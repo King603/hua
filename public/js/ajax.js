@@ -13,7 +13,7 @@
 var ajax = function (url, type, callback, data) {
     var xhr = new XMLHttpRequest();//不变
     //如果发送get请求时，带参数
-    if (type == "get" && data !== undefined) {
+    if ((type == "get" || type == "delete") && data !== undefined) {
         //则需要将参数用?连接到url地址结尾
         url += data;
     }
@@ -25,9 +25,9 @@ var ajax = function (url, type, callback, data) {
             //只不过这个形参变量传入的不是一个值，而是一个函数
             callback(result);
         }
-    } 
+    }
     xhr.open(type, url, true);
-    if (type == "post") {
+    if (type == "post" || type == "put") {
         //只有发送的是post请求时，才需添加请求头
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         //只有post请求，才会将参数放在send()中发送
