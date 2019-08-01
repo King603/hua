@@ -1,5 +1,5 @@
 //导入express模块
-const express=requier("express");
+const express=require("express");
 //导入body-parser模块
 const bodyParser=require("body-parser");
 //导入user路由模块
