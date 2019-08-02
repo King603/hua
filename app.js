@@ -1,16 +1,16 @@
 //导入express模块
-const express=require("express");
+import express, { static } from "express";
 //导入body-parser模块
-const bodyParser=require("body-parser");
+import { urlencoded } from "body-parser";
 //导入user路由模块
-const userRouter=require("./router/user.js");
+import userRouter from "./router/user.js";
 //设置web服务器
 var app=express();
 //监听端口
 app.listen(8080);
 //设置静态托管文件夹
-app.use(express.static("public"));
-app.use(bodyParser.urlencoded({
+app.use(static("public"));
+app.use(urlencoded({
     extended:false
 }));
 //使用路由器，挂载到/user下

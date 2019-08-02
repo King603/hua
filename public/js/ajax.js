@@ -1,3 +1,5 @@
+//开启严格模式
+"use strict";
 // 要封装一个函数，保存重用的代码：
 // 1.代码中所有不确定的，都定义成形参变量
 // 2.所有不一定执行的代码，都要加判断条件。
@@ -13,26 +15,27 @@
 var ajax = function (url, type, callback, data) {
     var xhr = new XMLHttpRequest();//不变
     //如果发送get请求时，带参数
-    if ((type == "get" || type == "delete") && data !== undefined) {
-        //则需要将参数用?连接到url地址结尾
-        url += data;
-    }
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            var result = JSON.parse(xhr.responseText);
-            //缺少一段自定义的代码来对result执行不同的操作
-            //之后，只要一段代码不确定时，也可用形参变量来解决
-            //只不过这个形参变量传入的不是一个值，而是一个函数
-            callback(result);
-        }
-    }
-    xhr.open(type, url, true);
-    if (type == "post" || type == "put") {
+    if (type == "get" || type == "delete") {
+        if (data) url += "?" + data;//则需要将参数用?连接到url地址结尾
+        xhr.open(type, url, true);
+        //而如果是get请求，send()中什么都没有
+        xhr.send();
+    } else {
+        xhr.open(type, url, true);
         //只有发送的是post请求时，才需添加请求头
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         //只有post请求，才会将参数放在send()中发送
-        xhr.send(data);
-    } else {//而如果是get请求，send()中什么都没有
-        xhr.send();
+        if (data) xhr.send(data);
+        else xhr.send();
+    }
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var result = xhr.responseText;
+            // 缺少一段自定义的代码来对result执行不同的操作
+            // 之后，只要一段代码不确定时，也可用形参变量来解决
+            // 只不过这个形参变量传入的不是一个值，而是一个函数
+            callback(result);
+        }
     }
 }
+export default ajax;
