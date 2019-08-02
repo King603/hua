@@ -16,7 +16,8 @@ var ajax = function (url, type, callback, data) {
     var xhr = new XMLHttpRequest();//不变
     //如果发送get请求时，带参数
     if (type == "get" || type == "delete") {
-        if (data) url += "?" + data;//则需要将参数用?连接到url地址结尾
+        //则需要将参数用?连接到url地址结尾
+        if (data) url += "?" + data;
         xhr.open(type, url, true);
         //而如果是get请求，send()中什么都没有
         xhr.send();
