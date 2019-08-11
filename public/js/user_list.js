@@ -9,6 +9,9 @@ function show() {
         var htmlstr = `
             <table border="1px" width="800px">
                 <tr>
+                    <th>
+                        <label><input type="checkbox" />全选</label>
+                    </th>
                     <th>登录名称</th>
                     <th>电子邮件</th>
                     <th>联系方式</th>
@@ -23,6 +26,9 @@ function show() {
             else var gender = "保密";
             htmlstr += `
                 <tr>
+                    <td>
+                        <label><input type="checkbox" /></label>
+                    </td>
                     <td>${arr[i].uname}</td>
                     <td>${arr[i].email}</td>
                     <td>${arr[i].phone}</td>
