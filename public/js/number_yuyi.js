@@ -45,7 +45,6 @@ var arr = [
     [1001, "忠诚的爱 直到永远"]
 ];
 var str = `
-<tbody class="row">
 <tr>
 <th colspan="2" class="border-0 text-center">花朵数</th>
 <th class="border-0">花语</th>
@@ -58,7 +57,6 @@ for (var i = 0; i < arr.length; i++) {
 <td class="border-0">朵</td>
 <td class="border-0 col-11">${arr[i][1]}</td>
 </tr>
-</tbody>
 `;
 }
 t1.innerHTML = str;
