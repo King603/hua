@@ -1,0 +1,578 @@
+@charset "utf-8";
+/*
+ * pc站礼品栏目列表页
+ * 2018年3月16日15:19:13
+ * 最后修改日期：2018年3月29日11:39:56
+ * */
+/*基础样式*/
+.common {
+  margin-bottom: 0;
+}
+.wrapper {
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+.wrapper a {
+  text-decoration: none;
+}
+.wrapper a:hover,
+.wrapper a:link,
+.wrapper a:visited,
+.wrapper a.active {
+  text-decoration: none;
+}
+.wrapper img {
+  width: 100%;
+}
+.breadcrumb {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 16px;
+  background-color: #fff;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 0;
+}
+.breadcrumb > li + li:before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(//img02.hua.com/pc/assets/img/gifts/gifts-sprite.png) no-repeat center center;
+  background-position: -24px -56px;
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  vertical-align: middle;
+  margin-top: -3px;
+}
+.breadcrumb a {
+  color: #232323;
+}
+.breadcrumb a:hover {
+  color: #ff6a00;
+  text-decoration: none;
+}
+.banner {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+  -webkit-background-size: 1200px 300px;
+  background-size: 1200px 300px;
+  /*mask*/
+}
+.banner.bg {
+  margin: 0;
+}
+.banner .swiper-container {
+  height: 300px;
+}
+.banner:hover .banner-prev,
+.banner:hover .banner-next {
+  opacity: 1;
+}
+.banner-prev,
+.banner-next {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  z-index: 8;
+  width: 36px;
+  height: 100px;
+  margin: -50px 0 0 0;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  -webkit-transition: background 0.2s;
+  -ms-transition: background 0.2s;
+  transition: background 0.2s;
+  cursor: pointer;
+  -webkit-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.banner-prev > .scon,
+.banner-next > .scon {
+  margin-top: 38px;
+}
+.banner-prev:hover,
+.banner-next:hover {
+  background: rgba(255, 185, 142, 0.5);
+}
+.banner-prev {
+  left: 16px;
+}
+.banner-next {
+  right: 16px;
+}
+.banner .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 20px;
+}
+.banner .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #494949;
+  background-color: #fff;
+  opacity: 1;
+}
+.banner .swiper-pagination-bullet-active {
+  width: 15px;
+  height: 17px;
+  background: url(//img02.hua.com/pc/assets/img/gifts/gifts-sprite.png) no-repeat center center;
+  background-position: -192px -56px;
+  border: none;
+}
+.banner-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.banner-info {
+  color: #fff;
+  width: 560px;
+  margin: 90px auto;
+}
+.banner-info-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "微软雅黑";
+}
+/*category*/
+.category {
+  width: 100%;
+}
+.category:after {
+  content: "";
+  display: block;
+  height: 0;
+  *zoom: 1;
+  clear: both;
+}
+.category-item {
+  float: left;
+  width: 396px;
+  height: 128px;
+  padding: 10px 20px;
+  -webkit-background-size: 396px 128px;
+  background-size: 100%;
+  background-repeat: repeat-x;
+  transition: all 0.2s;
+  cursor: pointer;
+  overflow: hidden;
+}
+.category-item:hover {
+  background-position-x: -10px;
+}
+.category-item + .category-item {
+  margin-left: 6px;
+}
+.category-item-info {
+  float: left;
+  width: 168px;
+  color: #232323;
+}
+.category-item__name {
+  font-size: 22px;
+  height: 48px;
+  line-height: 48px;
+  margin-top: 8px;
+  border-bottom: 2px solid #BCBCBC;
+}
+.category-item__name .scon {
+  margin-left: 8px;
+}
+.category-item__desc {
+  margin-top: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*礼品分类*/
+.giftcate {
+  margin: 32px -48px;
+}
+.giftcate:after {
+  content: "";
+  display: block;
+  height: 0;
+  *zoom: 1;
+  clear: both;
+}
+.giftcate-item {
+  float: left;
+  width: 162px;
+  text-align: center;
+  color: #232323;
+  font-size: 16px;
+}
+.giftcate-item p {
+  margin: 0;
+  cursor: pointer;
+}
+.giftcate-item.active {
+  color: #ff6a00;
+}
+.giftcate-item.active a {
+  color: inherit;
+}
+.giftcate-item > i {
+  cursor: pointer;
+}
+.giftcate-item > i:hover + p {
+  color: #ff6a00;
+}
+/*产品列表*/
+.product {
+  /*价格筛选输入*/
+  /*折扣分隔条*/
+}
+.product-filter {
+  background-color: #fff;
+}
+.product-filter-item {
+  width: 100%;
+  background-color: #F5F5F5;
+  padding: 24px 16px;
+}
+.product-filter-item__name {
+  color: #767677;
+}
+.product-filter-item__val {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 32px;
+  color: #222223;
+  font-size: 0;
+}
+.product-filter-item__val > li {
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+}
+.product-filter-item__val > li:hover,
+.product-filter-item__val > li.active {
+  color: #ff6a00;
+}
+.product-filter-item__val > li:hover a,
+.product-filter-item__val > li.active a {
+  color: #ff6a00;
+}
+.product-filter-item__val > li.active .scon-price {
+  background-position: -240px -56px;
+}
+.product-filter-item__val > li.active.desc .scon-price {
+  background-position: -264px -56px;
+}
+.product-filter-item__val > li + li {
+  margin-left: 32px;
+}
+.product-filter-item + .product-filter-item {
+  margin-top: 1px;
+}
+.product .filter-price {
+  font-size: 0;
+}
+.product .filter-price.input .filter-price-btn {
+  display: inline-block;
+}
+.product .filter-price:hover {
+  color: inherit;
+}
+.product .filter-price > div {
+  display: inline-block;
+}
+.product .filter-price-label {
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.product .filter-price-label > .scon {
+  margin: 0 4px;
+}
+.product .filter-price-line {
+  display: inline-block;
+  height: 1px;
+  width: 16px;
+  margin: 0 12px;
+  background: #BCBCBC;
+  vertical-align: middle;
+}
+.product .filter-price-input input {
+  width: 96px;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 8px;
+  box-shadow: 0 0 0 999px #fff inset;
+  border: 1px solid #BCBCBC;
+  outline-color: #ff6a00;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.product .filter-price-input input::-webkit-outer-spin-button,
+.product .filter-price-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.product .filter-price-input input[type="number"] {
+  -moz-appearance: textfield;
+}
+.product .filter-price-btn {
+  box-shadow: none;
+  border: none;
+  outline: none;
+  width: 60px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background-color: #E6E6E6;
+  color: #232323;
+  vertical-align: bottom;
+  font-size: 14px;
+  margin-left: 12px;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+.product .filter-price-btn.btn-primary {
+  background-color: #FFB98E;
+  margin-left: 20px;
+}
+.product .filter-price-btn.btn-primary:active {
+  background-color: #ff6a00;
+}
+.product-list {
+  margin: 0 -12px;
+  padding: 0;
+  list-style: none;
+}
+.product-list:after {
+  content: "";
+  display: block;
+  height: 0;
+  *zoom: 1;
+  clear: both;
+}
+.product-list-nomore {
+  margin: 20px 12px 0;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-top: 3px #bbb double;
+}
+.product-list-item {
+  float: left;
+  width: 282px;
+  margin: 48px 12px 0;
+}
+.product-list-item__info {
+  padding: 12px 0;
+}
+.product-list-item__info hr {
+  margin: 12px 0;
+  border-color: #E6E6E6;
+}
+.product-list-item__pic {
+  overflow: hidden;
+  height: 307px;
+}
+.product-list-item__pic:hover img {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: -webkit-scale(1.05);
+  transform: scale(1.05);
+}
+.product-list-item__pic img {
+  width: 100%;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -o-transition: transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+.product-info-tag {
+  font-size: 12px;
+  color: #fff;
+  height: 23px;
+  line-height: 23px;
+  overflow: hidden;
+}
+.product-info-tag > span {
+  background-color: #FE6600;
+  padding: 3px 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+.product-info-name {
+  color: #232323;
+  margin-top: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.product-info-price {
+  color: #fe6600;
+  letter-spacing: 1px;
+}
+.product-info-doubleprice > s {
+  color: #777;
+  font-size: 12px;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+.product-info-doubleprice > b {
+  font-size: 22px;
+  color: #fe6600;
+  font-weight: bold;
+  font-family: "微软雅黑";
+}
+.product-info-btn {
+  display: inline-block;
+  width: 116px;
+  height: 32px;
+  line-height: 32px;
+  color: #232323;
+  border: 1px solid #232323;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 12px;
+}
+.product-info-btn:hover {
+  color: inherit;
+}
+.product-info-light {
+  color: #777;
+  font-size: 12px;
+  min-height: 17px;
+  max-height: 17px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.product-title {
+  margin-top: 40px;
+}
+.product-title-line {
+  width: 100%;
+  height: 4px;
+  background-color: #777777;
+}
+.product-title-name {
+  font-size: 24px;
+  color: #232323;
+  font-weight: bold;
+  margin: 28px 0 0;
+}
+.product-title + .product-list > li:first-child,
+.product-title + .product-list > li:nth-child(2),
+.product-title + .product-list > li:nth-child(3),
+.product-title + .product-list > li:nth-child(4) {
+  margin-top: 25px;
+}
+.product-curbar {
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  font-size: 24px;
+  color: #232323;
+  text-align: center;
+  font-weight: bold;
+  font-family: "微软雅黑";
+  margin: 48px 0 0;
+}
+.product-curbar + .product-list > li:first-child,
+.product-curbar + .product-list > li:nth-child(2),
+.product-curbar + .product-list > li:nth-child(3),
+.product-curbar + .product-list > li:nth-child(4) {
+  margin-top: 24px;
+}
+/*字体、图片图标库*/
+/*精灵图图标 SpriteIcon*/
+.scon {
+  display: inline-block;
+  background: url(//img02.hua.com/pc/assets/img/gifts/gifts-sprite.png) no-repeat center center;
+  vertical-align: middle;
+  font-style: normal;
+}
+.scon-left {
+  width: 24px;
+  height: 24px;
+  background-position: 0 -56px;
+}
+.scon-right {
+  width: 24px;
+  height: 24px;
+  background-position: -24px -56px;
+}
+.scon[class*="scon-tag"] {
+  width: 48px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 14px;
+}
+.scon-tag-green {
+  background-position: -48px -56px;
+}
+.scon-tag-orange {
+  background-position: -96px -56px;
+}
+.scon-tag-pink {
+  background-position: -144px -56px;
+}
+.scon[class*="scon-cate"] {
+  width: 56px;
+  height: 56px;
+}
+.scon-cate-all {
+  background-position: 0px 0;
+}
+.scon-cate-yyh {
+  background-position: -56px 0;
+}
+.scon-cate-ysh {
+  background-position: -112px 0;
+}
+.scon-cate-jbh {
+  background-position: -168px 0;
+}
+.scon-cate-ss {
+  background-position: -224px 0;
+}
+.scon-cate-qkl {
+  background-position: -280px 0;
+}
+.scon-cate-gz {
+  background-position: -336px 0;
+}
+.scon-cate-bj {
+  background-position: -392px 0;
+}
+.scon-cate-sj {
+  background-position: -448px 0;
+}
+.scon-price {
+  width: 16px;
+  height: 16px;
+  background-position: -216px -56px;
+}
+.scon-price.up {
+  background-position: -240px -56px;
+}
+.scon-price.down {
+  background-position: -264px -56px;
+}

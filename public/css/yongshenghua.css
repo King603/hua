@@ -1,0 +1,219 @@
+@charset "utf-8";
+/*PC 永生花页面样式
+ * 2018年5月4日09:36:30
+ */
+.yongshenghua .nav li:nth-child(3) {
+  background: #ff6a00;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+.com-width {
+  width: 1200px;
+  margin: 0 auto;
+}
+.filterbar {
+  font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+  background: #fff;
+  height: auto;
+  padding: 10px 10px 6px 20px;
+  border-bottom: 1px solid #484848;
+  margin-bottom: 10px;
+}
+.filterbar ul {
+  *zoom: 1;
+}
+.filterbar ul:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.filterbar ul li {
+  float: left;
+}
+.filterbar ul li + li {
+  margin-left: 40px;
+}
+.filterbar ul li a {
+  display: inline-block;
+  height: 27px;
+  line-height: 27px;
+  color: #233333;
+}
+.filterbar ul li.active a {
+  color: #fe6600;
+}
+.filterbar ul li:nth-child(3) .glyphicon {
+  width: 10px;
+  top: -1px;
+  vertical-align: middle;
+}
+.filterbar ul li:nth-child(3) .glyphicon:before {
+  content: "\e253";
+  float: left;
+}
+.filterbar ul li:nth-child(3) .glyphicon:after {
+  content: "\e252";
+  float: left;
+}
+.filterbar ul li.active.up .glyphicon:after {
+  color: #233333;
+}
+.filterbar ul li.active.down .glyphicon:before {
+  color: #233333;
+}
+.filterbar .fr li {
+  margin: 0;
+}
+.filterbar .fr li.step {
+  margin: 0 10px;
+  height: 27px;
+  line-height: 27px;
+  font-size: 12px;
+}
+.filterbar .fr li.active a {
+  color: #ff6a00;
+}
+.filterbar ul .glyphicon {
+  font-size: 12px;
+  margin-left: 5px;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+.product-list ul {
+  *zoom: 1;
+}
+.product-list ul:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.product-list ul li {
+  float: left;
+  width: 285px;
+  height: auto;
+  margin-bottom: 60px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.product-list ul li a:focus,
+.product-list ul li a:hover {
+  color: #233333;
+}
+.product-list ul li:hover {
+  -webkit-box-shadow: -2px 2px 6px 2px rgba(231, 231, 231, 0.8);
+  box-shadow: -2px 2px 6px 2px rgba(231, 231, 231, 0.8);
+}
+.product-list ul li + Li {
+  margin-left: 20px;
+}
+.product-list ul li:nth-child(4n + 1) {
+  margin-left: 0;
+}
+.product-list .item-img {
+  overflow: hidden;
+  height: 311px;
+}
+.product-list .item-img img {
+  width: 100%;
+  height: auto;
+  background: #C1C1C1;
+}
+.product-list .product-info {
+  text-align: center;
+  font-family: "微软雅黑", simhei;
+  color: #233333;
+  padding: 10px;
+}
+.product-list .product-info .name {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+.product-list .product-info .promotion {
+  font-weight: bold;
+  font-size: 14px;
+  color: #f00;
+  margin: 0;
+}
+.product-list .product-info .desc {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 12px;
+  min-height: 17px;
+}
+.product-list .product-info .price {
+  font-size: 16px;
+}
+.panel-body ul {
+  padding-left: 40px;
+  list-style: disc;
+}
+.product-filter {
+  margin-bottom: 30px;
+  background-color: #fff;
+  font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+}
+.product-filter-item {
+  width: 100%;
+  background-color: #F5F5F5;
+  padding: 24px 16px;
+}
+.product-filter-item__name {
+  color: #767677;
+}
+.product-filter-item__val {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 32px;
+  color: #222223;
+  font-size: 0;
+}
+.product-filter-item__val > li {
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+}
+.product-filter-item__val > li a {
+  color: #232323;
+}
+.product-filter-item__val > li:hover,
+.product-filter-item__val > li.active {
+  color: #ff6a00;
+}
+.product-filter-item__val > li:hover a,
+.product-filter-item__val > li.active a {
+  color: #ff6a00;
+}
+.product-filter-item__val > li a:visited {
+  color: inherit;
+}
+.product-filter-item__val > li.active .scon-price {
+  background-position: -240px -56px;
+}
+.product-filter-item__val > li.active.desc .scon-price {
+  background-position: -264px -56px;
+}
+.product-filter-item__val > li + li {
+  margin-left: 32px;
+}
+.product-filter-item + .product-filter-item {
+  margin-top: 1px;
+}
+
+.item-img{
+  float: left !important;  
+}

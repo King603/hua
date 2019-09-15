@@ -1,0 +1,219 @@
+.choose_city {
+    width: 1200px;
+    height: auto;
+    font-size: 14px;
+    border: 3px solid #FE7A24;
+    background: #FFF none repeat scroll 0% 0%;
+    font-size: 14px;
+}
+
+.choose_city .rmcs {
+    margin-top: 17px;
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+    clear: both;
+}
+
+.choose_city .rmcs {
+    line-height: 50px;
+}
+
+.choose_city .xzcs_dt .rm_gkt i {
+    color: #f36f20;
+}
+
+.choose_city .title_type1,
+.choose_city .title_type2 {
+    padding-left: 25px;
+    width: 120px;
+    float: left;
+    font-weight: bold;
+    color: #333;
+}
+
+.choose_city .xzcs_dt {
+    width: 1070px;
+    float: left;
+}
+
+.choose_city .rmcs span {
+    color: #F36F20;
+    float: left;
+}
+
+.choose_city .rm_cz {
+    margin-top: 3px;
+    line-height: 30px;
+    position: relative;
+}
+
+.choose_city .rm_cz #shen {
+    width: 133px;
+}
+
+.choose_city .rm_cz select {
+    height: 30px;
+    border: 1px solid #D7D7D7;
+    vertical-align: middle;
+    padding-right: 10px;
+    margin-right: 2px;
+}
+
+.choose_city .rm_cz .smt {
+    padding: 0 20px;
+    width: 68px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    background: #ff7b00;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    transition: .3s background linear;
+    cursor: pointer;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.letter_search {
+    margin: 20px 0 20px 0;
+    height: 46px;
+    line-height: 46px;
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+    background: #f4f4f4;
+}
+
+.letter_search strong.title_type2 {
+    width: auto;
+}
+
+.choose_city .title_type2 {
+    color: #595959;
+}
+
+.letter_search .letter_list {
+    margin: 11px 10px 0 0;
+    float: right;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.letter_search .letter_list a {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.choose_city .cs_zs {
+    margin-bottom: 20px;
+    overflow: hidden;
+    clear: both;
+}
+
+.choose_city .cs_zs .xzcs_dt a.se_cur {
+    color: #ff7e00;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.choose_city .rmcs span,
+.choose_city .rmcs span a {
+    color: #f36f20;
+    float: left;
+}
+
+.choose_city .xzcs_dt a {
+    margin-right: 28px;
+    display: inline-block;
+}
+
+.letter_search .letter_list a.se_cur {
+    background: #F60;
+    color: #fff;
+}
+
+.choose_city .cs_zs .xzcs_dt a {
+    margin: 1px 18px 12px 0px;
+    vertical-align: middle;
+}
+
+.f_cs {
+    color: #5F675E;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.f_csb {
+    color: #FF7E00;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.f_ff7 {
+    color: #FF7E00;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.dropdown em {
+    width: 10px;
+    height: 14px;
+    float: left;
+    margin: 3px 7px 0px 0px;
+    display: inline;
+    background: transparent url("img/cake/cstb.png") no-repeat scroll 0% 0%;
+}
+
+.csqh {
+    display: inline-block;
+    margin-bottom: 0px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    padding: 5px 10px;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+}
+
+.soso {
+    width: 260px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    height: 32px;
+    padding: 0 8px;
+    line-height: 32px;
+    vertical-align: middle;
+    margin-left: 35px;
+}
+
+.soso_btn {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    left: -39px;
+    top: 1px;
+}
+
+.promo-tag {
+    display: inline-block;
+    height: 16px;
+    padding: 0 7px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #FE6600;
+    border: 1px solid #FE6600;
+    border-radius: 7px;
+}
