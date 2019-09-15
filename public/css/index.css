@@ -1,24 +1,39 @@
-.index{
-    background:url(../img/index/18_logoupdate_banner_top.png) 50% 0 no-repeat;
-    height:100px;width:100%;
+.index {
+    background: url(../img/index/18_logoupdate_banner_top.png) 50% 0 no-repeat;
+    height: 100px;
+    width: 100%;
 }
-.card-body + .card-body{
-    border-top:1px solid #ddd;
+
+.card-body+.card-body {
+    border-top: 1px solid #ddd;
 }
+
 .carousel-control-prev,
-.carousel-control-next{
-	width:4%;height: 20%;
-	background:#aaa;
-	border-radius: 0.5rem;
-	top:40%;
+.carousel-control-next {
+    width: 4%;
+    height: 20%;
+    background: #aaa;
+    border-radius: 0.5rem;
+    top: 40%;
 }
-.carousel-indicators li{
-	width: 0.75rem;height: 0.75rem;
-	background-color: #fff;
-	border-radius: 50%;
-	margin-left: 0.4rem;
-	margin-right: 0.4rem;
-	}
-.carousel-indicators .active{
+
+.carousel-indicators li {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.carousel-indicators .active {
     background-color: #0aa1ed;
+}
+
+.list-unstyled>li {
+    padding: 0 !important
+}
+
+.footer-server li {
+    padding: 0 1rem !important
 }

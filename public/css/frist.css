@@ -1,0 +1,49 @@
+.nav .tag {
+    position: relative;
+    color: #fe6600 !important;
+}
+
+.nav .tag:before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: -4px;
+    width: 26px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-image: url(../img/tag-new02.png);
+    animation: doudong 0.5s linear infinite;
+}
+
+.floor .bd .floor-products li .product-title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@-webkit-keyframes doudong {
+    0% {
+        top: 13px
+    }
+    50% {
+        top: 11px;
+    }
+    100% {
+        top: 13px;
+    }
+}
+
+@keyframes doudong {
+    0% {
+        top: 13px
+    }
+    50% {
+        top: 11px;
+    }
+    100% {
+        top: 13px;
+    }
+}

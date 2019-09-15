@@ -1,0 +1,175 @@
+body {
+    min-width: 1200px;
+}
+
+.categorys .dropdown-cate {
+    height: 440px;
+}
+
+.beian {
+    width: 16px;
+    height: 16px;
+    background: url(../img/beian.png) no-repeat;
+    background-size: 16px;
+    margin: -3px 2px 0;
+}
+
+.nav>li>a {
+    padding: 9px 22px;
+}
+
+.focus-wrapper a,
+.time-limit ul li {
+    position: relative;
+}
+
+.focus-wrapper .rightbox,
+.time-limit .tuijian {
+    position: absolute;
+    color: #232628;
+    font-family: PingFangSC, tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+}
+
+.focus-wrapper .rightbox p,
+.time-limit .tuijian p {
+    margin: 0;
+}
+
+.focus-wrapper .rightbox-price span,
+.time-limit .tuijian-price span {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.focus-wrapper .rightbox {
+    top: 50px;
+    left: 20px;
+}
+
+.focus-wrapper .rightbox-name {
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.focus-wrapper .rightbox-price {
+    font-size: 17px;
+    line-height: 23px;
+}
+
+.focus-wrapper .rightbox-price span {
+    margin-right: 3px;
+}
+
+.time-limit .tuijian {
+    top: 105px;
+    left: 12px;
+}
+
+.time-limit .tuijian-desc {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.time-limit .tuijian-price {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: bold;
+    font-family: DINAlternate-Bold;
+}
+
+.time-limit .tuijian-discount {
+    font-size: 12px;
+    padding: 0 6px;
+    color: #ff6600;
+    line-height: 22px;
+    height: 24px;
+    border: 1px solid #ff6600;
+    border-radius: 12px;
+}
+
+.time-limit .tuijian-discount span {
+    margin: 0 2px;
+}
+
+.time-limit .tuijian-discount img {
+    vertical-align: top;
+    margin-top: 6px;
+    margin-right: 3px;
+}
+
+.app-wx-wrapper .app-download {
+    width: 334px;
+    text-align: left;
+    padding-left: 0;
+}
+
+.app-wx-wrapper .app-download img {
+    margin-left: 13px;
+    margin-right: 19px;
+}
+
+.app-wx-wrapper .cartoon {
+    width: 466px;
+}
+
+.app-wx-wrapper .weixin {
+    width: 390px;
+}
+
+.app-wx-wrapper .cartoon img {
+    margin: 13px auto;
+}
+
+.app-wx-wrapper .weixin img {
+    margin-right: 20px;
+    margin-left: 18px;
+}
+
+.app-wx-wrapper .app-download,
+.app-wx-wrapper .weixin {
+    padding: 25px 0px 20px 20px;
+}
+
+.app-wx-wrapper {
+    position: relative;
+    height: 178px;
+    background-color: #F6F9FA;
+}
+
+.app-wx-wrapper .app-download-banner {
+    width: 100%;
+}
+
+.app-wx-wrapper .app-download-btn {
+    position: absolute;
+    left: 353px;
+    width: 180px;
+    height: 42px;
+    border-radius: 21px;
+}
+
+.app-wx-wrapper .app-download-ios {
+    top: 28px;
+}
+
+.app-wx-wrapper .app-download-android {
+    top: 82px;
+}
+
+.product-title-con {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.promo-tag {
+    display: inline-block;
+    height: 16px;
+    padding: 0 7px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #FE6600;
+    border: 1px solid #FE6600;
+    border-radius: 7px;
+    margin-right: 6px;
+}

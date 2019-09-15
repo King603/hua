@@ -1,0 +1,90 @@
+#MEIQIA-INVITE,
+#MEIQIA-INVITE div,
+#MEIQIA-INVITE span {
+    float: none;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none;
+}
+
+#MEIQIA-INVITE {
+    position: fixed;
+    z-index: 2147483647;
+    display: none;
+    width: 340px;
+    height: 130px;
+    margin-bottom: 64px;
+    border: 1px solid #f7f7f7;
+    border-radius: 4px;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, .16);
+    text-align: left;
+    cursor: pointer;
+    color: #000;
+    line-height: 1.428571429;
+    background-color: #fff;
+}
+
+#MEIQIA-INVITE #MEIQIA-INVITE-ARROW1,
+#MEIQIA-INVITE #MEIQIA-INVITE-ARROW2 {
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+}
+
+#MEIQIA-INVITE #MEIQIA-INVITE-ARROW1 {
+    z-index: 2;
+}
+
+#MEIQIA-INVITE #MEIQIA-INVITE-ARROW2 {
+    z-index: 1;
+}
+
+#MEIQIA-INVITE {
+    right: 60px;
+    bottom: 0;
+}
+
+#MEIQIA-INVITE #MEIQIA-INVITE-ARROW1 {
+    right: 12px;
+    bottom: -8px;
+    border-top: 8px solid #fff;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+}
+
+#MEIQIA-INVITE #MEIQIA-INVITE-ARROW2 {
+    right: 11px;
+    bottom: -10px;
+    border-top: 9px solid #f7f7f7;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+#MEIQIA-INVITE #MEIQIA-INVITE-CLOSE {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-position: 0 -260px;
+}
+
+#MEIQIA-INVITE #MEIQIA-INVITE-CLOSE:hover {
+    background-position: 0 -300px;
+}
+
+#MEIQIA-INVITE #MEIQIA-INVITE-INSIDE {
+    width: 300px;
+    height: 44px;
+    margin: 46px 20px 0;
+    text-align: left;
+    font-size: 14px;
+    line-height: 22px;
+    overflow: hidden;
+    color: #000;
+    /*word-break: break-all;*/
+}

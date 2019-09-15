@@ -1,0 +1,36 @@
+#MEIQIA-FULL-HEIGHT {
+    height: 100% !important;
+}
+
+#MEIQIA-PANEL-HOLDER {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 320px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    visibility: hidden;
+    background-color: transparent;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);
+    border-left: 1px solid #eee;
+    *border-left: 1px solid #eee;
+}
+
+#MEIQIA-IFRAME {
+    display: none;
+    float: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none;
+}

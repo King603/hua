@@ -1,0 +1,45 @@
+/*Logo替换 2018-10-31 16:17:57*/
+
+header .logo {
+    background: url(../img/pc_hualogo.png) left center no-repeat;
+}
+
+.service.serviceVip {
+    display: none;
+}
+
+.vipwechatchat {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+.vipwechatchat:hover>.vipwechatchat-box {
+    display: block;
+}
+
+.vipwechatchat-box {
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    background: #FEF3ED;
+    display: none;
+    width: 220px;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    font-size: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;
+    border-radius: 4px;
+}
+
+.vipwechatchat-box>h3 {
+    color: #fe6600;
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+
+.vipwechatchat-box>p {
+    font-size: 12px;
+    color: #777;
+}
