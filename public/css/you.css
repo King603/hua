@@ -1,0 +1,25 @@
+.main .banner-info-tips>p {
+    width: 440px;
+}
+
+#goTopBtn {
+    display: none;
+    bottom: 80px;
+    cursor: pointer;
+    right: 15px;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    border: 1px solid #e6e6e6;
+    background: #fafafa;
+    z-index: 9998;
+}
+
+#goTopBtn span {
+    display: inline-block;
+    width: 17px;
+    height: 16px;
+    background: url("//img02.hua.com/pc/pimg/top_1.png") no-repeat;
+    vertical-align: top;
+    margin: 12px 11px;
+}
