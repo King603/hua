@@ -1,7 +1,7 @@
 /*Logo替换 2018-10-31 16:17:57*/
 
 header .logo {
-    background: url(../img/pc_hualogo.png) left center no-repeat;
+    background: url(../img/common/hualogo.png) left center no-repeat;
 }
 
 .service.serviceVip {
