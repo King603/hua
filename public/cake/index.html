@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>生日蛋糕_生日蛋糕网上订购_生日蛋糕预定-花礼网(中国鲜花礼品网)</title>
+    <script async="" src="../js/meiqia-old.js"></script>
+    <script type="text/javascript" async="" src="../js/analytics.js"></script>
+    <script async="" charset="UTF-8" src="../js/meiqia.js"></script>
+    <script async="" src="../js/gtm.js"></script>
+    <script src="../js/hm.js"></script>
+    <script type="text/javascript" src="../js/CheckAgent.js"></script>
+    <link rel="icon" href="../img/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public_2019.css">
+    <link rel="stylesheet" href="../css/logo.css">
+    <link type="text/css" rel="stylesheet" href="../css/mbar.css">
+    <link rel="stylesheet" href="../css/city.css">
+    <link rel="stylesheet" href="../css/layer.css" id="layuicss-skinlayercss">
+    <link rel="stylesheet" href="../css/MEIQIA-ICON-STYLE.css" id="MEIQIA-ICON-STYLE">
+    <link rel="stylesheet" href="../css/MEIQIA-PANEL-STYLE.css" id="MEIQIA-PANEL-STYLE">
+    <link rel="stylesheet" href="../css/MEIQIA-BTN-STYLE.css" id="MEIQIA-BTN-STYLE">
+    <link rel="stylesheet" href="../css/MEIQIA-INVITE-STYLE.css" id="MEIQIA-INVITE-STYLE">
+</head>
+
+<body class="cake">
+    <!-- 顶部导航 -->
+    <div class="site-nav">
+        <div class="container">
+            <ul class="site-nav-l">
+                <li class="menu">
+                    <a href="/" onClick="addfavorite();return false;"><span
+                            class="ico ico-star"></span>收藏鲜花网(hua.com)</a>
+                </li>
+                <li class="menu dropdown">
+                    <a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span
+                            class="ico ico-weixin"></span>关注微信</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="../img/common/wechat_qrcode.jpg" height="124" width="124">
+                        <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
+                    </div>
+                </li>
+                <li class="menu dropdown">
+                    <a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span
+                            class="ico ico-mobile"></span>花礼网app</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="../img/common/app_qrcode.jpg" height="124" width="124">
+                        <p>新人专享100元APP礼包</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="site-nav-r">
+                <!--登陆状态信息显示start-->
+                <li class="menu login" id="LoginInfo">
+                    <a href="/Passport/Login/" rel="nofollow" id="btn-login">你好，请登录</a><a href="/Passport/Register/"
+                        rel="nofollow" id="btn-reg">注册</a>
+                </li>
+                <!--登陆状态信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu">
+                    <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <!--我的花礼信息显示start-->
+                <li class="menu dropdown">
+                    <a href="/member/" rel="nofollow" data-hover="dropdown" data-delay="0" target="_blank">我的花礼</a>
+                </li>
+                <!--我的花礼信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu dropdown">
+                    <a href="/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span
+                            class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-service">
+                        <a href="/member/payment/balancefill" target="_blank">在线付款</a>
+                        <a href="/help/" target="_blank">帮助中心</a>
+                        <a href="/help/afterservice.htm" target="_blank">售后服务</a>
+                        <a href="/help/sendRange.htm" target="_blank">配送范围</a>
+                        <a href="/chat/" target="_blank">留言反馈</a>
+                    </div>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <!--购物车信息显示start-->
+                <li class="menu dropdown">
+                    <a href="/shopping/showcart/" data-hover="dropdown" data-delay="0" rel="nofollow"
+                        target="_blank"><span class="ico ico-cart"></span>购物车<span class="text-primary"
+                            id="gwcCount"></span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+                </li>
+                <!--购物车信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu slogan">
+                    中国领先鲜花速递服务
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航 End -->
+    <!-- 头部 -->
+    <header>
+        <div class="logo">
+            <h1><a href="/" class="logo-bd">鲜花速递</a></h1>
+        </div>
+        <div class="search">
+            <form name="i_search" method="get" action="/search/">
+                <div class="input-group">
+                    <input name="keyword" type="text" class="form-control" placeholder="商品关键词">
+                    <span class="input-group-btn">
+                        <button id="test" class="btn btn-primary" type="button" onClick="this.form.submit()">搜索</button>
+                    </span>
+                </div>
+            </form>
+            <span class="help-block">
+                <a href="/hongmeigui/">红玫瑰</a><a href="/flower/JingPinXianHua/">精品鲜花</a><a
+                    href="/theme/birthday/">生日鲜花</a><a href="/worldflora/">港澳台送花</a>
+            </span>
+        </div>
+        <div class="service serviceDefault">
+            <span class="ico ico-phone"></span>400-889-8188
+            <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a>
+        </div>
+        <div class="service serviceVip">
+            <div class="vipwechatchat">
+                <img style="margin-right: 6px;" src="../img/common/wechat.png" width="30" /><span>1对1钻石客户经理</span>
+                <div class="vipwechatchat-box">
+                    <h3>微信1对1客服经理</h3>
+                    <img class="img-responsive" style="width: 120px;display: inline-block;"
+                        src="../img/common/VIPChatQR.jpg" />
+                    <p>扫一扫添加客户经理微信</p>
+                    <p>微信号：VIP-Service-Hua</p>
+                </div>
+            </div>
+            <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a><br />
+            <span class="ico ico-phone"></span><span>钻石专线：400-830-3920</span>
+        </div>
+    </header>
+    <!-- 头部 End -->
+    <!-- 导航 -->
+    <nav class="common">
+        <div class="container">
+            <div class="categorys dropdown">
+                <h3 class="categorys-title" data-hover="dropdown" data-delay="0">
+                    <a href="all.html"><span class="pull-right glyphicon glyphicon-menu-down"></span>全部商品导购</a>
+                </h3>
+                <div class="dropdown-menu dropdown-cate" id="all1">
+                    <h4><a href="/flower/">鲜花</a></h4>
+                    <ul class="cate-list list-inline" id="xhyt"></ul>
+                    <h4><a href="/yongshenghua/">永生花</a></h4>
+                    <ul class="cate-list list-inline" id="ysh"></ul>
+                    <h4><a href="/gifts/">礼品</a></h4>
+                    <ul class="cate-list list-inline" id="lp"></ul>
+                    <h4><a href="/Plant/">绿植</a></h4>
+                    <ul class="cate-list list-inline" id="plant1"></ul>
+                </div>
+            </div>
+            <ul class="nav" id="nav"></ul>
+        </div>
+    </nav>
+    <!-- 导航 End -->
+    <!-- 内容 -->
+    <div class="container">
+        <!--城市导航开始-->
+        <div class="tlbanner">
+            <div class="choose_city">
+                <!--热门城市-->
+                <div class="rmcs">
+                    <div class="title_type1">热门城市</div>
+                    <div class="xzcs_dt">
+                        <span><a href="/cake/city/beijingdangao.html">北京蛋糕</a><a
+                                href="/cake/city/shanghaidangao.html">上海蛋糕</a><a
+                                href="/cake/city/guangzhoudangao.html">广州蛋糕</a><a
+                                href="/cake/city/shenzhendangao.html">深圳蛋糕</a><a
+                                href="/cake/city/tianjindangao.html">天津蛋糕</a><a
+                                href="/cake/city/chongqingdangao.html">重庆蛋糕</a><a
+                                href="/cake/city/wuhandangao.html">武汉蛋糕</a><a
+                                href="/cake/city/hangzhoudangao.html">杭州蛋糕</a></span>
+                        <div class="rm_gkt">共开通了<i>1000多</i>个城市蛋糕配送</div>
+                    </div>
+                </div>
+                <!--快速查找-->
+                <div class="rm_cz" id="city_1">
+                    <strong class="title_type1">快速查找</strong>
+                    <select name="to_state" id="to_state"></select>
+                    <select id="to_city" name="to_city" disabled="disabled"></select>
+                    <input value="hf" name="hidden_tcode" id="hidden1" type="hidden">
+                    <input class="smt" value="进入" onClick="ToSelectCity()" type="button">
+                    <input id="psCity2" name="psCity" placeholder="请输入蛋糕配送城市" type="text" class="soso">
+                    <a class="soso_btn" href="javascript:void(0)"
+                        onClick="location.href='/cake/city/?city='+document.getElementById('psCity2').value"><span
+                            class="ico ico-search"></span></a>
+                </div>
+                <!--拼音查找城市-->
+                <div class="letter_search">
+                    <strong class="title_type2">按拼音首字母选择</strong>
+                    <div class="letter_list" id="letter_list"></div>
+                </div>
+                <div id="city_box"></div>
+            </div>
+        </div>
+        <!--城市导航结束-->
+        <div class="wrapper">
+            <div class="pull-left w970 l230">
+                <!-- 品牌蛋糕推荐 元祖蛋糕 START-->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/ganso/">更多元祖蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>元祖蛋糕</strong> <span class="small">（可配送上海市等国内100多个城市）</span>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/ganso/"><img src="../pimg/cake_brand_s_04.jpg" alt="元祖蛋糕"></a>
+                        </div>
+                        <p>
+                            元祖是2010上海世博会糕点赞助商，源自台湾，以原料上乘工艺精湛著称，是家喻户晓的精致礼品代言者。<br>
+                            <span
+                                class="text-primary">元祖蛋糕可配送：上海,南京,苏州,无锡,杭州,宁波,天津,贵阳,郑州,重庆,合肥,济南,青岛,烟台,长沙,成都,武汉,大连,沈阳,福州,厦门,南昌,广州,南宁,石家庄,西安,太原,昆明,长春,温州,湖州,嘉兴,金华,丽水,衢州,绍兴,台州,舟山,镇江,盐城,扬州,常州,淮安,连云港,南通,泰州,烟台等共100多个城市。</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 商品列表 -->
+                <div class="grid-wrapper" id="item_1"></div>
+                <!-- 商品列表 End -->
+                <!-- 品牌蛋糕推荐 元祖蛋糕 End -->
+                <!-- 品牌蛋糕推荐 廿一客蛋糕 START-->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/21cake/">更多廿一客蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>廿一客蛋糕</strong> <span class="small">（可配送北京，上海，广州，深圳，天津，杭州，苏州，无锡）</span>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/21cake/"><img src="../pimg/cake_brand_21cake.png" alt="廿一客蛋糕" width="110"
+                                    height="50"></a>
+                        </div>
+                        <p>
+                            廿一客蛋糕（21Cake)，只做新鲜的方形蛋糕。现已来到更多城市。在世界范围，研究蛋糕食材内涵，创造高价值单品。<br>
+                            <span class="text-primary">廿一客配送城市：北京，上海，广州，深圳，天津，杭州，苏州，无锡</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 商品列表 -->
+                <div class="grid-wrapper" id="item_2"></div>
+                <!-- 商品列表 End -->
+                <!-- 品牌蛋糕推荐 廿一客蛋糕 End -->
+                <!------------ lecake 品牌蛋糕推荐 诺心蛋糕 START----------->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/lecake/">更多诺心蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>诺心蛋糕</strong> <span class="small">（可配送上海，杭州，南京，苏州等10多个城市）</span>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/lecake/"><img src="../pimg/cake_brand_s_10.jpg" alt="诺心蛋糕"></a>
+                        </div>
+                        <p>
+                            “诺心蛋糕LE CAKE”-诺心LE CAKE 致力提供高品质及美味的蛋糕食品，高质及安心的精品蛋糕品牌。诺心LE
+                            CAKE秉承精选世界各地的优质食材原料，通过自建中央工厂生产制作优质的黄金比例配方蛋糕,全程冷链配送，将新鲜的蛋糕直送上门。<br>
+                            <span
+                                class="text-primary">诺心蛋糕配送城市：上海，杭州，南京，苏州，宁波，无锡，绍兴，嘉兴，北京，天津，广州，深圳，成都，重庆。注：需要提前24小时订购。</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 商品列表 -->
+                <div class="grid-wrapper" id="item_3"></div>
+                <!-- 商品列表 End -->
+                <!-- lecake 品牌蛋糕推荐 诺心蛋糕 End -->
+                <!-- 品牌蛋糕推荐 INCAKE蛋糕 START-->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/incake/">更多INCAKE蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>INCAKE蛋糕</strong> <span class="small">（可配送上海、福州、厦门）</span>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/incake/"><img src="../pimg/cake_brand_s_16.png" alt="INCAKE蛋糕"></a>
+                        </div>
+                        <p>
+                            INCAKE秉承了传统英式手工艺的蛋糕制作，用心烘培和真诚的笑容是INCAKE的宗旨。优质的选材和源于英伦的经典配方是INCAKE印克蛋糕的核心竞争力。<br>
+                            <span class="text-primary">INCAKE可配送上海、福州、厦门等多个城市。</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 商品列表 -->
+                <div class="grid-wrapper" id="item_4"></div>
+                <!-- 商品列表 End -->
+                <!-- 品牌蛋糕推荐 INCAKE蛋糕 End -->
+                <!------------ 贝思客蛋糕 START----------->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/beisike/">更多贝思客蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>贝思客蛋糕</strong> <span class="small">（可配送北京，杭州，南京，宁波，上海，绍兴，苏州，天津，无锡，重庆，成都等城市）</span>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/beisike/"><img src="../pimg/brandcake_beisike.png?11" alt="贝思客蛋糕"
+                                    style="width:110px;height:50px;"></a>
+                        </div>
+                        <p>
+                            贝思客蛋糕，你身边的甜品专家，在线销售各种口味的生日蛋糕、巧克力蛋糕、芝士、乳酪蛋糕、慕斯蛋糕、鲜奶蛋糕、商务蛋糕,婚庆蛋糕,已在北京/上海/天津/杭州/苏州/无锡/宁波/南京/绍兴九大城市开通服务,让生日蛋糕延至日常<br>
+                            <span class="text-primary">贝思客蛋糕配送城市：北京，杭州，南京，宁波，上海，绍兴，苏州，天津，无锡，重庆，成都</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 商品列表 -->
+                <div class="grid-wrapper" id="item_5"></div>
+                <!-- 商品列表 End -->
+                <!-- 贝思客蛋糕 End -->
+                <!-- 品牌蛋糕推荐 BONCAKE蛋糕 START-->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/boncake/">更多BONCAKE蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>BONCAKE蛋糕</strong> <span class="small">（可配送北京、上海、天津、沈阳、哈尔滨）</span>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/boncake/"><img src="../pimg/boncake.png " alt="BONCAKE蛋糕"></a>
+                        </div>
+                        <p>
+                            1886年，第一代BON叔在巴黎街头开设了一家甜品店，他一直用微笑和色彩温暖着他的客人。 2009年一位国立凡尔赛美术学院的新锐设计师， 一位蓝带桀
+                            骜不驯的优秀的年轻厨师和一位勒芒大学主修心理学和色彩学的年轻心理咨询师加入到产品的研发之中， 用他们的热情和自己擅长的专业知识， 碰撞出 BON CAKE 色彩系列蛋糕，
+                            并且登上了2009年《Cake Craft & Decoration》著名杂志的专访。 2014年 BON CAKE 强势进入中国，我们带着最好的产品和微笑与大家见面，
+                            我们是用色彩传递快乐的新锐甜品专家。<br>
+                            <span class="text-primary">BONCAKE可配送北京、上海、天津、沈阳、哈尔滨。</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 商品列表 -->
+                <div class="grid-wrapper" id="item_6"></div>
+                <!-- 商品列表 End -->
+                <!-- 品牌蛋糕推荐 BONCAKE蛋糕 End -->
+                <!------------ Mcake 品牌蛋糕推荐 诺心蛋糕 START----------->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/mcake/">更多Mcake蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>Mcake蛋糕</strong> <span class="small">（可配送上海，杭州，苏州，北京共4个城市）</span>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/mcake/"><img src="../pimg/cake_brand_s_14.jpg" alt="Mcake蛋糕"></a>
+                        </div>
+                        <p>
+                            “Mcake蛋糕”-Mcake把法国传统蛋糕文化带入中国，提供纯正的欧式味觉体验，同时也将欧洲的上好材质、经典工艺以及优雅的文艺气质，融入产品的每一个细节之中，带给客户更多的享受与愉悦。<br>
+                            <span class="text-primary">Mcake蛋糕配送城市：上海，杭州，苏州，北京。**注**：请提前5小时预订，苏州请提前8小时预订。</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 商品列表 -->
+                <div class="grid-wrapper" id="item_7"></div>
+                <!-- 商品列表 End -->
+                <!-- Mcake 品牌蛋糕推荐 诺心蛋糕 End -->
+                <!------------ 品牌蛋糕推荐 窝夫小子蛋糕 START----------->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/waffleboy/">更多窝夫小子蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>窝夫小子蛋糕</strong> <span class="small">（可配送北京、上海两个城市）</span>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/waffleboy/"><img src="../pimg/cake_brand_s_02.jpg" alt="窝夫小子蛋糕"></a>
+                        </div>
+                        <p>
+                            窝夫小子是极具异国情调的蛋糕品牌，以欧洲饮食文化为背景，采撷天然纯正食材，精选世界顶级原料制作，荟萃欧洲蛋糕经典，烘焙世界美味，在中国烘焙行业树立起了鲜明的形象。<br>
+                            <span class="text-primary">窝夫小子蛋糕配送城市：北京、上海。</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 商品列表 -->
+                <div class="grid-wrapper" id="item_8"></div>
+                <!-- 商品列表 End -->
+                <!-- 品牌蛋糕推荐 窝夫小子蛋糕 End -->
+                <!------------ 品牌蛋糕推荐 米卡米卡蛋糕 START----------->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/micamika/">更多米卡米卡蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>米卡米卡蛋糕</strong> <span class="small">（可免费配送北京六环以内，天津市区六区内）</span>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/micamika/"><img src="../pimg/cake_brand_s_03.jpg" alt="米卡米卡蛋糕"></a>
+                        </div>
+                        <p>
+                            “米卡米卡蛋糕Micamika”-米卡米卡蛋糕成立于2010年6月，为北京地区的消费者提供欧式蛋糕预订、配送服务。欧式蛋糕：28款欧式蛋糕，19个国家的优质原料，拒绝繁复、色彩膨胀的油脂造型，绝不添加任何人工色素等非天然原料。<br>
+                            <span class="text-primary">米卡米卡蛋糕配送城市：北京，天津。<span
+                                    style="color:#545454;">北京配送6环内及6环10公里内范围，天津免费配送市区六区内（快速路以内）</span></span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 米卡米卡蛋糕 商品列表 -->
+                <div class="grid-wrapper" id="item_9"></div>
+                <!-- 商品列表 End -->
+                <!-- 品牌蛋糕推荐 米卡米卡蛋糕 End -->
+                <!------------ 品牌蛋糕推荐 幸福西饼蛋糕 START----------->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/xfxb/">更多幸福西饼蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>幸福西饼蛋糕</strong> <span class="small">（可配送深圳、广州两个城市）</span>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/xfxb/"><img src="../pimg/cake_brand_s_07.jpg" alt="幸福西饼蛋糕"></a>
+                        </div>
+                        <p>
+                            幸福西饼蛋糕-深圳市幸福西饼食品有限公司创建于2008年10月，主要经营面包、西饼、曲奇、蛋糕、季节礼饼等中西式糕点。经过多年努力，目前在深圳和广州有二十多家分店，深圳分店遍及罗湖、福田、南山、宝安、龙岗等各大区域，成为深圳地区最具竟争力的品牌蛋糕店之一。<br>
+                            <span class="text-primary">幸福西饼蛋糕配送城市：广州、深圳。<span
+                                    style="color:#545454;">市区免费配送，配送范围见商品详情。</span></span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 商品列表 -->
+                <div class="grid-wrapper" id="item_10"></div>
+                <!-- 商品列表 End -->
+                <!-- 品牌蛋糕推荐 幸福西饼蛋糕 End -->
+                <!------------ Vcake品牌蛋糕推荐 Vcake蛋糕 START----------->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/vcake/">更多Vcake蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>Vcake蛋糕</strong> <span class="small">（可配送深圳市）</span>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/vcake/"><img src="../pimg/cake_brand_s_12.jpg" alt="Vcake蛋糕"></a>
+                        </div>
+                        <p>
+                            “Vcake蛋糕”-专注于欧式、法式甜点、配方蛋糕的传承与创新。拥有资深法厨团队、国际航空配餐业（IFCA）食品生产管理团队，专业物流配送。
+                            Vcake采用近100%进口原料、食材；坚持苛刻挑剔的选择，甄选世界同类顶级食材；为客户提供高品质、绿色、健康、安全的美味配方食品！<br>
+                            <span
+                                class="text-primary">Vcake蛋糕配送城市：深圳。配送区域：深圳罗湖区、福田区、南山区、宝安中心区及新安五路-新安四路-宝安公园东南方向以内。</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 商品列表 -->
+                <div class="grid-wrapper" id="item_11"></div>
+                <!-- 商品列表 End -->
+                <!-- Vcake 品牌蛋糕推荐 Vcake蛋糕 End -->
+                <!-- 品牌蛋糕推荐 心之和蛋糕 START-->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/heartcheesecake/">更多心之和蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>心之和蛋糕</strong> <span class="small">（可配送全国200多个城市）</span>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/heartcheesecake/"><img src="../pimg/cake_brand_s_xinzhihe.png"
+                                    alt="心之和蛋糕"></a>
+                        </div>
+                        <p>
+                            心之和奶酪蛋糕 , 连续两届美国奶酪大赛冠军<br>
+                            <span
+                                class="text-primary">可配送：北京,广州,上海,天津,重庆,沈阳,南京,成都,西安,邯郸,石家庄,保定,承德,唐山,廊坊,沧州,秦皇岛,太原,晋中,吕梁,郑州,安阳,新乡,许昌,平顶山,南阳,开封,洛阳,济源,濮阳,周口,漯河,三门峡,大连,鞍山,本溪,丹东,锦州,营口,辽阳,朝阳,盘锦,长春,松原,哈尔滨,大庆,包头,无锡,镇江,苏州,南通,扬州,盐城,徐州,淮安,连云港,常州,泰州,宿迁,菏泽,济南,青岛,淄博,德州,烟台,潍坊,济宁,泰安,临沂,滨州,东营,合肥,蚌埠,芜湖,马鞍山,黄山,铜陵,宣城,六安,杭州,湖州,嘉兴,宁波,绍兴,台州,温州,金华,舟山,福州,厦门,宁德,莆田,泉州,漳州,龙岩,三明,威海,枣庄,日照,莱芜,聊城,汕尾,阳江,揭阳,茂名,鹰潭,襄阳,鄂州,黄石,宜昌,十堰,岳阳,长沙,湘潭,株洲,衡阳,郴州,益阳,娄底,江门,韶关,惠州,梅州,汕头,深圳,珠海,佛山,肇庆,湛江,中山,河源,清远,云浮,潮州,东莞,防城港,南宁,桂林,梧州,玉林,新余,南昌,九江,抚州,宜春,吉安,赣州,萍乡,自贡,绵阳,遂宁,内江,乐山,德阳,广元,昆明,海口,汉中,宝鸡,铜川,兰州,银川,西宁等共200多个城市。</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 商品列表 -->
+                <div class="grid-wrapper" id="item_12"></div>
+                <!-- 商品列表 End -->
+                <!-- 品牌蛋糕推荐 心之和蛋糕 End -->
+                <!-- 品牌蛋糕推荐 CAKEBOSS START-->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/cakeboss/">更多CAKEBOSS蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>CAKEBOSS蛋糕</strong>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/cakeboss/"><img style="width:110px;"
+                                    src="../pimg/cakebrand_cakeboss_220x100.png" alt="CAKEBOSS蛋糕"></a>
+                        </div>
+                        <p>CAKEBOSS开创于2014年总位于北京，为明星及企业御用高级蛋糕品牌，带着无限的激情和他意，只为打造中国情感蛋糕第一品牌。<br>CAKEBOSS目前在北京上海等城市拥有40家门店，一直致力于在建立基于服务系统，市场系统、研发系统和制造系统而形成的协作创新机制，采用连锁门店、互联网销售、中央工厂订单生产、冷链物流配送体系的o2o营销模式，提供高品质的产品和快捷高交服务，向顾客提供跨渠道，无缝化的新零售体验。<br>CAKEBOSS拥有百万年轻会员，通过内容打造品牌的强情感IP属性，致力于让3亿国人爱的表达！<br><span
+                                class="text-primary">可配送城市：北京、上海、天津、广州、南京、成都、西安、沈阳。</span></p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 商品列表 -->
+                <div class="grid-wrapper" id="item_13"></div>
+                <!-- 商品列表 End -->
+                <!-- 品牌蛋糕推荐 CAKEBOSS End-->
+                <!------------ 全国蛋糕推荐 全国蛋糕 START----------->
+                <!-- 品牌信息 -->
+                <div class="brand-wraper">
+                    <div class="hd">
+                        <div class="small pull-right">
+                            <a href="/cake/allcitycake/">更多全国蛋糕 &gt;&gt;</a>
+                        </div>
+                        <strong>全国配送蛋糕</strong> <span class="small">
+                        </span>
+                    </div>
+                    <div class="bd">
+                        <div class="img-box">
+                            <a href="/cake/allcitycake/"><img src="../pimg/cake_brand_s_09.jpg" alt="全国蛋糕"></a>
+                        </div>
+                        <p>以下蛋糕可配送全国1000多个城市，由当地正规蛋糕店新鲜提供，蛋糕品牌以当地为准!<br />当天制作,当天配送,新鲜送到家!</p>
+                    </div>
+                </div>
+                <!-- 品牌信息 End -->
+                <!-- 全国蛋糕 商品列表 -->
+                <div class="grid-wrapper" id="item_14"></div>
+                <!-- 全国蛋糕 商品列表 End -->
+            </div>
+            <div class="pull-left w210 r970">
+                <!-- 分类 -->
+                <div class="navigation">
+                    <div class="item">
+                        <div class="title">
+                            <span class="ico ico-brand"></span>
+                            <h4>品牌</h4>
+                        </div>
+                        <ul class="item-list list-inline" id="list1"></ul>
+                    </div>
+                    <div class="item">
+                        <div class="title">
+                            <span class="ico ico-sort"></span>
+                            <h4>分类</h4>
+                        </div>
+                        <ul class="item-list list-inline" id="list2"></ul>
+                    </div>
+                </div>
+                <!-- 分类 End -->
+                <!-- 热销推荐 -->
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">热销生日蛋糕推荐</h3>
+                    </div>
+                    <div class="panel-body" id="panel_list1"></div>
+                </div>
+                <!-- 热销推荐 End -->
+                <!-- 最新蛋糕订单评价 -->
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">最新生日蛋糕评价</h3>
+                    </div>
+                    <div class="panel-body" id="panel_list2"></div>
+                </div>
+                <!-- 最新蛋糕订单评价 End -->
+            </div>
+        </div>
+        <!-- 鲜花常识&送花礼仪 -->
+        <div class="panel panel-default knowledge">
+            <div class="panel-heading">
+                <h3 class="panel-title">生日蛋糕&amp;蛋糕常识</h3>
+            </div>
+            <div class="panel-body" id="panel_list3"></div>
+        </div>
+        <!-- 鲜花常识&送花礼仪 End -->
+    </div>
+    <!-- 内容 End -->
+    <!--底部-->
+    <!-- 尾部导航 -->
+    <div class="footer-nav">
+        <a href="/">首页</a><a href="/profile/about.htm" target="_blank">关于我们</a><a href="/profile/media.html"
+            target="_blank">媒体报道</a><a href="/profile/contact.htm" target="_blank">联系方式</a><a href="/qiyetuangou/"
+            target="_blank">企业团购</a><a href="/liansuo/" target="_blank">花店入驻</a><a href="/profile/links.htm"
+            target="_blank">友情链接</a><a href="/member/payment/balancefill" target="_blank">在线补款</a><a
+            class="last-child" href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+    </div>
+    <!-- 尾部导航 End -->
+    <!-- 通用尾部 -->
+    <footer>
+        <div class="auth">
+            <a href="https://ss.knet.cn/verifyseal.dll?sn=e15041744030058395oqbo000000&ct=df&a=1&pa=0.8817607406526804"
+                target="_blank"><img style="height:40px;" src="../img/common/cxwz.png"></a>
+            <a href="https://search.szfw.org/cert/l/CX20130306002238002312" target="_blank"><img
+                    src="../img/common/cxwz.gif" height="40" width="112"></a>
+            <a href="http://www.anquan.org/authenticate/cert/?site=www.hua.com&at=realname" rel="nofollow"
+                target="_blank"><img src="../img/common/smyz.gif" height="40" width="106"></a>
+            <img src="../img/common/slogan.png" height="50" width="212" /> <a
+                href="/member/payment/fillbyalipay?order_no=&total_fee=" rel="nofollow" target="_blank"><img
+                    src="../img/common/zfb.gif" height="49" width="96"></a>
+            <a href="/profile/news_20111110.htm" target="_blank"><img src="../img/common/100.jpg" height="49"
+                    width="150"></a>
+            <a href="/profile/ICP.htm" rel="nofollow" target="_blank"><img src="../img/common/bico1.jpg" alt="ICP"
+                    height="46" width="35"></a>
+            <a href="http://szcert.ebs.org.cn/fab6de6a-ff80-4e63-89e4-cd531170c256" rel="nofollow" target="_blank"><img
+                    alt="工商网监" src="../img/common/bico4.jpg" height="46" width="35"></a>
+            <a href="http://www.sznet110.gov.cn/netalarm/index.jsp" rel="nofollow" target="_blank"><img
+                    src="../img/common/bico3.jpg" alt="网安" height="46" width="35"></a>
+        </div>
+        <p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a
+                href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a
+                href="/profile/ICP.htm" rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a
+                href="http://www.miibeian.gov.cn" rel="nofollow" target="_blank">粤ICP备09171662号</a> <span
+                class="ico beian"></span>粤公网安备44030502000373号 Copyright © 2005-2019</p>
+        <p>花礼网 （中国鲜花礼品网） <a href="/">www.hua.com</a><span> 深圳市百易信息技术有限公司</span> 中国领先网上蛋糕店-生日蛋糕预定！</p>
+    </footer>
+    <!-- 通用尾部 End -->
+    <!-- 弹出窗口-->
+    <div class="modal fade com-modal" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="attNotice">收藏商品</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="" width="100%" frameborder="0" id="attPage"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 弹出窗口end-->
+    <div class="mui-mbar-tabs">
+        <div class="quick_link_mian">
+            <div class="quick_links_panel">
+                <div id="quick_links" class="quick_links">
+                    <li>
+                        <a href="#none" class="my_qlinks"><i class="ico_user"></i></a>
+                        <!-- ***** 未登录 ***** -->
+                        <div class="ibar_login_box">
+                            <div class="avatar_box" id="loginStats"></div>
+                            <div class="login_btnbox">
+                                <a href="/Member/Order/"><i class="ico_order"></i>我的订单</a>
+                            </div>
+                            <i class="icon_arrow_right_white"></i>
+                        </div>
+                    </li>
+                    <li id="shopCart">
+                        <a href="javascript:void(0)" class="message_list"><i class="ico_cart"></i>
+                            <div class="span">购物车</div><span class="cart_num" id="cart_num">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="history_list"><i class="ico_collect"></i></a>
+                        <div class="mp_tooltip">
+                            <a href="javascript:void(0)" class="history_list"
+                                style="color: #595656;font-size: 14px;width: 100%;background: #fff;border-radius: 3px 0 0 3px;">我的收藏</a>
+                            <i class="icon_arrow_right_white"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="mpbtn_histroy"><i class="ico_histroy"></i></a>
+                        <div class="mp_tooltip">
+                            <a href="javascript:void(0)" class="mpbtn_histroy"
+                                style="color: #595656;font-size: 14px;width: 100%;background: #fff;border-radius: 3px 0 0 3px;">最近查看</a>
+                            <i class="icon_arrow_right_white"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="leave_message"><i class="ico_phone"></i></a>
+                        <div class="mp_tooltip"><span id="rightbartel">400-889-8188</span><i
+                                class="icon_arrow_right_white"></i></div>
+                    </li>
+                    <li>
+                        <a id="kefu" href="javascript:;" target="_blank" class="mpbtn_recharge"><i
+                                class="ico_headset"></i></a>
+                        <div class="mp_tooltip">
+                            <a id="kefu1" href="javascript:;" target="_blank" class="mpbtn_recharge1"
+                                style="color: #595656;font-size: 14px;width: 100%;background: #fff;border-radius: 3px 0 0 3px;"
+                                title="在线客服">
+                                在线客服
+                            </a>
+                            <i class="icon_arrow_right_white"></i>
+                        </div>
+                    </li>
+                </div>
+                <div class="quick_toggle">
+                    <li>
+                        <a href="javascript:void(0)"><i class="ico_qrcode"></i></a>
+                        <div class="mp_qrcode">
+                            <p>
+                                <img src="../img/common/QR_wx.jpg" width="110" height="110">
+                                关注微信公众号
+                            </p>
+                            <p>
+                                <img src="../img/common/QR_app.jpg" width="110" height="110">
+                                下载花礼APP
+                            </p>
+                            <i class="icon_arrow_right_white"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/Chat/FeedBack" class="mpbtn_recharge" target="_blank"><i class="ico_surveys"></i></a>
+                        <div class="mp_tooltip"><a href="/Chat/FeedBack" class="mpbtn_recharge"
+                                style="color: #595656;font-size: 14px;width: 100%;background: #fff;border-radius: 3px 0 0 3px;"
+                                target="_blank">功能反馈</a><i class="icon_arrow_right_white"></i></div>
+                    </li>
+                    <li style="height:36px;margin-top:0px;">
+                        <a href="#top" class="return_top"><i class="ico_gotop"></i></a>
+                        <div class="mp_tooltip">
+                            <a href="#top" class="return_top"
+                                style="color: #595656;font-size: 14px;width: 100%;background: #fff;border-radius: 3px 0 0 3px;">返回顶部</a>
+                            <i class="icon_arrow_right_white"></i>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div id="quick_links_pop" class="quick_links_pop hide"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/statesandright.js"></script>
+    <script src="../js/layerpc/layer.js"></script>
+    <script type="text/javascript" src="../js/cakecityselect.js"></script>
+    <script>
+        function ToSelectCity() {
+            var selectCity = $("#to_city").val();
+            if (selectCity != "选择城市") {
+                location.href = '/cake/city/?city=' + $("#to_city").val();
+            }
+        }
+        $(function () {
+            //城市选择
+            $("#city_1").citySelect({
+                prov: "选择省份",
+                city: "选择城市",
+                nodata: "none"
+            });
+            //字母选择城市
+            $("#letter_list a").click(function () {
+                $("#letter_list a").removeClass("se_cur");
+                $(this).addClass("se_cur");
+                $("#city_box a").removeClass("f_csb");
+                var nameLetter = $(this).attr("name");
+                $("#city_box a").removeClass("f_csb");
+                $("#city_box a").removeClass("f_cs");
+                $("#city_box a").addClass("f_cs");
+                $("#city_box a[name='" + nameLetter + "']").removeClass("f_cs");
+                $("#city_box a[name='" + nameLetter + "']").addClass("f_csb");
+            });
+
+        });
+    </script>
+    <script>
+        //关注js
+        $('#loginModal').modal({ backdrop: 'static', keyboard: false, show: false });
+        $('#loginModal').on('shown.bs.modal', function () {
+            var $this = $(this);
+            var $modal_dialog = $this.find('.modal-dialog');
+            $this.css('display', 'block');
+            $modal_dialog.css({ 'margin-top': Math.max(0, ($(window).height() - $modal_dialog.height()) / 2) });
+        });
+        $('#loginModal').on('hidden.bs.modal', function () {
+            $("#attPage").attr("src", "");
+        });
+        //关注商品
+        function DoGuanZhu(pp) {
+            $("#attNotice").html("收藏商品");
+            $('#loginModal').modal('show');
+            $("#attPage").attr('src', '/shopping/winguanzhu?pp=' + pp)
+        }
+        //关注end
+    </script>
+    <script type="text/javascript">
+        var userId = 0;
+        function reqUrlParam(paras) {
+            var url = location.href;
+            var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+            var paraObj = {}
+            for (i = 0; j = paraString[i]; i++) {
+                paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+            }
+            var returnValue = paraObj[paras.toLowerCase()];
+            if (typeof (returnValue) == "undefined") {
+                return "";
+            } else {
+                return returnValue;
+            }
+        }
+        function getProductPrice() {
+            var dataPps = "";
+            $("span[data-pp]").each(function (index, data) {
+                dataPps = dataPps + $(this).attr("data-pp") + ",";
+            })
+            if (dataPps.length > 0) {
+                $.ajax({
+                    type: "POST", url: "/home/GetProductListPrice", data: { itemcodes: dataPps }, timeout: 60000, dataType: 'json',
+                    success: function (res) {
+                        if (res.DataStatus == 200 && res.Status == '0') {
+                            if (res.Datas.ProductPrices.length == 0) {
+                                return false;
+                            }
+                            for (var i = 0, len = res.Datas.ProductPrices.length; i < len; i++) {
+                                var temp = res.Datas.ProductPrices[i];
+                                $("span[data-pp='" + temp.ItemCode + "']").text(temp.Price);
+                            }
+                        }
+                        else { }
+                    }
+                });
+            }
+        }
+        function setCurUrlClass() {
+            // css : class = "color_tj"
+            var pathname1 = window.location.pathname;
+            $("a[href='" + pathname1 + "'").addClass("color_tj");
+        }
+        getProductPrice();
+        function addHuaPid() {
+            try {
+                var path = encodeURIComponent(window.location.pathname);
+                $("a[data-link]").each(function (index, data) {
+                    if ($(this).attr("href").indexOf("huaPid=") == -1) {
+                        var href = $(this).attr("href") + "?huaPid=" + path + "-" + $(this).attr("data-link");
+                        $(this).attr("href", href);
+                    }
+                })
+            }
+            catch (e) {
+                console.log(e);
+            }
+        }
+        addHuaPid();
+        $(function () {
+            $.get("/Home/GetLoginUserId", null, function (data) {
+                userId = data;
+            }, "json");
+            $("#header-chat,#kefu,#kefu1").click(function (e) {
+                e.preventDefault();
+                $("#MEIQIA-BTN").click();
+                //$(".jDKtMA").click();
+            });
+            if ($("#pjCount").length > 0) {
+                $.get("/productpj/GetPJCount", function (data) {
+                    $("#pjCount").text(data);
+                });
+            }
+        });
+        function openChatWindow(e) {
+            //美洽代码
+            $("#MEIQIA-BTN").click();
+            //$(".jDKtMA").click();
+        }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KS4PTHC');
+    </script>
+    <!-- End Google Tag Manager -->
+    <script type='text/javascript'>
+        (function (m, ei, q, i, a, j, s) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            j = ei.createElement(q),
+                s = ei.getElementsByTagName(q)[0];
+            j.async = true;
+            j.charset = 'UTF-8';
+            j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+            s.parentNode.insertBefore(j, s);
+        })(window, document, 'script', '_MEIQIA');
+        _MEIQIA('entId', 111117);//1212
+        $.post("/Home/MeiQiaVisitLog", null, function (data) {
+            _MEIQIA('clientId', data);
+        });
+    </script>
+    <script src="../js/cake.js"></script>
+</body>
+
+</html>

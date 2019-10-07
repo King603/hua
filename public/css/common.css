@@ -7013,7 +7013,7 @@ button.close {
   margin-right: 15px;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
-  background: url(//img02.hua.com/pc/assets/img/avatar_default_50.png) center center no-repeat;
+  background: url(../img/avatar_default_50.png) center center no-repeat;
 }
 
 .site-nav ul .dropdown-myhua .user p {
@@ -7200,8 +7200,7 @@ header .logo {
   width: 500px;
   height: 64px;
   margin-top: 28px;
-  background: url(//img02.hua.com/pc/assets/img/pc_hualogo.png) left center no-repeat;
-  /*background: url(//img02.hua.com/pc/assets/img/logo.png) 0 0 no-repeat;*/
+  background: url(../img/hualogo.png) left center no-repeat;
 }
 
 header .logo:before, header .logo:after {
@@ -7526,6 +7525,11 @@ header .service a {
   color: #f60;
   padding: 12px 0 0 0;
 }
+
+.gifts_toys_plant a+a::before{
+  content: ' / ';
+}
+  
 
 .gifts_toys_plant a:hover, .gifts_toys_plant a:visited {
   text-decoration: none;
@@ -9051,8 +9055,8 @@ a:hover .ico-member1, a:focus .ico-member1, .active a .ico-member1, .active a:ho
 }
 
 .ico-server-o1, .ico-server-o2, .ico-server-o3, .ico-server-o4, .ico-server-o5, .ico-server-w1, .ico-server-w2, .ico-server-w3, .ico-server-w4, .ico-server-w5, .ico-server-w6, .ico-server-w7, .ico-server-w8 {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 
 .ico-server-o1 {
@@ -9133,11 +9137,11 @@ a:hover .ico-member1, a:focus .ico-member1, .active a .ico-member1, .active a:ho
 }
 
 .ico-heart-d {
-  background-image: url(//img02.hua.com/pc/assets/img/ico_heart_d.png);
+  background-image: url(../img/ico_heart_d.png);
 }
 
 .ico-cart-d {
-  background-image: url(//img02.hua.com/pc/assets/img/ico_cart_d.png);
+  background-image: url(../img/ico_cart_d.png);
 }
 
 .ico-member {
@@ -9223,7 +9227,7 @@ a:hover .ico-heart-d, a:focus .ico-heart-d, a:hover .ico-cart-d, a:focus .ico-ca
 .ico-server-go1, .ico-server-go2, .ico-server-go3, .ico-server-go4, .ico-server-go5, .ico-server-go6 {
   width: 60px;
   height: 60px;
-  background-image: url(//img02.hua.com/pc/assets/img/server_z.png);
+  background-image: url(../img/server_z.png);
 }
 
 .ico-server-go1 {
@@ -9314,7 +9318,7 @@ a:hover .ico-server-go1, a:focus .ico-server-go1, li.active a .ico-server-go1, l
   width: 170px;
   height: 40px;
   display: block;
-  background-image: url(//img02.hua.com/pc/assets/img/pay_platform.png);
+  background-image: url(../img/pay_platform.png);
 }
 
 .pay-platform.h50 {
@@ -9855,19 +9859,19 @@ a:hover .ico-member1, a:focus .ico-member1, .active a .ico-member1, .active a:ho
 }
 
 .ico-clock, .flowersong-list .owl-next, .flowersong-list .owl-prev, .ico-android, .ico-apple, .ico-weixin-app, .ico-server-w8, .ico-server-w7, .ico-server-w6, .ico-server-w5, .ico-server-w4, .ico-server-w3, .ico-server-w2, .ico-server-w1, .ico-server-o5, .ico-server-o4, .ico-server-o3, .ico-server-o2, .ico-server-o1, .ico-brand, .ico-flower, .ico-ysh, .ico-Plant, .ico-heart, .ico-city, .ico-num, .ico-color, .ico-price, .ico-sort, .ico-calendar, .ico-pop, .ico-texture, .ico-effect, .ico-sort-gift, header .logo h2, .owl-next, .ico-wxrwm, .ico-xjt, .ico-cart-white {
-  background-image: url(//img02.hua.com/pc/assets/img/common_z.png)
+  background-image: url(../img/common_z.png)
 }
 
 .owl-prev, .ico-m-comment, .ico-m-receive, .ico-plus, .ico-m-pay, .ico-phone, .ico-headset, .ico-search, .ico-weixin, .ico-mobile, .ico-member5, .ico-member4, .ico-member3, .ico-weixin-pay, .ico-member2, .ico-member1, .ico-help6, .ico-help5, .ico-help7, .ico-dropdown-arrow, .ico-help8, .ico-help9, .ico-cart, .ico-lock, .ico-star, .ico-user, .ico-help4, .ico-help3, .ico-help2, .ico-help1, .ico-about8, .ico-about7, .ico-about6, .ico-about5, .ico-about4, .ico-about3, .ico-about2, .ico-about1, a:hover .ico-member1, a:focus .ico-member1, .active a .ico-member1, .active a:hover .ico-member1 {
-  background-image: url(//img02.hua.com/pc/assets/img/common_z.png)
+  background-image: url(../img/common_z.png)
 }
 
 .active a:focus .ico-member1, .ico-about2, .ico-about1, .ico-cart-white, .ico-cart, .ico-member6, .ico-star, .ico-about3, .ico-back, .ico-check, .ico-member, .ico-calendar, .ico-dropdown-arrow, .ico-pop, .ico-pic, .ico-cart-m, .ico-heart, .ico-lock, .ico-user, .ico-rating, .ico-notice, .ico-plus, #fullCarousel.carousel .carousel-indicators li, #fullCarousel.carousel .carousel-indicators li.active, #flowerCarousel.carousel .carousel-indicators li, #flowerCarousel.carousel .carousel-indicators li.active, .flowersong #fullCarousel.carousel .carousel-indicators li, .flowersong #fullCarousel.carousel .carousel-indicators li.active, .ico-d-arrow-top, .ico-d-arrow-bottom, .ico-empty, .ico-pthy {
-  background-image: url(//img02.hua.com/pc/assets/img/common_z.png)
+  background-image: url(../img/common_z.png)
 }
 
 .ico-add, .ico-minus {
-  background-image: url(//img02.hua.com/pc/assets/img/common_z.png)
+  background-image: url(../img/common_z.png)
 }
 
 /*΢�Ź���+app������ʽ*/

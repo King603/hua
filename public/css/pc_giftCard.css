@@ -1,0 +1,248 @@
+.top-banner {
+  height: 400px;
+  position: relative;
+}
+.top-banner h1,
+.top-banner p {
+  position: absolute;
+  left: 18.75%;
+}
+.top-banner h1 {
+  top: 136px;
+  font-size: 44px;
+  font-weight: bold;
+}
+.top-banner p {
+  top: 222px;
+  font-size: 22px;
+  font-weight: 300;
+}
+.top-banner .swiper-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.card {
+  background-color: #FCFCFC;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+.card_title {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+}
+.card_list {
+  width: 1200px;
+  margin: auto;
+  margin-top: 40px;
+  overflow: hidden;
+  font-size: 0;
+}
+.card_item {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 60px;
+  width: 330px;
+  margin-right: 105px;
+  box-shadow: 0px 8px 16px 0px rgba(247, 249, 250, 0.7);
+  border-radius: 8px;
+}
+.card_item:nth-child(3n) {
+  margin-right: 0;
+}
+.card_item_pic {
+  position: relative;
+}
+.card_item_pic img {
+  width: 100%;
+}
+.card_item_pic .card_value {
+  position: absolute;
+  right: 34px;
+  bottom: 19px;
+  color: #EDA3B0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.card_item_pic .card_value_blue {
+  color: #9CB4E2;
+}
+.card_item .left_shadow {
+  padding-left: 12px;
+  background-color: #F7F8FA;
+}
+.card_item_info {
+  padding: 20px;
+  background: #ffffff;
+}
+.card_item_info_desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.card_item_info_ft {
+  margin-top: 22px;
+}
+.card_item_info_price {
+  font-size: 24px;
+  color: #FF734C;
+  font-weight: 500;
+}
+.card_item_info_btn {
+  float: right;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px 12px;
+  background: #ff734c;
+  border-radius: 4px;
+  color: #fff;
+}
+.card_item_info_num {
+  float: right;
+  margin-top: 5px;
+  margin-right: 20px;
+  width: 108px;
+  height: 28px;
+  line-height: 28px;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #e9ecf0;
+}
+.card_item_info_num a:hover,
+.card_item_info_num a:visited,
+.card_item_info_num a:link,
+.card_item_info_num a:active {
+  color: inherit;
+  text-decoration: none;
+}
+.card_item_info_num .num_ipt {
+  font-size: 20px;
+  color: #B4BABF;
+  width: 50px;
+  height: 100%;
+  outline: none;
+  border-top: none;
+  border-bottom: none;
+  border-left: #E9ECF0 solid 1px;
+  border-right: #E9ECF0 solid 1px;
+  text-align: center;
+}
+.card_item_info_num .operation {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+}
+.card_item_info_num .iconfont {
+  font-size: 16px;
+  color: #B4BABF;
+}
+.feature {
+  background-color: #FCFCFC;
+  padding: 100px 0 78px;
+  text-align: center;
+}
+.feature_title {
+  font-weight: 400;
+  font-size: 36px;
+}
+.feature_list {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+}
+.feature_item {
+  margin-right: 29px;
+  width: 278px;
+}
+.feature_item_pic img {
+  width: 100%;
+}
+.feature_item_content {
+  padding: 20px 0;
+  background-color: #fff;
+}
+.feature_item_content_header {
+  font-size: 24px;
+  font-weight: 400;
+}
+.feature_item_content_body {
+  margin-top: 12px;
+  font-weight: 300;
+  font-size: 16px;
+  min-height: 48px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.card_show {
+  background-color: #F7F8FA;
+  padding: 100px 0;
+  text-align: center;
+}
+.card_show .card_title {
+  font-weight: 400;
+  font-size: 36px;
+}
+.card_show .card_view {
+  margin-top: 40px;
+  display: inline-block;
+}
+.card_show .card_view img {
+  width: 478px;
+}
+.card_show .card_view .card_desc {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.contact {
+  position: fixed;
+  width: 220px;
+  height: 410px;
+  top: 50%;
+  right: 34px;
+  margin-top: -205px;
+  background: #ff734c;
+  border-radius: 16px;
+  padding: 28px 22px 33px;
+  color: #fff;
+  font-size: 14px;
+  z-index: 999;
+}
+.contact .title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+}
+.contact .separate {
+  margin-top: 12px;
+  width: 180px;
+  height: 2px;
+  background: #ffa802;
+  margin-bottom: 22px;
+}
+.contact .contact_methods {
+  margin-bottom: 20px;
+}
+.contact .contact_methods .iconfont {
+  font-size: 16px;
+  color: #fff;
+  margin-right: 8px;
+}
+.contact .qr_code {
+  text-align: center;
+}
+.contact .qr_code img {
+  width: 124px;
+}
+.contact .code_tip {
+  margin-top: 12px;
+  text-align: center;
+}

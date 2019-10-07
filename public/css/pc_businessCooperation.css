@@ -1,0 +1,106 @@
+.top-banner {
+  height: 400px;
+  position: relative;
+}
+.top-banner h1,
+.top-banner p {
+  position: absolute;
+  left: 18.75%;
+}
+.top-banner h1 {
+  top: 136px;
+  font-size: 44px;
+  font-weight: bold;
+}
+.top-banner p {
+  top: 222px;
+  font-size: 22px;
+  font-weight: 300;
+}
+.top-banner .swiper-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.cooperation {
+  background-color: #F7F9FA;
+  padding: 100px 0 165px;
+  text-align: center;
+}
+.cooperation_title {
+  font-weight: 400;
+  font-size: 36px;
+}
+.cooperation_list {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+}
+.cooperation_item {
+  margin-right: 29px;
+  width: 278px;
+}
+.cooperation_item_pic img {
+  width: 100%;
+}
+.cooperation_item_content {
+  padding: 20px 0;
+  background-color: #fff;
+}
+.cooperation_item_content_header {
+  font-size: 24px;
+  font-weight: 400;
+}
+.cooperation_item_content_body {
+  margin-top: 12px;
+  font-weight: 300;
+  font-size: 16px;
+}
+.contact {
+  position: fixed;
+  width: 220px;
+  height: 410px;
+  top: 50%;
+  right: 34px;
+  margin-top: -205px;
+  background: #ff734c;
+  border-radius: 16px;
+  padding: 28px 22px 33px;
+  color: #fff;
+  font-size: 14px;
+  z-index: 999;
+}
+.contact .title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+}
+.contact .separate {
+  margin-top: 12px;
+  width: 180px;
+  height: 2px;
+  background: #ffa802;
+  margin-bottom: 22px;
+}
+.contact .contact_methods {
+  margin-bottom: 20px;
+}
+.contact .contact_methods .iconfont {
+  font-size: 16px;
+  color: #fff;
+  margin-right: 8px;
+}
+.contact .qr_code {
+  text-align: center;
+}
+.contact .qr_code img {
+  width: 124px;
+}
+.contact .code_tip {
+  margin-top: 12px;
+  text-align: center;
+}

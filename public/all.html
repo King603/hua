@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>鲜花导购-中国鲜花礼品网</title>
+    <script type="text/javascript" src="/js/CheckAgent.js"></script>
+    <link rel="icon" href="img/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/public_2019.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link type="text/css" rel="stylesheet" href="css/pagination.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body class="home">
+    <!-- 顶部导航 -->
+    <div class="site-nav">
+        <div class="container">
+            <ul class="site-nav-l">
+                <li class="menu">
+                    <a href="/" onClick="addfavorite();return false;"><span
+                            class="ico ico-star"></span>收藏鲜花网(hua.com)</a>
+                </li>
+                <li class="menu dropdown">
+                    <a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span
+                            class="ico ico-weixin"></span>关注微信</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="img/common/wechat_qrcode.jpg" height="124" width="124">
+                        <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
+                    </div>
+                </li>
+                <li class="menu dropdown">
+                    <a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span
+                            class="ico ico-mobile"></span>花礼网app</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="img/common/app_qrcode.jpg" height="124" width="124">
+                        <p>新人专享100元APP礼包</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="site-nav-r">
+                <!--登陆状态信息显示start-->
+                <li class="menu login" id="LoginInfo">
+                    <a href="/Passport/Login/" rel="nofollow" id="btn-login">你好，请登录</a><a href="/Passport/Register/"
+                        rel="nofollow" id="btn-reg">注册</a>
+                </li>
+                <!--登陆状态信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu">
+                    <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <!--我的花礼信息显示start-->
+                <li class="menu dropdown">
+                    <a href="/member/" rel="nofollow" data-hover="dropdown" data-delay="0" target="_blank">我的花礼</a>
+                </li>
+                <!--我的花礼信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu dropdown">
+                    <a href="/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span
+                            class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-service">
+                        <a href="/member/payment/balancefill" target="_blank">在线付款</a>
+                        <a href="/help/" target="_blank">帮助中心</a>
+                        <a href="/help/afterservice.html" target="_blank">售后服务</a>
+                        <a href="/help/sendRange.html" target="_blank">配送范围</a>
+                        <a href="/chat/" target="_blank">留言反馈</a>
+                    </div>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <!--购物车信息显示start-->
+                <li class="menu dropdown">
+                    <a href="/shopping/showcart/" data-hover="dropdown" data-delay="0" rel="nofollow"
+                        target="_blank"><span class="ico ico-cart"></span>购物车<span class="text-primary"
+                            id="gwcCount"></span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+                </li>
+                <!--购物车信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu slogan">
+                    全部商品导购
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航 End -->
+    <!-- 头部 -->
+    <header>
+        <div class="logo">
+            <h1><a href="/public/" class="logo-bd">会员中心</a></h1>
+        </div>
+        <div class="search">
+            <form name="i_search" method="get" action="/search/">
+                <div class="input-group">
+                    <input name="keyword" type="text" class="form-control" placeholder="商品关键词">
+                    <span class="input-group-btn">
+                        <button id="test" class="btn btn-primary" type="button" onClick="this.form.submit()">搜索</button>
+                    </span>
+                </div>
+            </form>
+            <span class="help-block">
+                <a href="/songlaoshixianhua/">送老师鲜花</a><a href="/florist/">自选鲜花</a><a href="/shengriliwu/">生日鲜花</a><a
+                    href="/worldflora/">港澳台送花</a>
+            </span>
+        </div>
+        <div class="service serviceDefault">
+            <span class="ico ico-phone"></span>400-889-8188
+            <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a>
+        </div>
+        <div class="service serviceVip">
+            <div class="vipwechatchat">
+                <img style="margin-right: 6px;" src="img/common/wechat.png" width="30" /><span>1对1钻石客户经理</span>
+                <div class="vipwechatchat-box">
+                    <h3>微信1对1客服经理</h3>
+                    <img class="img-responsive" style="width: 120px;display: inline-block;"
+                        src="img/common/VIPChatQR.jpg" />
+                    <p>扫一扫添加客户经理微信</p>
+                    <p>微信号：VIP-Service-Hua</p>
+                </div>
+            </div>
+            <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a><br />
+            <span class="ico ico-phone"></span><span>钻石专线：400-830-3920</span>
+        </div>
+    </header>
+    <!-- 头部 End -->
+    <!-- 导航 -->
+    <nav class="common">
+        <div class="container">
+            <div class="categorys dropdown">
+                <h3 class="categorys-title" data-hover="dropdown" data-delay="0">
+                    <a href="all.html"><span class="pull-right glyphicon glyphicon-menu-down"></span>全部商品导购</a>
+                </h3>
+                <div class="dropdown-menu dropdown-cate" id="all1">
+                    <h4><a href="/flower/">鲜花</a></h4>
+                    <ul class="cate-list list-inline" id="xhyt"></ul>
+                    <h4><a href="/yongshenghua/">永生花</a></h4>
+                    <ul class="cate-list list-inline" id="ysh"></ul>
+                    <h4><a href="/gifts/">礼品</a></h4>
+                    <ul class="cate-list list-inline" id="lp"></ul>
+                    <h4><a href="/Plant/">绿植</a></h4>
+                    <ul class="cate-list list-inline" id="plant1"></ul>
+                </div>
+            </div>
+            <ul class="nav" id="nav"></ul>
+        </div>
+    </nav>
+    <!-- 导航 End -->
+    <!-- 内容 -->
+    <div class="container">
+        <div class="breadcrumbs"><a href="/">首页</a> &gt; 全部商品导购</div>
+        <div class="wrapper help" style="border:1px solid #e0e0e0; padding:18px;">
+            <div class="fl_list">
+                <ul id="btn"></ul>
+            </div>
+            <div style="clear:both"></div>
+            <div class="xfl_list"><img src="pimg/sortimg_01.jpg" alt="鲜花"></div>
+            <h2>用途</h2>
+            <h3 id="yt1"></h3>
+            <h2>花材</h2>
+            <h3 id="hc"></h3>
+            <h2>颜色</h2>
+            <h3 id="ys"></h3>
+            <h2>类别</h2>
+            <h3 id="lb1"></h3>
+            <h2>商务鲜花</h2>
+            <h3 id="sw"></h3>
+            <h2>价格</h2>
+            <h3 id="jg"></h3>
+            <h2>枝数</h2>
+            <h3 id="zs"></h3>
+            <h2>节日专题</h2>
+            <h3 id="jr"></h3>
+            <div class="xfl_list"><img src="pimg/sortimg_02.jpg" alt="永生花"></div>
+            <h2>永生花分类</h2>
+            <h3 id="yongshenghua"></h3>
+            <div class="xfl_list"><img src="pimg/sortimg_03.jpg" alt="蛋糕"></div>
+            <h2>城市</h2>
+            <h3 id="city"></h3>
+            <h2>品牌</h2>
+            <h3 id="pb"></h3>
+            <h2>分类(仅全国蛋糕)</h2>
+            <h3 id="fl1"></h3>
+            <div class="xfl_list"><img src="pimg/sortimg_07.jpg" alt="巧克力"></div>
+            <h2>巧克力分类</h2>
+            <h3 id="fl2"></h3>
+            <div class="xfl_list"><img src="pimg/sortimg_04.jpg" alt="礼品"></div>
+            <h2>类别</h2>
+            <h3 id="lb2"></h3>
+            <h2>用途</h2>
+            <h3 id="yt2"></h3>
+            <h2>对象</h2>
+            <h3 id="dx"></h3>
+            <h2>品牌公仔</h2>
+            <h3 id="toy"></h3>
+            <h2>价格</h2>
+            <h3 id="price"></h3>
+            <div class="xfl_list"><img src="pimg/sortimg_05.jpg" alt="礼篮"></div>
+            <h2>礼篮分类</h2>
+            <h3 id="ll"></h3>
+            <div class="xfl_list"><img src="pimg/sortimg_06.jpg" alt="绿植花卉"></div>
+            <h2>绿植花卉分类</h2>
+            <h3 id="plant2"></h3>
+        </div>
+    </div>
+    <!-- 内容 End -->
+
+    <!--底部-->
+    <!-- 尾部导航 -->
+    <div class="footer-nav">
+        <a href="/">首页</a><a href="/profile/about.htm" target="_blank">关于我们</a><a href="/profile/media.html"
+            target="_blank">媒体报道</a><a href="/profile/contact.htm" target="_blank">联系方式</a><a href="/qiyetuangou/"
+            target="_blank">企业团购</a><a href="/liansuo/" target="_blank">花店入驻</a><a href="/profile/links.htm"
+            target="_blank">友情链接</a><a href="/member/payment/balancefill" target="_blank">在线补款</a><a class="last-child"
+            href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+    </div>
+    <!-- 尾部导航 End -->
+    <!-- 通用尾部 -->
+    <footer>
+        <div class="auth">
+            <a href="https://ss.knet.cn/verifyseal.dll?sn=e15041744030058395oqbo000000&ct=df&a=1&pa=0.8817607406526804"
+                target="_blank"><img style="height:40px;" src="img/common/cxwz.png"></a>
+            <a href="https://search.szfw.org/cert/l/CX20130306002238002312" target="_blank"><img
+                    src="img/common/cxwz.gif" height="40" width="112"></a>
+            <a href="http://www.anquan.org/authenticate/cert/?site=www.hua.com&at=realname" rel="nofollow"
+                target="_blank"><img src="img/common/smyz.gif" height="40" width="106"></a>
+            <img src="img/common/slogan.png" height="50" width="212" /> <a
+                href="/member/payment/fillbyalipay?order_no=&total_fee=" rel="nofollow" target="_blank"><img
+                    src="img/common/zfb.gif" height="49" width="96"></a>
+            <a href="/profile/news_20111110.htm" target="_blank"><img src="img/common/100.jpg" height="49"
+                    width="150"></a>
+            <a href="/profile/ICP.htm" rel="nofollow" target="_blank"><img src="img/common/bico1.jpg" alt="ICP"
+                    height="46" width="35"></a>
+            <a href="http://szcert.ebs.org.cn/fab6de6a-ff80-4e63-89e4-cd531170c256" rel="nofollow" target="_blank"><img
+                    alt="工商网监" src="img/common/bico4.jpg" height="46" width="35"></a>
+            <a href="http://www.sznet110.gov.cn/netalarm/index.jsp" rel="nofollow" target="_blank"><img
+                    src="img/common/bico3.jpg" alt="网安" height="46" width="35"></a>
+        </div>
+        <p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a
+                href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a
+                href="/profile/ICP.htm" rel="nofollow" target="_blank">粤B2-20050744</a><a
+                href="http://www.miibeian.gov.cn" rel="nofollow" target="_blank">粤ICP备09171662号</a> <span
+                class="ico beian"></span>粤公网安备44030502000373号 Copyright © 2005-2019</p>
+        <p>花礼网 （中国鲜花礼品网） <a href="/">www.hua.com</a><span> 深圳市百易信息技术有限公司</span> 中国领先鲜花网品牌,专业鲜花速递服务！</p>
+    </footer>
+    <!-- 通用尾部 End -->
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/statesandright.js"></script>
+    <script src="js/layerpc/layer.js"></script>
+    <script type="text/javascript">
+        var userId = 0;
+        function reqUrlParam(paras) {
+            var url = location.href;
+            var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+            var paraObj = {}
+            for (i = 0; j = paraString[i]; i++) {
+                paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+            }
+            var returnValue = paraObj[paras.toLowerCase()];
+            if (typeof (returnValue) == "undefined") {
+                return "";
+            } else {
+                return returnValue;
+            }
+        }
+        function getProductPrice() {
+            var dataPps = "";
+            $("span[data-pp]").each(function (index, data) {
+                dataPps = dataPps + $(this).attr("data-pp") + ",";
+            })
+            if (dataPps.length > 0) {
+                $.ajax({
+                    type: "POST", url: "/home/GetProductListPrice", data: { itemcodes: dataPps }, timeout: 60000, dataType: 'json',
+                    success: function (res) {
+                        if (res.DataStatus == 200 && res.Status == '0') {
+                            if (res.Datas.ProductPrices.length == 0) {
+                                return false;
+                            }
+                            for (var i = 0, len = res.Datas.ProductPrices.length; i < len; i++) {
+                                var temp = res.Datas.ProductPrices[i];
+                                $("span[data-pp='" + temp.ItemCode + "']").text(temp.Price);
+                            }
+                        }
+                        else { }
+                    }
+                });
+            }
+        }
+        function setCurUrlClass() {
+            // css : class = "color_tj"
+            var pathname1 = window.location.pathname;
+            $("a[href='" + pathname1 + "'").addClass("color_tj");
+        }
+        getProductPrice();
+
+        function addHuaPid() {
+            try {
+                var path = encodeURIComponent(window.location.pathname);
+                $("a[data-link]").each(function (index, data) {
+                    if ($(this).attr("href").indexOf("huaPid=") == -1) {
+                        var href = $(this).attr("href") + "?huaPid=" + path + "-" + $(this).attr("data-link");
+                        $(this).attr("href", href);
+                    }
+                })
+            }
+            catch (e) {
+                console.log(e);
+            }
+        }
+        addHuaPid();
+        $(function () {
+            $.get("/Home/GetLoginUserId", null, function (data) {
+                userId = data;
+            }, "json");
+            $("#header-chat,#kefu,#kefu1").click(function (e) {
+                e.preventDefault();
+
+                $("#MEIQIA-BTN").click();
+                //$(".jDKtMA").click();
+            });
+            if ($("#pjCount").length > 0) {
+                $.get("/productpj/GetPJCount", function (data) {
+                    $("#pjCount").text(data);
+                });
+            }
+        });
+        function openChatWindow(e) {
+            //美洽代码
+            $("#MEIQIA-BTN").click();
+            //$(".jDKtMA").click();
+        }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KS4PTHC');
+    </script>
+    <!-- End Google Tag Manager -->
+    <script type='text/javascript'>
+        (function (m, ei, q, i, a, j, s) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            j = ei.createElement(q),
+                s = ei.getElementsByTagName(q)[0];
+            j.async = true;
+            j.charset = 'UTF-8';
+            j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+            s.parentNode.insertBefore(j, s);
+        })(window, document, 'script', '_MEIQIA');
+        _MEIQIA('entId', 111117);//1212
+        $.post("/Home/MeiQiaVisitLog", null, function (data) {
+            _MEIQIA('clientId', data);
+        });
+    </script>
+    <script src="js/all.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+
+</html>

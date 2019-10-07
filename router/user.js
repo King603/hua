@@ -1,11 +1,14 @@
 //开启严格模式
 "use strict";
 //引入express模块
-import { Router } from "express";
+// import { Router } from "express";
+const express = require("express");
 //引入连接池数据
-import { query } from "../pool.js";
+// import { query } from "../pool.js";
+const pool = require("../pool.js");
+const query = pool.query();
 //创建路由对象
-var router = Router();
+var router = express.Router();
 //添加路由
 //1.注册路由
 router.post("/V1/reg", (req, res) => {
@@ -79,4 +82,4 @@ router.put("/V1/update", (req, res) => {
     });
 });
 //导出路由器模块
-export default router;
+module.exports = router;

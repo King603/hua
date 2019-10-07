@@ -1,9 +1,10 @@
 //开启严格模式
 "use strict";
 //引入MySQL模块
-import { createPool } from "mysql";
+// import { createPool } from "mysql";
+const mysql=require("mysql");
 //创建连接池
-var pool=createPool({
+var pool=mysql.createPool({
     host:"127.0.0.1",
     post:"3306",
     user:"root",
@@ -14,4 +15,4 @@ var pool=createPool({
 //冻结
 Object.freeze(pool);
 //导出链接池数据
-export default pool;
+module.exports=pool;

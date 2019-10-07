@@ -1,0 +1,27 @@
+h1, .h1, h2, .h2, h3, .h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper h2 {
+    background: #f2f2f2 none repeat scroll 0% 0%;
+    color: #7E7E80;
+    font-size: 14px;
+    height: 29px;
+    line-height: 29px;
+    font-weight: bold;
+    padding-left: 29px;
+    width: 100%;
+}
+
+.container h3 {
+    font-size: 12px;
+    font-weight: lighter;
+    line-height: 28px;
+    color: #7E7E80;
+    padding-left: 29px;
+    margin: 10px 0px 20px;
+}
+h3>a+a::before{
+    content:"  |  "
+}

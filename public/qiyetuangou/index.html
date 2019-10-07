@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>企业鲜花团购_企业团购鲜花礼品_公司鲜花采购服务-花礼网(中国鲜花礼品网)</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit|ie-comp">
+    <script type="text/javascript" src="../js/CheckAgent.js"></script>
+    <link rel="icon" href="../img/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public_2019.css">
+    <link rel="stylesheet" href="../css/logo.css">
+    <link type="text/css" rel="stylesheet" href="../css/mbar.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper-4.3.3.min.css" />
+    <link rel="stylesheet" href="../css/pc_groupBuy.css">
+    <style>
+        .nav {
+            margin: 0;
+        }
+
+        .nav li a {
+            color: #595656;
+        }
+
+        .nav li.active {
+            background-color: #f60;
+        }
+
+        .nav li.active a {
+            color: #fff;
+        }
+
+        .nav li.active a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="home">
+    <!-- 顶部导航 -->
+    <div class="site-nav">
+        <div class="container">
+            <ul class="site-nav-l">
+                <li class="menu">
+                    <a href="/" onClick="addfavorite();return false;"><span
+                            class="ico ico-star"></span>收藏鲜花网(hua.com)</a>
+                </li>
+                <li class="menu dropdown">
+                    <a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span
+                            class="ico ico-weixin"></span>关注微信</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="../img/common/wechat_qrcode.jpg" height="124" width="124">
+                        <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
+                    </div>
+                </li>
+                <li class="menu dropdown">
+                    <a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span
+                            class="ico ico-mobile"></span>花礼网app</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="../img/common/app_qrcode.jpg" height="124" width="124">
+                        <p>新人专享100元APP礼包</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="site-nav-r">
+                <!--登陆状态信息显示start-->
+                <li class="menu login" id="LoginInfo">
+                    <a href="/Passport/Login/" rel="nofollow" id="btn-login">你好，请登录</a><a href="/Passport/Register/"
+                        rel="nofollow" id="btn-reg">注册</a>
+                </li>
+                <!--登陆状态信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu">
+                    <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <!--我的花礼信息显示start-->
+                <li class="menu dropdown">
+                    <a href="/member/" rel="nofollow" data-hover="dropdown" data-delay="0" target="_blank">我的花礼</a>
+                </li>
+                <!--我的花礼信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu dropdown">
+                    <a href="/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span
+                            class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-service">
+                        <a href="/member/payment/balancefill" target="_blank">在线付款</a>
+                        <a href="/help/" target="_blank">帮助中心</a>
+                        <a href="/help/afterservice.htm" target="_blank">售后服务</a>
+                        <a href="/help/sendRange.htm" target="_blank">配送范围</a>
+                        <a href="/chat/" target="_blank">留言反馈</a>
+                    </div>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <!--购物车信息显示start-->
+                <li class="menu dropdown">
+                    <a href="/shopping/showcart/" data-hover="dropdown" data-delay="0" rel="nofollow"
+                        target="_blank"><span class="ico ico-cart"></span>购物车<span class="text-primary"
+                            id="gwcCount"></span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+                </li>
+                <!--购物车信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu slogan">
+                    企业团购
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航 End -->
+    <!-- 头部 -->
+    <header>
+        <div class="logo">
+            <h1><a href="/" class="logo-bd">中国鲜花礼品网(花礼网)</a></h1>
+            <!-- <h2>中国鲜花礼品网 始于2005，简称花礼网</h2> -->
+        </div>
+        <div class="search">
+            <form name="i_search" method="get" action="/search/">
+                <div class="input-group">
+                    <input name="keyword" type="text" class="form-control" placeholder="商品关键词">
+                    <span class="input-group-btn">
+                        <button id="test" class="btn btn-primary" type="button" onClick="this.form.submit()">搜索</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="service serviceDefault">
+            <span class="ico ico-phone"></span>400-889-8188
+            <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a>
+        </div>
+        <div class="service serviceVip">
+            <div class="vipwechatchat">
+                <img style="margin-right: 6px;" src=",,/img/common/wechat.png" width="30" /><span>1对1钻石客户经理</span>
+                <div class="vipwechatchat-box">
+                    <h3>微信1对1客服经理</h3>
+                    <img class="img-responsive" style="width: 120px;display: inline-block;"
+                        src=",,/img/common/VIPChatQR.jpg" />
+                    <p>扫一扫添加客户经理微信</p>
+                    <p>微信号：VIP-Service-Hua</p>
+                </div>
+            </div>
+            <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a><br />
+            <span class="ico ico-phone"></span><span>钻石专线：400-830-3920</span>
+        </div>
+    </header>
+    <!-- 头部 End -->
+    <!-- 导航 -->
+    <nav class="default">
+        <div class="container">
+            <ul class="nav">
+                <li class="active"><a href="/qiyetuangou/">企业团购</a></li>
+                <li><a href="/qiyetuangou/tuangouxianhua.html">团购鲜花</a></li>
+                <li><a href="/qiyetuangou/gift_card.html">礼品卡</a></li>
+                <li><a href="/qiyetuangou/other.html">商务合作</a></li>
+                <li><a href="/">网站首页</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Main Banner -->
+    <section class="banner swiper-container" id="mainSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide banner_container">
+                <a href="pc_groupFlower.html">
+                    <h1>团购鲜花专区</h1>
+                    <p>专业提供企业鲜花定制服务</p>
+                    <div class="join_now">立即进入</div>
+                    <div class="swiper-img" style="background-image:url('../img/qiyetuangou/groupbuy_pc.png');"></div>
+                </a>
+            </div>
+            <div class="swiper-slide banner_container">
+                <a href="pc_giftCard.html">
+                    <h1>礼品卡才最合心意</h1>
+                    <p>送一片礼品卡，送一片时尚新意</p>
+                    <div class="join_now">立即进入</div>
+                    <div class="swiper-img" style="background-image:url('../img/qiyetuangou/lipinka_pc.png');"></div>
+                </a>
+            </div>
+            <div class="swiper-slide banner_container">
+                <a href="pc_businessCooperation.html">
+                    <h1>商务合作专区</h1>
+                    <p>我们期待与各企业进行多方面<br />的合作，互利共赢</p>
+                    <div class="join_now" style="bottom: 80px;">立即进入</div>
+                    <div class="swiper-img" style="background-image:url('../img/qiyetuangou/shangwuhezuo_pc.png');">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="swiper-button-prev" style="left:50px;"></div>
+        <div class="swiper-button-next" style="right: 50px;"></div>
+    </section>
+    <!-- 人气团购商品推荐 -->
+    <div class="product">
+        <h1 class="product-title">人气团购商品推荐</h1>
+        <div class="product-container">
+            <!-- <i class="iconfont iconfont-arrow-left"></i> -->
+            <div class="product-list" id="product_list"></div>
+            <!-- <i class="iconfont iconfont-arrow-right"></i> -->
+        </div>
+    </div>
+    <!-- 助力企业的定制化解决方案 -->
+    <div class="case_container">
+        <div class="case_title">助力企业的定制化解决方案</div>
+        <div class="case_tav">
+            <div class="case_tav_item case_tav_item_active">客户维护</div>
+            <div class="case_tav_item">员工关怀</div>
+            <div class="case_tav_item" style="margin-right: 0;">促销活动</div>
+        </div>
+        <!-- 客户维护 -->
+        <div class="case_body" id='customerCare'>
+            <div class="case_body_header">
+                发展一位新客户的成本是挽留一个老客户的3~10倍，成功的企业深知留住老客户的重要。俗话说：开发十个新客户，不如维护好一个老客户。回头客带来的不止是销量，更是口碑。
+            </div>
+            <div class="case_body_info">
+                <div class="case_body_info_pic">
+                    <img class="illustrating_picture" src="../img/qiyetuangou/pt_fangtai.jpg" alt="">
+                </div>
+                <div class="case_body_info_center">
+                    <div class="case_center_example">
+                        <span>经典案例</span><img class="company_logo" src="../img/qiyetuangou/FangTai.png" alt="">
+                    </div>
+                    <div class="case_center_detail">
+                        <div class="case_center_requirement">
+                            <strong>需求：</strong><span class="requirement">在指定日期送给合作的高校招生办老师。</span>
+                        </div>
+                        <div class="case_center_sulotion">
+                            <strong>实施方案：</strong><span
+                                class="solution">1、方太集团自选好鲜花款式并与花礼网确认2、方太集团发送名单给花礼网，核实地址等信息，双方确定金额3、花礼网开出发票，方太集团收到后，将款项汇到指定账户4、花礼网按照需求将鲜花在指定日期送货上门。</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case_body_info_scroll">
+                    <div class="case_body_scroll_item case_body_scroll_item_active">方太集团</div>
+                    <div class="case_body_scroll_item">民生银行</div>
+                    <div class="case_body_scroll_item">陆家嘴信托</div>
+                    <div class="case_body_scroll_item">贝生乐商贸</div>
+                    <div class="case_body_scroll_item">华泰人寿</div>
+                    <div class="case_body_scroll_item">正泰电器</div>
+                </div>
+            </div>
+        </div>
+        <!-- 员工关怀 -->
+        <div class="case_body" id='staffCare' style="display: none">
+            <div class="case_body_header">
+                一个企业能达到的高度，主要取决于员工是什么样的人。经营之神松下幸之助说过，企业最大的资产是人。爱你的员工吧，他会百倍地爱你的企业，并创造令人难以置信的价值。
+            </div>
+            <div class="case_body_info">
+                <div class="case_body_info_pic">
+                    <img class="illustrating_picture" src="../img/qiyetuangou/pt_nuohe.jpg" alt="">
+                </div>
+                <div class="case_body_info_center">
+                    <div class="case_center_example">
+                        <span>经典案例</span><img class="company_logo" src="../img/qiyetuangou/NuoHe.png" alt="">
+                    </div>
+                    <div class="case_center_detail">
+                        <div class="case_center_requirement">
+                            <strong>需求：</strong><span class="requirement">在员工生日时送一束鲜花。</span>
+                        </div>
+                        <div class="case_center_sulotion">
+                            <strong>实施方案：</strong>
+                            <span
+                                class="solution">1、花礼网每月推荐不同的鲜花款式，双方沟通确认2、诺合诺德（中国）制药每月月底给次月生日名单，花礼网核实地址等信息，双方确定金额。3、花礼网开出发票，诺合诺德（中国）制药收到付款4、花礼网按照需求将鲜花在指定日期送达。</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case_body_info_scroll">
+                    <div class="case_body_scroll_item case_body_scroll_item_active">诺合诺德</div>
+                    <div class="case_body_scroll_item">上汽通用</div>
+                    <div class="case_body_scroll_item">华泰证券</div>
+                </div>
+            </div>
+        </div>
+        <!-- 促销活动 -->
+        <div class="case_body" id="salesPromotion" style="display: none">
+            <div class="case_body_header">
+                顾客要的不是便宜，而是感觉上占了便宜。优秀的促销能够最大程度地释放顾客的购买欲望，并且带来愉悦的消费体验。站在用户立场多为对方着想，效果定不让你失望。
+            </div>
+            <div class="case_body_info">
+                <div class="case_body_info_pic">
+                    <img class="illustrating_picture" src="../img/qiyetuangou/pt_beiyinmei.jpg" alt="">
+                </div>
+                <div class="case_body_info_center">
+                    <div class="case_center_example">
+                        <span>经典案例</span><img class="company_logo" src="../img/qiyetuangou/BeiYinMei.png" alt="">
+                    </div>
+                    <div class="case_center_detail">
+                        <div class="case_center_requirement">
+                            <strong>需求：</strong><span
+                                class="requirement">在母亲节当天，回馈分布在全国长期使用贝因美奶粉的优质客户，为每位优质客户赠送鲜花及贝因美自制精美贺卡。</span>
+                        </div>
+                        <div class="case_center_sulotion">
+                            <strong>实施方案：</strong><span
+                                class="solution">1，根据客户群体特征一致性，精选相对应的鲜花礼品方案。2，根据贝因美提供的客户配送资料，提前将贝因美特制精美贺卡配送至全国对应城市加盟店。3，母亲节当天，贝因美贺卡与精选鲜花同时配送至客户所在地。</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case_body_info_scroll">
+                    <div class="case_body_scroll_item case_body_scroll_item_active">贝因美</div>
+                    <div class="case_body_scroll_item">中石化</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 我们服务的企业 -->
+    <div class="partners_container">
+        <div class="partners_title">我们服务的企业</div>
+        <img class="partners_img" src="../img/qiyetuangou/logo_all_pc.png" alt="">
+    </div>
+    <!-- 我们服务的优势 -->
+    <div class="advantage">
+        <div class="advantage_title">我们服务的优势</div>
+        <div class="advantage_list" id="advantage_list"></div>
+    </div>
+    <!-- 联系方式 -->
+    <div class="contact">
+        <div class="title">联系方式</div>
+        <div class="separate"></div>
+        <div class="contact_methods">
+            <i class="iconfont iconfont-lianxiren"></i><span class="linkman">联系人：胡小姐</span>
+        </div>
+        <div class="contact_methods">
+            <i class="iconfont iconfont-dianhua"></i><span class="linkman">电话：0755-26668820</span>
+        </div>
+        <div class="contact_methods">
+            <i class="iconfont iconfont-qq1"></i><span class="linkman">QQ：2355363606</span>
+        </div>
+        <div class="qr_code"> <img src="../img/qiyetuangou/qr_code.png" alt=""></div>
+        <div class="code_tip">微信扫一扫·加我立刻咨询</div>
+    </div>
+
+    <!--底部-->
+    <!-- 尾部导航 -->
+    <div class="footer-nav">
+        <a href="/">首页</a><a href="/profile/about.htm" target="_blank">关于我们</a><a href="/profile/media.html"
+            target="_blank">媒体报道</a><a href="/profile/contact.htm" target="_blank">联系方式</a><a href="/qiyetuangou/"
+            target="_blank">企业团购</a><a href="/liansuo/" target="_blank">花店入驻</a><a href="/profile/links.htm"
+            target="_blank">友情链接</a><a href="/member/payment/balancefill" target="_blank">在线补款</a><a class="last-child"
+            href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+    </div>
+    <!-- 尾部导航 End -->
+    <!-- 通用尾部 -->
+    <footer>
+        <div class="auth">
+            <!-- <span style="margin-right:8px;">
+                <script src="http://kxlogo.knet.cn/seallogo.dll?sn=e15041744030058395oqbo000000&amp;size=4"></script>
+            </span> -->
+            <a href="https://ss.knet.cn/verifyseal.dll?sn=e15041744030058395oqbo000000&ct=df&a=1&pa=0.8817607406526804"
+                target="_blank"><img style="height:40px;" src="../img/common/cxwz.png"></a>
+            <a href="https://search.szfw.org/cert/l/CX20130306002238002312" target="_blank"><img
+                    src="../img/common/cxwz.gif" height="40" width="112"></a>
+            <a href="http://www.anquan.org/authenticate/cert/?site=www.hua.com&at=realname" rel="nofollow"
+                target="_blank"><img src="../img/common/smyz.gif" height="40" width="106"></a>
+            <img src="../img/common/slogan.png" height="50" width="212" /> <a
+                href="/member/payment/fillbyalipay?order_no=&total_fee=" rel="nofollow" target="_blank"><img
+                    src="../img/common/zfb.gif" height="49" width="96"></a>
+            <a href="/profile/news_20111110.htm" target="_blank"><img src="../img/common/100.jpg"
+                    height="49" width="150"></a>
+            <a href="/profile/ICP.htm" rel="nofollow" target="_blank"><img src="../img/common/bico1.jpg"
+                    alt="ICP" height="46" width="35"></a>
+            <!--             <a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403301920636" rel="nofollow" target="_blank"><img alt="网警" src="//img02.hua.com/pc/assets/img/bico2.jpg" height="46" width="35"></a> -->
+            <a href="http://szcert.ebs.org.cn/fab6de6a-ff80-4e63-89e4-cd531170c256" rel="nofollow" target="_blank"><img
+                    alt="工商网监" src="../img/common/bico4.jpg" height="46" width="35"></a>
+            <a href="http://www.sznet110.gov.cn/netalarm/index.jsp" rel="nofollow" target="_blank"><img
+                    src="../img/common/bico3.jpg" alt="网安" height="46" width="35"></a>
+        </div>
+        <p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a
+                href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a
+                href="/profile/ICP.htm" rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a
+                href="http://www.miibeian.gov.cn" rel="nofollow" target="_blank">粤ICP备09171662号</a> <span
+                class="ico beian"></span>粤公网安备44030502000373号 Copyright © 2005-2019</p>
+        <p>企业团购 <a href="/">www.hua.com</a><span> 深圳市百易信息技术有限公司</span> </p>
+    </footer>
+    <!-- 通用尾部 End -->
+    <div class="mui-mbar-tabs">
+        <div class="quick_link_mian">
+            <div class="quick_links_panel">
+                <div id="quick_links" class="quick_links">
+                    <li>
+                        <a href="#none" class="my_qlinks"><i class="ico_user"></i></a>
+                        <!-- ***** 未登录 ***** -->
+                        <div class="ibar_login_box">
+                            <div class="avatar_box" id="loginStats"></div>
+                            <div class="login_btnbox">
+                                <a href="/Member/Order/"><i class="ico_order"></i>我的订单</a>
+                            </div>
+                            <i class="icon_arrow_right_white"></i>
+                        </div>
+                    </li>
+                    <li id="shopCart">
+                        <a href="javascript:void(0)" class="message_list"><i class="ico_cart"></i>
+                            <div class="span">购物车</div><span class="cart_num" id="cart_num">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="history_list"><i class="ico_collect"></i></a>
+                        <div class="mp_tooltip">
+                            <a href="javascript:void(0)" class="history_list"
+                                style="color: #595656;font-size: 14px;width: 100%;background: #fff;border-radius: 3px 0 0 3px;">我的收藏</a>
+                            <i class="icon_arrow_right_white"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="mpbtn_histroy"><i class="ico_histroy"></i></a>
+                        <div class="mp_tooltip">
+                            <a href="javascript:void(0)" class="mpbtn_histroy"
+                                style="color: #595656;font-size: 14px;width: 100%;background: #fff;border-radius: 3px 0 0 3px;">最近查看</a>
+                            <i class="icon_arrow_right_white"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="leave_message"><i class="ico_phone"></i></a>
+                        <div class="mp_tooltip"><span id="rightbartel">400-889-8188</span><i
+                                class="icon_arrow_right_white"></i></div>
+                    </li>
+                    <li>
+                        <a id="kefu" href="javascript:;" target="_blank" class="mpbtn_recharge"><i
+                                class="ico_headset"></i></a>
+                        <div class="mp_tooltip">
+                            <a id="kefu1" href="javascript:;" target="_blank" class="mpbtn_recharge1"
+                                style="color: #595656;font-size: 14px;width: 100%;background: #fff;border-radius: 3px 0 0 3px;"
+                                title="在线客服">
+                                在线客服
+                            </a>
+                            <i class="icon_arrow_right_white"></i>
+                        </div>
+                    </li>
+                </div>
+                <div class="quick_toggle">
+                    <li>
+                        <a href="javascript:void(0)"><i class="ico_qrcode"></i></a>
+                        <div class="mp_qrcode">
+                            <p>
+                                <img src="../img/common/QR_wx.jpg" width="110" height="110">
+                                关注微信公众号
+                            </p>
+                            <p>
+                                <img src="../img/common/QR_app.jpg" width="110" height="110">
+                                下载花礼APP
+                            </p>
+                            <i class="icon_arrow_right_white"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/Chat/FeedBack" class="mpbtn_recharge" target="_blank"><i class="ico_surveys"></i></a>
+                        <div class="mp_tooltip"><a href="/Chat/FeedBack" class="mpbtn_recharge"
+                                style="color: #595656;font-size: 14px;width: 100%;background: #fff;border-radius: 3px 0 0 3px;"
+                                target="_blank">功能反馈</a><i class="icon_arrow_right_white"></i></div>
+                    </li>
+                    <li style="height:36px;margin-top:0px;">
+                        <a href="#top" class="return_top"><i class="ico_gotop"></i></a>
+                        <div class="mp_tooltip">
+                            <a href="#top" class="return_top"
+                                style="color: #595656;font-size: 14px;width: 100%;background: #fff;border-radius: 3px 0 0 3px;">返回顶部</a>
+                            <i class="icon_arrow_right_white"></i>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div id="quick_links_pop" class="quick_links_pop hide"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/statesandright.js"></script>
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/swiper-4.3.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/layer.js"></script>
+    <script>
+        window.onload = function () {
+            //  ==========
+            //  = SwiperBanner =
+            //  ==========
+            var mainBanner = new Swiper('#mainSwiper', {
+                loop: true,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                observer: true,
+                observeParents: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+            // 如果只有一个slide就销毁swiper
+            if (mainBanner.slides.length <= 3) {
+                mainBanner.destroy();
+            }
+            function getPrice(selector) {
+                var isYen = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+                var $elPrices = $(selector);
+                var pids = [];
+                $elPrices.map(function (index, el) {
+                    pids[pids.length] = el.getAttribute("data-id");
+                });
+                $.post("/home/GetProductListPrice", {
+                    itemcodes: pids.join(",")
+                }).done(function (res) {
+                    if (res.DataStatus == 200 && res.Status == '0') {
+                        if (res.Datas.ProductPrices.length == 0) {
+                            return false;
+                        }
+                        for (var i = 0, len = res.Datas.ProductPrices.length; i < len; i++) {
+                            var temp = res.Datas.ProductPrices[i];
+                            $elPrices.filter("[data-id=" + temp.ItemCode + "]").html(temp.Price);
+                        }
+                    } else {
+                        if (res.Datas && res.Datas.Messages) {
+                            huatools.showToast(res.Datas.Message);
+                        }
+                    }
+                });
+            }
+            if ($(".product-item-info-price").length > 0) {
+                getPrice(".product-item-info-price[data-id]");
+            }
+            // 企业解决方案
+            $('.case_tav_item').click(function () {
+                $(this).addClass('case_tav_item_active').siblings().removeClass("case_tav_item_active")
+                var index = $(this).index()
+                $(".case_body").eq(index).css("display", "block").siblings(".case_body").css("display", "none")
+            })
+            $(".case_body_scroll_item").click(function () {
+                $(this).addClass("case_body_scroll_item_active").siblings().removeClass("case_body_scroll_item_active")
+                var companyName = $(this).html()
+                if (companyName == "方太集团") {
+                    //配图
+                    $("#customerCare .illustrating_picture").attr("src", "../img/qiyetuangou/pt_fangtai.jpg");
+                    //企业logo
+                    $("#customerCare .company_logo").attr("src", "../img/qiyetuangou/FangTai.png");
+                    //需求
+                    $("#customerCare .requirement").html("在指定日期送给合作的高校招生办老师。");
+                    //实施方案
+                    $("#customerCare .solution").html("1、方太集团自选好鲜花款式并与花礼网确认2、方太集团发送名单给花礼网，核实地址等信息，双方确定金额3、花礼网开出发票，方太集团收到后，将款项汇到指定账户4、花礼网按照需求将鲜花在指定日期送货上门。");
+                }
+                if (companyName == "民生银行") {
+                    //配图
+                    $("#customerCare .illustrating_picture").attr("src", "../img/qiyetuangou/pt_minsheng.jpg");
+                    //企业logo
+                    $("#customerCare .company_logo").attr("src", "../img/qiyetuangou/MinSheng.png");
+                    //需求
+                    $("#customerCare .requirement").html("春节、中秋节给合作客户高管送鲜花等礼品。");
+                    //实施方案
+                    $("#customerCare .solution").html("1、民生银行自选好花束并与花礼网确认好细节。2、民生银行在节前5天将客户名单发送给花礼网，核实地址等信息，双方确定金额3、花礼网开出发票，民生银行收到后，将款项汇到指定账户4、花礼网按照需求将鲜花等礼品在指定日期送货上门。");
+                }
+                if (companyName == "华泰人寿") {
+                    //配图
+                    $("#customerCare .illustrating_picture").attr("src", "../img/qiyetuangou/pt_huatai.jpg");
+                    //企业logo
+                    $("#customerCare .company_logo").attr("src", "../img/qiyetuangou/HuaTai.png");
+                    //需求
+                    $("#customerCare .requirement").html("给缴费超过X元的保险客户送鲜花等生日礼，预算不超过Y元，需生日当天送达。");
+                    //实施方案
+                    $("#customerCare .solution").html("1、花礼网提议男女客户送不同的生日礼，且挑选符合客户属性的礼物，并和华泰人寿确认；2、华泰人寿每月25号之前将客户名单发送给花礼网，核实地址等信息，双方确定金额3、花礼网开出发票，华泰人寿收到后，在5号之前将款项汇到指定账户4、花礼网按照需求将生日礼在指定日期送货上门。");
+                }
+                if (companyName == "陆家嘴信托") {
+                    //配图
+                    $("#customerCare .illustrating_picture").attr("src", "../img/qiyetuangou/pt_lujiazui.jpg");
+                    //企业logo
+                    $("#customerCare .company_logo").attr("src", "../img/qiyetuangou/LuJiaZui.png");
+                    //需求
+                    $("#customerCare .requirement").html("给年投300万的高价值客户送生日礼，需在生日当天送达。");
+                    //实施方案
+                    $("#customerCare .solution").html("1、花礼网结合客户属性，每月推荐鲜花等生日礼，双方确认2、陆家嘴信托每月月底给次月生日名单，花礼网核实地址等信息，双方确定金额。3、花礼网开出发票，陆家嘴信托收到付款4、花礼网按照需求将生日礼在指定日期送货上门。");
+                }
+                if (companyName == "贝生乐商贸") {
+                    //配图
+                    $("#customerCare .illustrating_picture").attr("src", "../img/qiyetuangou/pt_beishengle.jpg");
+                    //企业logo
+                    $("#customerCare .company_logo").attr("src", "../img/qiyetuangou/Kids.png");
+                    //需求
+                    $("#customerCare .requirement").html("给巧虎KIDS全国分店开业时送花篮。");
+                    //实施方案
+                    $("#customerCare .solution").html("客户每次存5000，并自己下单，月底由财务来对账。");
+                }
+                if (companyName == "正泰电器") {
+                    //配图
+                    $("#customerCare .illustrating_picture").attr("src", "../img/qiyetuangou/pt_zhengtai.jpg");
+                    //企业logo
+                    $("#customerCare .company_logo").attr("src", "../img/qiyetuangou/ZhengTai.png");
+                    //需求
+                    $("#customerCare .requirement").html("给全国各地的经销商送生日礼，需在生日当天送达。");
+                    //实施方案
+                    $("#customerCare .solution").html("1、花礼网结合客户属性，每月推荐鲜花等生日礼，双方确认。2、正泰电器每月月底给次月生日名单，花礼网核实地址等信息，双方确定金额。3、花礼网开出发票，正泰电器收到付款4、花礼网按照需求将生日礼在指定日期送货上门。");
+                }
+                //员工关怀
+                if (companyName == "诺合诺德") {
+                    //配图
+                    $("#staffCare .illustrating_picture").attr("src", "../img/qiyetuangou/pt_nuohe.jpg");
+                    //企业logo
+                    $("#staffCare .company_logo").attr("src", "../img/qiyetuangou/NuoHe.png");
+                    //需求
+                    $("#staffCare .requirement").html("在员工生日时送一束鲜花。");
+                    //实施方案
+                    $("#staffCare .solution").html("1、花礼网每月推荐不同的鲜花款式，双方沟通确认2、诺合诺德（中国）制药每月月底给次月生日名单，花礼网核实地址等信息，双方确定金额。3、花礼网开出发票，诺合诺德（中国）制药收到付款4、花礼网按照需求将鲜花在指定日期送达。");
+                }
+                if (companyName == "上汽通用") {
+                    //配图
+                    $("#staffCare .illustrating_picture").attr("src", "../img/qiyetuangou/pt_shangqi.jpg");
+                    //企业logo
+                    $("#staffCare .company_logo").attr("src", "../img/qiyetuangou/ShangQi.png");
+                    //需求
+                    $("#staffCare .requirement").html("在员工生日时送一个生日蛋糕。");
+                    //实施方案
+                    $("#staffCare .solution").html("1、花礼网每月推荐不同的生日蛋糕，双方沟通确认2、上海通用汽车金融每月月底给次月生日名单，花礼网核实地址等信息，双方确定金额。3、花礼网开出发票，上海通用汽车金融收到付款4、花礼网按照需求将生日蛋糕在指定日期送达。");
+                }
+                if (companyName == "华泰证券") {
+                    //配图
+                    $("#staffCare .illustrating_picture").attr("src", "../img/qiyetuangou/pt_zhengquan.jpg");
+                    //企业logo
+                    $("#staffCare .company_logo").attr("src", "../img/qiyetuangou/ZhengQuan.png");
+                    //需求
+                    $("#staffCare .requirement").html("给员工送鲜花等生日礼，贺卡替换成自备贺卡和LOGO。");
+                    //实施方案
+                    $("#staffCare .solution").html("1、花礼网每月向华泰联合证券推荐鲜花等生日礼，双方沟通确认2、华泰联合证券月月底给次月生日名单，花礼网核实地址等信息，双方确定金额。3、花礼网开出发票，华泰联合证券收到付款4、花礼网按照需求将生日礼在指定日期送货上门。");
+                }
+
+                //促销活动
+                if (companyName == "贝因美") {
+                    //配图
+                    $("#salesPromotion .illustrating_picture").attr("src", "../img/qiyetuangou/pt_beiyinmei.jpg");
+                    //企业logo
+                    $("#salesPromotion .company_logo").attr("src", "../img/qiyetuangou/BeiYinMei.png");
+                    //需求
+                    $("#salesPromotion .requirement").html("在母亲节当天，回馈分布在全国长期使用贝因美奶粉的优质客户，为每位优质客户赠送鲜花及贝因美自制精美贺卡。");
+                    //实施方案
+                    $("#salesPromotion .solution").html("1，根据客户群体特征一致性，精选相对应的鲜花礼品方案。2，根据贝因美提供的客户配送资料，提前将贝因美特制精美贺卡配送至全国对应城市加盟店。3，母亲节当天，贝因美贺卡与精选鲜花同时配送至客户所在地。");
+                }
+                if (companyName == "中石化") {
+                    //配图
+                    $("#salesPromotion .illustrating_picture").attr("src", "../img/qiyetuangou/pt_zhongshihua.jpg");
+                    //企业logo
+                    $("#salesPromotion .company_logo").attr("src", "../img/qiyetuangou/ZhongShiHua.png");
+                    //需求
+                    $("#salesPromotion .requirement").html("给每个网点送200-400支单支精美包装的玫瑰。");
+                    //实施方案
+                    $("#salesPromotion .solution").html("1、在3月1号花礼网提交需求，并沟通不同品种玫瑰的比例2、中石化（浙分）提交门店地址和送达时间，花礼网核实地址等信息后，双方确认价格； 3、花礼网开出发票，中石化（浙分）收到后并付款4、花礼网在指定日期将花束送达至各网点。");
+                }
+            })
+
+        }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-KS4PTHC');</script>
+    <!-- End Google Tag Manager -->
+    <script type='text/javascript'>
+        (function (m, ei, q, i, a, j, s) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            j = ei.createElement(q),
+                s = ei.getElementsByTagName(q)[0];
+            j.async = true;
+            j.charset = 'UTF-8';
+            j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+            s.parentNode.insertBefore(j, s);
+        })(window, document, 'script', '_MEIQIA');
+        _MEIQIA('entId', 111117);//1212
+        $.post("/Home/MeiQiaVisitLog", null, function (data) {
+            _MEIQIA('clientId', data);
+        });
+    </script>
+    <script type="text/javascript">
+        var userId = 0;
+        function reqUrlParam(paras) {
+            var url = location.href;
+            var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+            var paraObj = {}
+            for (i = 0; j = paraString[i]; i++) {
+                paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+            }
+            var returnValue = paraObj[paras.toLowerCase()];
+            if (typeof (returnValue) == "undefined") {
+                return "";
+            } else {
+                return returnValue;
+            }
+        }
+        function getProductPrice() {
+            var dataPps = "";
+            $("span[data-pp]").each(function (index, data) {
+                dataPps = dataPps + $(this).attr("data-pp") + ",";
+            })
+            if (dataPps.length > 0) {
+                $.ajax({
+                    type: "POST", url: "/home/GetProductListPrice", data: { itemcodes: dataPps }, timeout: 60000, dataType: 'json',
+                    success: function (res) {
+                        if (res.DataStatus == 200 && res.Status == '0') {
+                            if (res.Datas.ProductPrices.length == 0) {
+                                return false;
+                            }
+                            for (var i = 0, len = res.Datas.ProductPrices.length; i < len; i++) {
+                                var temp = res.Datas.ProductPrices[i];
+                                $("span[data-pp='" + temp.ItemCode + "']").text(temp.Price);
+                            }
+                        }
+                        else { }
+                    }
+                });
+            }
+        }
+        function setCurUrlClass() {
+            // css : class = "color_tj"
+            var pathname1 = window.location.pathname;
+            $("a[href='" + pathname1 + "'").addClass("color_tj");
+        }
+        getProductPrice();
+        function addHuaPid() {
+            try {
+                var path = encodeURIComponent(window.location.pathname);
+                $("a[data-link]").each(function (index, data) {
+                    if ($(this).attr("href").indexOf("huaPid=") == -1) {
+                        var href = $(this).attr("href") + "?huaPid=" + path + "-" + $(this).attr("data-link");
+                        $(this).attr("href", href);
+                    }
+                })
+            }
+            catch (e) {
+                console.log(e);
+            }
+        }
+        addHuaPid();
+        $(function () {
+            $.get("/Home/GetLoginUserId", null, function (data) {
+                userId = data;
+            }, "json");
+
+            $("#header-chat,#kefu,#kefu1").click(function (e) {
+                e.preventDefault();
+
+                $("#MEIQIA-BTN").click();
+                //$(".jDKtMA").click();
+            });
+
+            if ($("#pjCount").length > 0) {
+                $.get("/productpj/GetPJCount", function (data) {
+                    $("#pjCount").text(data);
+                });
+            }
+        });
+        function openChatWindow(e) {
+
+            //美洽代码
+            $("#MEIQIA-BTN").click();
+            //$(".jDKtMA").click();
+        }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KS4PTHC');
+    </script>
+    <!-- End Google Tag Manager -->
+    <script type='text/javascript'>
+        (function (m, ei, q, i, a, j, s) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            j = ei.createElement(q),
+                s = ei.getElementsByTagName(q)[0];
+            j.async = true;
+            j.charset = 'UTF-8';
+            j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+            s.parentNode.insertBefore(j, s);
+        })(window, document, 'script', '_MEIQIA');
+        _MEIQIA('entId', 111117);//1212
+        $.post("/Home/MeiQiaVisitLog", null, function (data) {
+            _MEIQIA('clientId', data);
+        });
+    </script>
+    <script src="../js/qiyetuangou.js"></script>
+</body>
+
+</html>
