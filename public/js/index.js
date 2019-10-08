@@ -44,7 +44,7 @@
     for (var i = 0; i < arr.length; i++) {
         str += `
         <a href="/yongshenghua/yongshenghua_${arr[i][0]}.html" target="_blank">
-            <img src="img/index/ysh_brand_menu_0${i+1}.jpg" height="62" width="96">${arr[i][1]}
+            <img src="img/index/ysh_brand_menu_0${i + 1}.jpg" height="62" width="96">${arr[i][1]}
         </a>
         `
     }
@@ -188,14 +188,14 @@
 })();
 (() => {
     var arr = [
-        [9010969, "你最珍贵", 248],
-        [9010731, "牵手一生", 196],
-        [9012055, "不变的心", 469]
+        [9010969, "你最珍贵", 248, ''],
+        [9010731, "牵手一生", 196, ''],
+        [9012055, "不变的心", 469, 'class="last-child"']
     ];
     var str = "";
     for (var i = 0; i < arr.length; i++) {
         str += `
-        <a href="/product/${arr[i][0]}.html?huaPid=homepage-f00${i + 1}" target="_blank">
+        <a ${arr[i][3]} href="/product/${arr[i][0]}.html?huaPid=homepage-f00${i + 1}" target="_blank">
             <img src="tuijian/rightbox_${arr[i][0]}.png" height="140" width="210">
             <div class="rightbox">
                 <p class="rightbox-name">${arr[i][1]}</p>
@@ -544,6 +544,54 @@
     ];
     var str = "";
     for (var i = 0; i < arr.length; i++) {
-        str += `<li><a href="/cake/${arr[i][0]}" target="_blank">${arr[i][0]}</a></li>`
+        str += `<li><a href="/cake/${arr[i][0]}" target="_blank">  ${arr[i][1]}</a></li>`;
+    }
+    cake_list.innerHTML = str;
+})();
+(() => {
+    var arr = [
+        ["beijingdangao.html", "北京"],
+        ["shanghaidangao.html", "上海"],
+        ["guangzhoudangao.html", "广州"],
+        ["shenzhendangao.html", "深圳"],
+        ["tianjindangao.html", "天津"],
+        ["chengdudangao.html", "成都"],
+        ["chongqingdangao.html", "重庆"],
+        ["xiandangao.html", "西安"],
+        ["suzhoudangao.html", "苏州"],
+        ["hangzhoudangao.html", "杭州"],
+        ["nanjingdangao.html", "南京"],
+        ["?city=合肥", "合肥"],
+        ["wuhandangao.html", "武汉"],
+        ["?city=郑州", "郑州"],
+        ["?city=长沙", "长沙"],
+        ["?city=南昌", "南昌"],
+        ["haerbindangao.html", "哈尔滨"],
+        ["shenyangdangao.html", "沈阳"],
+        ["changchundangao.html", "长春"],
+        ["daliandangao.html", "大连"],
+        ["?city=青岛", "青岛"],
+        ["?city=济南", "济南"],
+        ["?city=福州", "福州"],
+        ["?city=厦门", "厦门"],
+        ["?city=昆明", "昆明"],
+        ["?city=贵阳", "贵阳"],
+        ["?city=南宁", "南宁"],
+        ["shijiazhuangdangao.html", "石家庄"],
+        ["?city=海口" , "海口"],
+        ["taiyuandangao.html", "太原"],
+        ["?city=兰州", "兰州"],
+        ["?city=乌鲁木齐", "乌鲁木齐"],
+        ["tangshandangao.html", "唐山"],
+        ["huhehaotedangao.html", "呼和浩特"],
+        ["?city=东莞", "东莞"],
+        ["?city=佛山", "佛山"],
+        ["?city=宁波", "宁波"],
+        ["?city=无锡", "无锡"],
+        ["?city=温州", "温州"],
+        ["?city=常州", "常州"]
+    ];
+    for (var i = 0; i < arr.length; i++) {
+        city_list.innerHTML += `<li><a href="/cake/city/${arr[i][0]}" target="_blank">${arr[i][1]}</a></li>`;
     }
 })();

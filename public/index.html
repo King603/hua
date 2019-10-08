@@ -13,7 +13,7 @@
     <script async="" src="js/gtm.js"></script>
     <script src="js/hm.js"></script>
     <script type="text/javascript" src="js/CheckAgent.js"></script>
-    <link rel="icon" href="https://www.hua.com/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/public_2019.css">
     <link rel="stylesheet" href="css/logo.css">
@@ -351,48 +351,7 @@
                         <div class="delivery-city-cont">
                             <h3>请选择或输入蛋糕配送城市</h3>
                             <h4>热门城市</h4>
-                            <ul>
-                                <li><a href="/cake/city/beijingdangao.html" target="_blank">北京</a></li>
-                                <li><a href="/cake/city/shanghaidangao.html" target="_blank">上海</a></li>
-                                <li><a href="/cake/city/guangzhoudangao.html" target="_blank">广州</a></li>
-                                <li><a href="/cake/city/shenzhendangao.html" target="_blank">深圳</a></li>
-                                <li><a href="/cake/city/tianjindangao.html" target="_blank">天津</a></li>
-                                <li><a href="/cake/city/chengdudangao.html" target="_blank">成都</a></li>
-                                <li><a href="/cake/city/chongqingdangao.html" target="_blank">重庆</a></li>
-                                <li><a href="/cake/city/xiandangao.html" target="_blank">西安</a></li>
-                                <li><a href="/cake/city/suzhoudangao.html" target="_blank">苏州</a></li>
-                                <li><a href="/cake/city/hangzhoudangao.html" target="_blank">杭州</a></li>
-                                <li><a href="/cake/city/nanjingdangao.html" target="_blank">南京</a></li>
-                                <li><a href="/cake/city/?city=合肥" target="_blank">合肥</a></li>
-                                <li><a href="/cake/city/wuhandangao.html" target="_blank">武汉</a></li>
-                                <li><a href="/cake/city/?city=郑州" target="_blank">郑州</a></li>
-                                <li><a href="/cake/city/?city=长沙" target="_blank">长沙</a></li>
-                                <li><a href="/cake/city/?city=南昌" target="_blank">南昌</a></li>
-                                <li><a href="/cake/city/haerbindangao.html" target="_blank">哈尔滨</a></li>
-                                <li><a href="/cake/city/shenyangdangao.html" target="_blank">沈阳</a></li>
-                                <li><a href="/cake/city/changchundangao.html" target="_blank">长春</a></li>
-                                <li><a href="/cake/city/daliandangao.html" target="_blank">大连</a></li>
-                                <li><a href="/cake/city/?city=青岛" target="_blank">青岛</a></li>
-                                <li><a href="/cake/city/?city=济南" target="_blank">济南</a></li>
-                                <li><a href="/cake/city/?city=福州" target="_blank">福州</a></li>
-                                <li><a href="/cake/city/?city=厦门" target="_blank">厦门</a></li>
-                                <li><a href="/cake/city/?city=昆明" target="_blank">昆明</a></li>
-                                <li><a href="/cake/city/?city=贵阳" target="_blank">贵阳</a></li>
-                                <li><a href="/cake/city/?city=南宁" target="_blank">南宁</a></li>
-                                <li><a href="/cake/city/shijiazhuangdangao.html" target="_blank">石家庄</a></li>
-                                <li><a href="/cake/city/?city=海口" target="_blank">海口</a></li>
-                                <li><a href="/cake/city/taiyuandangao.html" target="_blank">太原</a></li>
-                                <li><a href="/cake/city/?city=兰州" target="_blank">兰州</a></li>
-                                <li><a href="/cake/city/?city=乌鲁木齐" target="_blank">乌鲁木齐</a></li>
-                                <li><a href="/cake/city/tangshandangao.html" target="_blank">唐山</a></li>
-                                <li><a href="/cake/city/huhehaotedangao.html" target="_blank">呼和浩特</a></li>
-                                <li><a href="/cake/city/?city=东莞" target="_blank">东莞</a></li>
-                                <li><a href="/cake/city/?city=佛山" target="_blank">佛山</a></li>
-                                <li><a href="/cake/city/?city=宁波" target="_blank">宁波</a></li>
-                                <li><a href="/cake/city/?city=无锡" target="_blank">无锡</a></li>
-                                <li><a href="/cake/city/?city=温州" target="_blank">温州</a></li>
-                                <li><a href="/cake/city/?city=常州" target="_blank">常州</a></li>
-                            </ul>
+                            <ul id="city_list"></ul>
                             <div class="form-box">
                                 <input class="form-control" id="form-search" type="text" placeholder="请输入配送城市">
                                 <a class="btn btn-link" href="javascript:void(0)"
@@ -642,6 +601,8 @@
             <div id="quick_links_pop" class="quick_links_pop hide"></div>
         </div>
     </div>
+    <script src="js/index.js"></script>
+    <script src="js/footer.js"></script>
     <script type="text/javascript" src="js/common_index.js"></script>
     <script type="text/javascript" src="js/statesandright.js" defer="defer"></script>
     <script src="js/jquery.lazyload.min.js" type="text/javascript"></script>
@@ -844,8 +805,6 @@
             _MEIQIA('clientId', data);
         });
     </script>
-    <script src="js/index.js"></script>
-    <script src="js/footer.js"></script>
 </body>
 
 </html>

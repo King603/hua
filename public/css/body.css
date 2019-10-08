@@ -37,7 +37,7 @@ body {
 
 .focus-wrapper .rightbox-price span,
 .time-limit .tuijian-price span {
-    opacity: 0;
+    /* opacity: 0; */
     filter: alpha(opacity=0);
 }
 
