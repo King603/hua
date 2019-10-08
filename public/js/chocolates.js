@@ -131,7 +131,7 @@
         <li class="product-list-item">
             <a href="/product/${arr[i][0]}.html" target="_blank" data-link="${arr[i][0]}">
                 <div class="product-list-item__pic">
-                    <img src="../img/375x409.png" data-original="../newpic/${arr[i][0]}.jpg_220x240.jpg" alt="${arr[i][1]}" />
+                    <img src="../../img/375x409.png" data-original="../../newpic/${arr[i][0]}.jpg_220x240.jpg" alt="${arr[i][1]}" />
                 </div>
                 <div class="product-list-item__info">
                     <div class="product-info-tag">${arr[i][2]}</div>
