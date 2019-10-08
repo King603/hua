@@ -7781,7 +7781,7 @@ header .service a {
 }
 
 .carousel-indicators li, .carousel-indicators li.active {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .carousel-fade .carousel-inner .item {

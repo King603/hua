@@ -181,7 +181,7 @@
             <div class="fill" style="background-image:url('${arr[i][0]}');"><a href="${arr[i][1]}"target="_blank"></a></div>
         </div>
         `
-        str2 += `<li data-target="#fullCarousel" data-slide-to="i" class="${arr[i][2]}"></li>`
+        str2 += `<li data-target="#fullCarousel" data-slide-to="${i}" class="${arr[i][2]}"></li>`
     }
     banner.innerHTML = str1;
     ol.innerHTML = str2;
