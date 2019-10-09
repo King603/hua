@@ -240,3 +240,109 @@
         `
     }
 })();
+(() => {
+    var arr = [
+        ["/aiqingxianhua/", "爱情鲜花"],
+        ["/youqingxianhua/", "友情鲜花"],
+        ["/theme/birthday/", "生日鲜花"],
+        ["/songzhangbeixianhua/", "问候长辈"],
+        ["/songlaoshixianhua/", "回报老师"],
+        ["/tanbingweiwenxianhua/", "探病慰问"],
+        ["/daoqianxianhua/", "道歉鲜花"],
+        ["/hunqingxianhua/", "婚庆鲜花"],
+        ["/zhufuqinghexianhua/", "祝贺鲜花"],
+        ["/aisixianhua/", "哀思鲜花"],
+        ["/businessFlower/", "商务鲜花"],
+        ["/businessFlower/kaiyehualan/", "开业花篮"],
+        ["/florist/", "自选鲜花"],
+        ["/worldflora/", "澳台送花"]
+    ];
+    for (var i = 0; i < arr.length; i++) {
+        item_1.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
+    }
+})();
+(() => {
+    var arr = [
+        ["/meigui/", "玫瑰"],
+        ["/hongmeigui/", "红玫瑰"],
+        ["/fenmeigui/", "粉玫瑰"],
+        ["/baimeigui/", "白玫瑰"],
+        ["/zimeigui/", "紫玫瑰"],
+        ["/xiangbinmeigui/", "香槟玫瑰"],
+        ["/huangmeigui/", "黄玫瑰"],
+        ["/kangnaixin/", "康乃馨"],
+        ["/baihe/", "百合"],
+        ["/fulang/", "扶郎"],
+        ["/xiangrikui/", "向日葵"],
+        ["/yujinxiang/", "郁金香"],
+        ["/matilian/", "马蹄莲"]
+    ];
+    for (var i = 0; i < arr.length; i++) {
+        item_2.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
+    }
+})();
+(() => {
+    var arr = [
+        ["/hongsexianhua/", "red", "红色"],
+        ["/fensexianhua/", "pink", "粉色"],
+        ["/xiangbinsexianhua/", "champagne", "香槟"],
+        ["/huangsexianhua/", "yellow", "黄色"],
+        ["/baisexianhua/", "white", "白色"],
+        ["/zisexianhua/", "purple", "紫色"],
+        ["/lansexianhua/", "blue", "蓝色"]
+    ];
+    for (var i = 0; i < arr.length; i++) {
+        item_3.innerHTML += `<li><a href="${arr[i][0]}"><span class="c-${arr[i][1]}"></span>${arr[i][2]}</a></li>`
+    }
+})();
+(() => {
+    var arr = [
+        ["/huashu/", "花束"],
+        ["/hezhuanghua/", "花盒"],
+        ["/pingchahua/", "瓶花"],
+        ["/flower/JingPinXianHua/", "精品鲜花"],
+        ["/giftsBasket/", "果篮"],
+        ["/hualan/", "桌面花篮"],
+        ["/businessFlower/kaiyehualan/", "开业花蓝"],
+        ["/zuhexianhua/", "组合鲜花"]
+    ];
+    for (var i = 0; i < arr.length; i++) {
+        item_4.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
+    }
+})();
+(() => {
+    var arr = [
+        ["/tejiaxianhua/", "特价鲜花"],
+        ["/xianhuajiage/0-150/", "150元以下"],
+        ["/xianhuajiage/150-250/", "150-250元"],
+        ["/xianhuajiage/250-350/", "250-350元"],
+        ["/xianhuajiage/350-550/", "350-550元"],
+        ["/xianhuajiage/550-800/", "550-800元"],
+        ["/xianhuajiage/800-99999/", "800元以上"]
+    ];
+    for (var i = 0; i < arr.length; i++) {
+        item_5.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
+    }
+})();
+(() => {
+    var arr = [
+        ["jiu", 9],
+        ["shi", 10],
+        ["shiyi", 11],
+        ["shier", 12],
+        ["shiliu", 16],
+        ["shiba", 18],
+        ["shijiu", 19],
+        ["ershi", 20],
+        ["ershier", 22],
+        ["ershijiu", 29],
+        ["sanshisan", 33],
+        ["sanshiliu", 36],
+        ["wushi", 50],
+        ["liushiliu", 66],
+        ["jiushijiu", 99],
+    ];
+    for (var i = 0; i < arr.length; i++) {
+        item_6.innerHTML += `<li><a href="/${arr[i][0]}duomeigui/">${arr[i][1]}枝</a></li>`
+    }
+})();
