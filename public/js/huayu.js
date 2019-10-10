@@ -11,8 +11,7 @@
         ["businessFlower/kaiyehualan", "开业鲜花"]
     ];
     for (var i = 0; i < arr.length; i++) {
-        xhyt.innerHTML += `<li style="width:30%">
-        <a href="/${arr[i][0]}/" target="_blank">${arr[i][1]}</a></li>`
+        xhyt.innerHTML += `<li><a href="/${arr[i][0]}/" target="_blank">${arr[i][1]}</a></li>`
     }
 })();
 (() => {
@@ -27,23 +26,23 @@
 })();
 (() => {
     var arr = [
-        ["/", "首页"],
-        ["/flower", "鲜花"],
-        ["/yongshenghua", "永生花"],
-        ["/huayu", "花语大全"]
+        ["", "首页"],
+        ["flower", "鲜花"],
+        ["yongshenghua", "永生花"],
+        ["huayu", "花语大全"]
     ];
     for (var i = 0; i < arr.length; i++) {
-        nav.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
+        nav.innerHTML += `<li><a href="/${arr[i][0]}">${arr[i][1]}</a></li>`
     }
 })();
 (() => {
     var arr = [
-        ["", "18339", "20181015140110280", "天秤座性格分析及星座配对！", "生日礼物指南", "天秤座可能是十二星座里最憋屈的了，因为几乎没有人叫对了ta们的名字，实际上，“秤”这个字只有一个音：chèng，天秤座中的秤也并不是指天平，天秤座里面的“秤”称…"],
-        ["g-a4", "22732", "2018101514033054", "开花店需要哪些条件？你到底适不适合开花店？", "花店经营", "很多想要开花店的人都是那种对花艺感兴趣并且想以此生存的人，开花店需要哪些条件？你到底适不适合开花店？"],
-        ["", "23027", "20190305182251653", "春天的花有哪些？", "花卉花艺", "不知不觉，春天的脚步近了。寒冬的冰天雪地逐渐被绿意和一朵朵艳丽的花儿取代。春天，是最富有生机的。春雨，伴着万物生长。在春天开放的花儿之中，你认识多少种呢？"],
-        ["g-a4", "20901", "20180620085627742", "追女生除了送玫瑰还可以送什么花好？", "给朋友送花", "有一个很喜欢的女孩子，现在在追求阶段，想给她送花，送什么比较好？现在很多男生都觉得女生难追，费尽心思还是还来一句咱们只适合做朋友！有可能只是你的方式不对，爱情当…"],
-        ["", "23012", "20190315111443532", "花毛茛花语是什么？花毛茛养护技巧？", "鲜花常识", "要说春季必买的花卉之一，花毛茛肯定当之无愧，花色丰富的它，买几盆放在阳台和客厅里，绝对吸引眼球。花毛茛为重瓣或半重瓣，恍惚间，还颇有牡丹花的容颜，令人沉迷。"],
-        ["g-a4", "21805", "2018062009100895", "平时如何给女朋友创造惊喜？让女人倍感甜蜜的大绝招！", "给女朋友送花", "女人都喜欢浪漫与惊喜，这一点毋庸置疑。就是我们平时说的嘴上说着不要不要，但是收到你送的惊喜内心其实是很欢喜的，平时如何给女朋友创造惊喜？让女人倍感甜蜜的大绝招！"]
+        ["", "18339", "20181015140110280", "天秤座性格分析及星座配对！", "生日礼物指南", "<br>", "天秤座可能是十二星座里最憋屈的了，因为几乎没有人叫对了ta们的名字，实际上，“秤”这个字只有一个音：chèng，天秤座中的秤也并不是指天平，天秤座里面的“秤”称…"],
+        ["g-a4", "22732", "2018101514033054", "开花店需要哪些条件？你到底适不适合开花店？", "花店经营", "<br>", "很多想要开花店的人都是那种对花艺感兴趣并且想以此生存的人，开花店需要哪些条件？你到底适不适合开花店？"],
+        ["", "23027", "20190305182251653", "春天的花有哪些？", "花卉花艺", "<br>", "不知不觉，春天的脚步近了。寒冬的冰天雪地逐渐被绿意和一朵朵艳丽的花儿取代。春天，是最富有生机的。春雨，伴着万物生长。在春天开放的花儿之中，你认识多少种呢？"],
+        ["g-a4", "20901", "20180620085627742", "追女生除了送玫瑰还可以送什么花好？", "给朋友送花", "<br>", "有一个很喜欢的女孩子，现在在追求阶段，想给她送花，送什么比较好？现在很多男生都觉得女生难追，费尽心思还是还来一句咱们只适合做朋友！有可能只是你的方式不对，爱情当…"],
+        ["", "23012", "20190315111443532", "花毛茛花语是什么？花毛茛养护技巧？", "鲜花常识", "<br>", "要说春季必买的花卉之一，花毛茛肯定当之无愧，花色丰富的它，买几盆放在阳台和客厅里，绝对吸引眼球。花毛茛为重瓣或半重瓣，恍惚间，还颇有牡丹花的容颜，令人沉迷。"],
+        ["g-a4", "21805", "2018062009100895", "平时如何给女朋友创造惊喜？让女人倍感甜蜜的大绝招！", "给女朋友送花", "", "女人都喜欢浪漫与惊喜，这一点毋庸置疑。就是我们平时说的嘴上说着不要不要，但是收到你送的惊喜内心其实是很欢喜的，平时如何给女朋友创造惊喜？让女人倍感甜蜜的大绝招！"]
     ];
     var str = "";
     for (var i = 0; i < arr.length; i++) {
@@ -55,10 +54,10 @@
                 </div>
                 <div class="g-a1 ccontent">
                     <div class="g-row">
-                        <h4><a href="/huayu/${arr[i][1]}.html" target="_blank" title="${arr[i][3]}">${arr[i][3]}！</a></h4>
-                        <span> 分类：<a target="_blank" href="/huayu/${arr[i][1]}.html">${arr[i][4]}</a></span>
+                        <h4><a href="/huayu/${arr[i][1]}.html" target="_blank" title="${arr[i][3]}">${arr[i][3]}<br></a></h4>
+                        <span><br>分类：<a target="_blank" href="/huayu/${arr[i][1]}.html">${arr[i][4]}</a></span>
                     </div>
-                    <p>${arr[i][5]}</p>
+                    <p title="${arr[i][6]}">${arr[i][5]}${arr[i][6]}</p>
                 </div>
             </div>
         </li>
@@ -68,29 +67,24 @@
 })();
 (() => {
     var arr = [
-        ["Title", "/huayu/23025.html", "父亲六十大寿适合送什么花？", "/huayu/tozhangbei.html", "送长辈生日礼物"],
-        ["Brief", "/huayu/23025.html", "父亲六十大寿适合送什么花？", "", ""],
-        ["Title", "/huayu/23012.html", "花毛茛花语是什么？花毛茛养护技巧？", "/huayu/zhishi.html", "鲜花常识"],
-        ["Brief", "/huayu/23012.html", "要说春季必买的花卉之一，花毛茛肯定当之无愧，花色丰富的它，买几盆放在阳台和客厅里，绝对吸引眼球。花毛茛为重瓣或半重瓣，恍惚间，还颇有牡丹花的容颜，令人沉迷。", "", ""],
-        ["Title", "/huayu/22994.html", "给爷爷送花有哪些选择？给老人送花推荐！", "/huayu/forelder.html", "给长辈送花"],
-        ["Brief", "/huayu/22994.html", "爷爷今年70岁生日，如果要给他老人家送花，一般是怎么选择？有哪些寓意比较吉利的花适合送给老人，给爷爷送花有哪些选择？给老人送花推荐！", "", ""],
-        ["Title", "/huayu/22993.html", "送花要注意什么？如何给老人，爱人，朋友送花？", "/huayu/shenghuo.html", "鲜花生活"],
-        ["Brief", "/huayu/22993.html", "送花要注意什么？如何给老人，爱人，朋友送花？", "", ""],
-        ["Title", "/huayu/22732.html", "开花店需要哪些条件？你到底适不适合开花店？", "/huayu/huadian.html", "花店经营"],
-        ["Brief", "/huayu/22732.html", "很多想要开花店的人都是那种对花艺感兴趣并且想以此生存的人，开花店需要哪些条件？你到底适不适合开花店？", "", ""],
-        ["Title", "/huayu/22614.html", "婚礼清单|距离国庆婚礼旺季不到一周，该如何查漏补缺？", "/huayu/jiehun.html", "结婚送花"],
-        ["Brief", "/huayu/22614.html", "国庆婚礼旺季即将来临，对于一生只有一次的婚礼，细节十分重要！婚礼前一周是一个非常重要的时间，之前没准备好的要赶紧补上，已经准备好的，也要查漏补缺。", "", ""],
-        ["Title", "/huayu/22370.html", "女朋友压力大，有哪些缓解压力的妙招？", "/huayu/forgirl.html", "给女朋友送花"],
-        ["Brief", "/huayu/22370.html", "现代社会里，每个人要面对的压力实在太多了，小到连续加班、工作瓶颈、恋爱争吵，大到升学、求职、婚姻生育等重要人生选择，还有最近北上广深暴涨的房价，都让人头大，女朋友压力大，有哪些缓解压力的妙招？", "", ""],
-        ["Title", "/huayu/22337.html", "9.10教师节给老师送什么花合适？", "/huayu/jiaoshijie.html", "教师节送花"],
-        ["Brief", "/huayu/22337.html", "还有不到一个月的时间就是教师节了，各位想好给老师送什么礼物了吗？俗话说得好，礼轻情意重。礼物的贵重与否不重要，重要的是这份礼物的心意，送花是最不会出错的选择，也许有的人有这个心，但就是不知道送什么花给老师合适，小编给大家推荐一下！", "", ""]
+        ["23025", "父亲六十大寿适合送什么花？", "tozhangbei", "送长辈生日礼物", "父亲六十大寿适合送什么花？"],
+        ["23012", "花毛茛花语是什么？花毛茛养护技巧？", "zhishi", "鲜花常识", "要说春季必买的花卉之一，花毛茛肯定当之无愧，花色丰富的它，买几盆放在阳台和客厅里，绝对吸引眼球。花毛茛为重瓣或半重瓣，恍惚间，还颇有牡丹花的容颜，令人沉迷。"],
+        ["22994", "给爷爷送花有哪些选择？给老人送花推荐！", "forelder", "给长辈送花", "爷爷今年70岁生日，如果要给他老人家送花，一般是怎么选择？有哪些寓意比较吉利的花适合送给老人，给爷爷送花有哪些选择？给老人送花推荐！"],
+        ["22993", "送花要注意什么？如何给老人，爱人，朋友送花？", "shenghuo", "鲜花生活", "送花要注意什么？如何给老人，爱人，朋友送花？"],
+        ["22732", "开花店需要哪些条件？你到底适不适合开花店？", "huadian", "花店经营", "很多想要开花店的人都是那种对花艺感兴趣并且想以此生存的人，开花店需要哪些条件？你到底适不适合开花店？"],
+        ["22614", "婚礼清单|距离国庆婚礼旺季不到一周，该如何查漏补缺？", "jiehun", "结婚送花", "国庆婚礼旺季即将来临，对于一生只有一次的婚礼，细节十分重要！婚礼前一周是一个非常重要的时间，之前没准备好的要赶紧补上，已经准备好的，也要查漏补缺。"],
+        ["22370", "女朋友压力大，有哪些缓解压力的妙招？", "forgirl", "给女朋友送花", "现代社会里，每个人要面对的压力实在太多了，小到连续加班、工作瓶颈、恋爱争吵，大到升学、求职、婚姻生育等重要人生选择，还有最近北上广深暴涨的房价，都让人头大，女朋友压力大，有哪些缓解压力的妙招？"],
+        ["22337", "9.10教师节给老师送什么花合适？", "jiaoshijie", "教师节送花", "还有不到一个月的时间就是教师节了，各位想好给老师送什么礼物了吗？俗话说得好，礼轻情意重。礼物的贵重与否不重要，重要的是这份礼物的心意，送花是最不会出错的选择，也许有的人有这个心，但就是不知道送什么花给老师合适，小编给大家推荐一下！"]
     ];
     var str = "";
     for (var i = 0; i < arr.length; i++) {
         str += `
-        <div class="Item_${arr[i][0]}">
-            <a href="${arr[i][1]}" class="left" target="_blank">${arr[i][2]}</a>
-            <a href="${arr[i][3]}" class="right" target="_blank">${arr[i][4]}</a>
+        <div class="Item_Title">
+            <a href="/huayu/${arr[i][0]}.html" class="left" target="_blank">${arr[i][1]}</a>
+            <a href="/huayu/${arr[i][2]}.html" class="right" target="_blank">${arr[i][3]}</a>
+        </div>
+        <div class="Item_Brief">
+            <a href="/huayu/${arr[i][0]}.html" class="left" target="_blank">${arr[i][4]}</a>
         </div>
         `;
     }
@@ -102,7 +96,7 @@
         <dl class="home_rec_cat" id="list${i}"></dl>
         <dl class="home_rec_cat g-a4" id="list${i + 1}"></dl>
         <div class="separate"></div>
-        `
+        `;
     }
 })();
 (() => {
@@ -118,7 +112,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/list_liwu.html">送礼</a><a class="right" target="_blank" href="/huayu/list_liwu.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`;
+        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`;
     }
     list1.innerHTML = str;
 })();
@@ -135,7 +129,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/shengri.html">生日送花</a><a class="right" target="_blank" href="/huayu/shengri.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`
+        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
     }
     list2.innerHTML = str;
 })();
@@ -152,7 +146,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/jiqiao.html">送花艺术</a><a class="right" target="_blank" href="/huayu/jiqiao.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`
+        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
     }
     list3.innerHTML = str;
 })();
@@ -169,7 +163,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/zhishi.html">鲜花常识</a><a class="right" target="_blank" href="/huayu/zhishi.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`
+        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
     }
     list4.innerHTML = str;
 })();
@@ -186,7 +180,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/shenghuo.html">鲜花生活</a><a class="right" target="_blank" href="/huayu/shenghuo.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`
+        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
     }
     list5.innerHTML = str;
 })();
@@ -203,7 +197,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/huayi.html">花卉花艺</a><a class="right" target="_blank" href="/huayu/huayi.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`
+        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
     }
     list6.innerHTML = str;
 })();
@@ -220,7 +214,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/huayu.html">花语</a><a class="right" target="_blank" href="/huayu/huayu.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`
+        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
     }
     list7.innerHTML = str;
 })();
@@ -237,7 +231,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/list_zhufuyu.html">祝福语大全</a><a class="right" target="_blank" href="/huayu/list_zhufuyu.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`
+        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
     }
     list8.innerHTML = str;
 })();
@@ -254,7 +248,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/tonvyou.html">送女朋友生日礼物</a><a class="right" target="_blank" href="/huayu/tonvyou.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`
+        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
     }
     list9.innerHTML = str;
 })();
@@ -271,7 +265,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/topengyou.html">送朋友生日礼物</a><a class="right" target="_blank" href="/huayu/topengyou.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`
+        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
     }
     list10.innerHTML = str;
 })();
@@ -288,7 +282,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/tosongli.html">送礼艺术</a><a class="right" target="_blank" href="/huayu/tosongli.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`
+        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
     }
     list11.innerHTML = str;
 })();
@@ -305,7 +299,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/tojieri.html">节日礼物</a><a class="right" target="_blank" href="/huayu/tojieri.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`
+        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
     }
     list12.innerHTML = str;
 })();
@@ -322,7 +316,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/profile/media.html">媒体报道</a><a class="right" target="_blank" href="/profile/media.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/profile/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`
+        str += `<a href="/profile/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
     }
     list13.innerHTML = str;
 })();
@@ -339,7 +333,7 @@
     ];
     var str = '<dd class="header"><a class="left" target="_blank" href="/profile/gdsj.html">感动瞬间</a><a class="right" target="_blank" href="/profile/gdsj.html">更多>> </a></dd>';
     for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/profile/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`
+        str += `<a href="/profile/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
     }
     list14.innerHTML = str;
 })();
@@ -451,8 +445,8 @@
             ["/huayu/xianqiehua.html", "常用鲜切花专辑"]
         ]],
         ["#", "图片大全", [
-            ["//www.hua.com/flower_picture", "鲜花图片大全"],
-            ["//www.hua.com/flower_picture/dangao", "蛋糕图片大全"]
+            ["/flower_picture", "鲜花图片大全"],
+            ["/flower_picture/dangao", "蛋糕图片大全"]
         ]]
     ];
     var str = "";
@@ -467,5 +461,5 @@
         }
         str += "</dl></li>";
     }
-    bk_menu.innerHTML=str;
+    bk_menu.innerHTML = str;
 })();

@@ -90,7 +90,7 @@
         ["ddsp_btn", "订单实拍"],
         ["djbz_btn", "低价保障"],
         ["sd_btn", "3小时配送"],
-        ["tpcn_btn", "200%退赔承诺"]
+        ["tpcn_btn", "两倍退赔承诺"]
     ];
     var str = "";
     for (var i = 0; i < arr.length; i++) {

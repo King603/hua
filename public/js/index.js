@@ -224,7 +224,7 @@
                 <p>${arr[i][2]}</p>
             </a>
         </li>
-        `
+        `;
     }
     toper_server_ul.innerHTML = str;
 })();
@@ -247,7 +247,7 @@
                 </div>
             </a>
         </li>
-        `
+        `;
     }
     xstj.innerHTML = str;
 })();
@@ -267,10 +267,8 @@
         str += `
         <li>
             <a href="/product/${arr[i][1]}.html?huaPid=homepage-f10${i + 1}" target="_blank">
-                <span class="img-box" href="/product/${arr[i][1]}.html">
-                    <img data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
-                        height="240" width="220">
-                </span>
+                <img class="img-box" data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
+                    height="240" width="220">
                 <span class="product-title">爱情 · ${arr[i][0]}</span>
                 <p class="price">
                     <span class="price-sign">&yen;</span>
@@ -278,7 +276,7 @@
                 </p>
             </a>
         </li>
-        `
+        `;
     }
     f1.innerHTML = str;
 })();
@@ -298,10 +296,8 @@
         str += `
         <li>
             <a href="/product/${arr[i][1]}.html?huaPid=homepage-f20${i + 1}" target="_blank">
-                <span class="img-box" href="/product/${arr[i][1]}.html">
-                    <img data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
-                        height="240" width="220">
-                </span>
+                <img class="img-box" data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
+                    height="240" width="220">
                 <span class="product-title">送长辈 ·  ${arr[i][0]}</span>
                 <p class="price">
                     <span class="price-sign">&yen;</span>
@@ -329,10 +325,8 @@
         str += `
         <li>
             <a href="/product/${arr[i][1]}.html?huaPid=homepage-f30${i + 1}" target="_blank">
-                <span class="img-box" href="/product/${arr[i][1]}.html">
-                    <img data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
-                        height="240" width="220">
-                </span>
+                <img class="img-box" data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
+                    height="240" width="220">
                 <span class="product-title">永生花 · ${arr[i][0]}</span>
                 <p class="price">
                     <span class="price-sign">&yen;</span>
@@ -346,24 +340,22 @@
 })();
 (() => {
     var arr = [
-        ["幸福西饼蛋糕 · 四重奏蛋糕(约2磅)", "5602016", "228"],
-        ["幸福西饼蛋糕 · 浪漫果纷蛋糕(约2磅)", "5602045", "218"],
-        ["诺心蛋糕 · 草莓拿破仑蛋糕（5-8人食）", "5902028", "336"],
-        ["诺心蛋糕 · 王子蛋糕（2-4人食）", "5901021", "218"],
-        ["元祖蛋糕 · 小圆香径鲜奶蛋糕（黄金燕麦）(8寸)", "5302064", "258"],
-        ["窝夫小子蛋糕 · 累成狗焦糖海盐奶油蛋糕（6寸）", "5501138", "199"],
-        ["Mcake蛋糕 · 小熊动物造型芝士味生日儿童生日宴会蛋糕（2磅）", "5142028", "298"],
-        ["21CAKE蛋糕 · 百香果酸乳酪慕斯蛋糕(2磅)", "5222023", "298"]
+        ["幸福西饼蛋糕·四重奏蛋糕(约2磅)", "5602016", "228"],
+        ["幸福西饼蛋糕·浪漫果纷蛋糕(约2磅)", "5602045", "218"],
+        ["诺心蛋糕·草莓拿破仑蛋糕(5-8人食)", "5902028", "336"],
+        ["诺心蛋糕·王子蛋糕(2-4人食)", "5901021", "218"],
+        ["元祖蛋糕·小圆香径鲜奶蛋糕(黄金燕麦)(8寸)", "5302064", "258"],
+        ["窝夫小子蛋糕·累成狗焦糖海盐奶油蛋糕(6寸)", "5501138", "199"],
+        ["Mcake蛋糕·小熊动物造型芝士味生日儿童生日宴会蛋糕(2磅)", "5142028", "298"],
+        ["21CAKE蛋糕·百香果酸乳酪慕斯蛋糕(2磅)", "5222023", "298"]
     ];
     var str = "";
     for (var i = 0; i < arr.length; i++) {
         str += `
         <li>
             <a href="/product/${arr[i][1]}.html?huaPid=homepage-f40${i + 1}" target="_blank">
-                <span class="img-box" href="/product/${arr[i][1]}.html">
-                    <img data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
-                        height="240" width="220">
-                </span>
+                <img class="img-box" data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
+                    height="240" width="220">
                 <span class="product-title">${arr[i][0]}</span>
                 <p class="price">
                     <span class="price-sign">&yen;</span>
@@ -371,7 +363,7 @@
                 </p>
             </a>
         </li>
-        `
+        `;
     }
     f4.innerHTML = str;
 })();
@@ -391,10 +383,8 @@
         str += `
         <li>
             <a href="/product/${arr[i][1]}.html?huaPid=homepage-f50${i + 1}" target="_blank">
-                <span class="img-box" href="/product/${arr[i][1]}.html">
-                    <img data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
-                        height="240" width="220">
-                </span>
+                <img class="img-box" data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
+                    height="240" width="220">
                 <span class="product-title">礼品 · ${arr[i][0]}</span>
                 <p class="price">
                     <span class="price-sign">&yen;</span>
@@ -521,7 +511,7 @@
     ];
     str = "";
     for (var i = 0; i < arr.length; i++) {
-        str += `<li><a href="/cake/${arr[i][0]}/" target="_blank">${arr[i][1]}</a></li>`
+        str += `<li><a href="/cake${arr[i][0]}" target="_blank">${arr[i][1]}&nbsp;</a></li>`
     }
     cake_ul.innerHTML = str;
 })();
