@@ -25,7 +25,6 @@
     <!-- 顶部导航 -->
     <div class="site-nav">
         <div class="container">
-
             <ul class="site-nav-l">
                 <li class="menu">
                     <a href="/" onClick="addfavorite();return false;"><span
@@ -139,63 +138,16 @@
                 </h3>
                 <div class="dropdown-menu dropdown-cate">
                     <h4><a href="/flower/">鲜花</a></h4>
-                    <ul class="cate-list list-inline">
-                        <li><a target="_blank" href="/aiqingxianhua/">爱情鲜花</a></li>
-                        <li><a target="_blank" href="/shengriliwu/">生日鲜花</a></li>
-                        <li><a target="_blank" href="/youqingxianhua/">友情鲜花</a></li>
-                        <li><a target="_blank" href="/songzhangbeixianhua/">问候长辈</a></li>
-                        <li><a target="_blank" href="/zhufuqinghexianhua/">祝贺鲜花</a></li>
-                        <li><a target="_blank" href="/hunqingxianhua/">婚庆鲜花</a></li>
-                        <li><a target="_blank" href="/tanbingweiwenxianhua/">探病慰问</a></li>
-                        <li><a target="_blank" href="/daoqianxianhua/">道歉鲜花</a></li>
-                        <li><a target="_blank" href="/businessFlower/kaiyehualan/">开业花篮</a></li>
-                    </ul>
+                    <ul class="cate-list list-inline" id="xh"></ul>
                     <h4><a href="/yongshenghua/">永生花</a></h4>
-                    <ul class="cate-list list-inline">
-                        <li><a target="_blank" href="/yongshenghua/yongshenghua_box.html">经典花盒</a></li>
-                        <li><a target="_blank" href="/yongshenghua/yongshenghua_large.html">巨型玫瑰</a></li>
-                        <li><a target="_blank" href="/yongshenghua/yongshenghua_lavender.html">薰衣草</a></li>
-                        <li><a target="_blank" href="/yongshenghua/yongshenghua_vase.html">永生瓶花</a></li>
-                        <li><a target="_blank" href="/yongshenghua/yongshenghua_characteristic.html">特色永生花</a></li>
-                    </ul>
-
+                    <ul class="cate-list list-inline" id="ysh"></ul>
                     <h4><a href="/gifts/">礼品</a></h4>
-                    <ul class="cate-list list-inline">
-                        <li><a target="_blank" href="/livingflower/">泰国保鲜花</a></li>
-                        <li><a target="_blank" href="/gifts/musicbox/">音乐盒</a></li>
-                        <li><a target="_blank" href="/gifts/crystallaser/">水晶内雕</a></li>
-                        <li><a target="_blank" href="/gifts/goldenflower/">金箔花</a></li>
-                        <li><a target="_blank" href="/gifts/cosmeticmirror/">化妆镜</a></li>
-                        <li><a target="_blank" href="/gifts/kingking/">香薰系列</a></li>
-                        <li><a target="_blank" href="/gifts/bestlife/">音乐睡枕</a></li>
-                        <li><a target="_blank" href="/gifts/vase/">花瓶/相框</a></li>
-                        <li><a target="_blank" href="/katonghuashu/">卡通花束</a></li>
-                        <li><a target="_blank" href="/toys/">品牌公仔</a></li>
-                        <li><a target="_blank" href="/gifts/shoushi/">首饰</a></li>
-                        <li><a target="_blank" href="/gifts/giftstalk/">Giftstalk精选</a></li>
-                        <li><a target="_blank" href="/gifts/dengshi/">创意礼品</a></li>
-                        <li><a target="_blank" href="/qiyetuangou/gift_card.html">礼品卡</a></li>
-                        <li><a target="_blank" href="/gifts/duorouzhiwupenzai/">多肉植物盆栽</a></li>
-                    </ul>
+                    <ul class="cate-list list-inline" id="gifis"></ul>
                     <h4><a href="/Plant/">绿植</a></h4>
-                    <ul class="cate-list list-inline">
-                        <li><a target="_blank" href="/Plant/greenplant/">绿色植物</a></li>
-                        <li><a target="_blank" href="/Plant/potflower/">盆栽花卉</a></li>
-                    </ul>
+                    <ul class="cate-list list-inline" id="Plant"></ul>
                 </div>
             </div>
-            <ul class="nav">
-                <li><a href="/">首页</a></li>
-                <li><a href="/flower/">鲜花</a></li>
-                <li><a href="/yongshenghua/">永生花</a></li>
-                <li><a href="/cake/">蛋糕</a></li>
-                <li><a href="/gifts/">礼品</a></li>
-                <li><a href="/gifts/chocolates/">巧克力</a></li>
-                <li><a href="/huayu/">花语大全</a></li>
-                <li><a href="/you/">设计师臻选鲜花</a></li>
-                <li><a href="/theme/chongyangjie/">重阳节鲜花礼品</a></li>
-
-            </ul>
+            <ul class="nav" id="nav"></ul>
         </div>
     </nav>
     <!-- 导航 End -->
@@ -269,6 +221,7 @@
         <p> 花礼网 （中国鲜花礼品网） <a href="/">www.hua.com</a><span> 深圳市百易信息技术有限公司</span> 高端鲜花,中国领先鲜花网品牌,专业鲜花速递服务！</p>
     </footer>
     <!-- 通用尾部 End -->
+    <script src="../js/you.js"></script>
     <script type="text/javascript" src="../pc/js/common.js"></script>
     <script type="text/javascript" src="../js/statesandright.js"></script>
     <script src="../js/layer.js"></script>
@@ -432,7 +385,6 @@
             _MEIQIA('clientId', data);
         });
     </script>
-    <script src="../js/you.js"></script>
 </body>
 
 </html>

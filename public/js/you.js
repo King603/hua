@@ -109,3 +109,86 @@
     str += "</div></div>";
     product_white.innerHTML = str;
 })();
+(() => {
+    var arr = [
+        ["aiqingxianhua", "爱情鲜花"],
+        ["shengriliwu", "生日鲜花"],
+        ["youqingxianhua", "友情鲜花"],
+        ["songzhangbeixianhua", "问候长辈"],
+        ["zhufuqinghexianhua", "祝贺鲜花"],
+        ["hunqingxianhua", "婚庆鲜花"],
+        ["tanbingweiwenxianhua", "探病慰问"],
+        ["daoqianxianhua", "道歉鲜花"],
+        ["businessFlower/kaiyehualan", "开业花篮"]
+    ];
+    for (var elem of arr) {
+        xh.innerHTML += `<li><a target="_blank" href="/${elem[0]}/">${elem[1]}</a></li>`;
+    }
+})();
+(() => {
+    var arr = [
+        ["box", "经典花盒"],
+        ["large", "巨型玫瑰"],
+        ["lavender", "薰衣草"],
+        ["vase", "永生瓶花"],
+        ["characteristic", "特色永生花"]
+    ];
+    for (var elem of arr) {
+        ysh.innerHTML += `<li><a target="_blank" href="/yongshenghua/yongshenghua_${elem[0]}.html">${elem[1]}</a></li>`;
+    }
+})();
+(() => {
+    var arr = [
+        ["livingflower/", "泰国保鲜花"],
+        ["gifts/musicbox/", "音乐盒"],
+        ["gifts/crystallaser/", "水晶内雕"],
+        ["gifts/goldenflower/", "金箔花"],
+        ["gifts/cosmeticmirror/", "化妆镜"],
+        ["gifts/kingking/", "香薰系列"],
+        ["gifts/bestlife/", "音乐睡枕"],
+        ["gifts/vase/", "花瓶/相框"],
+        ["katonghuashu/", "卡通花束"],
+        ["toys/", "品牌公仔"],
+        ["gifts/shoushi/", "首饰"],
+        ["gifts/giftstalk/", "Giftstalk精选"],
+        ["gifts/dengshi/", "创意礼品"],
+        ["qiyetuangou/gift_card.html", "礼品卡"],
+        ["gifts/duorouzhiwupenzai/", "多肉植物盆栽"]
+    ];
+    for (var elem of arr) {
+        gifts.innerHTML += `<li><a target="_blank" href="/${elem[0]}">${elem[1]}</a></li>`;
+    }
+})();
+(() => {
+    var arr = [
+        ["greenplant", "绿色植物"],
+        ["potflower", "盆栽花卉"]
+    ];
+    for (var elem of arr) {
+        Plant.innerHTML += `<li><a target="_blank" href="/Plant/${elem[0]}/">${elem[1]}</a></li>`;
+    }
+})();
+(() => {
+    var arr = [
+        ["", "首页"],
+        ["flower/", "鲜花"],
+        ["yongshenghua/", "永生花"],
+        ["cake/", "蛋糕"],
+        ["gifts/", "礼品"],
+        ["gifts/chocolates/", "巧克力"],
+        ["huayu/", "花语大全"],
+        ["you/", "设计师臻选鲜花"],
+        ["theme/chongyangjie/", "重阳节鲜花礼品"]
+    ];
+    for (var elem of arr) {
+        nav.innerHTML += `<li><a href="/${elem[0]}">${elem[1]}</a></li>`;
+    }
+})();
+
+
+
+
+
+
+
+
