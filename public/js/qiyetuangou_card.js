@@ -43,8 +43,7 @@
                     <div class="card_item_info_num">
                         <a href="javascript:SetNum('Q_${arr[i][1]}','minus');" class="operation"><i class="iconfont iconfont-jian"></i></a>
                         <input class="num_ipt" name="Q_${arr[i][1]}" id="Q_${arr[i][1]}" value="1" type="text" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" />
-                        <a href="javascript:SetNum('Q_${arr[i][1]}','add');" class="operation"><i class="iconfont iconfont-jia"></i>
-                        </a>
+                        <a href="javascript:SetNum('Q_${arr[i][1]}','add');" class="operation"><i class="iconfont iconfont-jia"></i></a>
                     </div>
                 </div>
             </div>
@@ -76,12 +75,14 @@
                     <div class="card_item_info_num">
                         <a href="javascript:SetNum('Q_${arr[i][1]}','minus');" class="operation"><i class="iconfont iconfont-jian"></i></a>
                         <input class="num_ipt" name="Q_${arr[i][1]}" id="Q_${arr[i][1]}" value="1" type="text" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" />
-                        <a href="javascript:SetNum('Q_${arr[i][1]}','add');" class="operation"><i class="iconfont iconfont-jia"></i>
-                        </a>
+                        <a href="javascript:SetNum('Q_${arr[i][1]}','add');" class="operation"><i class="iconfont iconfont-jia"></i></a>
                     </div>
                 </div>
             </div>
         </div>
         `;
     }
+})();
+(() => {
+
 })();

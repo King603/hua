@@ -302,7 +302,12 @@
             <div class="xzcs_dt">
         `;
         for (var j = 0; j < arr[i][1].length; j++) {
-            str += `<span><a href="/cake/city/${arr[i][1][j][0]}" title="${arr[i][1][j][1]}蛋糕" class="${arr[i][1][j][2]}" name="${arr[i][1][j][3]}city">${arr[i][1][j][1]}</a></span>`;
+            str += `
+            <span>
+                <a href="/cake/city/${arr[i][1][j][0]}" title="${arr[i][1][j][1]}蛋糕" class="${arr[i][1][j][2]}" name="${arr[i][1][j][3]}city">
+                    ${arr[i][1][j][1]}
+                </a>
+            </span>`;
         }
         str += "</div></div>";
     }

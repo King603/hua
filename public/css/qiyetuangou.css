@@ -1,0 +1,19 @@
+.nav {
+  margin: 0;
+}
+
+.nav li a {
+  color: #595656;
+}
+
+.nav li.active {
+  background-color: #f60;
+}
+
+.nav li.active a {
+  color: #fff;
+}
+
+.nav li.active a:hover {
+  color: #fff;
+}
