@@ -1,0 +1,283 @@
+.site-nav .container {
+  width: 1200px;
+}
+.wrapper .w970 .box-border {
+  padding-top: 0;
+}
+.wrapper .w970 .article {
+  padding-bottom: 0;
+}
+.container .banner {
+  width: 100%;
+  position: relative;
+}
+.container .banner .banner-bg {
+  width: 100%;
+}
+.container .banner .huali-banner-logo {
+  width: 284px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -142px;
+  margin-top: -36px;
+}
+.container .title {
+  width: 720px;
+  margin: 36px auto 0;
+  color: #232628;
+  text-align: center;
+  font-weight: bold;
+}
+.container .title-cn {
+  font-size: 24px;
+  line-height: 24px;
+}
+.container .title-en {
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 8px;
+}
+.container .content {
+  width: 720px;
+  margin: 20px auto 0;
+  color: #232628;
+}
+.container .content .para {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+.container .content .para .text-bold {
+  font-weight: bold;
+}
+.container .profile {
+  width: 100%;
+  margin: 0 auto;
+}
+.container .award {
+  width: 100%;
+  height: 302px;
+  margin: 0 auto;
+}
+.container .award .swiper-container {
+  width: 720px;
+  height: 255px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+.container .award .swiper-slide {
+  text-align: center;
+}
+.container .award .swiper-slide img {
+  width: 220px;
+}
+.container .award .swiper-slide .slide-title {
+  margin-top: 16px;
+  color: #232628;
+}
+.container .award .swiper-slide .slide-title .award-year {
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+}
+.container .award .swiper-slide .slide-title .award-year .year {
+  font-size: 18px;
+}
+.container .award .swiper-slide .slide-title .award-name {
+  text-align: center;
+  font-size: 12px;
+}
+.container .award-button-prev,
+.container .award-button-next {
+  position: absolute;
+  top: 60px;
+  outline: none;
+  width: 38px;
+  height: 38px;
+  background-size: 38px 38px;
+  cursor: pointer;
+}
+.container .award-button-prev {
+  left: 50px;
+  background-image: url('//img02.hua.com/pc/pimg/aboutus/swiper_arrow_left.png');
+}
+.container .award-button-next {
+  right: 50px;
+  background-image: url('//img02.hua.com/pc/pimg/aboutus/swiper_arrow_right.png');
+}
+.container .points-container {
+  background-color: #F7F9FA;
+}
+.container .points-container .points {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.container .points-container .list {
+  margin: 0;
+}
+.container .points-container .item {
+  margin-top: 58px;
+  font-size: 0;
+}
+.container .points-container .item .pic {
+  display: inline-block;
+  width: 554px;
+  font-size: 0;
+  vertical-align: top;
+}
+.container .points-container .item .pic img {
+  width: 100%;
+}
+.container .points-container .item .pic .vedio {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.container .points-container .item .pic .vedio-img {
+  width: 271px;
+  margin-top: 14px;
+}
+.container .points-container .item .pic .vedio-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 59px;
+  margin-top: -28px;
+  margin-left: -28px;
+}
+.container .points-container .item .pic .vedio + .vedio {
+  margin-left: 12px;
+}
+.container .points-container .item .num {
+  position: relative;
+  font-size: 78px;
+  line-height: 95px;
+  font-weight: bold;
+  color: #FF734C;
+}
+.container .points-container .item .num:after {
+  position: absolute;
+  content: '';
+  bottom: -4px;
+  width: 50px;
+  height: 4px;
+  background-color: #FF734C;
+}
+.container .points-container .item-content {
+  display: inline-block;
+  width: 414px;
+  vertical-align: top;
+  color: #232628;
+}
+.container .points-container .item-content-box {
+  margin-top: 20px;
+}
+.container .points-container .item-content-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 30px;
+}
+.container .points-container .item-content-desc {
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 12px;
+}
+.container .points-container .item-left .item-content {
+  padding-left: 10px;
+}
+.container .points-container .item-left .item-content .num:after {
+  left: 0;
+}
+.container .points-container .item-right .item-content {
+  padding-right: 10px;
+}
+.container .points-container .item-right .item-content .num {
+  float: right;
+}
+.container .points-container .item-right .item-content .num:after {
+  right: 0;
+}
+.container .points-container .item-right .item-content-box {
+  float: right;
+}
+.container .points-container .item-right .item-content-title {
+  float: right;
+}
+.container .points-container .item-right .item-content-desc {
+  float: right;
+  text-align: right;
+}
+.container .company {
+  width: 100%;
+  margin: 0 auto 65px;
+}
+.container .company .para {
+  text-align: center;
+}
+.container .company-box {
+  position: relative;
+  height: 208px;
+  overflow: hidden;
+}
+.container .company .swiper-company {
+  width: 720px;
+  margin: 0 auto;
+  height: 176px;
+  overflow: hidden;
+}
+.container .company .swiper-slide img {
+  width: 220px;
+  height: 176px;
+}
+.container .company-button-prev,
+.container .company-button-next {
+  position: absolute;
+  top: 35%;
+  width: 38px;
+  height: 38px;
+  background-size: 38px 38px;
+  outline: none;
+  cursor: pointer;
+}
+.container .company-button-prev {
+  left: 50px;
+  background-image: url('//img02.hua.com/pc/pimg/aboutus/swiper_arrow_left.png');
+}
+.container .company-button-next {
+  right: 50px;
+  background-image: url('//img02.hua.com/pc/pimg/aboutus/swiper_arrow_right.png');
+}
+.container .bottom {
+  width: 100%;
+}
+.container .bottom img {
+  width: 100%;
+}
+.eject {
+  position: fixed;
+  z-index: 1002;
+  top: 50%;
+  left: 50%;
+  margin-top: -297px;
+  margin-left: -432px;
+  display: none;
+}
+.eject .play {
+  position: absolute;
+  top: 50px;
+  right: 51px;
+}
+.mask {
+  background: #000;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  cursor: pointer;
+}
