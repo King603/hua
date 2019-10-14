@@ -1,4 +1,5 @@
 (() => {
+    var zxwz=document.getElementById("zxwz");
     var arr = [
         [23044, "给客户送礼一般如何送？给客户送礼有哪些讲究？", "很多人一提到给客户送礼，就头大，送什么，花多少钱合适……心里都没有一点数，如果是一个有心的人，其实他会在送礼之前首先应该列一份清单，把需要打点的人一一列出。给客户送礼一般如何送？给客户送礼有哪些讲究？"],
         [23043, "送女孩永不凋谢的花，有这几种选择", "送女孩永不凋谢的花，有这几种选择"],
@@ -10,18 +11,26 @@
         [23036, "白色情人节是什么？白色情人节要干什么？", "白色情人节是什么？白色情人节要干什么？"]
     ];
     var str = "";
-    for (var i = 0; i < arr.length; i++) {
+    for (var elem of arr) {
         str += `
         <div class="Item_Title">
-            <a class="left" href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a>
+            <a class="left" href="/huayu/${elem[0]}.html" target="_blank">${elem[1]}</a>
         </div>
         <div class="Item_Brief">
-            <a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][2]}</a>
+            <a href="/huayu/${elem[0]}.html" target="_blank">${elem[2]}</a>
         </div>
         `;
     }
     zxwz.innerHTML = str;
 })();
+var get_list=(arr,num,father)=>{
+    var list=document.querySelectorAll(".aboutallbox .home_rec_cat")[num-1];
+    var str = `<div class="header"><a class="left" target="_blank" href="/huayu/${father.href}.html">${father.title}</a><a class="right" target="_blank" href="/huayu/shengri.html">更多>></a></div>`;
+    for (var elem of arr) {
+        str += `<div><a href="/huayu/${elem[0]}.html" target="_blank">${elem[1]}</a></div>`;
+    }
+    list.innerHTML = str;
+}
 (() => {
     var arr = [
         [19164, "忘记老婆生日怎么办？如何选用生日鲜花？"],
@@ -33,11 +42,7 @@
         [22888, "花开一面墙，花落一路香，一棵爬藤植物的花海"],
         [22874, "生日送花祝福语怎么写？给老婆，给朋友，给长辈祝福语！"]
     ];
-    var str = '<div class="header"><a class="left" target="_blank" href="/huayu/shengri.html">生日送花</a><a class="right" target="_blank" href="/huayu/shengri.html">更多>></a></div>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<div><a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></div>`;
-    }
-    list1.innerHTML = str;
+    get_list(arr,1,{href:"shengri",title:"生日送花"});
 })();
 (() => {
     var arr = [
@@ -50,11 +55,7 @@
         [18212, "巨蟹座性格分析及星座配对！"],
         [17743, "永生花是什么？永生花是真花吗？它为什么叫永生花？"]
     ];
-    var str = '<div class="header"><a class="left" target="_blank" href="/huayu/jiqiao.html">送花艺术</a><a class="right" target="_blank" href="/huayu/jiqiao.html">更多>></a></div>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<div><a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></div>`;
-    }
-    list2.innerHTML = str;
+    get_list(arr,2,{href:"jiqiao",title:"送花艺术"});
 })();
 (() => {
     var arr = [
@@ -67,18 +68,8 @@
         [17774, "对不起，我应该早点告诉你"],
         [14593, "2016，为12星座开运的12种花"]
     ];
-    var str = '<div class="header"><a class="left" target="_blank" href="/huayu/zhishi.html">鲜花常识</a><a class="right" target="_blank" href="/huayu/zhishi.html">更多>></a></div>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<div><a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></div>`;
-    }
-    list3.innerHTML = str;
+    get_list(arr,3,{href:"zhishi",title:"鲜花常识"});
 })();
-
-
-
-
-
-
 (() => {
     var arr = [
         [22993, "送花要注意什么？如何给老人，爱人，朋友送花？"],
@@ -90,11 +81,7 @@
         [15442, "最能代表女神的花，你是哪一种？"],
         [13519, "雾霾天，清除污染的最佳十大室内植物"]
     ];
-    var str = '<div class="header"><a class="left" target="_blank" href="/huayu/shenghuo.html">鲜花生活</a><a class="right" target="_blank" href="/huayu/shenghuo.html">更多>></a></div>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<div><a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></div>`;
-    }
-    list4.innerHTML = str;
+    get_list(arr,4,{href:"shenghuo",title:"鲜花生活"});
 })();
 (() => {
     var arr = [
@@ -107,11 +94,7 @@
         [17749, "如何区分进口永生花和国产永生花？"],
         [18135, "插花要怎么弄才具有独一无二的美？"]
     ];
-    var str = '<div class="header"><a class="left" target="_blank" href="/huayu/huayi.html">花卉花艺</a><a class="right" target="_blank" href="/huayu/huayi.html">更多>></a></div>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<div><a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></div>`;
-    }
-    list5.innerHTML = str;
+    get_list(arr,5,{href:"huayi",title:"花卉花艺"});
 })();
 (() => {
     var arr = [
@@ -124,39 +107,38 @@
         [17488, "多头康乃馨的花语是什么？"],
         [11558, "百合花语，百合花怎么养？"]
     ];
-    var str = '<div class="header"><a class="left" target="_blank" href="/huayu/huayu.html">花语</a><a class="right" target="_blank" href="/huayu/huayu.html">更多>></a></div>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<div><a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></div>`;
+    get_list(arr,6,{href:"huayu",title:"花语"});
+})();
+var get_menu=(arr,num)=>{
+    var menu=document.querySelectorAll(".dropdown-menu .list-inline")[num-1];
+    for(var elem of arr){
+        menu.innerHTML+=`<li><a href="/${elem[0]}/">${elem[1]}</a></li>`;
     }
-    list6.innerHTML = str;
+}
+(() => {
+    var arr = [
+        ["/aiqingxianhua/", "爱情鲜花"],
+        ["/youqingxianhua/", "友情鲜花"],
+        ["/shengriliwu/", "生日鲜花"],
+        ["/songzhangbeixianhua/", "问候长辈"],
+        ["/zhufuqinghexianhua/", "祝贺鲜花"],
+        ["/hunqingxianhua/", "婚庆鲜花"],
+        ["/tanbingweiwenxianhua/", "探病慰问"],
+        ["/daoqianxianhua/", "道歉鲜花"],
+        ["/businessFlower/kaiyehualan/", "开业花篮"]
+    ];
+    get_menu(arr,1);
 })();
 (() => {
     var arr = [
-        ["aiqingxianhua", "爱情鲜花"],
-        ["youqingxianhua", "友情鲜花"],
-        ["shengriliwu", "生日鲜花"],
-        ["songzhangbeixianhua", "问候长辈"],
-        ["zhufuqinghexianhua", "祝贺鲜花"],
-        ["hunqingxianhua", "婚庆鲜花"],
-        ["tanbingweiwenxianhua", "探病慰问"],
-        ["daoqianxianhua", "道歉鲜花"],
-        ["businessFlower/kaiyehualan", "开业花篮"]
+        ["/yongshenghua/yongshenghua_box.html", "经典花盒"],
+        ["/yongshenghua/yongshenghua_large.html", "巨型玫瑰"],
+        ["/yongshenghua/yongshenghua_lavender.html", "薰衣草"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        xh.innerHTML += `<li><a href="/${arr[i][0]}/">${arr[i][1]}</a></li>`;
-    }
+    get_menu(arr,2);
 })();
 (() => {
-    var arr = [
-        ["box", "经典花盒"],
-        ["large", "巨型玫瑰"],
-        ["lavender", "薰衣草"]
-    ];
-    for (var i = 0; i < arr.length; i++) {
-        ysh.innerHTML += `<li><a href="/yongshenghua/yongshenghua_${arr[i][0]}.html">${arr[i][1]}</a></li>`;
-    }
-})();
-(() => {
+    var nav=document.getElementsByClassName("nav")[0];
     var arr = [
         ["/", "首页"],
         ["/flower/", "鲜花"],
@@ -218,6 +200,7 @@
         ["yuanxiaojie", "元宵节送花"],
         ["whiteday", "白色情人节送花"]
     ];
+    var sh=document.getElementById("sh");
     for (var i = 0; i < arr.length; i++) {
         sh.innerHTML += `<dd><img src="../img/baike/tree_switch.gif" /><a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}</a></dd>`;
     }
@@ -235,12 +218,11 @@
         [11644, "满天星的花语是什么？"],
         [11031, "送女朋友鲜花，送花卡片写什么？"]
     ];
+    var ul11=document.getElementsByClassName("ul11")[0];
     for (var i = 0; i < arr.length; i++) {
         ul11.innerHTML += `<li><a href="/huayu/${arr[i][0]}.html" target="_self">${arr[i][1]}</a></li>`;
     }
 })();
-
-
 
 
 

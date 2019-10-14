@@ -187,15 +187,16 @@
     ol.innerHTML = str2;
 })();
 (() => {
+    var bd = document.querySelector("#fullCarousel .bd")
     var arr = [
         [9010969, "你最珍贵", 248, ''],
         [9010731, "牵手一生", 196, ''],
-        [9012055, "不变的心", 469, 'class="last-child"']
+        [9012055, "不变的心", 469, "last-child"]
     ];
     var str = "";
     for (var i = 0; i < arr.length; i++) {
         str += `
-        <a ${arr[i][3]} href="/product/${arr[i][0]}.html?huaPid=homepage-f00${i + 1}" target="_blank">
+        <a class="${arr[i][3]}" href="/product/${arr[i][0]}.html?huaPid=homepage-f00${i + 1}" target="_blank">
             <img src="tuijian/rightbox_${arr[i][0]}.png" height="140" width="210">
             <div class="rightbox">
                 <p class="rightbox-name">${arr[i][1]}</p>
@@ -207,6 +208,7 @@
     bd.innerHTML = str;
 })();
 (() => {
+    var ul = document.querySelector(".container .toper-server ul")
     var arr = [
         ["/profile/why_choose_us.htm", "鲜花电商龙头", "销量领先，权威认证龙头企业"],
         ["/productpj/", "14年品牌 真实口碑", '最近评价<font id="pjCount">334029</font>条'],
@@ -226,9 +228,10 @@
         </li>
         `;
     }
-    toper_server_ul.innerHTML = str;
+    ul.innerHTML = str;
 })();
 (() => {
+    var product_list = document.getElementsByClassName("product-list")[0];
     var arr = [
         ["9010947", "真爱如初", 299, 56],
         ["9012089", "爱在心头", 587, 108],
@@ -249,7 +252,7 @@
         </li>
         `;
     }
-    xstj.innerHTML = str;
+    product_list.innerHTML = str;
 })();
 (() => {
     var arr = [
@@ -262,23 +265,7 @@
         ["99枝玫瑰赠德芙心语巧克力", "9092112", "629"],
         ["我只钟情你", "9012223", "236"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `
-        <li>
-            <a href="/product/${arr[i][1]}.html?huaPid=homepage-f10${i + 1}" target="_blank">
-                <img class="img-box" data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
-                    height="240" width="220">
-                <span class="product-title">爱情 · ${arr[i][0]}</span>
-                <p class="price">
-                    <span class="price-sign">&yen;</span>
-                    <span class="price-num" data-pp="${arr[i][1]}">${arr[i][2]}</span>
-                </p>
-            </a>
-        </li>
-        `;
-    }
-    f1.innerHTML = str;
+    get_floor(arr, 1, "爱情");
 })();
 (() => {
     var arr = [
@@ -291,23 +278,7 @@
         ["幸福万年长", "9012204", "338"],
         ["感激", "9010736", "218"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `
-        <li>
-            <a href="/product/${arr[i][1]}.html?huaPid=homepage-f20${i + 1}" target="_blank">
-                <img class="img-box" data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
-                    height="240" width="220">
-                <span class="product-title">送长辈 ·  ${arr[i][0]}</span>
-                <p class="price">
-                    <span class="price-sign">&yen;</span>
-                    <span class="price-num" data-pp="${arr[i][1]}">${arr[i][2]}</span>
-                </p>
-            </a>
-        </li>
-        `
-    }
-    f2.innerHTML = str;
+    get_floor(arr, 2, "送长辈");
 })();
 (() => {
     var arr = [
@@ -320,23 +291,7 @@
         ["爱与祝福", "1073039", "198"],
         ["公主的水晶鞋&#183;粉", "1073125", "198"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `
-        <li>
-            <a href="/product/${arr[i][1]}.html?huaPid=homepage-f30${i + 1}" target="_blank">
-                <img class="img-box" data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
-                    height="240" width="220">
-                <span class="product-title">永生花 · ${arr[i][0]}</span>
-                <p class="price">
-                    <span class="price-sign">&yen;</span>
-                    <span class="price-num" data-pp="${arr[i][1]}">${arr[i][2]}</span>
-                </p>
-            </a>
-        </li>
-        `
-    }
-    f3.innerHTML = str;
+    get_floor(arr, 3, "永生花");
 })();
 (() => {
     var arr = [
@@ -349,23 +304,7 @@
         ["Mcake蛋糕·小熊动物造型芝士味生日儿童生日宴会蛋糕(2磅)", "5142028", "298"],
         ["21CAKE蛋糕·百香果酸乳酪慕斯蛋糕(2磅)", "5222023", "298"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `
-        <li>
-            <a href="/product/${arr[i][1]}.html?huaPid=homepage-f40${i + 1}" target="_blank">
-                <img class="img-box" data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
-                    height="240" width="220">
-                <span class="product-title">${arr[i][0]}</span>
-                <p class="price">
-                    <span class="price-sign">&yen;</span>
-                    <span class="price-num" data-pp="${arr[i][1]}">${arr[i][2]}</span>
-                </p>
-            </a>
-        </li>
-        `;
-    }
-    f4.innerHTML = str;
+    get_floor(arr, 4);
 })();
 (() => {
     var arr = [
@@ -378,23 +317,7 @@
         ["十八音粉水晶钢琴", "1064035", "258"],
         ["星期耳钉礼盒", "1076062", "198"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `
-        <li>
-            <a href="/product/${arr[i][1]}.html?huaPid=homepage-f50${i + 1}" target="_blank">
-                <img class="img-box" data-original="newpic/${arr[i][1]}.jpg_220x240.jpg" src="newpic/${arr[i][1]}.jpg_220x240.jpg"
-                    height="240" width="220">
-                <span class="product-title">礼品 · ${arr[i][0]}</span>
-                <p class="price">
-                    <span class="price-sign">&yen;</span>
-                    <span class="price-num" data-pp="${arr[i][1]}">${arr[i][2]}</span>
-                </p>
-            </a>
-        </li>
-        `
-    }
-    f5.innerHTML = str;
+    get_floor(arr, 5, "礼品");
 })();
 (() => {
     var arr = [
@@ -404,20 +327,20 @@
         ["/huayu/20051116174222.htm", "通用送花祝福语-经典送花祝福语"],
         ["/huayu/20051115105306.htm", "送花的常识与技巧"],
         ["/huayu/20050405004253.htm", "女孩都喜欢别人送鲜花吗？"],
-        ["//www.hua.com/huayu/22994.html", "给爷爷送花有哪些选择？给老人送花推荐！"],
-        ["//www.hua.com/huayu/22993.html", "送花要注意什么？如何给老人，爱人，朋友送花？"],
-        ["//www.hua.com/huayu/14821.html", "12星座异地恋如何维持？送你一份送花攻略！"],
-        ["//www.hua.com/huayu/10786.html", "送花的含义，生活中怎么送花？"],
-        ["//www.hua.com/huayu/11031.html", "送女朋友鲜花，送花卡片写什么？"],
-        ["//www.hua.com/huayu/13297.html", "异地恋有大招，教你不分手！"],
-        ["//www.hua.com/huayu/23044.html", "给客户送礼一般如何送？给客户送礼有哪些讲究？"],
-        ["//www.hua.com/huayu/23043.html", "送女孩永不凋谢的花，有这几种选择"],
-        ["//www.hua.com/huayu/23042.html", "第一次给女朋友过生日，该送什么？"],
-        ["//www.hua.com/huayu/23040.html", "粉色系玫瑰有哪些？粉色系玫瑰有啥区别？"],
-        ["//www.hua.com/huayu/23039.html", "苏醒玫瑰花语是什么？苏醒玫瑰适合送给谁？"],
-        ["//www.hua.com/huayu/23038.html", "春天有哪些应季的花？"],
-        ["//www.hua.com/huayu/23037.html", "白色情人节贺卡留言，白色情人节祝福语精选"],
-        ["//www.hua.com/huayu/23036.html", "白色情人节是什么？白色情人节要干什么？"]
+        ["/huayu/22994.html", "给爷爷送花有哪些选择？给老人送花推荐！"],
+        ["/huayu/22993.html", "送花要注意什么？如何给老人，爱人，朋友送花？"],
+        ["/huayu/14821.html", "12星座异地恋如何维持？送你一份送花攻略！"],
+        ["/huayu/10786.html", "送花的含义，生活中怎么送花？"],
+        ["/huayu/11031.html", "送女朋友鲜花，送花卡片写什么？"],
+        ["/huayu/13297.html", "异地恋有大招，教你不分手！"],
+        ["/huayu/23044.html", "给客户送礼一般如何送？给客户送礼有哪些讲究？"],
+        ["/huayu/23043.html", "送女孩永不凋谢的花，有这几种选择"],
+        ["/huayu/23042.html", "第一次给女朋友过生日，该送什么？"],
+        ["/huayu/23040.html", "粉色系玫瑰有哪些？粉色系玫瑰有啥区别？"],
+        ["/huayu/23039.html", "苏醒玫瑰花语是什么？苏醒玫瑰适合送给谁？"],
+        ["/huayu/23038.html", "春天有哪些应季的花？"],
+        ["/huayu/23037.html", "白色情人节贺卡留言，白色情人节祝福语精选"],
+        ["/huayu/23036.html", "白色情人节是什么？白色情人节要干什么？"]
     ];
     var str = "";
     for (var i = 0; i < arr.length; i++) {
@@ -568,7 +491,7 @@
         ["?city=贵阳", "贵阳"],
         ["?city=南宁", "南宁"],
         ["shijiazhuangdangao.html", "石家庄"],
-        ["?city=海口" , "海口"],
+        ["?city=海口", "海口"],
         ["taiyuandangao.html", "太原"],
         ["?city=兰州", "兰州"],
         ["?city=乌鲁木齐", "乌鲁木齐"],
@@ -585,3 +508,124 @@
         city_list.innerHTML += `<li><a href="/cake/city/${arr[i][0]}" target="_blank">${arr[i][1]}</a></li>`;
     }
 })();
+(() => {
+    var arr = [
+        ["www.chinaname.cn", "中华取名网"],
+        ["sz.fang.com", "深圳房产网"],
+        ["www.juanpi.com", "卷皮网"],
+        ["www.wbiao.cn", "腕表"],
+        ["www.bbhun.com", "宝贝婚团网"],
+        ["www.yuanlin365.com", "苗木"],
+        ["www.zocai.com", "佐卡伊珠宝网"],
+        ["www.blove.com", "钻石婚戒定制"],
+        ["www.spider.com.cn", "杂志"],
+        ["www.iyijiao.com", "中国青少年艺术教育网"],
+        ["www.aiuw.com", "装修网"],
+        ["www.dog126.com", "淘狗网"],
+        ["www.liwuyou.com", "礼无忧网"],
+        ["www.goupuzi.com", "宠物狗"],
+        ["www.jiyouwang.com", "机友网"],
+        ["www.cocodiy.com", "礼物网"],
+        ["zx.meilele.com", "装修"],
+        ["www.ipo3.com", "新三板"],
+        ["www.huoming.com", "商标注册"],
+        ["www.loho88.com", "眼镜店"]
+    ];
+    var str = "";
+    for (var i = 0; i < arr.length; i++) {
+        str += `<a href="http://${arr[i][0]}/" target="_blank">${arr[i][1]}</a>`
+    }
+    yl.innerHTML = str;
+})();
+(() => {
+    var arr = [
+        ["default.htm", "服务声明"],
+        ["faq.htm", "常见问题"],
+        ["afterservice.htm", "售后服务"],
+        ["send_shuoming.htm", "配送说明"],
+        ["sendRange.htm", "配送范围"],
+        ["ordercx/", "订单查询"],
+        ["order_cancel.htm", "取消订单"],
+        ["re_payment.htm", "补交货款"],
+        ["private.htm", "隐私条款"],
+        ["safe.htm", "安全条款"]
+    ];
+    var str = "";
+    for (var i = 0; i < arr.length; i++) {
+        str += `<li><a href="/help/${arr[i][0]}" target="_blank" rel="nofollow">${arr[i][1]}</a></li>`
+    }
+    fh_1.innerHTML = str;
+})();
+(() => {
+    var arr = [
+        ["shop_step.htm", "中国鲜花礼品网购物流程"],
+        ["demo.htm", "中国鲜花礼品网订购演示"],
+        ["sendRange.htm", "鲜花网能配送哪些城市？"],
+        ["afterservice.htm", "鲜花售后服务是怎么样的？"],
+        ["Orde_in_advance.htm", "我应该提前多久预订鲜花？"]
+    ];
+    var str = "";
+    for (var i = 0; i < arr.length; i++) {
+        str += `<li><a href="/help/${arr[i][0]}" target="_blank">${arr[i][1]}</a></li>`
+    }
+    fh_2.innerHTML = str;
+})();
+(() => {
+    var arr = [
+        ["http://sz.hua.com/", "深圳鲜花"],
+        ["http://bj.hua.com/", "北京鲜花"],
+        ["http://sh.hua.com/", "上海鲜花"],
+        ["http://gz.hua.com/", "广州鲜花"],
+        ["http://tj.hua.com/", "天津鲜花"],
+        ["http://cq.hua.com/", "重庆鲜花"],
+        ["http://cd.hua.com/", "成都鲜花"],
+        ["http://xa.hua.com/", "西安鲜花"],
+        ["http://wh.hua.com/", "武汉鲜花"],
+        ["http://nj.hua.com/", "南京鲜花"],
+        ["http://xm.hua.com/", "厦门鲜花"],
+        ["/help/sendRange.htm", "更多城市"]
+    ];
+    var str = "";
+    for (var i = 0; i < arr.length; i++) {
+        str += `<li><a href="${arr[i][0]}" target="_blank" title="${arr[i][1]}">${arr[i][1]}</a></li>`
+    }
+    fh_3.innerHTML = str;
+})();
+(() => {
+    var arr = [
+        ["pp", "十四年品牌"],
+        ["xldy", "销量领先"],
+        ["bwkh_btn", "百万客户信赖"],
+        ["ychy_btn", "时尚原创花艺"],
+        ["ddsp_btn", "订单实拍"],
+        ["djbz_btn", "低价保障"],
+        ["sd_btn", "3小时配送"],
+        ["tpcn_btn", "两倍退赔承诺"]
+    ];
+    var str = "";
+    for (var i = 0; i < arr.length; i++) {
+        str += `<li><a href="/profile/why_choose_us.htm#${arr[i][0]}" target="_blank"><span class="ico ico-server-w${i + 1}"></span>${arr[i][1]}</a></li>`
+    }
+    fs.innerHTML = str;
+})();
+function get_floor (arr, num, st = "") {
+    var f = document.querySelectorAll(".container .floor .floor-products")[num - 1];
+    var i = 1;
+    var str = "";
+    for (var elem of arr) {
+        str += `
+        <li>
+            <a href="/product/${elem[1]}.html?huaPid=homepage-f50${i++}" target="_blank">
+                <img class="img-box" data-original="newpic/${elem[1]}.jpg_220x240.jpg" src="newpic/${elem[1]}.jpg_220x240.jpg"
+                    height="240" width="220">
+                <span class="product-title">${st} · ${elem[0]}</span>
+                <p class="price">
+                    <span class="price-sign">&yen;</span>
+                    <span class="price-num" data-pp="${elem[1]}">${elem[2]}</span>
+                </p>
+            </a>
+        </li>
+        `;
+    }
+    f.innerHTML = str;
+}

@@ -96,7 +96,6 @@ var _html = (element, arr) => {
     _html(".dropdown-menu>ul.list-inline:nth-child(10)", arr);
 })();
 (() => {
-    var nav = document.querySelector(".nav");
     var arr = [
         ["", "首页"],
         ["flower/", "鲜花"],
@@ -108,9 +107,7 @@ var _html = (element, arr) => {
         ["you/", "设计师臻选鲜花"],
         ["theme/birthday/", "浪漫生日礼"]
     ];
-    for (var elem of arr) {
-        nav.innerHTML += `<li><a target="_blank" href="/${elem[0]}">${elem[1]}</a></li>`;
-    }
+    _html(".nav", arr);
 })();
 (() => {
     var Product_1 = document.querySelectorAll("#mainSection .product")[0];
@@ -155,7 +152,7 @@ var _html = (element, arr) => {
     var i = 0;
     for (var elem of arr) {
         product_item[i].innerHTML += `
-        <a href="/product/${elem[0]}.html?huaPid=birthday-f20${i + 1}" target="_blank">
+        <a href="/product/${elem[0]}.html?huaPid=birthday-f20${i++}" target="_blank">
             <div class="product-item-pic">
                 <img src="../../newpic/${elem[0]}.jpg" />
             </div>
@@ -174,7 +171,6 @@ var _html = (element, arr) => {
             </div>
         </a>
         `;
-        i++;
     }
 })();
 (() => {
@@ -199,7 +195,7 @@ var _html = (element, arr) => {
     var i = 0
     for (var elem of arr) {
         product_item[i].innerHTML += `
-        <a href="/product/${elem[0]}.html?huaPid=birthday-f30${i + 1}" target="_blank">
+        <a href="/product/${elem[0]}.html?huaPid=birthday-f30${i++}" target="_blank">
             <div class="product-item-pic">
                 <span class="product-item-pic-tag">${elem[1]}</span>
                 <img src="../../newpic/${elem[0]}.jpg" />
@@ -219,7 +215,6 @@ var _html = (element, arr) => {
             </div>
         </a>
         `;
-        i++;
     }
 })();
 (() => {
@@ -244,7 +239,7 @@ var _html = (element, arr) => {
     var i = 0
     for (var elem of arr) {
         product_item[i].innerHTML += `
-        <a href="/product/${elem[0]}.html?huaPid=birthday-f40${i + 1}" target="_blank">
+        <a href="/product/${elem[0]}.html?huaPid=birthday-f40${i++}" target="_blank">
             <div class="product-item-pic">
                 <img src="../../newpic/${elem[0]}.jpg" />
             </div>
@@ -263,7 +258,6 @@ var _html = (element, arr) => {
             </div>
         </a>
         `;
-        i++;
     }
 })();
 (() => {
@@ -288,7 +282,7 @@ var _html = (element, arr) => {
     var i = 0;
     for (var elem of arr) {
         product_item[i].innerHTML += `
-        <a href="/product/${elem[0]}.html?huaPid=birthday-f50${i + 1}" target="_blank">
+        <a href="/product/${elem[0]}.html?huaPid=birthday-f50${i++}" target="_blank">
             <div class="product-item-pic">
                 <img src="../../newpic/${elem[0]}.jpg" />
             </div>
@@ -307,7 +301,6 @@ var _html = (element, arr) => {
             </div>
         </a>
         `;
-        i++;
     }
 })();
 (() => {
@@ -324,7 +317,7 @@ var _html = (element, arr) => {
     var i = 0;
     for (var elem of arr) {
         product_item[i].innerHTML += `
-        <a href="/product/${elem[0]}.html?huaPid=birthday-f50${i + 1}" target="_blank">
+        <a href="/product/${elem[0]}.html?huaPid=birthday-f50${i++}" target="_blank">
             <div class="product-item-pic">
                 <img src="../../newpic/${elem[0]}.jpg" />
             </div>
@@ -343,7 +336,6 @@ var _html = (element, arr) => {
             </div>
         </a>
         `;
-        i++;
     }
 })();
 

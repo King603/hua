@@ -1,78 +1,122 @@
+function get_nav(arr, num) {
+    var cate_list = document.querySelectorAll(".common .cate-list")[num - 1];
+    for (var elem of arr) {
+        cate_list.innerHTML += `<li><a href="${elem[0]}" target="_blank">${elem[1]}</a></li>`
+    }
+}
 (() => {
     var arr = [
-        ["aiqingxianhua", "爱情鲜花"],
-        ["shengriliwu", "生日鲜花"],
-        ["youqingxianhua", "友情鲜花"],
-        ["songzhangbeixianhua", "问候长辈"],
-        ["tanbingweiwenxianhua", "探病慰问"],
-        ["daoqianxianhua", "道歉鲜花"],
-        ["zhufuqinghexianhua", "祝贺鲜花"],
-        ["hunqingxianhua", "婚庆鲜花"],
-        ["businessFlower", "商务鲜花"]
+        ["/flower/", "鲜花"],
+        ["/yongshenghua/", "永生花"],
+        ["/gifts/", "礼品"],
+        ["/Plant/", "绿植"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        xhyt.innerHTML += `<li style="width:30%"><a href="/${arr[i][0]}/" target="_blank">${arr[i][1]}</a></li>`
+    var dropdown_cate = document.querySelector(".common .dropdown-cate");
+    for (var elem of arr) {
+        dropdown_cate.innerHTML += `
+        <h4><a href="${elem[0]}">${elem[1]}</a></h4>
+        <ul class="cate-list list-inline"></ul>
+        `;
     }
+})();
+
+
+(() => {
+    var arr = [
+        ["/aiqingxianhua/", "爱情鲜花"],
+        ["/shengriliwu/", "生日鲜花"],
+        ["/youqingxianhua/", "友情鲜花"],
+        ["/songzhangbeixianhua/", "问候长辈"],
+        ["/tanbingweiwenxianhua/", "探病慰问"],
+        ["/daoqianxianhua/", "道歉鲜花"],
+        ["/zhufuqinghexianhua/", "祝贺鲜花"],
+        ["/hunqingxianhua/", "婚庆鲜花"],
+        ["/businessFlower/", "商务鲜花"]
+    ];
+    get_nav(arr, 1);
 })();
 (() => {
     var arr = [
-        ["box", "经典花盒"],
-        ["large", "巨型玫瑰"],
-        ["lavender", "薰衣草"],
-        ["vase", "永生瓶花"],
-        ["characteristic", "特色永生花"]
+        ["/yongshenghua/yongshenghua_box.html", "经典花盒"],
+        ["/yongshenghua/yongshenghua_large.html", "巨型玫瑰"],
+        ["/yongshenghua/yongshenghua_lavender.html", "薰衣草"],
+        ["/yongshenghua/yongshenghua_vase.html", "永生瓶花"],
+        ["/yongshenghua/yongshenghua_characteristic.html", "特色永生花"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        ysh.innerHTML += `<li><a target="_blank" href="/yongshenghua/yongshenghua_${arr[i][0]}.html">${arr[i][1]}</a></li>`
-    }
+    get_nav(arr, 2);
 })();
 (() => {
     var arr = [
-        ["livingflower/", "泰国保鲜花"],
-        ["gifts/musicbox/", "音乐盒"],
-        ["gifts/crystallaser/", "水晶内雕"],
-        ["gifts/goldenflower/", "金箔花"],
-        ["gifts/cosmeticmirror/", "化妆镜"],
-        ["gifts/kingking/", "香薰系列"],
-        ["gifts/bestlife/", "音乐睡枕"],
-        ["gifts/vase/", "花瓶/相框"],
-        ["katonghuashu/", "卡通花束"],
-        ["toys/", "品牌公仔"],
-        ["gifts/shoushi/", "首饰"],
-        ["gifts/giftstalk/", "Giftstalk精选"],
-        ["gifts/dengshi/", "创意礼品"],
-        ["qiyetuangou/gift_card.html", "礼品卡"],
-        ["gifts/duorouzhiwupenzai/", "多肉植物盆栽"]
+        ["/livingflower/", "泰国保鲜花"],
+        ["/gifts/musicbox/", "音乐盒"],
+        ["/gifts/crystallaser/", "水晶内雕"],
+        ["/gifts/goldenflower/", "金箔花"],
+        ["/gifts/cosmeticmirror/", "化妆镜"],
+        ["/gifts/kingking/", "香薰系列"],
+        ["/gifts/bestlife/", "音乐睡枕"],
+        ["/gifts/vase/", "花瓶/相框"],
+        ["/katonghuashu/", "卡通花束"],
+        ["/toys/", "品牌公仔"],
+        ["/gifts/shoushi/", "首饰"],
+        ["/gifts/giftstalk/", "Giftstalk精选"],
+        ["/gifts/dengshi/", "创意礼品"],
+        ["/qiyetuangou/gift_card.html", "礼品卡"],
+        ["/gifts/duorouzhiwupenzai/", "多肉植物盆栽"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        lp.innerHTML += `<li><a target="_blank" href="/${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    get_nav(arr, 3);
 })();
 (() => {
     var arr = [
-        ["greenplant/", "绿色植物"],
-        ["potflower/", "盆栽花卉"]
+        ["/Plant/greenplant/", "绿色植物"],
+        ["/Plant/potflower/", "盆栽花卉"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        plant1.innerHTML += `<li><a target="_blank" href="/Plant/${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    get_nav(arr, 4);
 })();
 (() => {
+    var nav = document.getElementsByClassName("nav")[0];
     var arr = [
         ["/", "首页"],
-        ["/flower", "鲜花"],
-        ["/yongshenghua", "永生花"],
-        ["/cake", "蛋糕"],
-        ["/gifts", "礼品"],
-        ["/gifts/chocolates", "巧克力"],
-        ["/huayu", "花语大全"],
-        ["/you", "设计师臻选鲜花"],
+        ["/flower/", "鲜花"],
+        ["/yongshenghua/", "永生花"],
+        ["/cake/", "蛋糕"],
+        ["/gifts/", "礼品"],
+        ["/gifts/chocolates/", "巧克力"],
+        ["/huayu/", "花语大全"],
+        ["/you/", "设计师臻选鲜花"],
         ["/theme/birthday/", "生日鲜花礼品"],
     ];
-    for (var i = 0; i < arr.length; i++) {
-        nav.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
+    for (var elem of arr) {
+        nav.innerHTML += `<li><a href="${elem[0]}">${elem[1]}</a></li>`
     }
 })();
+(() => {
+    var arr = [
+        ["", "effect", "用途", ""],
+        ["", "texture", "花材", ""],
+        ["", "color", "颜色", ""],
+        ["", "sort", "类别", ""],
+        ["", "price", "价格", ""],
+        ["last-child", "num", "枝数", "list-special"]
+    ];
+    var navigation = document.getElementsByClassName("navigation")[0];
+    for (var elem of arr) {
+        navigation.innerHTML += `
+        <div class="item ${elem[0]}">
+            <div class="title">
+                <span class="ico ico-${elem[1]}"></span>
+                <h4>${elem[2]}</h4>
+            </div>
+            <ul class="item-list ${elem[3]} list-inline"></ul>
+        </div>
+        `;
+    }
+})();
+function get_item(num, arr) {
+    var item = document.querySelectorAll(".navigation>.item>.item-list")[num - 1];
+    for (var elem of arr) {
+        item.innerHTML += `<li><a href="${elem[0]}">${elem[1]}</a></li>`
+    }
+}
 (() => {
     var arr = [
         ["/aiqingxianhua/", "爱情鲜花"],
@@ -90,9 +134,7 @@
         ["/florist/", "自选鲜花"],
         ["/worldflora/", "澳台送花"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        item_1.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    get_item(1, arr);
 })();
 (() => {
     var arr = [
@@ -110,23 +152,19 @@
         ["/yujinxiang/", "郁金香"],
         ["/matilian/", "马蹄莲"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        item_2.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    get_item(2, arr);
 })();
 (() => {
     var arr = [
-        ["/hongsexianhua/", "red", "红色"],
-        ["/fensexianhua/", "pink", "粉色"],
-        ["/xiangbinsexianhua/", "champagne", "香槟"],
-        ["/huangsexianhua/", "yellow", "黄色"],
-        ["/baisexianhua/", "white", "白色"],
-        ["/zisexianhua/", "purple", "紫色"],
-        ["/lansexianhua/", "blue", "蓝色"]
+        ["/hongsexianhua/", '<span class="c-red"></span>红色'],
+        ["/fensexianhua/", '<span class="c-pink"></span>粉色'],
+        ["/xiangbinsexianhua/", '<span class="c-champagne"></span>香槟'],
+        ["/huangsexianhua/", '<span class="c-yellow"></span>黄色'],
+        ["/baisexianhua/", '<span class="c-white"></span>白色'],
+        ["/zisexianhua/", '<span class="c-purple"></span>紫色'],
+        ["/lansexianhua/", '<span class="c-blue"></span>蓝色']
     ];
-    for (var i = 0; i < arr.length; i++) {
-        item_3.innerHTML += `<li><a href="${arr[i][0]}"><span class="c-${arr[i][1]}"></span>${arr[i][2]}</a></li>`
-    }
+    get_item(3, arr);
 })();
 (() => {
     var arr = [
@@ -139,9 +177,7 @@
         ["/businessFlower/kaiyehualan/", "开业花蓝"],
         ["/zuhexianhua/", "组合鲜花"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        item_4.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    get_item(4, arr);
 })();
 (() => {
     var arr = [
@@ -153,33 +189,30 @@
         ["/xianhuajiage/550-800/", "550-800元"],
         ["/xianhuajiage/800-99999/", "800元以上"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        item_5.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    get_item(5, arr);
 })();
 (() => {
     var arr = [
-        ["jiu", 9],
-        ["shi", 10],
-        ["shiyi", 11],
-        ["shier", 12],
-        ["shiliu", 16],
-        ["shiba", 18],
-        ["shijiu", 19],
-        ["ershi", 20],
-        ["ershier", 22],
-        ["ershijiu", 29],
-        ["sanshisan", 33],
-        ["sanshiliu", 36],
-        ["wushi", 50],
-        ["liushiliu", 66],
-        ["jiushijiu", 99],
+        ["/jiuduomeigui/", "9枝"],
+        ["/shiduomeigui/", "10枝"],
+        ["/shiyiduomeigui/", "11枝"],
+        ["/shierduomeigui/", "12枝"],
+        ["/shiliuduomeigui/", "16枝"],
+        ["/shibaduomeigui/", "18枝"],
+        ["/shijiuduomeigui/", "19枝"],
+        ["/ershiduomeigui/", "20枝"],
+        ["/ershierduomeigui/", "22枝"],
+        ["/ershijiuduomeigui/", "29枝"],
+        ["/sanshisanduomeigui/", "33枝"],
+        ["/sanshiliuduomeigui/", "36枝"],
+        ["/wushiduomeigui/", "50枝"],
+        ["/liushiliuduomeigui/", "66枝"],
+        ["/jiushijiuduomeigui/", "99枝"],
     ];
-    for (var i = 0; i < arr.length; i++) {
-        item_6.innerHTML += `<li><a href="/${arr[i][0]}duomeigui/">${arr[i][1]}枝</a></li>`
-    }
+    get_item(6, arr);
 })();
 (() => {
+    var panel_body=document.getElementsByClassName("panel-body")[0];
     var arr = [
         [9010845, "幸福典藏", "红色康乃馨16枝，白色相思梅5枝，栀子叶0.5扎", "146"],
         [9010846, "幸福花园", "红色康乃馨11枝", "121"],
@@ -187,26 +220,27 @@
         [9010840, "爱的祝福", "2枝多头白香水百合,19枝粉康乃馨", "208"],
         [9010741, "健康长久", "红色康乃馨99枝、多头红色康乃馨1扎", "436"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        tuijian.innerHTML += `
+    for (var elem of arr) {
+        panel_body.innerHTML += `
         <div class="side-item">
             <div class="img-box">
-                <a href="/product/${arr[i][0]}.html" target="_blank" data-link="${arr[i][0]}"><img src="../newpic/${arr[i][0]}.jpg_220x240.jpg" width="180" height="196" alt="${arr[i][1]}"></a>
+                <a href="/product/${elem[0]}.html" target="_blank" data-link="${elem[0]}"><img src="../newpic/${elem[0]}.jpg_220x240.jpg" width="180" height="196" alt="${elem[1]}"></a>
             </div>
             <div class="info-cont">
                 <div class="title">
-                    <a href="/product/${arr[i][0]}.html" class="product-title" data-link="${arr[i][0]}">鲜花/${arr[i][1]}-${arr[i][2]}</a>
+                    <a href="/product/${elem[0]}.html" class="product-title" data-link="${elem[0]}">鲜花/${elem[1]}-${elem[2]}</a>
                 </div>
                 <div class="price">
                     <span class="price-sign">&yen;</span>
-                    <span class="price-num" data-pp="${arr[i][0]}">${arr[i][3]}</span>
+                    <span class="price-num" data-pp="${elem[0]}">${elem[3]}</span>
                 </div>
             </div>
         </div>
-        `
+        `;
     }
 })();
 (() => {
+    var panel_body=document.getElementsByClassName("panel-body")[1];
     var arr = [
         [9012009, "6872479*", "送花速度很快"],
         [9012219, "152885*", "早上11点下单，下午3点不到就送到了，而且花花很新鲜，盛赞啊啊啊~~~"],
@@ -215,23 +249,24 @@
         [9012056, "youyida*", "给公司员工家属的生日福利，很不错！"],
         [9012441, "181****3681", "不错不错不错"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        pingjia.innerHTML += `
+    for (var elem of arr) {
+        panel_body.innerHTML += `
         <div class="side-com">
             <div class="img-box">
-                <a href="/product/${arr[i][0]}.html" target="_blank">
-                    <img src="../newpic/${arr[i][0]}.jpg_80x87.jpg">
+                <a href="/product/${elem[0]}.html" target="_blank">
+                    <img src="../newpic/${elem[0]}.jpg_80x87.jpg">
                 </a>
             </div>
             <div class="com-cont">
-                <h5>会员号：${arr[i][1]}</h5>
-                <p><a href="/productpj/${arr[i][0]}.html" target="_blank">${arr[i][2]}</a></p>
+                <h5>会员号：${elem[1]}</h5>
+                <p><a href="/productpj/${elem[0]}.html" target="_blank">${elem[2]}</a></p>
             </div>
         </div>
-        `
+        `;
     }
 })();
 (() => {
+    var grid_item=document.getElementsByClassName("grid-wrapper")[0];
     var arr = [
         [9012332, "留住好时光", "239", "粉绣球1枝，粉雪山玫瑰6枝", "精选昆明A级花材"],
         [9012095, "幸福绽放", "172", "粉色康乃馨19枝", "温暖之选 亮丽花色"],
@@ -262,35 +297,36 @@
         [9012093, "永恒的爱", "258", "粉色康乃馨33枝", ""],
         [9012188, "相思红", "178", "红色康乃馨11枝，粉色桔梗4枝，红豆5枝", ""]
     ];
-    for (var i = 0; i < arr.length; i++) {
+    for (var elem of arr) {
         grid_item.innerHTML += `
         <div class="grid-item">
             <div class="grid-panel">
                 <div class="img-box">
-                    <a href="/product/${arr[i][0]}.html" target="_blank" data-link="${arr[i][0]}"><img width="220" height="240" src="../newpic/${arr[i][0]}.jpg_220x240.jpg" alt="${arr[i][1]}"></a>
+                    <a href="/product/${elem[0]}.html" target="_blank" data-link="${elem[0]}"><img width="220" height="240" src="../newpic/${elem[0]}.jpg_220x240.jpg" alt="${elem[1]}"></a>
                 </div>
                 <div class="info-cont">
                     <div class="price">
                         <span class="price-sign">&yen;</span>
-                        <span class="price-num" data-pp="${arr[i][0]}">${arr[i][2]}</span>
+                        <span class="price-num" data-pp="${elem[0]}">${elem[2]}</span>
                     </div>
                     <div class="title">
-                        <a href="/product/${arr[i][0]}.html" target="_blank" data-link="${arr[i][0]}">
-                            <span class="product-title">鲜花/${arr[i][1]}-${arr[i][3]}</span>
-                            <span class="feature">${arr[i][4]}</span>
+                        <a href="/product/${elem[0]}.html" target="_blank" data-link="${elem[0]}">
+                            <span class="product-title">鲜花/${elem[1]}-${elem[3]}</span>
+                            <span class="feature">${elem[4]}</span>
                         </a>
                     </div>
                     <div class="operate">
-                        <a href="javascript:DoGuanZhu('${arr[i][0]}')" class="attention"><span class="ico ico-heart-d"></span>收藏</a>
-                        <a href="/shopping/AddtoCart?product_code=${arr[i][0]}" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                        <a href="javascript:DoGuanZhu('${elem[0]}')" class="attention"><span class="ico ico-heart-d"></span>收藏</a>
+                        <a href="/shopping/AddtoCart?product_code=${elem[0]}" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
                     </div>
                 </div>
             </div>
         </div>
-        `
+        `;
     }
 })();
 (() => {
+    var panel_body=document.getElementsByClassName("panel-body")[2];
     var arr = [
         [
             ["10482", "送花给长辈送什么花？"],
@@ -299,8 +335,6 @@
             ["12033", "康乃馨花语，母亲节为什么送康乃馨？"],
             ["10870", "母亲节送什么？母亲节鲜花推荐"]
         ],
-
-
         [
             ["10510", "送长辈送什么花好？"],
             ["10428", "妈妈生日，精心准备的几款鲜花"],
@@ -308,8 +342,6 @@
             ["10792", "母亲节送什么花？"],
             ["11351", "妇女节鲜花，三八节送妈妈什么花最温馨？"]
         ],
-
-
         [
             ["11619", "给老师送什么花合适？"],
             ["10516", "给老师送花的精心推荐"],
@@ -319,12 +351,12 @@
         ]
     ];
     var str = "";
-    for (var i = 0; i < arr.length; i++) {
+    for (var elems of arr) {
         str += "<ul>";
-        for (var j = 0; j < arr[i].length; j++) {
-            str += `<li><a href="/huayu/${arr[i][j][0]}.html" target="_blank">${arr[i][j][1]}</a></li>`
+        for (var elem of elems) {
+            str += `<li><a href="/huayu/${elem[0]}.html" target="_blank">${elem[1]}</a></li>`;
         }
         str += "</ul>";
     }
-    liyi.innerHTML = str;
+    panel_body.innerHTML = str;
 })();
