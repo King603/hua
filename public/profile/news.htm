@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>公司动态-花礼网(中国鲜花礼品网) </title>
+    <link rel="icon" href="../img/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+    <link type="text/css" rel="stylesheet" href="../css/pagination.css">
+    <link rel="stylesheet" href="../css/logo.css">
+</head>
+
+<body class="huayu">
+    <!-- 顶部导航 -->
+    <div class="site-nav">
+        <div class="container">
+            <ul class="site-nav-l">
+                <li class="menu">
+                    <a href="//www.hua.com/" onClick="addfavorite();return false;"><span
+                            class="ico ico-star"></span>收藏鲜花网</a>
+                </li>
+                <li class="menu dropdown">
+                    <a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span
+                            class="ico ico-mobile"></span>手机花礼</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="//img02.hua.com/pc/pimg/app_qrcode.jpg" height="124" width="124">
+                        <p>用手机客户端 享特别优惠</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="site-nav-r">
+                <li class="menu login" id="LoginInfo"></li>
+                <li class="site-nav-pipe">|</li>
+                <li class="menu">
+                    <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <li class="menu dropdown">
+                    <a href="/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span
+                            class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-service">
+                        <a href="/member/payment/balancefill" target="_blank">在线付款</a>
+                        <a href="/help/" target="_blank">帮助中心</a>
+                        <a href="/help/afterservice.htm" target="_blank">售后服务</a>
+                        <a href="/help/sendRange.htm" target="_blank">配送范围</a>
+                        <a href="/chat/" target="_blank">留言反馈</a>
+                    </div>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <li class="menu dropdown">
+                    <a href="/shopping/showcart" data-hover="dropdown" data-delay="0" rel="nofollow"
+                        target="_blank"><span class="ico ico-cart"></span>购物车<span class="text-primary"
+                            id="gwcCount"></span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <li class="menu slogan">
+                    公司动态
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航 End -->
+    <!-- 头部 -->
+    <header>
+        <div class="logo">
+            <h1><a href="//www.hua.com/" class="logo-bd">中国鲜花礼品网，鲜花网动态</a></h1>
+            <i></i>
+            <h2>中国鲜花礼品网 始于2005，简称花礼网</h2>
+        </div>
+        <div class="search">
+            <form name="i_search" method="get" action="/search/">
+                <div class="input-group">
+                    <input name="keyword" type="text" class="form-control" placeholder="商品关键词">
+                    <span class="input-group-btn">
+                        <button id="test" class="btn btn-primary" type="button" onClick="this.form.submit()">搜索</button>
+                    </span>
+                </div>
+            </form>
+            <span class="help-block"><a href="/hongmeigui/">红玫瑰</a><a href="/flowersong/">永生花</a><a
+                    href="/shengriliwu/">生日鲜花</a><a href="/gifts/goldenflower/">金玫瑰</a></span>
+        </div>
+        <div class="service">
+            <span class="ico ico-phone"></span>400-889-8188
+            <a href="/chat/" target="_blank"><span class="ico ico-headset"></span>在线客服</a>
+        </div>
+    </header>
+    <!-- 头部 End -->
+    <!-- 导航 -->
+    <nav class="common">
+        <div class="container">
+            <div class="categorys dropdown">
+                <h3 class="categorys-title" data-hover="dropdown" data-delay="0">
+                    <a href="/all.html"><span class="pull-right glyphicon glyphicon-menu-down"></span>全部商品导购</a>
+                </h3>
+                <div class="dropdown-menu dropdown-cate">
+                    <h4><a href="/flower/">鲜花</a></h4>
+                    <ul class="cate-list list-inline"></ul>
+                    <h4><a href="/yongshenghua/">永生花</a></h4>
+                    <ul class="cate-list list-inline"></ul>
+                </div>
+            </div>
+            <ul class="nav"></ul>
+        </div>
+    </nav>
+    <!-- 导航 End -->
+    <!-- 中部内容开始 -->
+    <div class="container">
+        <div class="breadcrumbs"><a href="/">首页</a> &gt; <a href="/profile/news.htm">公司动态</a></div>
+        <div class="wrapper about">
+            <div class="pull-left w970 l230">
+                <div class="box-border">
+                    <div class="article">
+                        <h3>
+                            <b>NEWS</b>
+                            公司动态
+                        </h3>
+                        <ul class="center-list1"></ul>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="pull-left w210 r970">
+                <div class="box-border">
+                    <div class="hd"><b></b><a href="/profile/about.htm">关于我们</a></div>
+                    <ul class="bd"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 中部内容结束 -->
+    <div style="clear:both"></div>
+    <!-- 尾部导航 -->
+    <div class="footer-nav">
+        <a href="/">首页</a><a href="/profile/about.htm" target="_blank">关于我们</a><a href="/profile/media.html"
+            target="_blank">媒体报道</a><a href="/profile/contact.htm" target="_blank">联系方式</a><a href="/help/GroupBuy.htm"
+            target="_blank">团购合作</a><a href="/liansuo/" target="_blank">花店入驻</a><a href="/member/payment/balancefill"
+            target="_blank">在线补款</a><a class="last-child" href="/huayu/songhua_city.html" target="_blank">同城送花</a><a
+            class="last-child" href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+    </div>
+    <!-- 尾部导航 End -->
+    <!-- 通用尾部 -->
+    <footer>
+        <div class="auth">
+            <a href="//kxlogo.knet.cn/seallogo.dll?sn=e15041744030058395oqbo000000&size=4" target="_blank"><img
+                    src="../img/common/kxwz.gif" height="40" width="109"></a>
+            <a href="https://search.szfw.org/cert/l/CX20130306002238002312" target="_blank"><img
+                    src="../img/common/cxwz.gif" height="40" width="112"></a>
+            <a href="//www.anquan.org/authenticate/cert/?site=www.hua.com&at=realname" rel="nofollow"
+                target="_blank"><img src="../img/common/smyz.gif" height="40" width="106"></a>
+            <a href="/member/payment/fillbyalipay?order_no=&order_sum=" rel="nofollow" target="_blank"><img
+                    src="../img/common/zfb.gif" height="49" width="96"></a>
+            <a href="/profile/news_20111110.htm" target="_blank"><img src="../img/common/100.jpg" height="49"
+                    width="150"></a>
+        </div>
+        <p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a
+                href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a
+                href="/profile/ICP.htm" rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a
+                href="//www.miibeian.gov.cn" rel="nofollow" target="_blank">粤ICP备09171662号</a> Copyright &copy;
+            2005-2019</p>
+        <p>花礼网(中国鲜花礼品网) Hua.com -- 公司动态 </p>
+    </footer>
+    <!-- 通用尾部 End -->
+    <script src="../js/news.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/statesandright.js"></script>
+
+</body>
+
+</html>

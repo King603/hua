@@ -532,7 +532,7 @@ var item = (floor, arr, num) => {
     }
 })();
 (() => {
-    var yl=document.querySelector(".footer-link>ul");
+    var yl=document.querySelector(".footer-link>div");
     var arr = [
         ["www.chinaname.cn", "中华取名网"],
         ["sz.fang.com", "深圳房产网"],
@@ -564,16 +564,16 @@ var item = (floor, arr, num) => {
 (() => {
     var fh_1=document.getElementsByClassName("list-unstyled")[0];
     var arr = [
-        ["/help/default.htm", "服务声明"],
-        ["/help/faq.htm", "常见问题"],
-        ["/help/afterservice.htm", "售后服务"],
-        ["/help/send_shuoming.htm", "配送说明"],
-        ["/help/sendRange.htm", "配送范围"],
-        ["/help/ordercx/", "订单查询"],
-        ["/help/order_cancel.htm", "取消订单"],
-        ["/help/re_payment.htm", "补交货款"],
-        ["/help/private.htm", "隐私条款"],
-        ["/help/safe.htm", "安全条款"]
+        ["default.htm", "服务声明"],
+        ["faq.htm", "常见问题"],
+        ["afterservice.htm", "售后服务"],
+        ["send_shuoming.htm", "配送说明"],
+        ["sendRange.htm", "配送范围"],
+        ["ordercx/", "订单查询"],
+        ["order_cancel.htm", "取消订单"],
+        ["re_payment.htm", "补交货款"],
+        ["private.htm", "隐私条款"],
+        ["safe.htm", "安全条款"]
     ];
     var str = "";
     for (var i = 0; i < arr.length; i++) {
@@ -584,11 +584,11 @@ var item = (floor, arr, num) => {
 (() => {
     var fh_2=document.getElementsByClassName("list-unstyled")[1];
     var arr = [
-        ["/help/shop_step.htm", "中国鲜花礼品网购物流程"],
-        ["/help/demo.htm", "中国鲜花礼品网订购演示"],
-        ["/help/sendRange.htm", "鲜花网能配送哪些城市？"],
-        ["/help/afterservice.htm", "鲜花售后服务是怎么样的？"],
-        ["/help/Orde_in_advance.htm", "我应该提前多久预订鲜花？"]
+        ["shop_step.htm", "中国鲜花礼品网购物流程"],
+        ["demo.htm", "中国鲜花礼品网订购演示"],
+        ["sendRange.htm", "鲜花网能配送哪些城市？"],
+        ["afterservice.htm", "鲜花售后服务是怎么样的？"],
+        ["Orde_in_advance.htm", "我应该提前多久预订鲜花？"]
     ];
     var str = "";
     for (var i = 0; i < arr.length; i++) {
@@ -619,6 +619,7 @@ var item = (floor, arr, num) => {
     fh_3.innerHTML = str;
 })();
 (() => {
+    var fs=document.querySelector(".footer-server>ul");
     var arr = [
         ["pp", "十四年品牌"],
         ["xldy", "销量领先"],
