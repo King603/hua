@@ -325,12 +325,6 @@ var get_item = (arr, num) => {
     ];
     get_item(arr, 6);
 })();
-var get_item = (arr, num) => {
-    var item = document.querySelectorAll(".navigation .item-list")[num - 1];
-    for (var elem of arr) {
-        item.innerHTML = `<li><a href="${elem[0]}">${elem[1]}</a></li>`;
-    }
-}
 (() => {
     var liyi = document.getElementsByClassName("panel-body")[2];
     var arr = [
@@ -341,7 +335,6 @@ var get_item = (arr, num) => {
             [12087, "妻子生日送多少朵玫瑰最好？"],
             [11876, "结婚后的情人节送什么？"]
         ],
-
         [
             [12071, "恋爱的那点事儿，怎样谈恋爱？"],
             [11441, "老婆过生日送什么花？"],
@@ -349,7 +342,6 @@ var get_item = (arr, num) => {
             [12023, "惹女友生气了怎么办？"],
             [11883, "送花的含义：相爱纪念日送什么花？"]
         ],
-
         [
             [11370, "解读爱情：十二星座之守护花"],
             [20051116174222, "经典送花祝福语"],
@@ -359,10 +351,10 @@ var get_item = (arr, num) => {
         ]
     ];
     var str = "";
-    for (var i = 0; i < arr.length; i++) {
+    for (var elems of arr) {
         str += "<ul>";
-        for (var j = 0; j < arr[i].length; j++) {
-            str += `<li><a href="/huayu/${arr[i][j][0]}.html" target="_blank">${arr[i][j][1]}</a></li>`;
+        for (var elem of elems) {
+            str += `<li><a href="/huayu/${elem[0]}.html" target="_blank">${elem[1]}</a></li>`;
         }
         str += "</ul>";
     }

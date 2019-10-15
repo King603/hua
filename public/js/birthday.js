@@ -120,7 +120,7 @@ var _html = (element, arr) => {
     var i = 0;
     for (var elem of arr) {
         product_item[i].innerHTML += `
-        <a href="/product/${elem[0]}.html?huaPid=birthday-f10${i + 1}" target="_blank">
+        <a href="/product/${elem[0]}.html?huaPid=birthday-f10${i++}" target="_blank">
             <img class="item-bg" src="../../birthday/${elem[1]}.png" />
             <div class="product-item-pic">
                 <img src="../../birthday/product_${elem[0]}.jpg" alt="${elem[2]}" />
@@ -137,7 +137,6 @@ var _html = (element, arr) => {
             </div>
         </a>
         `;
-        i++;
     }
 })();
 (() => {

@@ -1,3 +1,9 @@
+var _html = (element, arr) => {
+    var ul = document.querySelector(element);
+    for (var elem of arr) {
+        ul.innerHTML += `<li><a target="_blank" href="${elem[0]}">${elem[1]}</a></li>`;
+    }
+}
 (() => {
     var arr = [
         ["aiqingxianhua", "爱情鲜花"],
@@ -10,9 +16,7 @@
         ["daoqianxianhua", "道歉鲜花"],
         ["businessFlower/kaiyehualan", "开业花篮"]
     ];
-    for (var elem of arr) {
-        xh.innerHTML += `<li><a target="_blank" href="/${elem[0]}/">${elem[1]}</a></li>`;
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(2)", arr);
 })();
 (() => {
     var arr = [
@@ -22,9 +26,7 @@
         ["vase", "永生瓶花"],
         ["characteristic", "特色永生花"]
     ];
-    for (var elem of arr) {
-        ysh.innerHTML += `<li><a target="_blank" href="/yongshenghua/yongshenghua${elem[0]}.html/">${elem[1]}</a></li>`;
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(4)", arr);
 })();
 (() => {
     var arr = [
@@ -44,18 +46,14 @@
         ["qiyetuangou/gift_card.html", "礼品卡"],
         ["gifts/duorouzhiwupenzai/", "多肉植物盆栽"]
     ];
-    for (var elem of arr) {
-        gifts.innerHTML += `<li><a target="_blank" href="/${elem[0]}">${elem[1]}</a></li>`;
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(6)", arr);
 })();
 (() => {
     var arr = [
         ["greenplant", "绿色植物"],
         ["potflower", "盆栽花卉"]
     ];
-    for (var elem of arr) {
-        Plant.innerHTML += `<li><a target="_blank" href="/Plant/${elem[0]}/">${elem[1]}</a></li>`;
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(8)", arr);
 })();
 (() => {
     var arr = [
@@ -69,9 +67,7 @@
         ["/you/", "设计师臻选鲜花"],
         ["/theme/birthday/", "生日鲜花礼品"]
     ];
-    for (var elem of arr) {
-        nav.innerHTML += `<li><a href="${elem[0]}">${elem[1]}</a></li>`;
-    }
+    _html("nav .nav", arr);
 })();
 (() => {
     var arr = [
@@ -100,6 +96,7 @@
         [5302078, "蟠桃献颂(8寸)", "258", "元祖鲜奶蛋糕", ""],
         [5309076, "百寿延绵(8号+12号+14号)", "1150", "元祖祝寿蛋糕,需600元蛋糕架押金，并须提前3个工作日预订", "元祖授权销售"]
     ];
+    var grid_wrapper=document.getElementsByClassName("grid-wrapper")[0];
     for (var elem of arr) {
         grid_wrapper.innerHTML += `
         <div class="grid-item">
@@ -128,68 +125,69 @@
         `;
     }
 })();
+var get_cake_list=(arr,num)=>{
+    var list=document.querySelectorAll(".navigation .item-list")[num-1];
+    for (var elem of arr) {
+        list.innerHTML += `<li><a href="/cake/${elem[0]}">${elem[1]}</a></li>`;
+    }
+}
 (() => {
     var arr = [
-        ["beijingdangao", "北京"],
-        ["shanghaidangao", "上海"],
-        ["shenzhendangao", "深圳"],
-        ["guangzhoudangao", "广州"],
-        ["tianjindangao", "天津"],
-        ["chongqingdangao", "重庆"],
-        ["chengdudangao", "成都"],
-        ["shenyangdangao", "沈阳"],
-        ["wuhandangao", "武汉"],
-        ["xiandangao", "西安"],
-        ["hangzhoudangao", "杭州"],
-        ["nanjingdangao", "南京"],
-        ["suzhoudangao", "苏州"]
+        ["city/beijingdangao.html", "北京"],
+        ["city/shanghaidangao.html", "上海"],
+        ["city/shenzhendangao.html", "深圳"],
+        ["city/guangzhoudangao.html", "广州"],
+        ["city/tianjindangao.html", "天津"],
+        ["city/chongqingdangao.html", "重庆"],
+        ["city/chengdudangao.html", "成都"],
+        ["city/shenyangdangao.html", "沈阳"],
+        ["city/wuhandangao.html", "武汉"],
+        ["city/xiandangao.html", "西安"],
+        ["city/hangzhoudangao.html", "杭州"],
+        ["city/nanjingdangao.html", "南京"],
+        ["city/suzhoudangao.html", "苏州"],
+        ["", "更多&gt;&gt;"]
     ];
-    for (var elem of arr) {
-        city.innerHTML += `<li><a href="/cake/city/${elem[0]}.html">${elem[1]}</a></li>`;
-    }
-    city.innerHTML += '<li class="last-child"><a href="/cake/">更多&gt;&gt;</a></li>';
+    get_cake_list(arr,1);
 })();
 (() => {
     var arr = [
-        ["ganso", "元祖蛋糕"],
-        ["21cake", "廿一客蛋糕"],
-        ["lecake", "诺心蛋糕"],
-        ["incake", "INCAKE"],
-        ["beisike", "贝思客蛋糕"],
-        ["boncake", "BONCAKE"],
-        ["mcake", "Mcake蛋糕"],
-        ["waffleboy", "窝夫小子"],
-        ["micamika", "米卡米卡"],
-        ["xfxb", "幸福西饼"],
-        ["vcake", "Vcake蛋糕"],
-        ["heartcheesecake", "心之和蛋糕"],
-        ["cakeboss", "CAKEBOSS"],
-        ["allcitycake", "全国蛋糕"]
+        ["ganso/", "元祖蛋糕"],
+        ["21cake/", "廿一客蛋糕"],
+        ["lecake/", "诺心蛋糕"],
+        ["incake/", "INCAKE"],
+        ["beisike/", "贝思客蛋糕"],
+        ["boncake/", "BONCAKE"],
+        ["mcake/", "Mcake蛋糕"],
+        ["waffleboy/", "窝夫小子"],
+        ["micamika/", "米卡米卡"],
+        ["xfxb/", "幸福西饼"],
+        ["vcake/", "Vcake蛋糕"],
+        ["heartcheesecake/", "心之和蛋糕"],
+        ["cakeboss/", "CAKEBOSS"],
+        ["allcitycake/", "全国蛋糕"]
     ];
-    for (var elem of arr) {
-        logo.innerHTML += `<li><a href="/cake/${elem[0]}/">${elem[1]}</a></li>`;
-    }
+    get_cake_list(arr,2);
 })();
 (() => {
     var arr = [
-        ["xiannaidangao", "鲜奶蛋糕"],
-        ["shuiguodangao", "水果蛋糕"],
-        ["qiaokelidangao", "巧克力蛋糕"],
-        ["musidangao", "慕斯蛋糕"],
+        ["xiannaidangao/", "鲜奶蛋糕"],
+        ["shuiguodangao/", "水果蛋糕"],
+        ["qiaokelidangao/", "巧克力蛋糕"],
+        ["musidangao/", "慕斯蛋糕"],
         ["wutangdangao", "无糖蛋糕"],
-        ["shengxiaodangao", "生肖蛋糕"],
-        ["qinglvdangao", "情人蛋糕"],
-        ["hunqingdangao", "婚庆蛋糕"],
-        ["zhushoudangao", "祝寿蛋糕"],
-        ["ertongdangao", "儿童蛋糕"],
-        ["oushidangao", "欧式蛋糕"],
-        ["jieqingdangao", "节庆蛋糕"]
+        ["shengxiaodangao/", "生肖蛋糕"],
+        ["qinglvdangao/", "情人蛋糕"],
+        ["hunqingdangao/", "婚庆蛋糕"],
+        ["zhushoudangao/", "祝寿蛋糕"],
+        ["ertongdangao/", "儿童蛋糕"],
+        ["oushidangao/", "欧式蛋糕"],
+        ["jieqingdangao/", "节庆蛋糕"]
     ];
-    for (var elem of arr) {
-        fenlei.innerHTML += `<li><a href="/cake/${elem[0]}/">${elem[1]}</a></li>`;
-    }
+    get_cake_list(arr,3);
 })();
 (() => {
+    var panel_list1=document.getElementsByClassName("panel-body")[0];
     var arr = [
         [5302015, "水果之恋(8寸)", "元祖鲜奶蛋糕，布丁水果夹层", "258"],
         [5302066, "情有独钟(8寸)", "元祖鲜奶蛋糕", "258"],
@@ -198,7 +196,7 @@
         [5301096, "西点卷(虎皮卷)", "纯手工制，香气宜人", "10"]
     ];
     for (var elem of arr) {
-        tuijian.innerHTML += `
+        panel_list1.innerHTML += `
         <div class="side-item">
             <div class="img-box">
                 <a href="/product/${elem[0]}.html" target="_blank" data-link="${elem[0]}">
@@ -221,6 +219,7 @@
     }
 })();
 (() => {
+    var panel_list2=document.getElementsByClassName("panel-body")[1];
     var arr = [
         [9012078, "hpl3581*", "謝謝你們，準時到達"],
         [5501001, "jessj*", "送货及时，不错"],
@@ -230,7 +229,7 @@
         [5301097, "jaceyzh*", "花不是很新鲜"]
     ];
     for (var elem of arr) {
-        pingjia.innerHTML += `
+        panel_list2.innerHTML += `
         <div class="side-com">
             <div class="img-box">
                 <a href="/product/${elem[0]}.html" target="_blank">
@@ -246,6 +245,7 @@
     }
 })();
 (() => {
+    var panel_list3=document.getElementsByClassName("panel-body")[2];
     var arr = [
         [
             [4016, "元祖蛋糕介绍"],
@@ -277,7 +277,7 @@
         }
         str += "</ul>";
     }
-    changshi.innerHTML = str;
+    panel_list3.innerHTML = str;
 })();
 
 

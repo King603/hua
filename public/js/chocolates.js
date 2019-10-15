@@ -1,3 +1,9 @@
+var _html = (element, arr) => {
+    var ul = document.querySelector(element);
+    for (var elem of arr) {
+        ul.innerHTML += `<li><a target="_blank" href="${elem[0]}">${elem[1]}</a></li>`;
+    }
+}
 (() => {
     var arr = [
         ["aiqingxianhua", "爱情鲜花"],
@@ -10,9 +16,7 @@
         ["hunqingxianhua", "婚庆鲜花"],
         ["businessFlower", "商务鲜花"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        xhyt.innerHTML += `<li style="width:30%"><a href="/${arr[i][0]}/" target="_blank">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(2)", arr);
 })();
 (() => {
     var arr = [
@@ -22,9 +26,7 @@
         ["vase", "永生瓶花"],
         ["characteristic", "特色永生花"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        ysh.innerHTML += `<li><a target="_blank" href="/yongshenghua/yongshenghua_${arr[i][0]}.html">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(4)", arr);
 })();
 (() => {
     var arr = [
@@ -44,18 +46,14 @@
         ["qiyetuangou/gift_card.html", "礼品卡"],
         ["gifts/duorouzhiwupenzai/", "多肉植物盆栽"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        lp.innerHTML += `<li><a target="_blank" href="/${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(6)", arr);
 })();
 (() => {
     var arr = [
         ["greenplant/", "绿色植物"],
         ["potflower/", "盆栽花卉"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        plant1.innerHTML += `<li><a target="_blank" href="/Plant/${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(8)", arr);
 })();
 (() => {
     var arr = [
@@ -69,11 +67,10 @@
         ["/you", "设计师臻选鲜花"],
         ["/theme/chongyangjie", "重阳节鲜花礼品"],
     ];
-    for (var i = 0; i < arr.length; i++) {
-        nav.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    _html("nav .nav", arr);
 })();
 (() => {
+    var giftcate=document.getElementById("giftcate");
     var arr = [
         ["active", "/Gifts/", "all", "全部"],
         ["", "/Gifts/musicbox/", "yyh", "音乐盒"],
@@ -96,6 +93,7 @@
     }
 })();
 (() => {
+    var dataList=document.getElementById("dataList");
     var arr = [
         [1201003, "奢悦之美巧克力礼盒", "<span>始于颜值 忠于口感</span>", "夹心巧克力", 158, ""],
         [1201002, "玫瑰之约手工巧克力礼盒", "", "手工巧克力", 99, ""],
@@ -146,6 +144,7 @@
     }
 })();
 (() => {
+    var panel_body=document.getElementsByClassName("panel-body")[0];
     var arr = [
         [
             ["13947.html", "情人节送花和巧克力代表什么？"],

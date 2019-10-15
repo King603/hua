@@ -1,4 +1,5 @@
 (() => {
+    var xhyt = document.getElementById("xhyt");
     var arr = [
         ["aiqingxianhua", "爱情鲜花"],
         ["shengriliwu", "生日鲜花"],
@@ -17,6 +18,7 @@
     xhyt.innerHTML = str;
 })();
 (() => {
+    var xhhc = document.getElementById("xhhc");
     var arr = [
         ["meigui", "玫瑰"],
         ["kangnaixin", "康乃馨"],
@@ -33,6 +35,7 @@
     xhhc.innerHTML = str;
 })();
 (() => {
+    var ysh = document.getElementById("ysh");
     var arr = [
         ["box", "经典花盒"],
         ["large", "巨型玫瑰"],
@@ -51,6 +54,7 @@
     ysh.innerHTML = str;
 })();
 (() => {
+    var cake_logo = document.getElementById("cake_logo");
     var arr = [
         ["ganso", "cake_brand_menu_01.jpg", "元祖"],
         ["21cake", "cake_brand_21cake.png", "廿一客蛋糕"],
@@ -77,6 +81,7 @@
     cake_logo.innerHTML = str + '<a href="/cake/allcitycake/" class="national" target="_blank">全国蛋糕</a>';
 })();
 (() => {
+    var city = document.getElementById("city");
     var arr = [
         ["beijingdangao.html", "北京"],
         ["shanghaidangao.html", "上海"],
@@ -128,6 +133,7 @@
     city.innerHTML = str + '<a href="/cake/" target="_blank">更多&gt;&gt;</a>';
 })();
 (() => {
+    var gifts = document.getElementById("gifts");
     var arr = [
         ["/Gifts/musicbox/", "gifts-musicbox.png", "音乐盒"],
         ["/Gifts/goldenflower/", "gifts-goldenflower.png", "金箔花"],
@@ -148,6 +154,7 @@
     gifts.innerHTML = str;
 })();
 (() => {
+    var nav = document.getElementById("nav");
     var arr = [
         ["/flower/", "", "鲜花"],
         ["/yongshenghua/", "", "永生花"],
@@ -166,6 +173,8 @@
     nav.innerHTML = str;
 })();
 (() => {
+    var banner = document.getElementsByClassName("carousel-inner")[0];
+    var ol = document.getElementsByClassName("carousel-indicators")[0];
     var arr = [
         ["slider/19_chongyangjie_pc.jpg", "/theme/chongyangjie/", "active"],
         ["slider/18_birthday_pc.jpg?830", "/theme/birthday/?830", ""],
@@ -254,6 +263,27 @@
     }
     product_list.innerHTML = str;
 })();
+var get_floor = (arr, num, st = "") => {
+    var f = document.querySelectorAll(".container .floor .floor-products")[num - 1];
+    var i = 1;
+    var str = "";
+    for (var elem of arr) {
+        str += `
+        <li>
+            <a href="/product/${elem[1]}.html?huaPid=homepage-f50${i++}" target="_blank">
+                <img class="img-box" data-original="newpic/${elem[1]}.jpg_220x240.jpg" src="newpic/${elem[1]}.jpg_220x240.jpg"
+                    height="240" width="220">
+                <span class="product-title">${st} · ${elem[0]}</span>
+                <p class="price">
+                    <span class="price-sign">&yen;</span>
+                    <span class="price-num" data-pp="${elem[1]}">${elem[2]}</span>
+                </p>
+            </a>
+        </li>
+        `;
+    }
+    f.innerHTML = str;
+}
 (() => {
     var arr = [
         ["一往情深", "9010966", "239"],
@@ -320,6 +350,7 @@
     get_floor(arr, 5, "礼品");
 })();
 (() => {
+    var article = document.getElementsByClassName("article-list")[0];
     var arr = [
         ["/theme/tianchengzuo/", "天秤座鲜花礼物"],
         ["/huayu/20051115103610.htm", "鲜花枝数与其对应的含意"],
@@ -344,11 +375,12 @@
     ];
     var str = "";
     for (var i = 0; i < arr.length; i++) {
-        str += `<li class="article-item"><a href="${arr[i][0]}" target="_blank">${arr[i][1]}</a></li>`
+        str += `<li class="article-item"><a href="${arr[i][0]}" target="_blank">${arr[i][1]}</a></li>`;
     }
-    rmzx.innerHTML = str;
+    article.innerHTML = str;
 })();
 (() => {
+    var comments = document.getElementsByClassName("comments-list")[0];
     var arr = [
         ["avatar_default_04.jpg", "M*", "速度快，准时送达，还挺好看的！", "b844c15ef9854f4b8ad027abd235ad4a.jpg", "浙江杭州市余杭区", "2019-10-03"],
         ["avatar_default_05.jpg", "M*", "挺不错的，服务到位！还好看！", "5534c63513a24ef180919914456cd388.jpg", "浙江杭州市余杭区", "2019-10-03"],
@@ -383,10 +415,16 @@
                 </div>
             </div>
         </li>
-        `
+        `;
     }
     comments.innerHTML = str;
 })();
+var item = (floor, arr, num) => {
+    var item = document.querySelectorAll(`.${floor} .item-list`)[num - 1];
+    for (var elem of arr) {
+        item.innerHTML += `<li><a href="${elem[0]}" target="_blank">${elem[1]}</a></li>`;
+    }
+}
 (() => {
     var arr = [
         ["/gifts/crystallaser/", "水晶内雕-3D激光内雕水晶"],
@@ -394,26 +432,18 @@
         ["/gifts/goldenflower/", "金箔玫瑰/金箔画"],
         ["/gifts/musicbox/", "精品音乐盒/八音盒"]
     ];
-    str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `<li><a href="${arr[i][0]}" target="_blank">${arr[i][1]}</a></li>`
-    }
-    gifts_xg.innerHTML = str;
+    item("f5", arr, 1);
 })();
 (() => {
     var arr = [
-        ["/a_birthday/", "生日礼品"],
-        ["/a_dating/", "约会/求爱礼品"],
-        ["/a_wedding/", "结婚礼品"],
-        ["/a_thankyou/", "感谢/祝福礼品"],
-        ["/a_visit/", "拜访/探望礼品"],
-        ["/a_anniversary/", "结婚纪念日礼品"]
+        ["/gifts/a_birthday/", "生日礼品"],
+        ["/gifts/a_dating/", "约会/求爱礼品"],
+        ["/gifts/a_wedding/", "结婚礼品"],
+        ["/gifts/a_thankyou/", "感谢/祝福礼品"],
+        ["/gifts/a_visit/", "拜访/探望礼品"],
+        ["/gifts/a_anniversary/", "结婚纪念日礼品"]
     ];
-    str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `<li><a href="/gifts${arr[i][0]}" target="_blank">${arr[i][1]}</a></li>`
-    }
-    gifts_yt.innerHTML = str;
+    item("f5", arr, 2);
 })();
 (() => {
     var arr = [
@@ -432,11 +462,7 @@
         ["/cakeboss/", "CAKEBOSS"],
         ["/allcitycake/", "全国蛋糕"]
     ];
-    str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `<li><a href="/cake${arr[i][0]}" target="_blank">${arr[i][1]}&nbsp;</a></li>`
-    }
-    cake_ul.innerHTML = str;
+    item("f4", arr, 1);
 })();
 (() => {
     var arr = [
@@ -455,13 +481,10 @@
         ["city/suzhoudangao.html", "苏州"],
         ["", "更多"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `<li><a href="/cake/${arr[i][0]}" target="_blank">  ${arr[i][1]}</a></li>`;
-    }
-    cake_list.innerHTML = str;
+    item("f4", arr, 2);
 })();
 (() => {
+    var city_list=document.querySelector(".f4 ul");
     var arr = [
         ["beijingdangao.html", "北京"],
         ["shanghaidangao.html", "上海"],
@@ -509,6 +532,7 @@
     }
 })();
 (() => {
+    var yl=document.querySelector(".footer-link>ul");
     var arr = [
         ["www.chinaname.cn", "中华取名网"],
         ["sz.fang.com", "深圳房产网"],
@@ -538,17 +562,18 @@
     yl.innerHTML = str;
 })();
 (() => {
+    var fh_1=document.getElementsByClassName("list-unstyled")[0];
     var arr = [
-        ["default.htm", "服务声明"],
-        ["faq.htm", "常见问题"],
-        ["afterservice.htm", "售后服务"],
-        ["send_shuoming.htm", "配送说明"],
-        ["sendRange.htm", "配送范围"],
-        ["ordercx/", "订单查询"],
-        ["order_cancel.htm", "取消订单"],
-        ["re_payment.htm", "补交货款"],
-        ["private.htm", "隐私条款"],
-        ["safe.htm", "安全条款"]
+        ["/help/default.htm", "服务声明"],
+        ["/help/faq.htm", "常见问题"],
+        ["/help/afterservice.htm", "售后服务"],
+        ["/help/send_shuoming.htm", "配送说明"],
+        ["/help/sendRange.htm", "配送范围"],
+        ["/help/ordercx/", "订单查询"],
+        ["/help/order_cancel.htm", "取消订单"],
+        ["/help/re_payment.htm", "补交货款"],
+        ["/help/private.htm", "隐私条款"],
+        ["/help/safe.htm", "安全条款"]
     ];
     var str = "";
     for (var i = 0; i < arr.length; i++) {
@@ -557,12 +582,13 @@
     fh_1.innerHTML = str;
 })();
 (() => {
+    var fh_2=document.getElementsByClassName("list-unstyled")[1];
     var arr = [
-        ["shop_step.htm", "中国鲜花礼品网购物流程"],
-        ["demo.htm", "中国鲜花礼品网订购演示"],
-        ["sendRange.htm", "鲜花网能配送哪些城市？"],
-        ["afterservice.htm", "鲜花售后服务是怎么样的？"],
-        ["Orde_in_advance.htm", "我应该提前多久预订鲜花？"]
+        ["/help/shop_step.htm", "中国鲜花礼品网购物流程"],
+        ["/help/demo.htm", "中国鲜花礼品网订购演示"],
+        ["/help/sendRange.htm", "鲜花网能配送哪些城市？"],
+        ["/help/afterservice.htm", "鲜花售后服务是怎么样的？"],
+        ["/help/Orde_in_advance.htm", "我应该提前多久预订鲜花？"]
     ];
     var str = "";
     for (var i = 0; i < arr.length; i++) {
@@ -571,6 +597,7 @@
     fh_2.innerHTML = str;
 })();
 (() => {
+    var fh_3=document.getElementsByClassName("list-unstyled")[2];
     var arr = [
         ["http://sz.hua.com/", "深圳鲜花"],
         ["http://bj.hua.com/", "北京鲜花"],
@@ -608,24 +635,3 @@
     }
     fs.innerHTML = str;
 })();
-function get_floor (arr, num, st = "") {
-    var f = document.querySelectorAll(".container .floor .floor-products")[num - 1];
-    var i = 1;
-    var str = "";
-    for (var elem of arr) {
-        str += `
-        <li>
-            <a href="/product/${elem[1]}.html?huaPid=homepage-f50${i++}" target="_blank">
-                <img class="img-box" data-original="newpic/${elem[1]}.jpg_220x240.jpg" src="newpic/${elem[1]}.jpg_220x240.jpg"
-                    height="240" width="220">
-                <span class="product-title">${st} · ${elem[0]}</span>
-                <p class="price">
-                    <span class="price-sign">&yen;</span>
-                    <span class="price-num" data-pp="${elem[1]}">${elem[2]}</span>
-                </p>
-            </a>
-        </li>
-        `;
-    }
-    f.innerHTML = str;
-}

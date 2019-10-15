@@ -1,3 +1,9 @@
+var _html = (element, arr) => {
+    var ul = document.querySelector(element);
+    for (var elem of arr) {
+        ul.innerHTML += `<li><a target="_blank" href="${elem[0]}">${elem[1]}</a></li>`;
+    }
+}
 (() => {
     var arr = [
         ["aiqingxianhua", "爱情鲜花"],
@@ -10,9 +16,7 @@
         ["daoqianxianhua", "道歉鲜花"],
         ["businessFlower/kaiyehualan", "开业鲜花"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        xhyt.innerHTML += `<li><a href="/${arr[i][0]}/" target="_blank">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(2)", arr);
 })();
 (() => {
     var arr = [
@@ -20,9 +24,7 @@
         ["large", "巨型玫瑰"],
         ["lavender", "薰衣草"],
     ];
-    for (var i = 0; i < arr.length; i++) {
-        ysh.innerHTML += `<li><a target="_blank" href="/yongshenghua/yongshenghua_${arr[i][0]}.html">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(4)", arr);
 })();
 (() => {
     var arr = [
@@ -31,11 +33,10 @@
         ["yongshenghua", "永生花"],
         ["huayu", "花语大全"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        nav.innerHTML += `<li><a href="/${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    _html("nav .nav", arr);
 })();
 (() => {
+    var twtj=document.querySelector("#top-rated>ul");
     var arr = [
         ["", "18339", "20181015140110280", "天秤座性格分析及星座配对！", "生日礼物指南", "<br>", "天秤座可能是十二星座里最憋屈的了，因为几乎没有人叫对了ta们的名字，实际上，“秤”这个字只有一个音：chèng，天秤座中的秤也并不是指天平，天秤座里面的“秤”称…"],
         ["g-a4", "22732", "2018101514033054", "开花店需要哪些条件？你到底适不适合开花店？", "花店经营", "<br>", "很多想要开花店的人都是那种对花艺感兴趣并且想以此生存的人，开花店需要哪些条件？你到底适不适合开花店？"],
@@ -61,11 +62,12 @@
                 </div>
             </div>
         </li>
-        `
+        `;
     }
     twtj.innerHTML = str;
 })();
 (() => {
+    var tjwz=document.getElementById("tjwz");
     var arr = [
         ["23025", "父亲六十大寿适合送什么花？", "tozhangbei", "送长辈生日礼物", "父亲六十大寿适合送什么花？"],
         ["23012", "花毛茛花语是什么？花毛茛养护技巧？", "zhishi", "鲜花常识", "要说春季必买的花卉之一，花毛茛肯定当之无愧，花色丰富的它，买几盆放在阳台和客厅里，绝对吸引眼球。花毛茛为重瓣或半重瓣，恍惚间，还颇有牡丹花的容颜，令人沉迷。"],
@@ -91,14 +93,24 @@
     tjwz.innerHTML = str;
 })();
 (() => {
-    for (var i = 1; i < 14; i += 2) {
+    var list_all=document.getElementById("list_all")
+    for (var i = 0; i < 7; i++) {
         list_all.innerHTML += `
-        <dl class="home_rec_cat" id="list${i}"></dl>
-        <dl class="home_rec_cat g-a4" id="list${i + 1}"></dl>
+        <dl class="home_rec_cat"></dl>
+        <dl class="home_rec_cat g-a4"></dl>
         <div class="separate"></div>
         `;
     }
+    console.log(list_all);
 })();
+var Home_list=(title,arr,num)=>{
+    var list=document.querySelectorAll("#list_all>.home_rec_cat")[num-1];
+    var str=`<dd class="header"><a class="left" target="_blank" href="/huayu/list_liwu.html">${title}</a><a class="right" target="_blank" href="/huayu/list_liwu.html">更多>> </a></dd>`;
+    for(var elem of arr){
+        str+=`<a href="/huayu/${elem[0]}.html" target="_blank">${elem[1]}<br></a></dd>`;
+    }
+    list.innerHTML=str;
+}
 (() => {
     var arr = [
         ["23025", "父亲六十大寿适合送什么花？"],
@@ -110,11 +122,7 @@
         ["21072", "男生身上这些特质，最能吸引妹子的注意力了！"],
         ["21053", "如何聊天才不会把天聊死？"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/list_liwu.html">送礼</a><a class="right" target="_blank" href="/huayu/list_liwu.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`;
-    }
-    list1.innerHTML = str;
+    Home_list("送礼",arr,1);
 })();
 (() => {
     var arr = [
@@ -127,11 +135,7 @@
         ["22888", "花开一面墙，花落一路香，一棵爬藤植物的花海"],
         ["22874", "生日送花祝福语怎么写？给老婆，给朋友，给长辈祝福语！"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/shengri.html">生日送花</a><a class="right" target="_blank" href="/huayu/shengri.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
-    }
-    list2.innerHTML = str;
+    Home_list("生日送花",arr,2);
 })();
 (() => {
     var arr = [
@@ -144,11 +148,7 @@
         ["18212", "巨蟹座性格分析及星座配对！"],
         ["17743", "永生花是什么？永生花是真花吗？它为什么叫永生花？"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/jiqiao.html">送花艺术</a><a class="right" target="_blank" href="/huayu/jiqiao.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
-    }
-    list3.innerHTML = str;
+    Home_list("送花艺术",arr,3);
 })();
 (() => {
     var arr = [
@@ -161,11 +161,7 @@
         ["17774", "对不起，我应该早点告诉你"],
         ["14593", "2016，为12星座开运的12种花"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/zhishi.html">鲜花常识</a><a class="right" target="_blank" href="/huayu/zhishi.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
-    }
-    list4.innerHTML = str;
+    Home_list("鲜花常识",arr,4);
 })();
 (() => {
     var arr = [
@@ -178,11 +174,7 @@
         ["15442", "最能代表女神的花，你是哪一种？"],
         ["13519", "雾霾天，清除污染的最佳十大室内植物"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/shenghuo.html">鲜花生活</a><a class="right" target="_blank" href="/huayu/shenghuo.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
-    }
-    list5.innerHTML = str;
+    Home_list("鲜花生活",arr,5);
 })();
 (() => {
     var arr = [
@@ -195,11 +187,7 @@
         ["17749", "如何区分进口永生花和国产永生花？"],
         ["18135", "插花要怎么弄才具有独一无二的美？"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/huayi.html">花卉花艺</a><a class="right" target="_blank" href="/huayu/huayi.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
-    }
-    list6.innerHTML = str;
+    Home_list("花卉花艺",arr,6);
 })();
 (() => {
     var arr = [
@@ -212,11 +200,7 @@
         ["17488", "多头康乃馨的花语是什么？"],
         ["11558", "百合花语，百合花怎么养？"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/huayu.html">花语</a><a class="right" target="_blank" href="/huayu/huayu.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
-    }
-    list7.innerHTML = str;
+    Home_list("花语",arr,7);
 })();
 (() => {
     var arr = [
@@ -229,11 +213,7 @@
         ["20051116174222", "经典送花祝福语"],
         ["23056", "一年一度的父亲节又快到了，有什么想对爸爸说的吗？"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/list_zhufuyu.html">祝福语大全</a><a class="right" target="_blank" href="/huayu/list_zhufuyu.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
-    }
-    list8.innerHTML = str;
+    Home_list("祝福语大全",arr,8);
 })();
 (() => {
     var arr = [
@@ -246,11 +226,7 @@
         ["22071", "生日送花卡片怎么写？给女朋友生日送花祝福语精选！"],
         ["22055", "送对生日礼物，让女友温柔一整年"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/tonvyou.html">送女朋友生日礼物</a><a class="right" target="_blank" href="/huayu/tonvyou.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
-    }
-    list9.innerHTML = str;
+    Home_list("送女朋友生日礼物",arr,9);
 })();
 (() => {
     var arr = [
@@ -263,11 +239,7 @@
         ["21738", "送礼指南| 如何为百变双子座女生挑选礼物？"],
         ["21139", "祝朋友生日快乐的话！朋友生日祝福语精选！"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/topengyou.html">送朋友生日礼物</a><a class="right" target="_blank" href="/huayu/topengyou.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
-    }
-    list10.innerHTML = str;
+    Home_list("送朋友生日礼物",arr,10); 
 })();
 (() => {
     var arr = [
@@ -280,11 +252,7 @@
         ["8007", "新年礼物选购"],
         ["8006", "礼赠艺术"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/tosongli.html">送礼艺术</a><a class="right" target="_blank" href="/huayu/tosongli.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
-    }
-    list11.innerHTML = str;
+    Home_list("送礼艺术",arr,11);
 })();
 (() => {
     var arr = [
@@ -297,11 +265,7 @@
         ["21974", "500元以下礼物清单，送出最走心的七夕礼物！"],
         ["21325", "520情人节送礼物，四款永生花让女友乐开花！"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/huayu/tojieri.html">节日礼物</a><a class="right" target="_blank" href="/huayu/tojieri.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/huayu/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
-    }
-    list12.innerHTML = str;
+    Home_list("节日礼物",arr,12);
 })();
 (() => {
     var arr = [
@@ -314,11 +278,7 @@
         ["17656", "花礼网荣获中国电子商务行业门户大会鲜花礼品行业龙头奖"],
         ["17639", "百易（花礼网）获2016年国家级高新技术企业认定"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/profile/media.html">媒体报道</a><a class="right" target="_blank" href="/profile/media.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/profile/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
-    }
-    list13.innerHTML = str;
+    Home_list("媒体报道",arr,13);
 })();
 (() => {
     var arr = [
@@ -331,13 +291,10 @@
         ["11796", "小女人的“幸福”"],
         ["11784", "不能让真爱“埋没掉”"]
     ];
-    var str = '<dd class="header"><a class="left" target="_blank" href="/profile/gdsj.html">感动瞬间</a><a class="right" target="_blank" href="/profile/gdsj.html">更多>> </a></dd>';
-    for (var i = 0; i < arr.length; i++) {
-        str += `<a href="/profile/${arr[i][0]}.html" target="_blank">${arr[i][1]}<br></a></dd>`
-    }
-    list14.innerHTML = str;
+    Home_list("感动瞬间",arr,14);
 })();
 (() => {
+    var list15=document.getElementById("list15");
     var arr = [
         ["23056", "一年一度的父亲节又快到了，有什么想对爸爸说的吗？", "一年一度的父亲节又快到了，有什么想对爸爸说的吗？"],
         ["23044", "给客户送礼一般如何送？给客户送礼有哪些讲究？", "很多人一提到给客户送礼，就头大，送什么，花多少钱合适……心里都没有一点数，如果是一个有心的人，其实他会在送礼之前首先应该列一份清单，把需要打点的人一一列出。给客户送礼一般如何送？给客户送礼有哪些讲究？"],
@@ -362,6 +319,7 @@
     list15.innerHTML = str;
 })();
 (() => {
+    var bk_menu=document.getElementsByClassName("bk_menu")[0];
     var arr = [
         ["/huayu/list_xianhua.html", "送花", [
             ["/huayu/jiehun.html", "结婚送花"],

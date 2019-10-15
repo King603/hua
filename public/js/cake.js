@@ -1,3 +1,9 @@
+var _html = (element, arr) => {
+    var ul = document.querySelector(element);
+    for (var elem of arr) {
+        ul.innerHTML += `<li><a target="_blank" href="${elem[0]}">${elem[1]}</a></li>`;
+    }
+}
 (() => {
     var arr = [
         ["aiqingxianhua", "爱情鲜花"],
@@ -10,9 +16,7 @@
         ["hunqingxianhua", "婚庆鲜花"],
         ["businessFlower", "商务鲜花"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        xhyt.innerHTML += `<li style="width:30%"><a href="/${arr[i][0]}/" target="_blank">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(2)", arr);
 })();
 (() => {
     var arr = [
@@ -22,9 +26,7 @@
         ["vase", "永生瓶花"],
         ["characteristic", "特色永生花"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        ysh.innerHTML += `<li><a target="_blank" href="/yongshenghua/yongshenghua_${arr[i][0]}.html">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(4)", arr);
 })();
 (() => {
     var arr = [
@@ -44,18 +46,14 @@
         ["qiyetuangou/gift_card.html", "礼品卡"],
         ["gifts/duorouzhiwupenzai/", "多肉植物盆栽"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        lp.innerHTML += `<li><a target="_blank" href="/${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(6)", arr);
 })();
 (() => {
     var arr = [
         ["greenplant/", "绿色植物"],
         ["potflower/", "盆栽花卉"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        plant1.innerHTML += `<li><a target="_blank" href="/Plant/${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(8)", arr);
 })();
 (() => {
     var arr = [
@@ -69,11 +67,10 @@
         ["/you", "设计师臻选鲜花"],
         ["/theme/chongyangjie", "重阳节鲜花礼品"],
     ];
-    for (var i = 0; i < arr.length; i++) {
-        nav.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    _html("nav .nav", arr);
 })();
 (() => {
+    var letter_list = document.getElementById("letter_list");
     var arr = [
         ["a", "A"],
         ["b", "B"],
@@ -293,6 +290,7 @@
             ["wulumuqidangao.html", "乌鲁木齐", "f_csb", "w"]
         ]]
     ];
+    var city_box = document.getElementById("city_box");
     var str = "";
     for (var i = 0; i < arr.length; i++) {
         str += `
@@ -314,6 +312,7 @@
     city_box.innerHTML = str;
 })();
 (() => {
+    var grid_list = document.querySelectorAll(".wrapper .grid-wrapper");
     var arr = [
         [
             ["5302071", "清风有信(8寸)", "298", "元祖蛋糕/清风有信(8寸)-元祖慕斯蛋糕", "元祖授权销售"],
@@ -405,9 +404,8 @@
             ["5010031", "I LOVE YOU", "158", "蛋糕/I LOVE YOU-8寸(2磅)心形鲜奶蛋糕", ""]
         ],
     ];
-    var str = "";
     for (var i = 0; i < arr.length; i++) {
-        str = "<!-- 商品 -->";
+        var str = "<!-- 商品 -->";
         for (var j = 0; j < arr[i].length; j++) {
             str += `
             <div class="grid-item">
@@ -435,26 +433,11 @@
             </div>
             `;
         }
-        str += "<!-- 商品 End -->"
-        switch (i + 1) {
-            case 1: item_1.innerHTML = str; break;
-            case 2: item_2.innerHTML = str; break;
-            case 3: item_3.innerHTML = str; break;
-            case 4: item_4.innerHTML = str; break;
-            case 5: item_5.innerHTML = str; break;
-            case 6: item_6.innerHTML = str; break;
-            case 7: item_7.innerHTML = str; break;
-            case 8: item_8.innerHTML = str; break;
-            case 9: item_9.innerHTML = str; break;
-            case 10: item_10.innerHTML = str; break;
-            case 11: item_11.innerHTML = str; break;
-            case 12: item_12.innerHTML = str; break;
-            case 13: item_13.innerHTML = str; break;
-            case 14: item_14.innerHTML = str; break;
-        }
+        grid_list[i].innerHTML = str + "<!-- 商品 End -->";
     }
 })();
 (() => {
+    var list=document.querySelectorAll(".navigation .item-list");
     var arr = [
         [
             ["/ganso/", "元祖蛋糕"],
@@ -492,13 +475,11 @@
         for (var j = 0; j < arr[i].length; j++) {
             str += `<li><a href="/cake${arr[i][j][0]}">${arr[i][j][1]}</a></li>`
         }
-        switch (i) {
-            case 0: list1.innerHTML = str; break;
-            case 1: list2.innerHTML = str; break;
-        }
+        list[i].innerHTML = str;
     }
 })();
 (() => {
+    var panel_list1=document.getElementsByClassName("panel-body")[0];
     var arr = [
         ["5010041", "陪伴左右", "2磅(8寸)水果蛋糕", "168"],
         ["5010040", "多彩生活", "2磅(8寸)水果蛋糕", "169"],
@@ -511,8 +492,7 @@
         str += `
         <div class="side-item">
             <div class="img-box">
-                <a href="/product/${arr[i][0]}.html" target="_blank" data-link="${arr[i][0]}"><img
-     src="../newpic/${arr[i][0]}.jpg_220x240.jpg" width="180" height="196" alt="${arr[i][1]}"></a>
+                <a href="/product/${arr[i][0]}.html" target="_blank" data-link="${arr[i][0]}"><img src="../newpic/${arr[i][0]}.jpg_220x240.jpg" width="180" height="196" alt="${arr[i][1]}"></a>
             </div>
             <div class="info-cont">
                 <div class="title">
@@ -531,6 +511,7 @@
     panel_list1.innerHTML += str + "<!-- 侧边商品 End -->";
 })();
 (() => {
+    var panel_list2=document.getElementsByClassName("panel-body")[1];
     var arr = [
         ["5302015", "313774*", "包装完美，蛋糕美味，快递员还非常有礼貌地祝福生日快乐??电话回访非常及时，特别好的体验！"],
         ["5010012", "139****4107", "态度和蔼，送货及时，非常感谢。"],
@@ -557,6 +538,7 @@
     panel_list2.innerHTML += str + "<!-- 侧边评价 End -->"
 })();
 (() => {
+    var panel_list3=document.getElementsByClassName("panel-body")[2];
     var arr = [
         [
             ["4001", "蛋糕的分类,做法和保存"],

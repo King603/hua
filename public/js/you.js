@@ -1,15 +1,10 @@
-(() => {
-    var arr = [
-        ["9012296", "情迷尼斯", "糖果玫瑰<span>76cm长形礼盒</span>", 599, "花材上选用的是稀有玫瑰品种A级玫瑰，每一朵的花型都要求完美，糖果玫瑰如其名，有着甜美的色彩和香味。为玫瑰定制了专属的礼盒，完美的细节彰显品质。"],
-        ["9012300", "赤道花园", "红拂玫瑰<span>76cm长形礼盒</span>", 699, "采撷最娇艳的玫瑰，经设计师妙手点拨，将芬芳馥郁的气息融入，轻轻打开，芬芳扑面袭来，沉醉在那花香醉人的奇幻世界...如心脏般大小的玫瑰肆意绽放，为高端鲜花爱好者们营造出了一个静谧与舒适的氛围，赏心悦目！"],
-        ["9012298", "天使之吻", "红袖玫瑰<span>76cm长形礼盒</span>", 699, "红袖玫瑰有着罕见的双层色彩，渐变的颜色让人迷恋。为玫瑰定制了专属的礼盒，完美的细节彰显品质。"],
-        ["9012299", "瓦尔登湖畔", "小白兔玫瑰<span>76cm长形礼盒</span>", 699, "小白兔玫瑰如它的名字一般，透着可爱的气质。为玫瑰定制了专属的礼盒，完美的细节彰显品质。"],
-        ["9012297", "邂逅西雅图", "新娘玫瑰<span>76cm长形礼盒</span>", 699, "新娘玫瑰有着偏成熟韵味的色彩，有着厚实的花瓣、笔直的枝条，毫不逊色于其他赤道玫瑰。为玫瑰定制了专属的礼盒，完美的细节彰显品质。"]
-    ];
+var get_product=(arr,className,title)=>{
+    var product=document.getElementsByClassName(className)[0];
+    console.log(product)
     var i = 0;
     var str = `
     <div class="com-width">
-        <div class="product-title">高端花盒系列</div>
+        <div class="product-title">${title}</div>
         <a class="product-item full" href="/product/${arr[i][0]}.html?huaPid=shejishi-f10${i + 1}" target="_blank">
             <div class="product-item-pic"><img src="../img/you/${arr[i][0]}.jpg" /></div>
             <div class="product-item-info">
@@ -46,10 +41,20 @@
                 <div class="product-item-info__desc">${arr[i][4]}</div>
             </div>
         </a>
-        `
+        `;
     }
     str += "</div></div>";
-    product_black.innerHTML = str;
+    product.innerHTML = str;
+}
+(() => {
+    var arr = [
+        ["9012296", "情迷尼斯", "糖果玫瑰<span>76cm长形礼盒</span>", 599, "花材上选用的是稀有玫瑰品种A级玫瑰，每一朵的花型都要求完美，糖果玫瑰如其名，有着甜美的色彩和香味。为玫瑰定制了专属的礼盒，完美的细节彰显品质。"],
+        ["9012300", "赤道花园", "红拂玫瑰<span>76cm长形礼盒</span>", 699, "采撷最娇艳的玫瑰，经设计师妙手点拨，将芬芳馥郁的气息融入，轻轻打开，芬芳扑面袭来，沉醉在那花香醉人的奇幻世界...如心脏般大小的玫瑰肆意绽放，为高端鲜花爱好者们营造出了一个静谧与舒适的氛围，赏心悦目！"],
+        ["9012298", "天使之吻", "红袖玫瑰<span>76cm长形礼盒</span>", 699, "红袖玫瑰有着罕见的双层色彩，渐变的颜色让人迷恋。为玫瑰定制了专属的礼盒，完美的细节彰显品质。"],
+        ["9012299", "瓦尔登湖畔", "小白兔玫瑰<span>76cm长形礼盒</span>", 699, "小白兔玫瑰如它的名字一般，透着可爱的气质。为玫瑰定制了专属的礼盒，完美的细节彰显品质。"],
+        ["9012297", "邂逅西雅图", "新娘玫瑰<span>76cm长形礼盒</span>", 699, "新娘玫瑰有着偏成熟韵味的色彩，有着厚实的花瓣、笔直的枝条，毫不逊色于其他赤道玫瑰。为玫瑰定制了专属的礼盒，完美的细节彰显品质。"]
+    ];
+    get_product(arr,"black","高端花盒系列");
 })();
 (() => {
     var arr = [
@@ -64,51 +69,14 @@
         ["9012293", "Flora Love", "优雅知性女神范", 699, "马鸢尾叶有着非常美的线条感，搭配白色郁金香与紫罗兰，充满优雅浪漫味道。除此之外荔枝玫瑰的独特花型及香甜的气味也让人着迷。"],
         ["9012294", "魔法潘多拉", "温婉端庄淑女范", 699, "浅蓝色是一个跟天空海洋相联系的自然色，给人安静平和感觉，市场少见的紫掌增添了尊贵感，白色的纸上印着常春藤的花纹，花束整体形态端庄优雅。"]
     ];
-    var i = 0;
-    var str = `
-    <div class="com-width">
-        <div class="product-title">主题花束系列</div>
-        <a class="product-item full" href="/product/${arr[i][0]}.html?huaPid=shejishi-f20${i + 1}" target="_blank">
-            <div class="product-item-pic"><img src="../img/you/${arr[i][0]}.jpg" /></div>
-            <div class="product-item-info">
-                <div class="product-item-info__hd">
-                    <div class="product-info-left">
-                        <p class="product-info-name">${arr[i][1]}</p>
-                        <p class="product-info-tag">${arr[i][2]}</p>
-                    </div>
-                    <div class="product-info-right">
-                        <p>RMB</p>
-                        <div class="product-info-price" data-id="${arr[i][0]}">${arr[i][3]}</div>
-                    </div>
-                </div>
-                <div class="product-item-info__desc">${arr[i][4]}</div>
-            </div>
-        </a>
-        <div class="product-list">
-    `;
-    for (i = 1; i < arr.length; i++) {
-        str += `
-        <a class="product-item" href="/product/${arr[i][0]}.html?huaPid=shejishi-f20${i + 1}" target="_blank">
-            <div class="product-item-pic"><img src="../img/you/${arr[i][0]}.jpg" /></div>
-            <div class="product-item-info">
-                <div class="product-item-info__hd">
-                    <div class="product-info-left">
-                        <p class="product-info-name">${arr[i][1]}</p>
-                        <p class="product-info-tag">${arr[i][2]}</p>
-                    </div>
-                    <div class="product-info-right">
-                        <p>RMB</p>
-                        <div class="product-info-price" data-id="${arr[i][0]}">${arr[i][3]}</div>
-                    </div>
-                </div>
-                <div class="product-item-info__desc">${arr[i][4]}</div>
-            </div>
-        </a>
-        `
-    }
-    str += "</div></div>";
-    product_white.innerHTML = str;
+    get_product(arr,"white","主题花束系列");
 })();
+var _html = (element, arr) => {
+    var ul = document.querySelector(element);
+    for (var elem of arr) {
+        ul.innerHTML += `<li><a target="_blank" href="${elem[0]}">${elem[1]}</a></li>`;
+    }
+}
 (() => {
     var arr = [
         ["aiqingxianhua", "爱情鲜花"],
@@ -121,9 +89,7 @@
         ["daoqianxianhua", "道歉鲜花"],
         ["businessFlower/kaiyehualan", "开业花篮"]
     ];
-    for (var elem of arr) {
-        xh.innerHTML += `<li><a target="_blank" href="/${elem[0]}/">${elem[1]}</a></li>`;
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(2)", arr);
 })();
 (() => {
     var arr = [
@@ -133,9 +99,7 @@
         ["vase", "永生瓶花"],
         ["characteristic", "特色永生花"]
     ];
-    for (var elem of arr) {
-        ysh.innerHTML += `<li><a target="_blank" href="/yongshenghua/yongshenghua_${elem[0]}.html">${elem[1]}</a></li>`;
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(4)", arr);
 })();
 (() => {
     var arr = [
@@ -155,18 +119,14 @@
         ["qiyetuangou/gift_card.html", "礼品卡"],
         ["gifts/duorouzhiwupenzai/", "多肉植物盆栽"]
     ];
-    for (var elem of arr) {
-        gifts.innerHTML += `<li><a target="_blank" href="/${elem[0]}">${elem[1]}</a></li>`;
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(6)", arr);
 })();
 (() => {
     var arr = [
         ["greenplant", "绿色植物"],
         ["potflower", "盆栽花卉"]
     ];
-    for (var elem of arr) {
-        Plant.innerHTML += `<li><a target="_blank" href="/Plant/${elem[0]}/">${elem[1]}</a></li>`;
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(8)", arr);
 })();
 (() => {
     var arr = [
@@ -180,9 +140,7 @@
         ["you/", "设计师臻选鲜花"],
         ["theme/chongyangjie/", "重阳节鲜花礼品"]
     ];
-    for (var elem of arr) {
-        nav.innerHTML += `<li><a href="/${elem[0]}">${elem[1]}</a></li>`;
-    }
+    _html("nav .nav", arr);
 })();
 
 

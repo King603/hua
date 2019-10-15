@@ -1,3 +1,9 @@
+var _html = (element, arr) => {
+    var ul = document.querySelector(element);
+    for (var elem of arr) {
+        ul.innerHTML += `<li><a target="_blank" href="${elem[0]}">${elem[1]}</a></li>`;
+    }
+}
 (() => {
     var arr = [
         ["aiqingxianhua", "爱情鲜花"],
@@ -10,9 +16,7 @@
         ["hunqingxianhua", "婚庆鲜花"],
         ["businessFlower", "商务鲜花"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        xhyt.innerHTML += `<li style="width:30%"><a href="/${arr[i][0]}/" target="_blank">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(2)", arr);
 })();
 (() => {
     var arr = [
@@ -22,9 +26,7 @@
         ["vase", "永生瓶花"],
         ["characteristic", "特色永生花"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        ysh.innerHTML += `<li><a target="_blank" href="/yongshenghua/yongshenghua_${arr[i][0]}.html">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(4)", arr);
 })();
 (() => {
     var arr = [
@@ -44,18 +46,14 @@
         ["qiyetuangou/gift_card.html", "礼品卡"],
         ["gifts/duorouzhiwupenzai/", "多肉植物盆栽"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        lp.innerHTML += `<li><a target="_blank" href="/${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(6)", arr);
 })();
 (() => {
     var arr = [
         ["greenplant/", "绿色植物"],
         ["potflower/", "盆栽花卉"]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        plant1.innerHTML += `<li><a target="_blank" href="/Plant/${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(8)", arr);
 })();
 (() => {
     var arr = [
@@ -69,9 +67,7 @@
         ["/you", "设计师臻选鲜花"],
         ["/theme/chongyangjie", "重阳节鲜花礼品"],
     ];
-    for (var i = 0; i < arr.length; i++) {
-        nav.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    _html("nav .nav", arr);
 })();
 (() => {
     var arr = [
@@ -98,16 +94,17 @@
         ]
     ];
     var str = "";
-    for (var i = 0; i < arr.length; i++) {
+    for (var elems of arr) {
         str += "<ul>";
-        for (var j = 0; j < arr[i].length; j++) {
-            str += `<li><a href="/huayu/${arr[i][j][0]}.html" target="_blank">${arr[i][j][1]}</a></li>`
+        for (var elem of elems) {
+            str += `<li><a href="/huayu/${elem[0]}.html" target="_blank">${elem[1]}</a></li>`
         }
         str += "</ul>";
     }
     liyi.innerHTML = str;
 })();
 (() => {
+    var list=document.querySelector(".product-list ul");
     var arr = [
         ["1073263", "创意永生花台灯，可调亮度", "永生花/永生花满月艺术台灯/朦胧粉", "永生花台灯", 398],
         ["1073247", "上市即卖断货的爆款重上架", "永生花/花好月圆永生花台灯", "精选进口奥斯汀永生玫瑰台灯", 298],
@@ -268,19 +265,19 @@
         ["1073260", "创意新品 永生花化妆镜盒", "永生花/独家记忆", "永生花化妆镜礼盒", 368],
         ["1073259", "创意新品 永生花化妆镜盒", "永生花/神秘花园", "永生花化妆镜礼盒", 368]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        liebiao.innerHTML += `
+    for (var elem of arr) {
+        list.innerHTML += `
         <li>
-            <a href="/product/${arr[i][0]}.html" target="_blank" data-link="${arr[i][0]}">
+            <a href="/product/${elem[0]}.html" target="_blank" data-link="${elem[0]}">
                 <div class="item-img">
-                    <img data-original="../newpic/${arr[i][0]}.jpg_220x240.jpg" src="../newpic/${arr[i][0]}.jpg_220x240.jpg">
+                    <img data-original="../newpic/${elem[0]}.jpg_220x240.jpg" src="../newpic/${elem[0]}.jpg_220x240.jpg">
                 </div>
                 <div class="product-info">
-                    <p class="promotion">${arr[i][1]}&nbsp;</p>
-                    <h5 class="name" style="overflow: hidden; height: 20px; line-height: 20px;">${arr[i][2]}</h5>
-                    <p class="desc">${arr[i][3]}</p>
+                    <p class="promotion">${elem[1]}&nbsp;</p>
+                    <h5 class="name" style="overflow: hidden; height: 20px; line-height: 20px;">${elem[2]}</h5>
+                    <p class="desc">${elem[3]}</p>
                     <div class="box">
-                        <span class="price" data-id="${arr[i][0]}">¥&nbsp;${arr[i][4]}</span>
+                        <span class="price" data-id="${elem[0]}">¥&nbsp;${elem[4]}</span>
                         <span class="btn-buy"></span>
                     </div>
                 </div>

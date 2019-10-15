@@ -1,3 +1,9 @@
+var _html = (element, arr) => {
+    var ul = document.querySelector(element);
+    for (var elem of arr) {
+        ul.innerHTML += `<li><a target="_blank" href="${elem[0]}">${elem[1]}</a></li>`;
+    }
+}
 (() => {
     var arr = [
         ["/aiqingxianhua/", "爱情鲜花"],
@@ -10,11 +16,7 @@
         ["/daoqianxianhua/", "道歉鲜花"],
         ["/businessFlower/kaiyehualan/", "开业花篮"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`;
-    }
-    xh.innerHTML = str;
+    _html(".dropdown-menu>ul.list-inline:nth-child(2)", arr);
 })();
 (() => {
     var arr = [
@@ -24,11 +26,7 @@
         ["vase.html", "永生瓶花"],
         ["characteristic.html", "特色永生花"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `<li><a href="/yongshenghua/yongshenghua_${arr[i][0]}">${arr[i][1]}</a></li>`;
-    }
-    ysh.innerHTML = str;
+    _html(".dropdown-menu>ul.list-inline:nth-child(4)", arr);
 })();
 (() => {
     var arr = [
@@ -46,11 +44,7 @@
         ["vcake", "Vcake"],
         ["allcitycake", "全国品牌"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `<li><a href="/cake/${arr[i][0]}/">${arr[i][1]}</a></li>`;
-    }
-    cake.innerHTML = str;
+    _html(".dropdown-menu>ul.list-inline:nth-child(6)", arr);
 })();
 (() => {
     var arr = [
@@ -70,22 +64,14 @@
         ["/qiyetuangou/gift_card.html", "礼品卡"],
         ["/gifts/duorouzhiwupenzai/", "多肉植物盆栽"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`;
-    }
-    gifts.innerHTML = str;
+    _html(".dropdown-menu>ul.list-inline:nth-child(8)", arr);
 })();
 (() => {
     var arr = [
         ["/Plant/greenplant/", "绿色植物"],
         ["/Plant/potflower/", "盆栽花卉"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`;
-    }
-    Plant.innerHTML = str;
+    _html(".dropdown-menu>ul.list-inline:nth-child(10)", arr);
 })();
 (() => {
     var arr = [
@@ -99,21 +85,19 @@
         ["/you", "设计师臻选鲜花"],
         ["/theme/chongyangjie", "重阳节鲜花礼品"],
     ];
-    for (var i = 0; i < arr.length; i++) {
-        nav.innerHTML += `<li><a href="${arr[i][0]}">${arr[i][1]}</a></li>`
-    }
+    _html("nav .nav", arr);
 })();
-(() => {
-    var arr = [
-        ["9012332", "留住好时光·", "粉绣球1枝，粉雪山玫瑰6枝，粉桔梗0.3扎，栀子叶0.5扎", 239, "¥306"],
-        ["9012201", "馨情无限·", "高档礼盒装鲜花:戴安娜粉玫瑰11枝，红色康乃馨11支，红色石竹梅4枝，栀子叶4枝", 238, "¥312"],
-        ["9012440", "星河璀璨·", "香槟玫瑰9枝、蓝绣球1枝、向日葵3枝、白色洋桔梗5枝、尤加利叶5枝！", 289, "¥376"]
-    ];
-    var str = "";
+var get_product = (arr, num, id) => {
+    var product = document.querySelectorAll("#mainSection>.product")[num - 1];
+    var str = `
+    <div class="product-title">
+        <img src="../../img/chongyangjie/pc_title${parseInt(id / 100)}.png" />
+    </div>
+    <div class="product-list product-list-flex3">`;
     for (var i = 0; i < arr.length; i++) {
         str += `
-        <div class="product-item" id="f10${i + 1}">
-            <a href="/product/${arr[i][0]}?huaPid=chongyangjie-f10${i + 1}" target="_blank">
+        <div class="product-item" id="f${id}">
+            <a href="/product/${arr[i][0]}?huaPid=chongyangjie-f${id}" target="_blank">
                 <div class="product-item-pic">
                     <img src="../../img/chongyangjie/${arr[i][0]}.jpg_220x240.jpg" style="display: inline;" />
                 </div>
@@ -129,10 +113,18 @@
                     </div>
                 </div>
             </a>
-        </div>
-        `;
+        </div>`;
+        id++;
     }
-    title1.innerHTML = str;
+    product.innerHTML = str + "</div>";
+}
+(() => {
+    var arr = [
+        ["9012332", "留住好时光·", "粉绣球1枝，粉雪山玫瑰6枝，粉桔梗0.3扎，栀子叶0.5扎", 239, "¥306"],
+        ["9012201", "馨情无限·", "高档礼盒装鲜花:戴安娜粉玫瑰11枝，红色康乃馨11支，红色石竹梅4枝，栀子叶4枝", 238, "¥312"],
+        ["9012440", "星河璀璨·", "香槟玫瑰9枝、蓝绣球1枝、向日葵3枝、白色洋桔梗5枝、尤加利叶5枝！", 289, "¥376"]
+    ];
+    get_product(arr, 1, 101);
 })();
 (() => {
     var arr = [
@@ -143,30 +135,7 @@
         ["9012314", "温馨问候·", "香槟玫瑰9枝、多头白百合2枝、粉色康乃馨13枝", 285, "¥389"],
         ["9012204", "幸福万年长·", "红色康乃馨66枝，搭配白边紫色多头康乃馨15枝，栀子叶2扎", 338, "¥486"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `
-        <div class="product-item" id="f20${i + 1}">
-            <a href="/product/${arr[i][0]}?huaPid=chongyangjie-f20${i + 1}" target="_blank">
-                <div class="product-item-pic">
-                    <img src="../../img/chongyangjie/${arr[i][0]}.jpg_220x240.jpg" style="display: inline;" />
-                </div>
-                <div class="product-item-info">
-                    <div class="product-item-info-header">
-                        <span class="product-item-info-title">${arr[i][1]}</span>
-                        <span class="product-item-info-desc">${arr[i][2]}</span>
-                    </div>
-                    <div class="product-item-info-footer">
-                        <span class="product-item-info-price">${arr[i][3]}</span>
-                        <span class="product-item-info-sprice">${arr[i][4]}</span>
-                        <button class="product-item-info-btn">购买</button>
-                    </div>
-                </div>
-            </a>
-        </div>
-        `;
-    }
-    title2.innerHTML = str;
+    get_product(arr, 2, 201);
 })();
 (() => {
     var arr = [
@@ -177,30 +146,7 @@
         ["9012410", "感恩有你·", "紫红康乃馨10枝，苏醒玫瑰10枝，蓝色绣球1枝，浅紫紫罗兰10枝（紫罗兰属于季节性花材，无货用浅紫色洋桔梗代替），粉勿忘我10枝，尤加利叶10枝", 339, "¥429"],
         ["9020015", "水果花篮-温馨祝福·", "粉香水百合1枝,粉玫瑰8枝,粉康+紫康+紫边康乃馨间插,巴西叶和其他绿叶适量; 进口橙子3个,红富士苹果3个，进口红提1斤。", 279, "¥339"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `
-        <div class="product-item" id="f30${i + 1}">
-            <a href="/product/${arr[i][0]}?huaPid=chongyangjie-f30${i + 1}" target="_blank">
-                <div class="product-item-pic">
-                    <img src="../../img/chongyangjie/${arr[i][0]}.jpg_220x240.jpg" style="display: inline;" />
-                </div>
-                <div class="product-item-info">
-                    <div class="product-item-info-header">
-                        <span class="product-item-info-title">${arr[i][1]}</span>
-                        <span class="product-item-info-desc">${arr[i][2]}</span>
-                    </div>
-                    <div class="product-item-info-footer">
-                        <span class="product-item-info-price">${arr[i][3]}</span>
-                        <span class="product-item-info-sprice">${arr[i][4]}</span>
-                        <button class="product-item-info-btn">购买</button>
-                    </div>
-                </div>
-            </a>
-        </div>
-        `;
-    }
-    title3.innerHTML = str;
+    get_product(arr, 3, 301);
 })();
 (() => {
     var arr = [
@@ -211,32 +157,10 @@
         ["1073128", "幸福港湾·", "进口粉色永生玫瑰1枝（直径6-7cm）、浅紫色康乃馨1枝，浅粉桃色小玫瑰1朵，搭配粉色、蓝色、黄色绣球，小星花3枝，小满天星适量", 288, "¥448"],
         ["1060009", "幸福时光·", "精选绽放优美的红玫瑰七枝，配叶适量，在采摘后一个小时内用荷兰最新专利工艺处理，完整保留鲜花色泽和形态，经泰国花艺师精妙构思与巧手装扮，封入精美玻璃花瓶，保证产品使用寿命5年以上。", 569, "¥869"]
     ];
-    var str = "";
-    for (var i = 0; i < arr.length; i++) {
-        str += `
-        <div class="product-item" id="f40${i + 1}">
-            <a href="/product/${arr[i][0]}?huaPid=chongyangjie-f40${i + 1}" target="_blank">
-                <div class="product-item-pic">
-                    <img src="../../img/chongyangjie/${arr[i][0]}.jpg_220x240.jpg" style="display: inline;" />
-                </div>
-                <div class="product-item-info">
-                    <div class="product-item-info-header">
-                        <span class="product-item-info-title">${arr[i][1]}</span>
-                        <span class="product-item-info-desc">${arr[i][2]}</span>
-                    </div>
-                    <div class="product-item-info-footer">
-                        <span class="product-item-info-price">${arr[i][3]}</span>
-                        <span class="product-item-info-sprice">${arr[i][4]}</span>
-                        <button class="product-item-info-btn">购买</button>
-                    </div>
-                </div>
-            </a>
-        </div>
-        `;
-    }
-    title4.innerHTML = str;
+    get_product(arr, 4, 401);
 })();
 (() => {
+    var panel_body = document.getElementsByClassName("panel-body")[0];
     var arr = [
         [
             [22620, "重阳节送礼送什么好？"],
@@ -261,11 +185,10 @@
         ]
     ];
     var str = "";
-    for (var i = 0; i < arr.length; i++) {
+    for (var elems of arr) {
         str += "<ul>";
-        for (var j = 0; j < arr.length[i]; j++) {
-            // str += `<li><a href="/huayu/22620.html" target="_blank">重阳节送礼送什么好？</a></li>`;
-            str += `<li><a href="/huayu/${arr[i][j][0]}.html" target="_blank">${arr[i][j][1]}</a></li>`;
+        for (var elem of elems) {
+            str += `<li><a href="/huayu/${elem[0]}.html" target="_blank">${elem[1]}</a></li>`;
         }
         str += "</ul>"
     }

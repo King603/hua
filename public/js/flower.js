@@ -14,7 +14,7 @@ var _html = (element, arr) => {
     ];
     for (var elem of arr) {
         div.innerHTML += `
-        <h4><a href="/${elem[0]}/">${elem[1]}</a></h4>
+        <h4><a href="${elem[0]}">${elem[1]}</a></h4>
         <ul class="cate-list list-inline"></ul>
         `;
     }

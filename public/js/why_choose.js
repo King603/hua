@@ -1,3 +1,9 @@
+var _html = (element, arr) => {
+    var ul = document.querySelector(element);
+    for (var elem of arr) {
+        ul.innerHTML += `<li><a target="_blank" href="${elem[0]}">${elem[1]}</a></li>`;
+    }
+}
 (() => {
     var arr = [
         ["aiqingxianhua", "爱情鲜花"],
@@ -10,9 +16,7 @@
         ["daoqianxianhua", "道歉鲜花"],
         ["businessFlower/kaiyehualan", "开业花篮"]
     ];
-    for (var elem of arr) {
-        xh.innerHTML += `<li><a target="_blank" href="/${elem[0]}/">${elem[1]}</a></li>`;
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(2)", arr);
 })();
 (() => {
     var arr = [
@@ -22,9 +26,7 @@
         ["vase", "永生瓶花"],
         ["characteristic", "特色永生花"]
     ];
-    for (var elem of arr) {
-        ysh.innerHTML += `<li><a target="_blank" href="/yongshenghua/yongshenghua_${elem[0]}.html">${elem[1]}</a></li>`;
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(4)", arr);
 })();
 (() => {
     var arr = [
@@ -40,9 +42,7 @@
         ["vcake", "Vcake"],
         ["allcitycake", "全国品牌"]
     ];
-    for (var elem of arr) {
-        cake.innerHTML += `<li><a target="_blank" href="/cake/${elem[0]}/">${elem[1]}</a></li>`;
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(6)", arr);
 })();
 (() => {
     var arr = [
@@ -62,18 +62,14 @@
         ["qiyetuangou/gift_card.html", "礼品卡"],
         ["gifts/duorouzhiwupenzai/", "多肉植物盆栽"]
     ];
-    for (var elem of arr) {
-        gifts.innerHTML += `<li><a target="_blank" href="/${elem[0]}">${elem[1]}</a></li>`;
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(8)", arr);
 })();
 (() => {
     var arr = [
         ["greenplant", "绿色植物"],
         ["potflower", "盆栽花卉"]
     ];
-    for (var elem of arr) {
-        Plant.innerHTML += `<li><a target="_blank" href="/Plant/${elem[0]}/">${elem[1]}</a></li>`;
-    }
+    _html(".dropdown-menu>ul.list-inline:nth-child(10)", arr);
 })();
 (() => {
     var arr = [
@@ -87,11 +83,10 @@
         ["you/", "设计师臻选鲜花"],
         ["theme/chongyangjie/", "重阳节鲜花礼品"]
     ];
-    for (var elem of arr) {
-        nav.innerHTML += `<li><a href="/${elem[0]}">${elem[1]}</a></li>`;
-    }
+    _html("nav .nav", arr);
 })();
 (() => {
+    var guarantee_menu=document.getElementById("guarantee_menu");
     var arr = [
         ["pp", "selected", "14年品牌"],
         ["xldy", "", "销量第一"],
@@ -107,6 +102,7 @@
     }
 })();
 (() => {
+    var owl_carousel=document.getElementsByClassName("owl-carousel")[0];
     var arr = [
         ["15", "鲜花礼品行业龙头奖"],
         ["17", "2017年荣获世界电子商务大会最具影响力奖"],
@@ -131,6 +127,7 @@
     }
 })();
 (() => {
+    var ajaxComment=document.getElementById("ajaxComment");
     var arr = [
         ["9012241", "135****4685", "2019-10-10 IP：117.136.29.2*", "非常不错的！"],
         ["9012243", "135****4685", "2019-10-10 IP：117.136.29.2*", "非常不错的！"],
@@ -163,13 +160,15 @@
     ajaxComment.innerHTML = str;
 })();
 (() => {
+    var mqxl_new=document.getElementsByClassName("mqxl-new")[0];
     var arr = [
         ["http://www.cmbchina.com/Personal/Promotion/PrmotionInfo.aspx?guid=d0f82e6b-a86e-477d-8c6e-15a4a05cdb01", 13, "“招商银行”2015情人节活动"],
         ["http://mall.wanlitong.com/shop/hua/index.html", 14, "“中国平安”唯一指定鲜花类积分兑换服务商"],
         ["http://map.baidu.com", 15, "“百度地图”春运送爱到家活动合作"]
     ];
+    var str="<ul>";
     for (var elem of arr) {
-        mqxl_new.innerHTML += `
+        str += `
         <li>
             <a href="${elem[0]}" target="_blank">
                 <img src="../pimg/why_${elem[1]}.jpg" alt="${elem[2]}">
@@ -178,8 +177,10 @@
         </li>
         `;
     }
+    mqxl_new.innerHTML=str+"</ul>";
 })();
 (() => {
+    var list_sales1=document.getElementsByClassName("list-sales1")[0];
     var arr = [
         [9012009, "忘情巴黎", "33枝玫瑰，石竹梅", 296],
         [9012011, "阳光海岸", "19枝香槟玫瑰", 219],
@@ -198,6 +199,7 @@
     }
 })();
 (() => {
+    var OrderShowHtml=document.getElementById("OrderShowHtml");
     var arr = [
         ["9012289", "7400", "2018281493169482", "213376093", "三环与四环之间*****"],
         ["9010946", "7399", "2018281484389524", "213252084", "宝安区***"],

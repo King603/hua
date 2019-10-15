@@ -1,4 +1,5 @@
 (() => {
+    var feature_list=document.getElementsByClassName("feature_list")[0];
     var arr = [
         ["送礼更有面", "礼品卡设计时尚美观且实用，不必担心送出去的礼物不是对方所需"],
         ["支付更健康 ", "随买随支付，免去了您转账的麻烦 "],
@@ -19,6 +20,32 @@
         `;
     }
 })();
+var get_list = (arr, num, str="") => {
+    var list = document.getElementsByClassName("card_list");
+    console.log(list);
+    for (var elem of arr) {
+        list[num - 1].innerHTML += `
+        <div class="card_item">
+            <div class="card_item_pic">
+                <img src="../img/qiyetuangou/${str}card_background.png" alt="">
+                <span class="card_value">￥${elem[0]}</span>
+            </div>
+            <div class="card_item_info">
+                <p class="card_item_info_desc">花礼网礼品卡${elem[0]}面值(实物卡)·快递包邮</p>
+                <div class="card_item_info_ft">
+                    <span class="card_item_info_price">￥${elem[0]}</span>
+                    <div class="card_item_info_btn" onClick="DoBuy(${elem[1]})">购买</div>
+                    <div class="card_item_info_num">
+                        <a href="javascript:SetNum('Q_${elem[1]}','minus');" class="operation"><i class="iconfont iconfont-jian"></i></a>
+                        <input class="num_ipt" name="Q_${elem[1]}" id="Q_${elem[1]}" value="1" type="text" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" />
+                        <a href="javascript:SetNum('Q_${elem[1]}','add');" class="operation"><i class="iconfont iconfont-jia"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+    }
+}
 (() => {
     var arr = [
         [100, 1074001],
@@ -28,28 +55,7 @@
         [800, 1074005],
         [1000, 1074006]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        card_list1.innerHTML += `
-        <div class="card_item">
-            <div class="card_item_pic">
-                <img src="../img/qiyetuangou/card_background.png" alt="">
-                <span class="card_value">￥${arr[i][0]}</span>
-            </div>
-            <div class="card_item_info">
-                <p class="card_item_info_desc">花礼网礼品卡${arr[i][0]}面值(实物卡)·快递包邮</p>
-                <div class="card_item_info_ft">
-                    <span class="card_item_info_price">￥${arr[i][0]}</span>
-                    <div class="card_item_info_btn" onClick="DoBuy(${arr[i][1]})">购买</div>
-                    <div class="card_item_info_num">
-                        <a href="javascript:SetNum('Q_${arr[i][1]}','minus');" class="operation"><i class="iconfont iconfont-jian"></i></a>
-                        <input class="num_ipt" name="Q_${arr[i][1]}" id="Q_${arr[i][1]}" value="1" type="text" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" />
-                        <a href="javascript:SetNum('Q_${arr[i][1]}','add');" class="operation"><i class="iconfont iconfont-jia"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        `;
-    }
+    get_list(arr, 1);
 })();
 (() => {
     var arr = [
@@ -60,28 +66,7 @@
         [800, 1074015],
         [1000, 1074016]
     ];
-    for (var i = 0; i < arr.length; i++) {
-        card_list2.innerHTML += `
-        <div class="card_item">
-            <div class="card_item_pic">
-                <img src="../img/qiyetuangou/e_card_background.png" alt="">
-                <span class="card_value">￥${arr[i][0]}</span>
-            </div>
-            <div class="card_item_info">
-                <p class="card_item_info_desc">花礼网礼品卡${arr[i][0]}面值(实物卡)·快递包邮</p>
-                <div class="card_item_info_ft">
-                    <span class="card_item_info_price">￥${arr[i][0]}</span>
-                    <div class="card_item_info_btn" onClick="DoBuy(${arr[i][1]})">购买</div>
-                    <div class="card_item_info_num">
-                        <a href="javascript:SetNum('Q_${arr[i][1]}','minus');" class="operation"><i class="iconfont iconfont-jian"></i></a>
-                        <input class="num_ipt" name="Q_${arr[i][1]}" id="Q_${arr[i][1]}" value="1" type="text" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" />
-                        <a href="javascript:SetNum('Q_${arr[i][1]}','add');" class="operation"><i class="iconfont iconfont-jia"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        `;
-    }
+    get_list(arr, 2, "e_");
 })();
 (() => {
 
