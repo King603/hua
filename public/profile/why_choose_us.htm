@@ -703,7 +703,7 @@
         <div class="container">
             <ul class="site-nav-l">
                 <li class="menu">
-                    <a href="https://www.hua.com/" onClick="addfavorite();return false;"><span
+                    <a href="/" onClick="addfavorite();return false;"><span
                             class="ico ico-star"></span>收藏鲜花网</a>
                 </li>
                 <li class="menu dropdown">
@@ -791,18 +791,18 @@
                 </h3>
                 <div class="dropdown-menu dropdown-cate">
                     <h4><a href="/flower/">鲜花</a></h4>
-                    <ul class="cate-list list-inline" id="xh"></ul>
+                    <ul class="cate-list list-inline"></ul>
                     <h4><a href="/yongshenghua/">永生花</a></h4>
-                    <ul class="cate-list list-inline" id="ysh"></ul>
+                    <ul class="cate-list list-inline"></ul>
                     <h4><a target="_blank" href="/cake/">蛋糕</a></h4>
-                    <ul class="cate-list list-inline" id="cake"></ul>
+                    <ul class="cate-list list-inline"></ul>
                     <h4><a href="/gifts/">礼品</a></h4>
-                    <ul class="cate-list list-inline" id="gifts"></ul>
+                    <ul class="cate-list list-inline"></ul>
                     <h4><a href="/Plant/">绿植</a></h4>
-                    <ul class="cate-list list-inline" id="Plant"></ul>
+                    <ul class="cate-list list-inline"></ul>
                 </div>
             </div>
-            <ul class="nav" id="nav"></ul>
+            <ul class="nav"></ul>
         </div>
     </nav>
     <!-- 导航 End -->
@@ -1036,7 +1036,6 @@
                     lock = false;
                 });
             });
-
             var page = 1; //初始化当前的版面为1
             var $show = $("#lanrenzhijia").find(".lanrenzhijia_box"); //找到图片展示区域
             var page_count = $show.find("ul").length;
@@ -1047,7 +1046,6 @@
             }, function () {
                 $(this).find(".title").hide();
             })
-
             function nav() {
                 if (page == 1) {
                     $("#lanrenzhijia").find(".pre").hide().siblings(".next").show();
@@ -1092,10 +1090,8 @@
                 $(this).addClass("now").siblings("a").removeClass("now");
                 return false;
             })
-
         });
     </script>
-
     <script>
         $(function () {
             // 进阶篇tabs
@@ -1110,14 +1106,12 @@
                 navigation: false,
                 afterInit: customPager,
             });
-
             function customPager() {
                 $.each(this.owl.userItems, function (i) {
                     var titleData = jQuery(this).find('img').attr('title');
                     var paginationLinks = jQuery('.owl-controls .owl-pagination .owl-page span');
                 });
             };
-
             $(".next").click(function () {
                 owl.trigger('owl.next');
             })
@@ -1132,13 +1126,11 @@
         $.get("/ajax/ajaxComment.asp", null, function (data) {
             $("#ajaxComment").html(data);
         }); //评价数据
-
         var currPage = 1; //当前页码
         var totalPage = 1; //总页数
         var totalKuans = 1; //款数
         var totalNums = 1; //总数量
         var pageSize = 12; //分页数量
-
         $.get("/xianhuashipai/ajaxshow/?p=1", function (data) {
             var htmlNr = data.split("@@@");
             var shuliang = htmlNr[1].split("$$$");
@@ -1154,7 +1146,6 @@
             $("#totalNum").html(totalNums);
             $("#prePage").css("color", "#cccccc");
         });
-
         function GetPage(oper) {
             $("#prePage").removeAttr("style");
             $("#nextPage").removeAttr("style");
@@ -1198,11 +1189,9 @@
     <script type="text/javascript">
         function goTopEx() {
             var obj = document.getElementById("goTopBtn");
-
             function getScrollTop() {
                 return document.documentElement.scrollTop + document.body.scrollTop;
             }
-
             function setScrollTop(value) {
                 if (document.documentElement.scrollTop) {
                     document.documentElement.scrollTop = value;
@@ -1215,7 +1204,6 @@
             }
             obj.onclick = function () {
                 var goTop = setInterval(scrollMove, 10);
-
                 function scrollMove() {
                     setScrollTop(0);
                     if (getScrollTop() < 1) clearInterval(goTop);

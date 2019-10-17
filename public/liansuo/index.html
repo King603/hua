@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>连锁花店_中国领先的连锁鲜花店_全国鲜花店加盟-中国鲜花礼品网</title>
+  <link rel="icon" href="../img/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+  <script type="text/javascript" src="../js/CheckAgent.js"></script>
+  <link type="text/css" rel="stylesheet" href="../css/common.css">
+  <link type="text/css" rel="stylesheet" href="../css/public_2019.css">
+  <link rel="stylesheet" href="../css/logo.css">
+  <link type="text/css" rel="stylesheet" href="../css/pagination.css">
+  <link href="../css/about.css" rel="stylesheet" type="text/css" />
+  <style>
+    ul,
+    ol {
+      margin-top: 0px;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    .incontent {
+      font-size: 12px;
+    }
+
+    .aboutallbox {
+      width: 1200px;
+      margin: 0 auto 10px auto;
+      text-align: left;
+      color: #61645a;
+      line-height: 24px;
+    }
+
+    .inbasebox_R1 {
+      float: right;
+      width: 980px;
+    }
+
+    .rabox .title {
+      line-height: 30px;
+      background: url(//img02.hua.com/pc/skins/default/images/ico59.jpg) repeat-x left top;
+      border: 1px solid #e2e2e2;
+    }
+
+    .rabox .title span {
+      line-height: 30px;
+      padding-left: 30px;
+      background: transparent url("//img02.hua.com/pc/skins/default/images/ico58.jpg") no-repeat scroll 6px center;
+      font-weight: bold;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .city_1 input,
+    .city_1 select,
+    .city_1 textarea {
+      margin: 3px 0 3px 7px;
+    }
+
+    .rabox>.slider {
+      margin-bottom: 20px;
+    }
+
+    .rabox>.slider a {
+      display: block;
+    }
+
+    .rabox>.slider img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="home">
+  <!-- 顶部导航 -->
+  <div class="site-nav">
+    <div class="container">
+      <ul class="site-nav-l">
+        <li class="menu">
+          <a href="/" onClick="addfavorite();return false;"><span class="ico ico-star"></span>收藏鲜花网(hua.com)</a>
+        </li>
+        <li class="menu dropdown">
+          <a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span class="ico ico-weixin"></span>关注微信</a>
+          <div class="dropdown-menu dropdown-weixin">
+            <img src="../img/common/wechat_qrcode.jpg" height="124" width="124">
+            <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
+          </div>
+        </li>
+        <li class="menu dropdown">
+          <a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span
+              class="ico ico-mobile"></span>花礼网app</a>
+          <div class="dropdown-menu dropdown-weixin">
+            <img src="../img/common/app_qrcode.jpg" height="124" width="124">
+            <p>新人专享100元APP礼包</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="site-nav-r">
+        <!--登陆状态信息显示start-->
+        <li class="menu login" id="LoginInfo">
+          <a href="/Passport/Login/" rel="nofollow" id="btn-login">你好，请登录</a><a href="/Passport/Register/"
+            rel="nofollow" id="btn-reg">注册</a>
+        </li>
+        <!--登陆状态信息显示end-->
+        <li class="site-nav-pipe">|</li>
+        <li class="menu">
+          <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <!--我的花礼信息显示start-->
+        <li class="menu dropdown">
+          <a href="/member/" rel="nofollow" data-hover="dropdown" data-delay="0" target="_blank">我的花礼</a>
+        </li>
+        <!--我的花礼信息显示end-->
+        <li class="site-nav-pipe">|</li>
+        <li class="menu dropdown">
+          <a href="/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span
+              class="glyphicon glyphicon-triangle-bottom"></span></a>
+          <div class="dropdown-menu dropdown-service">
+            <a href="/member/payment/balancefill" target="_blank">在线付款</a>
+            <a href="/help/" target="_blank">帮助中心</a>
+            <a href="/help/afterservice.htm" target="_blank">售后服务</a>
+            <a href="/help/sendRange.htm" target="_blank">配送范围</a>
+            <a href="/chat/" target="_blank">留言反馈</a>
+          </div>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <!--购物车信息显示start-->
+        <li class="menu dropdown">
+          <a href="/shopping/showcart/" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank"><span
+              class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount"></span><span
+              class="glyphicon glyphicon-triangle-bottom"></span></a>
+          <div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+        </li>
+        <!--购物车信息显示end-->
+        <li class="site-nav-pipe">|</li>
+        <li class="menu slogan">
+          中国鲜花礼品网:中国鲜花网领先品牌
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 顶部导航 End -->
+  <!-- 头部 -->
+  <header>
+    <div class="logo">
+      <h1><a href="/" class="logo-bd">连锁花店加盟</a></h1>
+      <!-- <h2>中国鲜花礼品网 始于2005，简称花礼网</h2> -->
+    </div>
+    <div class="search">
+      <form name="i_search" method="get" action="/search/">
+        <div class="input-group">
+          <input name="keyword" type="text" class="form-control" placeholder="商品关键词">
+          <span class="input-group-btn">
+            <button id="test" class="btn btn-primary" type="button" onClick="this.form.submit()">搜索</button>
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="service serviceDefault">
+      <span class="ico ico-phone"></span>400-889-8188
+      <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a>
+    </div>
+    <div class="service serviceVip">
+      <div class="vipwechatchat">
+        <img style="margin-right: 6px;" src="../img/common/wechat.png" width="30" /><span>1对1钻石客户经理</span>
+        <div class="vipwechatchat-box">
+          <h3>微信1对1客服经理</h3>
+          <img class="img-responsive" style="width: 120px;display: inline-block;"
+            src="../img/common/VIPChatQR.jpg" />
+          <p>扫一扫添加客户经理微信</p>
+          <p>微信号：VIP-Service-Hua</p>
+        </div>
+      </div>
+      <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a><br />
+      <span class="ico ico-phone"></span><span>钻石专线：400-830-3920</span>
+    </div>
+  </header>
+  <!-- 头部 End -->
+  <!-- 导航 -->
+  <nav class="common">
+    <div class="container">
+      <div class="categorys dropdown">
+        <h3 class="categorys-title" data-hover="dropdown" data-delay="0">
+          <a href="/all.html"><span class="pull-right glyphicon glyphicon-menu-down"></span>全部商品导购</a>
+        </h3>
+        <div class="dropdown-menu dropdown-cate">
+          <h4><a href="/flower/">鲜花</a></h4>
+          <ul class="cate-list list-inline"></ul>
+          <h4><a href="/yongshenghua/">永生花</a></h4>
+          <ul class="cate-list list-inline"></ul>
+          <h4><a href="/gifts/">礼品</a></h4>
+          <ul class="cate-list list-inline"></ul>
+          <h4><a href="/Plant/">绿植</a></h4>
+          <ul class="cate-list list-inline"></ul>
+        </div>
+      </div>
+      <ul class="nav"></ul>
+    </div>
+  </nav>
+  <!-- 导航 End -->
+  <div class="breadcrumbs1"><a href="/">首页</a> &gt; <a href="/liansuo/" title="花店连锁加盟">花店连锁加盟 &gt; </a> 花店加盟首页</div>
+  <div class="aboutallbox">
+    <div class="inbasebox_L1">
+      <!-- 连锁加盟 -->
+      <div class="liansuo1_box">
+        <div class="title">花店加盟说明</div>
+        <div class="borderct">
+          <div class="incontent">
+            <ul class="ul10"></ul>
+          </div>
+        </div>
+        <div class="imgbottom"></div>
+      </div>
+      <!-- 连锁加盟 END -->
+      <!-- 优秀花店推荐 -->
+      <div class="liansuo2_box">
+        <div class="title">连锁花店推荐</div>
+        <div class="borderct">
+          <div class="incontent">
+            <ul class="ul10"></ul>
+          </div>
+        </div>
+        <div class="imgbottom"></div>
+      </div>
+      <!-- 优秀花店推荐 END -->
+    </div>
+    <div class="inbasebox_R1">
+      <!-- TOP当前位置start -->
+      <div class="rightdqwz">
+        <div class="intopdqwz_box"></div>
+        <!-- TOP当前位置End -->
+        <!-- rightbox -->
+        <div class="rabox">
+          <div class="slider">
+            <a href="/liansuo/FranchiseApply">
+              <img src="../slider/slide_liansuo.jpg">
+            </a>
+          </div>
+          <div class="title"><span>花店加盟首页1</span></div>
+          <div class="content" style="margin-bottom:18px;">
+            <div class="incontent">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="40" align="center"><span style="font-size:15px">
+                      <font color="#77aa33"><strong>鲜花店加盟申请表</strong></font>
+                    </span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="../img/flower_logo_icon.gif" width="16" height="17" align="absmiddle">
+                    <font color="#77AA33"><strong>[鲜花店加盟] 加盟条件</strong></font><br>
+                    1，<font color="red">自有花店，经营3年以上</font>，区位优势，从业人员在3人以上，且经营状况良好；<br>
+                    2，花艺优秀,有专业花艺师；<br>
+                    3，有电脑，可以接入互联网或备有传真机；<br>
+                    4，有强烈的合作愿望，注重服务和信誉；<br>
+                    加盟负责人：胡小姐，电话：0755-26668820，QQ：2355363581<br>
+                    <!-- <span style="color:red;">以下城市急需加盟店：</span>广州，北京石景山，扬州，淮安，贵阳，武汉，上海浦西一带，上海嘉定，青岛，杭州滨江，西宁<br> -->
+                    <font color="red">重要提醒：不接受新开业花店、准备开店者的加盟合作，此类情况，请勿咨询。</font><br><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <form method="post" name="form1" id="form1" action="/liansuo/">
+                      <input type="hidden" id="successMsg" />
+                      <table style="border-collapse:collapse" width="600" border="0" cellpadding="2" cellspacing="6"
+                        bordercolor="#999999" id="city_1" class="city_1">
+                        <tr>
+                          <td bgcolor="#F1F9E8" align="right" width="104">
+                            <font color="#545454">您的花店名称：</font>
+                          </td>
+                          <td width="357" align="left">
+                            <input name="shopname" type="text" size="15" maxlength="50" id="shopnameVal">
+                            <font color="#FF0000">*</font>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#F1F9E8" align="right" width="104">
+                            <font color="#545454">花店负责人姓名：</font>
+                          </td>
+                          <td width="357" align="left">
+                            <input name="realname" type="text" size="15" maxlength="50" id="realnameVal">
+                            <font color="#FF0000">*</font>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#F1F9E8" align="right">
+                            <font color="#545454">花店所在</font>省份：
+                          </td>
+                          <td align="left"><select name="province" size="1" id="to_state"></select>
+                            <font color="#FF0000">*</font>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#F1F9E8" align="right" width="104">
+                            <font color="#545454">花店所在城市：</font>
+                          </td>
+                          <td width="357" align="left">
+                            <SELECT name="city" id="to_city"></SELECT>
+                            <font color="#FF0000">*</font>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#F1F9E8" align="right" width="104">
+                            <font color="#545454">花店所在县(区)：</font>
+                          </td>
+                          <td width="357" align="left">
+                            <SELECT name="county" id="to_dist"></SELECT>
+                            <font color="#FF0000">*</font>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#F1F9E8" align="right" width="104">
+                            <font color="#545454">详细地址：</font>
+                          </td>
+                          <td width="357" align="left">
+                            <input type="text" name="address" size="35" maxlength="255" id="addressVal">
+                            <font color="#FF0000">*</font>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#F1F9E8" align="right" width="104">
+                            <font color="#545454">电话：</font>
+                          </td>
+                          <td width="357" align="left">
+                            <input name="tel" type="text" size="20" maxlength="50" id="telVal">
+                            <font color="#FF0000">*</font>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#F1F9E8" align="right" width="104">
+                            <div align="RIGHT">
+                              <font color="#545454">QQ号：&nbsp;</font>
+                            </div>
+                          </td>
+                          <td width="357" align="left">
+                            <input name="email" type="text" size="24" maxlength="50" id="emailVal">
+                            <font color="#FF0000">*</font>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#F1F9E8" align="right">开户行：</td>
+                          <td align="left">
+                            <input name="bankname" type="text" id="banknameVal" size="15" maxlength="50">
+                            <font color="#FF0000">*</font>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#F1F9E8" align="right" width="104">
+                            <div align="RIGHT">帐号：</div>
+                          </td>
+                          <td width="357" align="left">
+                            <input name="accountno" type="text" size="15" maxlength="50" id="accountnoVal">
+                            <font color="#FF0000">*</font>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#F1F9E8" align="right" width="104">
+                            <div align="RIGHT">
+                              <font color="#545454">收款人姓名：</font>
+                            </div>
+                          </td>
+                          <td width="357" align="left">
+                            <input name="accountid" type="text" size="15" maxlength="50" id="accountidVal">
+                            <font color="#FF0000">*</font>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#F1F9E8" align="right" width="104">
+                            <div align="RIGHT">
+                              <font color="#545454">配送区域：</font>
+                            </div>
+                          </td>
+                          <td width="357" align="left">
+                            <input name="zone" type="text" size="24" maxlength="50" id="zoneVal">
+                            <font color="#FF0000">*</font>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#F1F9E8" align="right" width="104">
+                            <font color="#545454">花店简介：</font>
+                          </td>
+                          <td width="357" align="left">
+                            <textarea rows="10" name="intro" cols="45" id="introVal"></textarea>
+                            <font color="#FF0000">*</font>
+                          </td>
+                        </tr>
+                        <tr style="display:none;">
+                          <td bgcolor="#F1F9E8" align="right" width="104">
+                            <font color="#545454">营业执照：</font>
+                          </td>
+                          <td width="457" align="left">
+                            <div id="picpath_license" style="float:left;margin-left:7px;">
+                              <img src="../img/no_pic.png" alt="照片位置">
+                            </div>
+                            <input type="hidden" id="picvalue_license" name="picvalue_license" value="" />
+                            <div style="float:left;">
+                              <!-- <iframe name="tu" allowTransparency="true" frameBorder="0" width="100%" height="40"
+                                scrolling="no" src="../api/uppic/YGAPic.aspx"
+                                style="margin-top:20px;"></iframe> -->
+                              <p style="line-height:1.5em;margin-left:7px;">仅支持JPG、GIF、PNG、JPEG、BMP格式<br>文件小于1M</p>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr style="display:none;">
+                          <td bgcolor="#F1F9E8" align="right" width="104">
+                            <font color="#545454">门头照：</font>
+                          </td>
+                          <td width="457" align="left">
+                            <div id="picpath_store" style="float:left;margin:10px 0 0 7px;">
+                              <img src="../img/no_pic.png" alt="照片位置">
+                            </div>
+                            <input type="hidden" id="picvalue_store" name="picvalue_store" value="" />
+                            <div style="float:left;">
+                              <!-- <iframe name="tu" allowTransparency="true" frameBorder="0" width="100%" height="40"
+                                scrolling="no" src="../api/uppic/YGAPic.aspx"
+                                style="margin-top:30px;"></iframe> -->
+                              <p style="line-height:1.5em;margin-left:7px;">仅支持JPG、GIF、PNG、JPEG、BMP格式<br>文件小于1M</p>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                      <br />
+                      <span class="tipInfo" id="spanMsg" style="color:red;"></span>
+                      <br />
+                      <input type="submit" name="B1" value="提 交" onClick="return CheckForm()">
+                      &nbsp;
+                      <input type="reset" name="B2" value="取 消"><br />
+                    </form>
+                  </td>
+                </tr>
+              </table>
+              <p>
+                <br />
+                <center>
+                  <img src="../img/flower_logo.jpg" alt="花店免费加盟 花店联盟" width="210" height="66" style="text-align: center;">
+                </center>
+                <img src="../img/flower_logo_icon.gif" width="16" height="17" align="absmiddle">
+                <font color="#77AA33"><strong>关于花店连锁</strong></font><br>
+                <br>
+                连锁是以提供消费品和服务为主要经营对象，通过标准化的技术和多店铺扩张的方式发展事业的一种经营方式！<br>
+                <br>
+                连锁加盟商可以在约定的期限内享有使用特许人的商标、产品或经营技术，以及特许人提供的信息和培训等，这一方面使特许人可在不需要大量资金的情况下，快速拓展自已的业务体系，另一方面使加盟商在缺少行业经验的情况下，以低风险投资顺利的解决创业过程中的许多问题，能在创业之初就顺利地以成熟的面貌开始经营。<br>
+                <br>
+                <br>
+                <img src="../img/flower_logo_icon.gif" width="16" height="17" align="absmiddle">
+                <font color="#77AA33"><strong>[鲜花店加盟]关于我们</strong></font><br>
+                “真情传递，从中国鲜花礼品网（花礼网）开始”！<br>
+                <br>
+                中国鲜花礼品网（花礼网），一个富有情感传递文化的消费园地，覆盖全国全部省会城市、大中型城市及绝大部分中小城市，现在拥有超过六百多个分布在全国各地的连锁城市配送，成为行业内有影响力的专业网络鲜花和礼品连锁机构，开始走上创立中国网络鲜花速递品牌之路。<br>
+                <br>
+                中国鲜花礼品网（花礼网）目前已经在全国内实现了配送服务，实现了异地互动配送模式。从而确立了中国鲜花礼品网在网下市场的定位。从连锁品牌来说，目前是很具有潜力发展的市场，通过网络的宣传，中国鲜花礼品网（花礼网）已经在网下具有很高的知名度，中国鲜花礼品网一直以时尚、前卫且市场消费潜力巨大的鲜花业为经营主业，网下的市场与网络市场相结合，连锁加盟店的开设，品牌的树立，市场的正确定位，无疑将具有非常重大的意义！<br>
+                <br>
+                中国鲜花礼品网（花礼网），一个您可以信赖、值得信赖的品牌，中国鲜花礼品网（花礼网）欢迎每一位有志人士加盟，加入中国鲜花礼品网（花礼网）这个充满亲情及温情的大家庭，并肩创造，共同分享！<br>
+                <br>
+                <img src="../img/flower_logo_icon.gif" width="16" height="17" align="absmiddle">
+                <font color="#77AA33">
+                  <strong>
+                    [鲜花店加盟]我们的优势<br>
+                  </strong>
+                </font>
+                一、品牌：中国鲜花礼品网（花礼网）致力于品牌发展。您可以在我们的授权范围内，使用花礼网的品牌和知识产权，包括：域名、徽标、名称、商标等进行合法经营活动，突显您的花店是全国连锁的鲜花店。这是您实力的象征。亦是消费信心的保障。
+              </p>
+              <p>
+                <strong>
+                  <font color="#77AA33"></font>
+                </strong>二、技术：中国鲜花礼品网（花礼网）的技术人员具有丰富的电子商务网站开发经验。在系统的稳定性。支付的安全性方面，具有良好的声誉。解决了客户的购物疑虑。同时也是国内最完善的鲜花礼品类电子商务交易平台。致力为花店和购花人构建安全便捷的交易桥梁。
+              </p>
+              <p>三、网络：中国鲜花礼品网（花礼网）全国各地拥有加盟和配送店达1000多个，可实现网上网下资源的共享、有效配置。通过我们的配送网络，你的服务范围可扩展到全国各地甚至全球。</p>
+              <p>
+                <strong>
+                  <font color="#77AA33"></font>
+                </strong>四、服务：为花店带来更多的顾客。为顾客带去更好的鲜花。让花店赚到更多的钱。使顾客付出最少，得到更多。<br>
+                <br>
+                <p>
+                  <img src="../img/flower_logo_icon.gif" width="16" height="17" align="absmiddle" />
+                  <font color="#77AA33"><strong>[鲜花店加盟]加盟方式</strong></font><br />
+                  符合条件的花店， 可以选择2种加盟方式：<br />
+                  一、配送店：二级城市以及县市，符合上述加盟条件者经审核合格后，可以免费加入成为配送店。
+                </p>
+                <p>二、正式加盟店：直辖市、省会城市、沿海地区重要城市以及经济特区，符合上述加盟条件者可以申请加入成为正式加盟店（需进行资质/花艺及服务审核）。</p>
+                <p>
+                  <br>
+                  <img src="../img/flower_logo_icon.gif" width="16" height="17" align="absmiddle">
+                  <font color="#77AA33">
+                    <strong>
+                      [鲜花店加盟]费用标准 <br>
+                    </strong>
+                  </font>一、配送店：<font color="#FF0000">免费加入</font>（需符合上述加盟条件）
+                </p>
+                <p>
+                  二、加盟店<br>
+                  A类：首都、直辖市、沿海地区以及经济特区。
+                  <br>
+                  信誉保证金：6000元RMB（将无息返还）
+                  <br>
+                  <br>
+                  B类：省会城市。
+                  <br>
+                  信誉保证金：3000元RMB（将无息返还） 　　<br>
+                  <br>
+                  C类：二级城市以及县市
+                  <br>
+                  信誉保证金：2000元RMB（将无息返还）
+                  <br>
+                  <br>
+                </p>
+            </div>
+          </div>
+        </div>
+        <!--盘石-->
+        <script type="text/javascript">
+          panshi_a = "4292263936_1476771840_1";
+          panshi_b = "960_60_10";
+        </script>
+        <script type="text/javascript" src="https://s.adyun.com/show_ps3.js"></script>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+    <!--底部-->
+    <!-- 尾部导航 -->
+    <div class="footer-nav">
+      <a href="/">首页</a><a href="/profile/about.htm" target="_blank">关于我们</a><a
+        href="/profile/media.html" target="_blank">媒体报道</a><a href="/profile/contact.htm"
+        target="_blank">联系方式</a><a href="/qiyetuangou/" target="_blank">企业团购</a><a href="/liansuo/"
+        target="_blank">花店入驻</a><a href="/profile/links.htm" target="_blank">友情链接</a><a
+        href="/member/payment/balancefill" target="_blank">在线补款</a><a class="last-child"
+        href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+    </div>
+    <!-- 尾部导航 End -->
+    <!-- 通用尾部 -->
+    <footer>
+      <div class="auth">
+        <!-- <span style="margin-right:8px;">
+                <script src="http://kxlogo.knet.cn/seallogo.dll?sn=e15041744030058395oqbo000000&amp;size=4"></script>
+            </span> -->
+        <a href="https://ss.knet.cn/verifyseal.dll?sn=e15041744030058395oqbo000000&ct=df&a=1&pa=0.8817607406526804"
+          target="_blank"><img style="height:40px;" src="../img/common/cxwz.png"></a>
+        <img src="../img/common/slogan.png" height="50" width="212" /> <a href="/profile/about.htm"
+          target="_blank"><img src="../img/common/100.jpg" height="49" width="150"></a>
+        <a href="/profile/ICP.htm" rel="nofollow" target="_blank"><img src="../img/common/bico1.jpg"
+            alt="ICP" height="46" width="35"></a>
+        <!--             <a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403301920636" rel="nofollow" target="_blank"><img alt="网警" src="//img02.hua.com/pc/assets/img/bico2.jpg" height="46" width="35"></a> -->
+      </div>
+      <p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a
+          href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a href="/profile/ICP.htm"
+          rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a href="http://www.miibeian.gov.cn" rel="nofollow"
+          target="_blank">粤ICP备09171662号</a> <span class="ico beian"></span>粤公网安备44030502000373号 Copyright © 2005-2019
+      </p>
+      <p> 花礼网 （中国鲜花礼品网） <a href="/">www.hua.com</a><span> 深圳市百易信息技术有限公司</span> 中国领先鲜花网品牌,专业鲜花速递服务！</p>
+    </footer>
+    <!-- 通用尾部 End -->
+    <!-- 弹出窗口-->
+    <!-- 弹出窗口end-->
+    <script src="../js/jquery-3.js"></script>
+    <script src="../js/liansuo.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/statesandright.js"></script>
+    <script src="../js/layerpc/layer.js"></script>
+    <script src="../js/jquery.cityselect_jmd.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $("#city_1").citySelect({
+          prov: "请选择省份",
+          city: "请选择城市",
+          dist: "请选择县(区)",
+          nodata: "none"
+        });
+      });
+      var msg = $("#successMsg").val();
+      if (msg != "") {
+        $("spanMsg").text("");
+        alert(msg);
+        window.location.href = "/LianSuo/";
+      }
+      function ShowErrMsg(info) {
+        $("#spanMsg").text(info);
+      }
+      function InitSelect() {
+      }
+      function CheckForm() {
+        var shopName = $.trim($("#shopnameVal").val());
+        var realName = $.trim($("#realnameVal").val());
+        var province = $.trim($("#to_state").val());
+        var city = $.trim($("#to_city").val());
+        var area = $.trim($("#to_dist").val());
+        var address = $.trim($("#addressVal").val());
+        var tel = $.trim($("#telVal").val());
+        var email = $.trim($("#emailVal").val());
+        var bankName = $.trim($("#banknameVal").val());
+        var accountNo = $.trim($("#accountnoVal").val());
+        var receiverName = $.trim($("#accountidVal").val());
+        var zone = $.trim($("#zoneVal").val());
+        var huadianIntro = $.trim($("#introVal").val());
+        if (shopName == "") {
+          ShowErrMsg("花店名称不能为空");
+          return false;
+        }
+        if (realName == "") {
+          ShowErrMsg("姓名不能为空");
+          return false;
+        }
+        if (province == "" || province == "请选择省份") {
+          ShowErrMsg("花店所在省份不能为空");
+          return false;
+        }
+        if (city == "" || city == "请选择城市") {
+          ShowErrMsg("花店所在城市不能为空");
+          return false;
+        }
+        if (area == "" || area == "请选择县(区)") {
+          ShowErrMsg("花店所在区(县)不能为空");
+          return false;
+        }
+        if (address == "") {
+          ShowErrMsg("您的地址不能为空");
+          return false;
+        }
+        if (tel == "") {
+          ShowErrMsg("电话不能为空");
+          return false;
+        }
+        if (email == "") {
+          ShowErrMsg("QQ号不能为空");
+          return false;
+        }
+        if (bankName == "") {
+          ShowErrMsg("开户行不能为空");
+          return false;
+        }
+        if (accountNo.length < 12) {
+          ShowErrMsg("结算账号不能少于12位数字");
+          return false;
+        }
+        if (receiverName == "") {
+          ShowErrMsg("收款人姓名不能为空");
+          return false;
+        }
+        if (zone == "") {
+          ShowErrMsg("配送区域不能为空");
+          return false;
+        }
+        if (huadianIntro == "") {
+          ShowErrMsg("花店简介不能为空");
+          return false;
+        }
+        return true;
+      }
+    </script>
+    <script type="text/javascript">
+      var userId = 0;
+      function reqUrlParam(paras) {
+        var url = location.href;
+        var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+        var paraObj = {}
+        for (i = 0; j = paraString[i]; i++) {
+          paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+        }
+        var returnValue = paraObj[paras.toLowerCase()];
+        if (typeof (returnValue) == "undefined") {
+          return "";
+        } else {
+          return returnValue;
+        }
+      }
+      function setLocalStoreHua(k, v) {
+        try {
+          if (localStorage != null) {
+            localStorage.setItem(k, v);
+          }
+        } catch (ex) { }
+      }
+      function getLocalStoreHua(k) {
+        try {
+          if (localStorage != null) {
+            var v1 = localStorage.getItem(k);
+            localStorage.removeItem(k);
+            return v1;
+          }
+        } catch (ex) { }
+        return "";
+      }
+      var lsPerfKey = "home/GetProductListPrice";
+      function getProductPrice() {
+        var dataPps = "";
+        $("span[data-pp]").each(function (index, data) {
+          dataPps = dataPps + $(this).attr("data-pp") + ",";
+        })
+        if (dataPps.length > 0) {
+          var perf1 = getLocalStoreHua(lsPerfKey);
+          var dts = new Date();
+          $.ajax({
+            type: "POST", url: "/home/GetProductListPrice",
+            data: { itemcodes: dataPps, perf: perf1 },
+            timeout: 60000, dataType: 'json',
+            success: function (res) {
+              if (res.DataStatus == 200 && res.Status == '0') {
+                if (res.Datas.ProductPrices.length == 0) {
+                  return false;
+                }
+                for (var i = 0, len = res.Datas.ProductPrices.length; i < len; i++) {
+                  var temp = res.Datas.ProductPrices[i];
+                  $("span[data-pp='" + temp.ItemCode + "']").text(temp.Price);
+                }
+              }
+              else { }
+            },
+            complete: function (res) {
+              var dte = new Date();
+              var useMs = dte.getTime() - dts.getTime();
+              //var resTxt = "v0,"+res.readyState + "," + res.status + "," + res.statusText;
+              var resTxt = "v0," + res.status + "," + dts.getTime() + "," + useMs;
+              setLocalStoreHua(lsPerfKey, resTxt);
+              console.log("AjaxReq性能", resTxt);
+            }
+          });
+        }
+      }
+      function setCurUrlClass() {
+        // css : class = "color_tj"
+        var pathname1 = window.location.pathname;
+        $("a[href='" + pathname1 + "'").addClass("color_tj");
+      }
+      getProductPrice();
+      function addHuaPid() {
+        try {
+          var path = encodeURIComponent(window.location.pathname);
+          $("a[data-link]").each(function (index, data) {
+            if ($(this).attr("href").indexOf("huaPid=") == -1) {
+              var href = $(this).attr("href") + "?huaPid=" + path + "-" + $(this).attr("data-link");
+              $(this).attr("href", href);
+            }
+          })
+        }
+        catch (e) {
+          console.log(e);
+        }
+      }
+      addHuaPid();
+      $(function () {
+        $.get("/Home/GetLoginUserId", null, function (data) {
+          userId = data;
+        }, "json");
+        $("#header-chat,#kefu,#kefu1").click(function (e) {
+          e.preventDefault();
+          //$("#MEIQIA-BTN").click();
+          _MEIQIA('showPanel');
+        });
+        if ($("#pjCount").length > 0) {
+          $.get("/productpj/GetPJCount", function (data) {
+            $("#pjCount").text(data);
+          });
+        }
+      });
+      function openChatWindow(e) {
+        //美洽代码
+        //$("#MEIQIA-BTN").click();
+        _MEIQIA('showPanel');
+      }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KS4PTHC');</script>
+    <!-- End Google Tag Manager -->
+    <script type='text/javascript'>
+      (function (m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function () {
+          (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+          s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+        s.parentNode.insertBefore(j, s);
+      })(window, document, 'script', '_MEIQIA');
+      _MEIQIA('entId', 111117);//1212
+      $.post("/Home/MeiQiaVisitLog", null, function (data) {
+        _MEIQIA('clientId', data);
+      });
+    </script>
+</body>
+
+</html>

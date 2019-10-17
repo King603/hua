@@ -1,0 +1,229 @@
+@charset "utf-8";
+.comments-list {
+  border-bottom: 1px solid #E9ECF0;
+}
+.comments-item {
+  padding-bottom: 16px;
+}
+.comments-item:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.comments-item + .comments-item {
+  padding-top: 20px;
+  border-top: 1px dotted #E9ECF0;
+}
+.comments-item-left {
+  float: left;
+  width: 150px;
+  text-align: center;
+  margin-right: 10px;
+}
+.comments-item-right {
+  float: left;
+  width: 768px;
+  padding: 6px 0;
+}
+.comments-item-pic {
+  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.comments-item-pic img {
+  width: 100%;
+  height: auto;
+}
+.comments-item-username {
+  font-size: 12px;
+  color: #71797F;
+  margin: 0 auto;
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.comments-item-rating {
+  width: 106px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-image: url(//img02.hua.com/pc/assets/img/pc_comments_rating_5.png);
+  margin-bottom: 6px;
+}
+.comments-item-rating.comments-item-rating-4 {
+  background-image: url(//img02.hua.com/pc/assets/img/pc_comments_rating_4.png);
+}
+.comments-item-rating.comments-item-rating-3 {
+  background-image: url(//img02.hua.com/pc/assets/img/pc_comments_rating_3.png);
+}
+.comments-item-rating.comments-item-rating-2 {
+  background-image: url(//img02.hua.com/pc/assets/img/pc_comments_rating_2.png);
+}
+.comments-item-rating.comments-item-rating-1 {
+  background-image: url(//img02.hua.com/pc/assets/img/pc_comments_rating_1.png);
+}
+.comments-item-desc {
+  font-size: 14px;
+  color: #232628;
+  margin: 0;
+}
+.comments-item-desc a {
+  color: inherit;
+}
+.comments-item-imglist {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.comments-item-imglist:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.comments-item-img {
+  display: inline-block;
+  line-height: 80px;
+  font-size: 0;
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #E9ECF0;
+  text-align: center;
+}
+.comments-item-img + .comments-item-img {
+  margin-left: 8px;
+}
+.comments-item-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.comments-item-address,
+.comments-item-time {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+}
+.comments-item-address {
+  margin-bottom: 0;
+  margin-right: 12px;
+  color: #71797F;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.comments-item-address > .iconfont {
+  display: inline-block;
+  width: 14px;
+  height: 1em;
+  margin-right: 4px;
+  background: url("//img02.hua.com/pc/assets/img/deliver_area_icon.png") no-repeat center center;
+  background-size: contain;
+  position: relative;
+  top: 2px;
+  vertical-align: top;
+}
+.comments-item-time {
+  line-height: 18px;
+}
+.comments-item-bottom {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: #F7F9FA;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 400px;
+  vertical-align: middle;
+  font-size: 0;
+}
+.comments-item-closeview {
+  z-index: 99;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 56px;
+  height: 20px;
+  background: #71797F;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.comments-item-closeview:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.comments-item-viewimg {
+  max-width: 100%;
+  max-height: 100%;
+}
+.comments-ft {
+  padding-top: 20px;
+  font-size: 0;
+  text-align: center;
+}
+.comments-ft-navi {
+  display: inline-block;
+  width: 180px;
+  margin: 0 16px;
+  font-size: 14px;
+  line-height: 34px;
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  vertical-align: top;
+}
+.comments-ft-left {
+  display: inline-block;
+  width: 50%;
+  font-size: 14px;
+  line-height: 20px;
+  color: #232628;
+  vertical-align: top;
+}
+.comments-ft-right {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  text-align: right;
+}
+.comments-ft-right span {
+  display: inline-block;
+  margin: 0 5px;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #B4BABF;
+  text-align: center;
+  line-height: 22px;
+  font-size: 12px;
+  color: #232628;
+  vertical-align: top;
+  cursor: pointer;
+}
+.comments-ft-right .ft-btn {
+  width: 56px;
+}
+.comments-ft-right .active {
+  color: #FF734C;
+  cursor: default;
+}
+.comments-ft-orange {
+  color: #FF734C;
+  font-weight: 600;
+}
+.comments-ft-underline {
+  text-decoration: underline;
+}
