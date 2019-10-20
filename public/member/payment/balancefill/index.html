@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>中国鲜花礼品网::会员服务-补缴款项</title>
+  <script type="text/javascript" src="../../../js/CheckAgent.js"></script>
+  <link rel="icon" href="../../../img/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+  <link type="text/css" rel="stylesheet" href="../../../css/common.css">
+  <link type="text/css" rel="stylesheet" href="../../../css/public_2019.css">
+  <link rel="stylesheet" href="../../../css/logo.css">
+  <style>
+    td,
+    th {
+      padding: 0 22px;
+    }
+
+    table a {
+      text-decoration: underline;
+      color: #809902;
+    }
+
+    .errBox {
+      padding: 28px 0;
+      text-align: center;
+    }
+
+    .errBox span {
+      color: #71797f;
+    }
+  </style>
+</head>
+
+<body class="home">
+  <!-- 顶部导航 -->
+  <div class="site-nav">
+    <div class="container">
+      <ul class="site-nav-l">
+        <li class="menu">
+          <a href="/" onClick="addfavorite();return false;"><span class="ico ico-star"></span>收藏鲜花网(hua.com)</a>
+        </li>
+        <li class="menu dropdown">
+          <a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span class="ico ico-weixin"></span>关注微信</a>
+          <div class="dropdown-menu dropdown-weixin">
+            <img src="../../../img/common/wechat_qrcode.jpg" height="124" width="124">
+            <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
+          </div>
+        </li>
+        <li class="menu dropdown">
+          <a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span
+              class="ico ico-mobile"></span>花礼网app</a>
+          <div class="dropdown-menu dropdown-weixin">
+            <img src="../../../img/common/app_qrcode.jpg" height="124" width="124">
+            <p>新人专享100元APP礼包</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="site-nav-r">
+        <!--登陆状态信息显示start-->
+        <li class="menu login" id="LoginInfo">
+          <a href="/Passport/Login/" rel="nofollow" id="btn-login">你好，请登录</a><a href="/Passport/Register/"
+            rel="nofollow" id="btn-reg">注册</a>
+        </li>
+        <!--登陆状态信息显示end-->
+        <li class="site-nav-pipe">|</li>
+        <li class="menu">
+          <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <!--我的花礼信息显示start-->
+        <li class="menu dropdown">
+          <a href="/member/" rel="nofollow" data-hover="dropdown" data-delay="0" target="_blank">我的花礼</a>
+        </li>
+        <!--我的花礼信息显示end-->
+        <li class="site-nav-pipe">|</li>
+        <li class="menu dropdown">
+          <a href="/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span
+              class="glyphicon glyphicon-triangle-bottom"></span></a>
+          <div class="dropdown-menu dropdown-service">
+            <a href="/member/payment/balancefill" target="_blank">在线付款</a>
+            <a href="/help/" target="_blank">帮助中心</a>
+            <a href="/help/afterservice.htm" target="_blank">售后服务</a>
+            <a href="/help/sendRange.htm" target="_blank">配送范围</a>
+            <a href="/chat/" target="_blank">留言反馈</a>
+          </div>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <!--购物车信息显示start-->
+        <li class="menu dropdown">
+          <a href="/shopping/showcart/" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank"><span
+              class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount"></span><span
+              class="glyphicon glyphicon-triangle-bottom"></span></a>
+          <div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+        </li>
+        <!--购物车信息显示end-->
+        <li class="site-nav-pipe">|</li>
+        <li class="menu slogan">
+          在线补款
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 顶部导航 End -->
+  <!-- 头部 -->
+  <header>
+    <div class="logo">
+      <h1><a href="/" class="logo-bd">鲜花速递</a></h1>
+      <!-- <h2>中国鲜花礼品网 始于2005，简称花礼网</h2> -->
+    </div>
+    <div class="search">
+      <form name="i_search" method="get" action="/search/">
+        <div class="input-group">
+          <input name="keyword" type="text" class="form-control" placeholder="商品关键词">
+          <span class="input-group-btn">
+            <button id="test" class="btn btn-primary" type="button" onClick="this.form.submit()">搜索</button>
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="service serviceDefault">
+      <span class="ico ico-phone"></span>400-889-8188
+      <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a>
+    </div>
+    <div class="service serviceVip">
+      <div class="vipwechatchat">
+        <img style="margin-right: 6px;" src="../../../img/common/wechat.png" width="30" /><span>1对1钻石客户经理</span>
+        <div class="vipwechatchat-box">
+          <h3>微信1对1客服经理</h3>
+          <img class="img-responsive" style="width: 120px;display: inline-block;"
+            src="../../../img/common/VIPChatQR.jpg" />
+          <p>扫一扫添加客户经理微信</p>
+          <p>微信号：VIP-Service-Hua</p>
+        </div>
+      </div>
+      <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a><br />
+      <span class="ico ico-phone"></span><span>钻石专线：400-830-3920</span>
+    </div>
+  </header>
+  <!-- 头部 End -->
+  <!-- 导航 -->
+  <nav class="common">
+    <div class="container">
+      <div class="categorys dropdown">
+        <h3 class="categorys-title" data-hover="dropdown" data-delay="0">
+          <a href="/all.html"><span class="pull-right glyphicon glyphicon-menu-down"></span>全部商品导购</a>
+        </h3>
+        <div class="dropdown-menu dropdown-cate">
+          <h4><a href="/flower/">鲜花</a></h4>
+          <ul class="cate-list list-inline"></ul>
+          <h4><a href="/yongshenghua/">永生花</a></h4>
+          <ul class="cate-list list-inline"></ul>
+          <h4><a href="/gifts/">礼品</a></h4>
+          <ul class="cate-list list-inline"></ul>
+          <h4><a href="/Plant/">绿植</a></h4>
+          <ul class="cate-list list-inline"></ul>
+        </div>
+      </div>
+      <ul class="nav"></ul>
+    </div>
+  </nav>
+  <!-- 导航 End -->
+  <!-- 内容 -->
+  <div class="container">
+    <div class="breadcrumbs"><a href="/">首页</a> &gt; 在线补款</div>
+    <div class="wrapper help" style="border:1px solid #e0e0e0;">
+      <div
+        style="line-height:60px; font-size:24px;font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif; text-align:center; margin-top:20px;">
+        在线补款</div>
+      <table style="border-collapse:collapse;" border="1" bordercolor="D9D9D9" cellpadding="0" cellspacing="0" width="76%" align="center">
+        <tbody>
+          <tr bgcolor="fbfbfb">
+            <th colspan="3" height="34" bgcolor="#eeeeee"><strong>国内支付</strong></th>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table style="border-collapse:collapse;" border="1" bordercolor="D9D9D9" cellpadding="0" cellspacing="0"  width="76%" align="center">
+        <tbody>
+          <tr bgcolor="fbfbfb">
+            <th colspan="3" height="34" bgcolor="#eeeeee"><strong>国外支付</strong></th>
+          </tr>
+          <tr>
+            <td height="90" width="23%">
+              <strong>PayPal支付</strong><br>
+            </td>
+            <td width="51%" align="center"></td>
+            <td valign="middle" width="26%" align="center">
+              <a target="_blank" href="/Member/Payment/FillByPaypal?order_no=&total_fee=&sign=">PayPal支付&gt;&gt;</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br><br><br><br><br>
+    </div>
+  </div>
+  <!--底部-->
+  <!-- 尾部导航 -->
+  <div class="footer-nav">
+    <a href="/">首页</a><a href="/profile/about.htm" target="_blank">关于我们</a><a href="/profile/media.html"
+      target="_blank">媒体报道</a><a href="/profile/contact.htm" target="_blank">联系方式</a><a href="/qiyetuangou/"
+      target="_blank">企业团购</a><a href="/liansuo/" target="_blank">花店入驻</a><a href="/profile/links.htm"
+      target="_blank">友情链接</a><a href="/member/payment/balancefill" target="_blank">在线补款</a><a class="last-child"
+      href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+  </div>
+  <!-- 尾部导航 End -->
+  <!-- 通用尾部 -->
+  <footer>
+    <div class="auth">
+      <!-- <span style="margin-right:8px;">
+                <script src="http://kxlogo.knet.cn/seallogo.dll?sn=e15041744030058395oqbo000000&amp;size=4"></script>
+            </span> -->
+      <a href="https://ss.knet.cn/verifyseal.dll?sn=e15041744030058395oqbo000000&ct=df&a=1&pa=0.8817607406526804"
+        target="_blank"><img style="height:40px;" src="../../../img/common/cxwz.png"></a>
+      <img src="../../../img/common/slogan.png" height="50" width="212" /> <a href="/profile/about.htm"
+        target="_blank"><img src="../../../img/common/100.jpg" height="49" width="150"></a>
+      <a href="/profile/ICP.htm" rel="nofollow" target="_blank"><img src="../../../img/common/bico1.jpg" alt="ICP"
+          height="46" width="35"></a>
+      <!--             <a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403301920636" rel="nofollow" target="_blank"><img alt="网警" src="//img02.hua.com/pc/assets/img/bico2.jpg" height="46" width="35"></a> -->
+    </div>
+    <p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a
+        href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a href="/profile/ICP.htm"
+        rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a href="http://www.miibeian.gov.cn" rel="nofollow"
+        target="_blank">粤ICP备09171662号</a> <span class="ico beian"></span>粤公网安备44030502000373号 Copyright © 2005-2019</p>
+    <p> 花礼网 （中国鲜花礼品网） <a href="/">www.hua.com</a><span> 深圳市百易信息技术有限公司</span> 会员中心</p>
+  </footer>
+  <!-- 通用尾部 End -->
+  <!-- 弹出窗口-->
+  <!-- 弹出窗口end-->
+  <script src="../../../js/jquery-3.js"></script>
+  <script src="../../../js/balancefill.js"></script>
+  <script type="text/javascript" src="../../../js/common.js"></script>
+  <script type="text/javascript" src="../../../js/statesandright.js"></script>
+  <script src="../../../js/layerpc/layer.js"></script>
+  <script type="text/javascript">
+    var userId = 0;
+    function reqUrlParam(paras) {
+      var url = location.href;
+      var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+      var paraObj = {}
+      for (i = 0; j = paraString[i]; i++) {
+        paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+      }
+      var returnValue = paraObj[paras.toLowerCase()];
+      if (typeof (returnValue) == "undefined") {
+        return "";
+      } else {
+        return returnValue;
+      }
+    }
+    function setLocalStoreHua(k, v) {
+      try {
+        if (localStorage != null) {
+          localStorage.setItem(k, v);
+        }
+      } catch (ex) { }
+    }
+    function getLocalStoreHua(k) {
+      try {
+        if (localStorage != null) {
+          var v1 = localStorage.getItem(k);
+          localStorage.removeItem(k);
+          return v1;
+        }
+      } catch (ex) { }
+      return "";
+    }
+    var lsPerfKey = "home/GetProductListPrice";
+    function getProductPrice() {
+      var dataPps = "";
+      $("span[data-pp]").each(function (index, data) {
+        dataPps = dataPps + $(this).attr("data-pp") + ",";
+      })
+      if (dataPps.length > 0) {
+        var perf1 = getLocalStoreHua(lsPerfKey);
+        var dts = new Date();
+        $.ajax({
+          type: "POST", url: "/home/GetProductListPrice",
+          data: { itemcodes: dataPps, perf: perf1 },
+          timeout: 60000, dataType: 'json',
+          success: function (res) {
+            if (res.DataStatus == 200 && res.Status == '0') {
+              if (res.Datas.ProductPrices.length == 0) {
+                return false;
+              }
+              for (var i = 0, len = res.Datas.ProductPrices.length; i < len; i++) {
+                var temp = res.Datas.ProductPrices[i];
+                $("span[data-pp='" + temp.ItemCode + "']").text(temp.Price);
+              }
+            }
+            else { }
+          },
+          complete: function (res) {
+            var dte = new Date();
+            var useMs = dte.getTime() - dts.getTime();
+            //var resTxt = "v0,"+res.readyState + "," + res.status + "," + res.statusText;
+            var resTxt = "v0," + res.status + "," + dts.getTime() + "," + useMs;
+            setLocalStoreHua(lsPerfKey, resTxt);
+            console.log("AjaxReq性能", resTxt);
+          }
+        });
+      }
+    }
+    function setCurUrlClass() {
+      // css : class = "color_tj"
+      var pathname1 = window.location.pathname;
+      $("a[href='" + pathname1 + "'").addClass("color_tj");
+    }
+    getProductPrice();
+    function addHuaPid() {
+      try {
+        var path = encodeURIComponent(window.location.pathname);
+        $("a[data-link]").each(function (index, data) {
+          if ($(this).attr("href").indexOf("huaPid=") == -1) {
+            var href = $(this).attr("href") + "?huaPid=" + path + "-" + $(this).attr("data-link");
+            $(this).attr("href", href);
+          }
+        })
+      }
+      catch (e) {
+        console.log(e);
+      }
+    }
+    addHuaPid();
+    $(function () {
+      $.get("/Home/GetLoginUserId", null, function (data) {
+        userId = data;
+      }, "json");
+      $("#header-chat,#kefu,#kefu1").click(function (e) {
+        e.preventDefault();
+
+        //$("#MEIQIA-BTN").click();
+        _MEIQIA('showPanel');
+      });
+      if ($("#pjCount").length > 0) {
+        $.get("/productpj/GetPJCount", function (data) {
+          $("#pjCount").text(data);
+        });
+      }
+    });
+    function openChatWindow(e) {
+      //美洽代码
+      //$("#MEIQIA-BTN").click();
+      _MEIQIA('showPanel');
+    }
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KS4PTHC');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script type='text/javascript'>
+    (function (m, ei, q, i, a, j, s) {
+      m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      j = ei.createElement(q),
+        s = ei.getElementsByTagName(q)[0];
+      j.async = true;
+      j.charset = 'UTF-8';
+      j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+      s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', 111117);//1212
+    $.post("/Home/MeiQiaVisitLog", null, function (data) {
+      _MEIQIA('clientId', data);
+    });
+  </script>
+</body>
+
+</html>

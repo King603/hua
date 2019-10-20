@@ -1,0 +1,53 @@
+ul, ol {
+  margin-top: 0px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.incontent {
+  font-size: 12px;
+}
+
+.aboutallbox {
+  width: 1200px;
+  margin: 0 auto 10px auto;
+  text-align: left;
+  color: #61645a;
+  line-height: 24px;
+}
+
+.inbasebox_R1 {
+  float: right;
+  width: 980px;
+}
+
+.rabox .title {
+  line-height: 30px;
+  background: url("../img/ico59.jpg") repeat-x left top;
+  border: 1px solid #e2e2e2;
+}
+
+.rabox .title span {
+  line-height: 30px;
+  padding-left: 30px;
+  background: transparent url("../img/ico58.jpg") no-repeat scroll 6px center;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+.city_1 input, .city_1 select, .city_1 textarea {
+  margin: 3px 0 3px 7px;
+}
+
+.rabox>.slider {
+  margin-bottom: 20px;
+}
+
+.rabox>.slider a {
+  display: block;
+}
+
+.rabox>.slider img {
+  width: 100%;
+}

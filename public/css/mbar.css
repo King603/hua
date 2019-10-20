@@ -40,7 +40,7 @@
     height: 36px;
     cursor: pointer;
     vertical-align: top;
-    background: url(//img02.hua.com/pc/assets/img/mbar/ibar_sprites.png) no-repeat;
+    background: url(../img/common/ibar_sprites.png) no-repeat;
 }
 .quick_links_panel {
     position: absolute;
@@ -159,7 +159,7 @@
     height: 133px;
     margin: 10px 0;
     color: #fff;
-    background: url(//img02.hua.com/pc/assets/img/mbar/ibar_sprites.png) no-repeat;
+    background: url(../img/common/ibar_sprites.png) no-repeat;
     background-position: -36px -216px;
 }
 

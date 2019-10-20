@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>花店入驻流程|中国最大的连锁花店免费入驻|网上鲜花连锁店|入驻鲜花网-中国鲜花礼品网，中国领先连锁鲜花店</title>
+  <link rel="icon" href="../img/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+  <link type="text/css" rel="stylesheet" href="../css/common.css">
+  <link type="text/css" rel="stylesheet" href="../css/public.css">
+  <link type="text/css" rel="stylesheet" href="../css/pagination.css">
+  <link href="../css/about.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="../css/liansuo.css">
+</head>
+
+<body>
+  <!-- 顶部导航 -->
+  <div class="site-nav">
+    <div class="container">
+      <ul class="site-nav-l">
+        <li class="menu">
+          <a href="/" onClick="addfavorite();return false;"><span class="ico ico-star"></span>收藏鲜花网</a>
+        </li>
+        <li class="menu dropdown">
+          <a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span
+              class="ico ico-mobile"></span>手机花礼</a>
+          <div class="dropdown-menu dropdown-weixin">
+            <img src="../img/common/app_qrcode.jpg" height="124" width="124">
+            <p>APP首单减20元！<br>(需下单时输入券号9920)</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="site-nav-r">
+        <li class="menu login" id="LoginInfo"></li>
+        <li class="site-nav-pipe">|</li>
+        <li class="menu">
+          <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <li class="menu dropdown">
+          <a href="/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span
+              class="glyphicon glyphicon-triangle-bottom"></span></a>
+          <div class="dropdown-menu dropdown-service">
+            <a href="/member/payment/balancefill" target="_blank">在线付款</a>
+            <a href="/help/" target="_blank">帮助中心</a>
+            <a href="/help/afterservice.htm" target="_blank">售后服务</a>
+            <a href="/help/sendRange.htm" target="_blank">配送范围</a>
+            <a href="/chat/" target="_blank">留言反馈</a>
+          </div>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <li class="menu dropdown">
+          <a href="/shopping/showcart" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank"><span
+              class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount"></span><span
+              class="glyphicon glyphicon-triangle-bottom"></span></a>
+          <div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <li class="menu slogan">
+          花店连锁入驻
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 顶部导航 End -->
+  <!-- 头部 -->
+  <header>
+    <div class="logo">
+      <h1><a href="/" class="logo-bd">鲜花速递</a></h1>
+      <i></i>
+      <h2>中国鲜花礼品网 始于2005，简称花礼网</h2>
+    </div>
+    <div class="search">
+      <form name="i_search" method="post" action="/search/">
+        <div class="input-group">
+          <input name="keyword" type="text" class="form-control" placeholder="商品关键词">
+          <span class="input-group-btn">
+            <button class="btn btn-primary" type="button" onclick="this.form.submit()">搜索</button>
+          </span>
+        </div>
+      </form>
+      <span class="help-block"><a href="/songlaoshixianhua/">送老师鲜花</a><a href="/florist/">自选鲜花</a><a
+          href="/shengriliwu/">生日鲜花</a><a href="/worldflora/">港澳台送花</a></span>
+    </div>
+    <div class="service">
+      <span class="ico ico-phone"></span>400-889-8188
+      <a href="/chat/" target="_blank"><span class="ico ico-headset"></span>在线客服</a>
+    </div>
+  </header>
+  <!-- 头部 End -->
+  <!-- 导航 -->
+  <nav class="common">
+    <div class="container">
+      <div class="categorys dropdown">
+        <h3 class="categorys-title" data-hover="dropdown" data-delay="0">
+          <a href="/all.html"><span class="pull-right glyphicon glyphicon-menu-down"></span>全部商品导购</a>
+        </h3>
+        <div class="dropdown-menu dropdown-cate">
+          <h4><a href="/flower/">鲜花</a></h4>
+          <ul class="cate-list list-inline"></ul>
+          <h4><a target="_blank" href="/yongshenghua/">永生花</a></h4>
+          <ul class="cate-list list-inline"></ul>
+          <h4><a target="_blank" href="/cake/">蛋糕</a></h4>
+          <ul class="cate-list list-inline"></ul>
+          <h4><a target="_blank" href="/gifts/">礼品</a></h4>
+          <ul class="cate-list list-inline"></ul>
+          <h4><a target="_blank" href="/Plant/">绿植</a></h4>
+          <ul class="cate-list list-inline"></ul>
+        </div>
+      </div>
+      <ul class="nav"></ul>
+    </div>
+  </nav>
+  <!-- 导航 End -->
+  <div class="breadcrumbs1"><a href="/">首页</a> &gt; <a href="/liansuo/" title="花店连锁入驻">花店入驻
+      &gt; </a>花店入驻流程</div>
+  <div class="aboutallbox">
+    <div class="inbasebox_L1">
+      <!-- 连锁入驻 -->
+      <div class="liansuo1_box">
+        <div class="title">花店入驻说明</div>
+        <div class="borderct">
+          <div class="incontent">
+            <ul class="ul10">
+              <li><a href="/liansuo/">花店入驻介绍</a></li>
+              <li><a href="JoinStep.htm">
+                  <font color="#FF6600">花店入驻流程
+                </a></font>
+              </li>
+              <li><a href="faq.htm">花店入驻FAQ</a></li>
+              <li><a href="/liansuo/sender_form.htm">入驻申请表</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="imgbottom"></div>
+      </div>
+      <!-- 连锁入驻 END -->
+      <!-- 优秀花店推荐 -->
+      <div class="liansuo2_box">
+        <div class="title">入驻连锁花店专区</div>
+        <div class="borderct">
+          <div class="incontent">
+            <ul class="ul10"></ul>
+          </div>
+        </div>
+        <div class="imgbottom"></div>
+      </div>
+      <!-- 优秀花店推荐 END -->
+    </div>
+    <div class="inbasebox_R1">
+      <!-- TOP当前位置start -->
+      <div class="rightdqwz">
+        <div class="intopdqwz_box"></div>
+        <!-- TOP当前位置End -->
+        <!-- rightbox -->
+        <div class="rabox">
+          <div class="title"><span>花店入驻流程</span></div>
+          <div class="content">
+            <div class="incontent">
+              <table width="90%" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#77aa33"
+                style="border-collapse:collapse">
+                <tbody>
+                  <tr>
+                    <td height="25" bgcolor="#F1F9E8" align="center">
+                      <strong>
+                        <font color="#77aa33">前期接洽</font>
+                      </strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="20" align="center">
+                      <font color="#666666">通过电话、在线沟通或E-mail等方式，了解入驻花店的基本状况。介绍花礼网发展现状、优势</font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="50" align="center">
+                      <img src="../img/arrow2.gif" height="52" width="7">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="25" bgcolor="#F1F9E8" align="center">
+                      <strong>
+                        <font color="77aa33">递交入驻申请表</font>
+                      </strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="20" align="center">
+                      <font color="#666666">提交入驻申请表，并按要求提供相关营业证照、物业产权证明（或有效的租赁证明文件）</font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="50" align="center">
+                      <img src="../img/arrow2.gif" height="52" width="7">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="25" bgcolor="#F1F9E8" align="center">
+                      <strong>
+                        <font color="77aa33">签订入驻合同</font>
+                      </strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="20" align="center">
+                      <font color="#666666">通过二次接洽，双方表达充分的合作意向，签定正式入驻合同，交纳入驻保证金</font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="50" align="center">
+                      <img src="../img/arrow2.gif" height="52" width="7">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="25" bgcolor="#F1F9E8" align="center">
+                      <strong>
+                        <font color="77aa33">提供技术指导</font>
+                      </strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <font color="#666666">花店需拥有电脑、具备上网条件、并有专人处理网上订单，开通后台订单管理权限</font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <img src="../img/arrow2.gif" height="52" width="7">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="25" bgcolor="#F1F9E8" align="center">
+                      <strong>
+                        <font color="77aa33">后续经营 服务管理</font>
+                      </strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="20" align="center">
+                      <font color="#666666">信息反馈，问题反馈，订单配合，成果反馈，执行花礼网平台计划</font>
+                    </td>
+                  </tr>
+                </tbody>
+              </table><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+    <!-- 尾部导航 -->
+    <div class="footer-nav">
+      <a href="/">首页</a><a href="/profile/about.htm" target="_blank">关于我们</a><a
+        href="/profile/media.html" target="_blank">媒体报道</a><a href="/profile/contact.htm"
+        target="_blank">联系方式</a><a href="/qiyetuangou/" target="_blank">企业团购</a><a href="/liansuo/"
+        target="_blank">花店入驻</a><a href="/member/payment/balancefill" target="_blank">在线补款</a><a
+        class="last-child" href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+    </div>
+    <!-- 尾部导航 End -->
+    <!-- 通用尾部 -->
+    <footer>
+      <div class="auth">
+        <a href="//kxlogo.knet.cn/seallogo.dll?sn=e15041744030058395oqbo000000&size=4" target="_blank"><img
+            src="../img/common/kxwz.gif" height="40" width="109"></a>
+        <a href="https://search.szfw.org/cert/l/CX20130306002238002312" target="_blank"><img
+            src="../img/common/cxwz.gif" height="40" width="112"></a>
+        <a href="//www.anquan.org/authenticate/cert/?site=www.hua.com&at=realname" rel="nofollow" target="_blank"><img
+            src="../img/common/smyz.gif" height="40" width="106"></a>
+        <img src="../img/common/slogan.png" height="50" width="212">
+        <a href="/member/payment/fillbyalipay?order_no=&order_sum=" rel="nofollow" target="_blank"><img
+            src="../img/common/zfb.gif" height="49" width="96"></a>
+        <a href="/profile/news_20111110.htm" target="_blank"><img src="../img/common/100.jpg"
+            height="49" width="150"></a>
+      </div>
+      <p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a
+          href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a href="/profile/ICP.htm"
+          rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a href="//www.miibeian.gov.cn" rel="nofollow"
+          target="_blank">粤ICP备09171662号</a> Copyright &copy; 2005-2016</p>
+      <p>花礼网 （中国鲜花礼品网） <a href="//www.hua.com/">www.hua.com</a> 中国领先鲜花网品牌,专业鲜花速递服务！</p>
+    </footer>
+    <!-- 通用尾部 End -->
+    <script src="../js/jquery-3.js"></script>
+    <script src="../js/liansuoJoinStep.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script>
+      $(function () {
+        var sjs = Math.random();
+        //$.get("/ajax/getlogininfo.asp?rmd="+sjs,null,function(data){if(data.indexOf("<") > -1){$("#LoginInfo").html(data);}});//登陆信息
+        //$.get("/ajax/CartCount.asp?rmd="+sjs,null,function(data){if(data.indexOf("(") > -1){$("#gwcCount").html(data);}});//购物车商品数量
+        //$.get("/ajax/getcartinfo.asp?rmd="+sjs,null,function(data){if(data.indexOf("<") > -1){$("#CartInfo").html(data);}});//购物车信息
+      });
+    </script>
+</body>
+
+</html>

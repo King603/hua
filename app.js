@@ -26,3 +26,5 @@ app.use("/", index);
 app.use("/user", userRouter);
 // //使用路由器，挂载到/admin下
 // app.use("/admin", admin);
+console.log("http:127.0.0.1:8080");
+console.log("http:localhost:8080");

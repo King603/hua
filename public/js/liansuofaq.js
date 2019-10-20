@@ -86,9 +86,9 @@ var list = (n, arr) => {
 }
 (() => {
   var arr = [
-    ["/liansuo/", '<font color="#FF6600">连锁花店加盟介绍</font>'],
+    ["/liansuo/", '连锁花店加盟介绍'],
     ["/liansuo/JoinStep.htm", '连锁加盟花店流程'],
-    ["/liansuo/faq.htm", '连锁加盟花店FAQ'],
+    ["/liansuo/faq.htm", '<font color="#FF6600">连锁加盟花店FAQ</font>'],
     ["/liansuo/sender_form.htm", '配送店免费加入']
   ];
   list(1, arr);

@@ -75,38 +75,42 @@ var _html = (element, arr) => {
   ];
   _html(nav, arr);
 })();
-var list = (n, arr) => {
-  var ul10 = $(`.liansuo${n}_box .ul10`);
-  console.log(ul10);
+(() => {
+  var arr = [
+    ["/buy1.jpg", "31", "62"],
+    ["/pic_mastercard.gif", "30", "50"],
+    ["/pic_visa.gif", "30", "50"],
+    ["/pic_ae.gif", "30", "50"]
+  ];
+  var paypal = $(".wrapper table:nth-child(4)>tbody>:nth-child(2)>:nth-child(2)");
   var str = "";
   for (var elem of arr) {
-    str += `<li><a href="${elem[0]}">${elem[1]}</a></li>`;
+    str += `<a target="_blank" href="/Member/Payment/FillByPaypal?order_no=&total_fee=&sign="><img src="../../../pimg/${elem[0]}" height="${elem[1]}" border="0" width="${elem[2]}"></a>`;
   }
-  ul10.html(str);
-}
-(() => {
-  var arr = [
-    ["/liansuo/", '<font color="#FF6600">连锁花店加盟介绍</font>'],
-    ["/liansuo/JoinStep.htm", '连锁加盟花店流程'],
-    ["/liansuo/faq.htm", '连锁加盟花店FAQ'],
-    ["/liansuo/sender_form.htm", '配送店免费加入']
-  ];
-  list(1, arr);
+  paypal.html(str + '<br>支持PayPal帐户余额支付、全球VISA、Master卡、AE卡等<span style="color:#fe6600">境外开通</span>的银行卡或信用卡在线快捷支付');
 })();
 (() => {
   var arr = [
-    ["//www.hua.com/city/beijing/", "北京花店"],
-    ["//www.hua.com/city/shenzhen/", "深圳花店"],
-    ["//www.hua.com/city/shanghai/", "上海花店"],
-    ["//www.hua.com/city/guangzhou/", "广州花店"],
-    ["//www.hua.com/city/tianjin/", "天津花店"],
-    ["//www.hua.com/city/zhongqing/", "重庆花店"],
-    ["//www.hua.com/city/chengdu/", "成都花店"],
-    ["//www.hua.com/city/hangzhou/", "杭州花店"],
-    ["//www.hua.com/city/nanjing/", "南京花店"],
-    ["//www.hua.com/city/wuhan/", "武汉花店"],
-    ["//www.hua.com/city/suzhou/", "苏州花店"],
-    ["//www.hua.com/city/changsha/", "长沙花店"]
+    ["支付宝帐户", "/Member/Payment/FillByAlipay?order_no=&total_fee=&sign=", "zfbzf_02"],
+    ["微信支付", "/Member/Payment/FillByWeixin?order_no=&total_fee=&sign=", "wxzf_01"],
+    ["关爱通支付", "/Member/Payment/FillByGuanAiTong?order_no=&total_fee=&sign=", "guanaitong"]
   ];
-  list(2, arr);
+  var all_pay = $(".wrapper table:nth-child(2)>tbody");
+  console.log(all_pay);
+  var str = "";
+  for (var elem of arr) {
+    str += `
+    <tr>
+      <td height="90"><strong>${elem[0]}</strong></td>
+      <td align="center"><a href="${elem[1]}" target="_blank" class="ablue"><img src="../../../pimg/${elem[2]}.jpg" alt="${elem[0]}"></a></td>
+      <td valign="middle" align="center"><a href="${elem[1]}" target="_blank" class="ablue">${elem[0]} &gt;&gt;</a></td>
+    </tr>`;
+  }
+  all_pay.append(str);
 })();
+
+
+
+
+
+
