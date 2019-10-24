@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>会员注册 - 花礼网</title>
+  <script type="text/javascript" src="../../js/CheckAgent.js"></script>
+  <link rel="icon" href="../../img/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+  <link type="text/css" rel="stylesheet" href="../../css/common.css?1">
+  <link type="text/css" rel="stylesheet" href="../../css/public_2019.css">
+  <link rel="stylesheet" type="text/css" href="../../css/iconfont.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/pc_login_20190611.css">
+  <style>
+    body {
+      color: #737373;
+    }
+  </style>
+</head>
+
+<body class="home">
+  <!-- 顶部导航 -->
+  <div class="site-nav">
+    <div class="container">
+      <ul class="site-nav-l">
+        <li class="menu">
+          <a href="/" onClick="addfavorite();return false;"><span class="ico ico-star"></span>收藏鲜花网(hua.com)</a>
+        </li>
+        <li class="menu dropdown">
+          <a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span class="ico ico-weixin"></span>关注微信</a>
+          <div class="dropdown-menu dropdown-weixin">
+            <img src="../../img/common/wechat_qrcode.jpg" height="124" width="124">
+            <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
+          </div>
+        </li>
+        <li class="menu dropdown">
+          <a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span
+              class="ico ico-mobile"></span>花礼网app</a>
+          <div class="dropdown-menu dropdown-weixin">
+            <img src="../../img/common/app_qrcode.jpg" height="124" width="124">
+            <p>新人专享100元APP礼包</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="site-nav-r">
+        <!--登陆状态信息显示start-->
+        <li class="menu login" id="LoginInfo">
+          <a href="/Passport/Login/" rel="nofollow" id="btn-login">你好，请登录</a><a href="/Passport/Register/"
+            rel="nofollow" id="btn-reg">注册</a>
+        </li>
+        <!--登陆状态信息显示end-->
+        <li class="site-nav-pipe">|</li>
+        <li class="menu">
+          <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <!--我的花礼信息显示start-->
+        <li class="menu dropdown">
+          <a href="/member/" rel="nofollow" data-hover="dropdown" data-delay="0" target="_blank">我的花礼</a>
+        </li>
+        <!--我的花礼信息显示end-->
+        <li class="site-nav-pipe">|</li>
+        <li class="menu dropdown">
+          <a href="/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span
+              class="glyphicon glyphicon-triangle-bottom"></span></a>
+          <div class="dropdown-menu dropdown-service">
+            <a href="/member/payment/balancefill" target="_blank">在线付款</a>
+            <a href="/help/" target="_blank">帮助中心</a>
+            <a href="/help/afterservice.htm" target="_blank">售后服务</a>
+            <a href="/help/sendRange.htm" target="_blank">配送范围</a>
+            <a href="/chat/" target="_blank">留言反馈</a>
+          </div>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <!--购物车信息显示start-->
+        <li class="menu dropdown">
+          <a href="/shopping/showcart/" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank"><span
+              class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount"></span><span
+              class="glyphicon glyphicon-triangle-bottom"></span></a>
+          <div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+        </li>
+        <!--购物车信息显示end-->
+        <li class="site-nav-pipe">|</li>
+        <li class="menu slogan">
+          中国鲜花礼品网:中国鲜花网领先品牌
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 顶部导航 End -->
+  <!-- 头部 -->
+  <header>
+    <div class="logo">
+      <h1><a href="/" class="logo-bd">中国鲜花礼品网(花礼网)</a></h1>
+      <!-- <div class="delivery-city">
+          <div class="dropdown csqh">
+              欢迎注册
+          </div>
+      </div> -->
+    </div>
+    <div class="search">
+      <form name="i_search" method="get" action="/search/">
+        <div class="input-group">
+          <input name="keyword" type="text" class="form-control" placeholder="商品关键词">
+          <span class="input-group-btn">
+            <button id="test" class="btn btn-primary" type="button" onClick="this.form.submit()">搜索</button>
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="service serviceDefault">
+      <span class="ico ico-phone"></span>400-889-8188
+      <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a>
+    </div>
+    <!-- <div class="service serviceVip">
+      <div class="vipwechatchat">
+        <img style="margin-right: 6px;" src="../../img/common/wechat.png" width="30" /><span>1对1钻石客户经理</span>
+        <div class="vipwechatchat-box">
+          <h3>微信1对1客服经理</h3>
+          <img class="img-responsive" style="width: 120px;display: inline-block;"
+            src="../../img/common/VIPChatQR.jpg" />
+          <p>扫一扫添加客户经理微信</p>
+          <p>微信号：VIP-Service-Hua</p>
+        </div>
+      </div>
+      <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a><br />
+      <span class="ico ico-phone"></span><span>钻石专线：400-830-3920</span>
+    </div> -->
+  </header>
+  <!-- 头部 End -->
+  <section class="login-wrapper">
+    <div class="container">
+      <div class="login-box">
+        <!-- 手机注册 -->
+        <div id="register-phone" class="login-form register-form register-form-tel">
+          <p class="register-title">手机注册</p>
+          <div class="input-box account-box">
+            <span class="iconfont iconfont-iphone"></span>
+            <input id="phone" name="phone" class="account" type="text" placeholder="请输入手机" autocomplete="off">
+          </div>
+          <div id="phoneVerifyBox" class="input-box verify-box">
+            <input id="phoneValidCode" name="phoneValidCode" class="verify" type="text" autocomplete="off"
+              placeholder="请输入验证码">
+            <a href="javascript:RefreshImage('imgCaptcha1');"><img id="imgCaptcha1"
+                src="/Passport/Login/BaseImageValidCode"></a>
+          </div>
+          <div class="input-box code-box">
+            <span class="iconfont iconfont-message"></span>
+            <input id="phoneCode" name="phoneCode" class="pwd" type="text" autocomplete="off" placeholder="请输入短信验证码">
+            <span id="getcode" class="get-code">获取验证码</span>
+            <div id="prompt_info" style="display:none;"><span id="regetcode">90</span>秒后重新发送</div>
+          </div>
+          <div class="input-box pwd-box">
+            <span class="iconfont iconfont-unlocked"></span>
+            <input id="phonePassWord" name="phonePassWord" class="pwd" type="password" placeholder="请输入密码"
+              autocomplete="new-password">
+          </div>
+          <div class="tips-box">
+            <p id="phoneEnr" class="tips"></p>
+          </div>
+          <input class="form-btn login-btn" type="button" value="注册" onClick="phoneRegister();">
+        </div>
+        <!-- 邮箱注册 -->
+        <div id="register-mail" class="login-form register-form register-form-mail">
+          <p class="register-title">邮箱注册</p>
+          <div class="input-box tel-box">
+            <span class="iconfont iconfont-iphone"></span>
+            <input id="email" name="email" class="account" type="text" placeholder="请输入邮箱" autocomplete="off">
+          </div>
+          <div id="emailVerifyBox" class="input-box verify-box">
+            <input id="emailValidCode" class="verify" type="text" autocomplete="off" placeholder="请输入验证码">
+            <a href="javascript:RefreshImage('imgCaptcha2');"><img id="imgCaptcha2"
+                src="/Passport/Login/BaseImageValidCode"></a>
+          </div>
+          <div class="input-box pwd-box">
+            <span class="iconfont iconfont-unlocked"></span>
+            <input id="emailPassWord" name="emailPassWord" class="pwd" type="password" placeholder="请输入密码"
+              autocomplete="new-password">
+          </div>
+          <div class="tips-box">
+            <p id="emailEnr" class="tips"></p>
+          </div>
+          <input class="form-btn login-btn" type="button" value="注册" onClick="emailRegister();">
+        </div>
+        <div class="bottom-box">
+          <p class="bottom-left bottom-left-mail">邮箱注册<i class="iconfont iconfont-arrow-right"></i></p>
+          <p class="bottom-left bottom-left-tel">手机注册<i class="iconfont iconfont-arrow-right"></i></p>
+          <a href="/Passport/Login/">
+            <p class="bottom-right-login">已有账号，去登录<i class="iconfont iconfont-arrow-right"></i></p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="pop-success" style="display:none;">
+    <i class="iconfont iconfont-success"></i>
+    <p class="pop-title">注册成功</p>
+    <div class="pop-content">
+      <p>账号<span id="pop-success-username"></span>已注册成功。</p>
+      <p>欢迎加入花礼网~</p>
+    </div>
+    <div class="pop-btm">
+      <a class="pop-btn" href="/">继续浏览</a>
+      <p class="pop-tip"><span id="pop-success-countdown"></span>s后将自动跳转…</p>
+    </div>
+  </div>
+  <div id="pop-exist" style="display:none;">
+    <p class="pop-title">账号已存在</p>
+    <div class="pop-content">
+      <p><span id="pop-exist-username"></span>已被注册过,请重新检查账号或直接登录。</p>
+    </div>
+    <a class="pop-btn" href="/Passport/Login/">去登录</a>
+  </div>
+  <!--底部-->
+  <!-- 尾部导航 -->
+  <div class="footer-nav">
+    <a href="/">首页</a><a href="/profile/about.htm" target="_blank">关于我们</a><a href="/profile/media.html"
+      target="_blank">媒体报道</a><a href="/profile/contact.htm" target="_blank">联系方式</a><a href="/qiyetuangou/"
+      target="_blank">企业团购</a><a href="/liansuo/" target="_blank">花店入驻</a><a href="/profile/links.htm"
+      target="_blank">友情链接</a><a href="/member/payment/balancefill" target="_blank">在线补款</a><a class="last-child"
+      href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+  </div>
+  <!-- 尾部导航 End -->
+  <!-- 通用尾部 -->
+  <footer>
+    <div class="auth">
+      <!-- <span style="margin-right:8px;">
+                <script src="http://kxlogo.knet.cn/seallogo.dll?sn=e15041744030058395oqbo000000&amp;size=4"></script>
+            </span> -->
+      <a href="https://ss.knet.cn/verifyseal.dll?sn=e15041744030058395oqbo000000&ct=df&a=1&pa=0.8817607406526804"
+        target="_blank"><img style="height:40px;" src="../../img/common/cxwz.png"></a>
+      <img src="../../img/common/slogan.png" height="50" width="212" /> <a href="/profile/about.htm"
+        target="_blank"><img src="../../img/common/100.jpg" height="49" width="150"></a>
+      <a href="/profile/ICP.htm" rel="nofollow" target="_blank"><img src="../../img/common/bico1.jpg" alt="ICP"
+          height="46" width="35"></a>
+      <!--             <a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403301920636" rel="nofollow" target="_blank"><img alt="网警" src="//img02.hua.com/pc/assets/img/bico2.jpg" height="46" width="35"></a> -->
+    </div>
+    <p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a
+        href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a href="/profile/ICP.htm"
+        rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a href="http://www.miibeian.gov.cn" rel="nofollow"
+        target="_blank">粤ICP备09171662号</a> <span class="ico beian"></span>粤公网安备44030502000373号 Copyright © 2005-2019</p>
+    <p> <a href="/">www.hua.com</a><span> 深圳市百易信息技术有限公司</span> </p>
+  </footer>
+  <!-- 通用尾部 End -->
+  <!-- 弹出窗口-->
+  <!-- 弹出窗口end-->
+  <script type="text/javascript" src="../../js/common.js"></script>
+  <script type="text/javascript" src="../../js/statesandright.js"></script>
+  <script src="../../js/layerpc/layer.js"></script>
+  <script src="../../js/mailautocomplete.js"></script>
+  <script>
+    $(function () {
+      // 表单切换
+      var toTelBtn = $(".bottom-left-tel");
+      var toMailBtn = $(".bottom-left-mail");
+      var phoneForm = $("#register-phone");
+      var mailForm = $("#register-mail");
+      toTelBtn.click(function () {
+        $(this).hide();
+        toMailBtn.show();
+        phoneForm.show();
+        mailForm.hide();
+      });
+      toMailBtn.click(function () {
+        $(this).hide();
+        toTelBtn.show();
+        mailForm.show();
+        phoneForm.hide();
+      })
+    });
+    var counter = 0;
+    var interval = null;
+    // 提示文字
+    function ShowTips(nr) {
+      if ($("#register-phone").css("display") != "none") {
+        $("#phoneEnr").html(nr);
+      }
+      else if ($("#register-mail").css("display") != "none") {
+        $("#emailEnr").html(nr);
+      }
+    }
+    function HideTips() {
+      if ($("#register-phone").css("display") != "none") {
+        $("#phoneEnr").html("");
+      }
+      else if ($("#register-mail").css("display") != "none") {
+        $("#emailEnr").html("");
+      }
+    }
+    // 刷新图形验证码
+    function RefreshImage(valImageId) {
+      var objImage = document.getElementById(valImageId)
+      if (objImage == undefined) {
+        return;
+      }
+      var now = new Date();
+      objImage.src = '/Passport/Login/BaseImageValidCode?x=' + now.toUTCString();
+    }
+    // 检查用户名格式
+    function Check_Reg() {
+      var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-";
+      var checkStr = myform.UserName.value;
+      var allValid = true;
+      var validGroups = true;
+      for (i = 0; i < checkStr.length; i++) {
+        ch = checkStr.charAt(i);
+        for (j = 0; j < checkOK.length; j++)
+          if (ch == checkOK.charAt(j))
+            break;
+        if (j == checkOK.length) {
+          allValid = false;
+          break;
+        }
+      }
+      return allValid;
+    }
+    //回车键
+    document.onkeydown = function (event) {
+      var e = event || window.event || arguments.callee.caller.arguments[0];
+      if (e && e.keyCode == 13) {
+        // 手机注册
+        var isPhonePwdFocus = $("#phonePassWord").is(":focus");
+        // 邮箱注册
+        var isEmailFocus = $("#email").is(":focus");
+        var isEmailCodeFocus = $("#emailValidCode").is(":focus");
+        var isEmailPwdFocus = $("#emailPassWord").is(":focus");
+        // Form:手机注册判断
+        if (isPhonePwdFocus) {
+          phoneRegister();
+        }
+        // Form:邮箱注册判断
+        if (isEmailFocus) {
+          $("#emailValidCode").focus();
+        }
+        else if (isEmailCodeFocus) {
+          $("#emailPassWord").focus();
+        }
+        else if (isEmailPwdFocus) {
+          emailRegister();
+        }
+      }
+    };
+    // 弹窗：账号已存在
+    function existPop() {
+      layer.open({
+        type: 1,
+        closeBtn: 1, //显示关闭按钮
+        anim: 2,
+        shadeClose: true, //开启遮罩关闭
+        title: ' ',
+        content: $('#pop-exist'),
+        area: '268px',
+        offset: '262px',
+        btnAlign: 'c',
+        shade: [0.5, '#B4BABF'],
+        resize: false,
+        move: false
+      });
+    }
+    // 弹窗：注册成功
+    function successPop() {
+      layer.open({
+        type: 1,
+        closeBtn: 1, //显示关闭按钮
+        anim: 2,
+        shade: true, //开启遮罩关闭
+        title: ' ',
+        content: $('#pop-success'),
+        area: '268px',
+        offset: '200px',
+        btnAlign: 'c',
+        shade: [0.5, '#B4BABF'],
+        resize: false,
+        move: false
+      });
+    }
+    // 检测手机号
+    function check_Phone(id) {
+      HideTips();
+      var phone = $("#" + id).val().trim();
+      if (phone == "") {
+        ShowTips("手机号不能为空，请您重新输入!");
+        return false;
+      }
+      if (!(/^\s*1\d{10}\s*$/gi).test(phone)) {
+        ShowTips("很抱歉!请输入有效的手机号!");
+        return false;
+      }
+      return true;
+    }
+    // 检测Email格式
+    function check_Email(id) {
+      HideTips();
+      var email = $("#" + id).val().trim();
+      if (email == "") {
+        ShowTips("请输入你的邮箱地址！");
+        return false;
+      } else if (!(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/gi).test(email)) {
+        ShowTips("请输入有效的邮箱地址！");
+        return false;
+      }
+      return true;
+    }
+    // 检测短信验证码
+    function check_SmsCode(id) {
+      HideTips();
+      var smsCode = $("#" + id).val().trim();
+      if (smsCode == "") {
+        ShowTips("请输入您的短信验证码!");
+        return false;
+      }
+      else if (!(/^\d{6}$/gi).test(smsCode)) {
+        ShowTips("您输入的短信验证码有误，请重新输入!");
+        return false;
+      }
+      return true;
+    }
+    // 检测密码
+    function check_PassWord(id) {
+      HideTips();
+      var pwd = $("#" + id).val().trim();
+      console.log(pwd);
+      if (pwd == "") {
+        ShowTips("请输入您的登录密码");
+        return false;
+      }
+      else if (pwd.length < 6) {
+        ShowTips("密码不能小于6位");
+        return false;
+      }
+      return true;
+    }
+    // 手机注册：获取短信验证码
+    $(function () {
+      $("#phoneVerifyBox").show();
+      $("#getcode").click(function () {
+        var interval = null;
+        HideTips();
+        if (!check_Phone("phone")) return false;
+        var phone = $("#phone").val().trim();
+        var imgCode = $("#phoneValidCode").val().trim();
+        $.ajax({
+          type: "Post",
+          url: "/Passport/Register/SendRegisterSmsValidCode",
+          data: {
+            mobile: phone,
+            picValidCode: imgCode
+          },
+          dataType: "json",
+          async: false,
+          success: function (data) {
+            console.log(data);
+            if (data.Status == "0") {
+              var data = data.Datas;
+              if (data.StatusCode == "1") {       // 发送成功
+                ShowTips("<span style='color:#232628'>验证码已发送请查收</span>");
+                var counter = 0;
+                $("#getcode").hide();
+                $("#regetcode").html("90");
+                $("#prompt_info").show();
+                $("#phoneCode").focus();
+                interval = window.setInterval(intervalFunc, 1000);
+              }
+              else {
+                if (data.StatusCode == "2") {      // 需要图片验证码
+                  ShowTips("请输入图形验证码");
+                  $("#phoneVerifyBox").show();
+                  $("#phoneValidCode").focus();
+                }
+                else if (data.StatusCode == "3") {      // 手机号已经存在
+                  $("#pop-exist-username").html("手机号" + phone);
+                  existPop();
+                }
+                else if (data.StatusCode == "-1") {     // 手机号格式不正确
+                  ShowTips("手机号格式不正确，请检查后重新输入");
+                  $("#phone").focus();
+                }
+                else if (data.StatusCode == "-2") {     // 图片验证码不正确
+                  ShowTips("图形验证码输入错误，请重新输入");
+                  phoneVerifyBox.show();
+                  RefreshImage('imgCaptcha1');
+                  $("#phoneValidCode").focus();
+                }
+                else if (data.StatusCode == "-3") {     // 短信验证码发送过于频繁
+                  ShowTips("短信验证码发送过于频繁");
+                }
+                else if (data.StatusCode == "-4") {     // 获取验证码次数超过限制
+                  ShowTips("获取验证码次数超过限制");
+                }
+                else {
+                  ShowTips("获取验证码失败!");
+                }
+              }
+            }
+          }
+        });
+      })
+      // 短信验证码倒计时
+      function intervalFunc() {
+        if (counter > 90) {
+          counter = 0;
+          $("#regetcode").html("");
+          $("#getcode").show();
+          $("#prompt_info").hide();
+          window.clearInterval(interval);
+        } else {
+          $("#regetcode").html((90 - counter).toString());
+        }
+        counter = counter + 1;
+      }
+    });
+    // ********** 手机注册逻辑begin **********
+    function phoneRegister() {
+      var successInterval = null;
+      HideTips();
+      // 必须：手机、短信验证码、密码
+      if (!check_Phone("phone")) return false;   // 手机
+      if (!check_SmsCode("phoneCode")) return false;  // 短信验证码
+      if (!check_PassWord("phonePassWord")) return false;   // 密码
+      var phone = $("#phone").val().trim();
+      var code = $("#phoneCode").val().trim();
+      var pwd = $("#phonePassWord").val().trim();
+      var imgCode = $("#phoneValidCode").val().trim();
+      $.ajax({
+        type: "Post",
+        url: "/Passport/Register/MobileRegister",
+        data: {
+          mobile: phone,
+          password: pwd,
+          action: "mobileRegister",
+          email: "",
+          smsValidCode: code,
+          picValidCode: imgCode
+        },
+        dataType: "json",
+        async: false,
+        success: function (data) {
+          console.log(data);
+          if (data.Status == "0") {
+            var data = data.Datas;
+            if (data.StatusCode == "1") {   // 注册成功
+              $("#pop-success-username").html(phone);
+              successPop();
+              // 3秒自动跳转首页
+              var counter = 3;
+              var popCountdown = $("#pop-success-countdown");
+              popCountdown.html(counter);
+              successInterval = window.setInterval(function () {
+                if (counter > 0) {
+                  counter--;
+                  popCountdown.html(counter);
+                }
+                else {
+                  window.clearInterval(successInterval);
+                  location.href = "/?registersucceed=true";
+                }
+              }, 1000);
+            }
+            else if (data.StatusCode == "2") {      // 手机号已存在
+              $("#pop-exist-username").html("手机号" + phone);
+              existPop();
+            }
+            else if (data.StatusCode == "-1") {     // 无效的手机号
+              ShowTips("手机号格式不正确，请检查后重新输入");
+              $("#phone").focus();
+            }
+            else if (data.StatusCode == "-2") {     // 短信验证码不正确
+              ShowTips("短信验证码有误");
+              $("#phoneCode").focus();
+            }
+            else if (data.StatusCode == "-3") {     // 密码不能为空
+              ShowTips("密码不能为空");
+              $("#phonePassWord").focus();
+            }
+            else if (data.StatusCode == "-4") {     // 密码不能少于6位
+              ShowTips("密码不能少于6位");
+              $("#phonePassWord").focus();
+            }
+            else if (data.StatusCode == "-5") {     // 手机号和短信验证码不匹配
+              ShowTips("手机号和短信验证码不匹配");
+            }
+            else {
+              ShowTips("注册失败！");
+            }
+          }
+        }
+      });
+    }// ********** 手机注册逻辑end **********
+    // ********** 邮箱注册逻辑begin **********
+    function emailRegister() {
+      var successInterval = null;
+      HideTips();
+      // 必须：邮箱、密码、(图片验证码)
+      if (!check_Email("email")) return false;   // 手机
+      if (!check_PassWord("emailPassWord")) return false;   // 密码
+      var email = $("#email").val().trim();
+      var pwd = $("#emailPassWord").val().trim();
+      var imgCode = $("#emailValidCode").val().trim();
+      $.ajax({
+        type: "Post",
+        url: "/Passport/Register/MobileRegister",
+        data: {
+          mobile: "",
+          password: pwd,
+          action: "emailRegister",
+          email: email,
+          smsValidCode: "",
+          picValidCode: imgCode
+        },
+        dataType: "json",
+        async: false,
+        success: function (data) {
+          console.log(data);
+          if (data.Status == "0") {
+            var data = data.Datas;
+            var failCount = data.LoginFailCount
+            if (data.StatusCode == "1") {   // 注册成功
+              $("#pop-success-username").html(email);
+              successPop();
+              // 3秒自动跳转首页
+              var counter = 3;
+              var popCountdown = $("#pop-success-countdown");
+              popCountdown.html(counter);
+              successInterval = window.setInterval(function () {
+                if (counter > 0) {
+                  counter--;
+                  popCountdown.html(counter);
+                }
+                else {
+                  window.clearInterval(successInterval);
+                  location.href = "/?registersucceed=true";
+                }
+              }, 1000);
+            }
+            else if (data.StatusCode == "2") {      // 邮箱已被注册
+              $("#pop-exist-username").html("邮箱" + email);
+              existPop();
+            }
+            else if (data.StatusCode == "-1") {     // 您的的E-mail不能为空
+              ShowTips("您的的邮箱不能为空");
+              $("#email").focus();
+            }
+            else if (data.StatusCode == "-2") {     // 密码为空
+              ShowTips("密码不能为空");
+              $("#emailPassWord").focus();
+            }
+            else if (data.StatusCode == "-3") {     // 密码不能少于6位
+              ShowTips("密码不能小于6位");
+              $("#emailPassWord").focus();
+            }
+            else if (data.StatusCode == "-4") {     // E-mail格式有误或是非规范E-mail地址
+              ShowTips("邮箱格式不正确，请检查后重新输入");
+              $("#email").focus();
+            }
+            else if (data.StatusCode == "-5") {     // 验证码不正确
+              ShowTips("图形验证码输入错误，请重新输入");
+              RefreshImage('imgCaptcha2');
+              $("#emailValidCode").focus();
+            }
+            else {
+              ShowTips("注册失败！");
+            }
+          }
+        }
+      });
+    }// ********** 邮箱注册逻辑end **********
+  </script>
+  <script type="text/javascript">
+    var userId = 0;
+    function reqUrlParam(paras) {
+      var url = location.href;
+      var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+      var paraObj = {}
+      for (i = 0; j = paraString[i]; i++) {
+        paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+      }
+      var returnValue = paraObj[paras.toLowerCase()];
+      if (typeof (returnValue) == "undefined") {
+        return "";
+      } else {
+        return returnValue;
+      }
+    }
+    function setLocalStoreHua(k, v) {
+      try {
+        if (localStorage != null) {
+          localStorage.setItem(k, v);
+        }
+      } catch (ex) { }
+    }
+    function getLocalStoreHua(k) {
+      try {
+        if (localStorage != null) {
+          var v1 = localStorage.getItem(k);
+          localStorage.removeItem(k);
+          return v1;
+        }
+      } catch (ex) { }
+      return "";
+    }
+    var lsPerfKey = "home/GetProductListPrice";
+    function getProductPrice() {
+      var dataPps = "";
+      $("span[data-pp]").each(function (index, data) {
+        dataPps = dataPps + $(this).attr("data-pp") + ",";
+      })
+      if (dataPps.length > 0) {
+        var perf1 = getLocalStoreHua(lsPerfKey);
+        var dts = new Date();
+        $.ajax({
+          type: "POST", url: "/home/GetProductListPrice",
+          data: { itemcodes: dataPps, perf: perf1 },
+          timeout: 60000, dataType: 'json',
+          success: function (res) {
+            if (res.DataStatus == 200 && res.Status == '0') {
+              if (res.Datas.ProductPrices.length == 0) {
+                return false;
+              }
+              for (var i = 0, len = res.Datas.ProductPrices.length; i < len; i++) {
+                var temp = res.Datas.ProductPrices[i];
+                $("span[data-pp='" + temp.ItemCode + "']").text(temp.Price);
+              }
+            }
+            else { }
+          },
+          complete: function (res) {
+            var dte = new Date();
+            var useMs = dte.getTime() - dts.getTime();
+            //var resTxt = "v0,"+res.readyState + "," + res.status + "," + res.statusText;
+            var resTxt = "v0," + res.status + "," + dts.getTime() + "," + useMs;
+            setLocalStoreHua(lsPerfKey, resTxt);
+            console.log("AjaxReq性能", resTxt);
+          }
+        });
+      }
+    }
+    function setCurUrlClass() {
+      // css : class = "color_tj"
+      var pathname1 = window.location.pathname;
+      $("a[href='" + pathname1 + "'").addClass("color_tj");
+    }
+    getProductPrice();
+    function addHuaPid() {
+      try {
+        var path = encodeURIComponent(window.location.pathname);
+        $("a[data-link]").each(function (index, data) {
+          if ($(this).attr("href").indexOf("huaPid=") == -1) {
+            var href = $(this).attr("href") + "?huaPid=" + path + "-" + $(this).attr("data-link");
+            $(this).attr("href", href);
+          }
+        })
+      }
+      catch (e) {
+        console.log(e);
+      }
+    }
+    addHuaPid();
+    $(function () {
+      $.get("/Home/GetLoginUserId", null, function (data) {
+        userId = data;
+      }, "json");
+
+      $("#header-chat,#kefu,#kefu1").click(function (e) {
+        e.preventDefault();
+        //$("#MEIQIA-BTN").click();
+        _MEIQIA('showPanel');
+      });
+      if ($("#pjCount").length > 0) {
+        $.get("/productpj/GetPJCount", function (data) {
+          $("#pjCount").text(data);
+        });
+      }
+    });
+    function openChatWindow(e) {
+      //美洽代码
+      //$("#MEIQIA-BTN").click();
+      _MEIQIA('showPanel');
+    }
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KS4PTHC');</script>
+  <!-- End Google Tag Manager -->
+  <script type='text/javascript'>
+    (function (m, ei, q, i, a, j, s) {
+      m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      j = ei.createElement(q),
+        s = ei.getElementsByTagName(q)[0];
+      j.async = true;
+      j.charset = 'UTF-8';
+      j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+      s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', 111117);//1212
+    $.post("/Home/MeiQiaVisitLog", null, function (data) {
+      _MEIQIA('clientId', data);
+    });
+  </script>
+</body>
+
+</html>

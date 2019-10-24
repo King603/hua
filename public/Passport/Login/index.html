@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+  <meta charset="utf-8">
+  <title>会员登录-花礼网</title>
+  <script type="text/javascript" src="../../js/CheckAgent.js"></script>
+  <link rel="icon" href="../../img/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+  <link type="text/css" rel="stylesheet" href="../../css/common.css">
+  <link type="text/css" rel="stylesheet" href="../../css/public_2019.css">
+  <link rel="stylesheet" type="text/css" href="../../css/iconfont.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/pc_login_20190611.css">
+  <style>
+    body {
+      color: #737373;
+    }
+  </style>
+</head>
+
+<body class="home">
+  <!-- 顶部导航 -->
+  <div class="site-nav">
+    <div class="container">
+      <ul class="site-nav-l">
+        <li class="menu">
+          <a href="/" onClick="addfavorite();return false;"><span class="ico ico-star"></span>收藏鲜花网(hua.com)</a>
+        </li>
+        <li class="menu dropdown">
+          <a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span class="ico ico-weixin"></span>关注微信</a>
+          <div class="dropdown-menu dropdown-weixin">
+            <img src="../../img/common/wechat_qrcode.jpg" height="124" width="124">
+            <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
+          </div>
+        </li>
+        <li class="menu dropdown">
+          <a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span
+              class="ico ico-mobile"></span>花礼网app</a>
+          <div class="dropdown-menu dropdown-weixin">
+            <img src="../../img/common/app_qrcode.jpg" height="124" width="124">
+            <p>新人专享100元APP礼包</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="site-nav-r">
+        <!--登陆状态信息显示start-->
+        <li class="menu login" id="LoginInfo">
+          <a href="/Passport/Login/" rel="nofollow" id="btn-login">你好，请登录</a><a href="/Passport/Register/"
+            rel="nofollow" id="btn-reg">注册</a>
+        </li>
+        <!--登陆状态信息显示end-->
+        <li class="site-nav-pipe">|</li>
+        <li class="menu">
+          <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <!--我的花礼信息显示start-->
+        <li class="menu dropdown">
+          <a href="/member/" rel="nofollow" data-hover="dropdown" data-delay="0" target="_blank">我的花礼</a>
+        </li>
+        <!--我的花礼信息显示end-->
+        <li class="site-nav-pipe">|</li>
+        <li class="menu dropdown">
+          <a href="/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span
+              class="glyphicon glyphicon-triangle-bottom"></span></a>
+          <div class="dropdown-menu dropdown-service">
+            <a href="/member/payment/balancefill" target="_blank">在线付款</a>
+            <a href="/help/" target="_blank">帮助中心</a>
+            <a href="/help/afterservice.htm" target="_blank">售后服务</a>
+            <a href="/help/sendRange.htm" target="_blank">配送范围</a>
+            <a href="/chat/" target="_blank">留言反馈</a>
+          </div>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <!--购物车信息显示start-->
+        <li class="menu dropdown">
+          <a href="/shopping/showcart/" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank"><span
+              class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount"></span><span
+              class="glyphicon glyphicon-triangle-bottom"></span></a>
+          <div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+        </li>
+        <!--购物车信息显示end-->
+        <li class="site-nav-pipe">|</li>
+        <li class="menu slogan">
+          中国鲜花礼品网:中国鲜花网领先品牌
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 顶部导航 End -->
+  <!-- 头部 -->
+  <header>
+    <div class="logo">
+      <h1><a href="/" class="logo-bd">中国鲜花礼品网(花礼网)</a></h1>
+      <!--<div class="delivery-city">
+          <div class="dropdown csqh">
+              欢迎登录
+          </div>
+      </div> -->
+    </div>
+    <div class="search">
+      <form name="i_search" method="get" action="/search/">
+        <div class="input-group">
+          <input name="keyword" type="text" class="form-control" placeholder="商品关键词">
+          <span class="input-group-btn">
+            <button id="test" class="btn btn-primary" type="button" onClick="this.form.submit()">搜索</button>
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="service serviceDefault">
+      <span class="ico ico-phone"></span>400-889-8188
+      <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a>
+    </div>
+    <!-- <div class="service serviceVip">
+      <div class="vipwechatchat">
+        <img style="margin-right: 6px;" src="../../img/common/wechat.png" width="30" /><span>1对1钻石客户经理</span>
+        <div class="vipwechatchat-box">
+          <h3>微信1对1客服经理</h3>
+          <img class="img-responsive" style="width: 120px;display: inline-block;" src="../../img/common/VIPChatQR.jpg" />
+          <p>扫一扫添加客户经理微信</p>
+          <p>微信号：VIP-Service-Hua</p>
+        </div>
+      </div>
+      <a target="_blank" id="header-chat" href="javascript:;"><span class="ico ico-headset"></span>在线客服</a><br />
+      <span class="ico ico-phone"></span><span>钻石专线：400-830-3920</span>
+    </div> -->
+  </header>
+  <!-- 头部 End -->
+  <section class="login-wrapper">
+    <div class="container">
+      <div class="login-box">
+        <input type="hidden" id="backUrl" name="backUrl" value="https://www.hua.com" />
+        <ul class="login-tabs">
+          <li><a href="javascript:;" class="login-wx">微信扫码</a></li>
+          <li><a href="javascript:;" class="login-account">账号密码登录</a></li>
+          <li><a href="javascript:;" class="login-tel">手机短信登录</a></li>
+        </ul>
+        <!-- 微信扫码登录 -->
+        <div class="login-form login-form-wx" style="display:none;">
+          <div id="QrCodeBox" class="qrcode-box">
+            <div class="qrcode-img">
+              <img
+                src="https://m.hua.com/wxapi/tempqrpic?pid=821ab775fa8e49398465ea103dfb4b17&userid=&type=8&sj=2019-10-24&sign=2e603bbb42a45481"
+                alt="微信扫码" draggable="false" />
+            </div>
+            <p>微信扫码，一秒登录</p>
+          </div>
+        </div>
+        <!-- 账号密码登录 -->
+        <div class="login-form login-form-pwd" style="display:block;">
+          <div class="input-box account-box">
+            <span class="iconfont iconfont-smile"></span>
+            <input id="UserName" class="account" type="text" placeholder="请输入花礼账号（邮箱或手机）">
+          </div>
+          <div class="input-box pwd-box">
+            <span class="iconfont iconfont-unlocked"></span>
+            <input id="PassWord" class="pwd" type="password" placeholder="请输入密码">
+          </div>
+          <div id="verifyBox1" class="input-box verify-box">
+            <input id="ValidCode" class="verify" type="text" autocomplete="off" placeholder="请输入验证码">
+            <a href="javascript:RefreshImage('imgCaptcha1');"><img id="imgCaptcha1"
+                src="/Passport/Login/BaseImageValidCode"></a>
+          </div>
+          <div class="tips-box">
+            <p id="Enr" class="tips"></p>
+            <a class="pwd-forget" href="/Member/Password/Forgot">忘记密码？</a>
+          </div>
+          <input class="form-btn login-btn" type="button" onClick="return Check_User_Login()" id="dosubmit" value="登录">
+          <input class="form-btn login-btn" type="button" disabled="disabled" style="display:none;" id="submiting"
+            value="登录中...">
+        </div>
+        <!-- 手机短信登录 -->
+        <div class="login-form login-form-phone" style="display:none;">
+          <div class="input-box tel-box">
+            <span class="iconfont iconfont-iphone"></span>
+            <input id="UserPhone" class="account" type="text" placeholder="请输入手机号">
+          </div>
+          <div id="verifyBox2" class="input-box verify-box">
+            <input id="phoneLoginValidCode" class="verify" type="text" autocomplete="off" placeholder="请输入图形验证码">
+            <a href="javascript:RefreshImage('imgCaptcha2');"><img id="imgCaptcha2"
+                src="/Passport/Login/BaseImageValidCode"></a>
+          </div>
+          <div id="imgCodeBox2" class="input-box code-box">
+            <span class="iconfont iconfont-message"></span>
+            <input id="phoneCode" class="pwd" type="text" placeholder="请输入短信验证码" autocomplete="off">
+            <button id="getcodeBtn" class="get-code" href="#">获取验证码</button>
+            <div id="prompt_info" style="display:none;"><span id="regetcode">90</span>秒后重新发送</div>
+          </div>
+          <div class="tips-box">
+            <p id="phoneEnr" class="tips"></p>
+          </div>
+          <input class="form-btn login-btn" type="button" onClick="CheckPhoneLogin();" value="登录/注册">
+          <p class="form-tip"><i class="iconfont iconfont-info"></i>首次登录将自动创建账号</p>
+        </div>
+        <ul class="other-login-ways">
+          <li class="login-way login-qq"><a href="/Passport/QQ/Login"><i
+                class="iconfont iconfont-qq"></i><span>QQ</span></a></li>
+          <li class="split"></li>
+          <li class="login-way login-ali"><a href="/Passport/Alipay/Login"><i
+                class="iconfont iconfont-alipay"></i><span>支付宝</span></a></li>
+        </ul>
+        <div class="bottom-box">
+          <a href="/Passport/Register/">
+            <p>一键快捷注册<i class="iconfont iconfont-arrow-right"></i></p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 弹出窗口-->
+  <div class="modal fade com-modal" id="loginModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="attNotice"></h4>
+        </div>
+        <div class="modal-body" style="overflow:hidden;">
+          <iframe src="" height="498" frameborder="0" id="attPage"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 弹出窗口end-->
+  <!--底部-->
+  <!-- 尾部导航 -->
+  <div class="footer-nav">
+    <a href="/">首页</a><a href="/profile/about.htm" target="_blank">关于我们</a><a
+      href="/profile/media.html" target="_blank">媒体报道</a><a href="/profile/contact.htm"
+      target="_blank">联系方式</a><a href="/qiyetuangou/" target="_blank">企业团购</a><a href="/liansuo/"
+      target="_blank">花店入驻</a><a href="/profile/links.htm" target="_blank">友情链接</a><a
+      href="/member/payment/balancefill" target="_blank">在线补款</a><a class="last-child"
+      href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+  </div>
+  <!-- 尾部导航 End -->
+  <!-- 通用尾部 -->
+  <footer>
+    <div class="auth">
+      <!-- <span style="margin-right:8px;">
+                <script src="http://kxlogo.knet.cn/seallogo.dll?sn=e15041744030058395oqbo000000&amp;size=4"></script>
+            </span> -->
+      <a href="https://ss.knet.cn/verifyseal.dll?sn=e15041744030058395oqbo000000&ct=df&a=1&pa=0.8817607406526804"
+        target="_blank"><img style="height:40px;" src="../../img/common/cxwz.png"></a>
+      <img src="../../img/common/slogan.png" height="50" width="212" /> <a href="/profile/about.htm"
+        target="_blank"><img src="../../img/common/100.jpg" height="49" width="150"></a>
+      <a href="/profile/ICP.htm" rel="nofollow" target="_blank"><img src="../../img/common/bico1.jpg"
+          alt="ICP" height="46" width="35"></a>
+      <!--             <a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403301920636" rel="nofollow" target="_blank"><img alt="网警" src="//img02.hua.com/pc/assets/img/bico2.jpg" height="46" width="35"></a> -->
+    </div>
+    <p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a
+        href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a href="/profile/ICP.htm"
+        rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a href="http://www.miibeian.gov.cn" rel="nofollow"
+        target="_blank">粤ICP备09171662号</a> <span class="ico beian"></span>粤公网安备44030502000373号 Copyright © 2005-2019</p>
+    <p> <a href="/">www.hua.com</a><span> 深圳市百易信息技术有限公司</span> </p>
+  </footer>
+  <!-- 通用尾部 End -->
+  <!-- 弹出窗口-->
+  <!-- 弹出窗口end-->
+  <script type="text/javascript" src="../../js/common.js"></script>
+  <script type="text/javascript" src="../../js/statesandright.js"></script>
+  <script src="../../js/layerpc/layer.js"></script>
+  <script src="../../js/mailautocomplete.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(function () {
+      // 表单切换
+      var loginTabs = $('.login-tabs li a');  // Tab
+      var loginWx = $(".login-wx");   // 微信扫码登录
+      var loginAccount = $('.login-account'); // 账号密码登录
+      var loginTel = $('.login-tel');  // 手机短信登录
+      var loginForm = $('.login-form');   // Form
+      var loginFormWx = $('.login-form-wx');  //  微信
+      var loginFormPwd = $('.login-form-pwd');    // 账号密码
+      var loginFormCode = $('.login-form-phone');     // 手机短信
+      loginTabs.click(function () {
+        loginTabs.removeClass('active');
+        $(this).addClass('active');
+      });
+      loginWx.click(function () {
+        loginForm.css({ "display": "none" });
+        loginFormWx.css({ "display": "block" });
+        interval1 = window.setInterval(intervalFunc1, 5000);
+      })
+      loginAccount.click(function () {
+        loginForm.css({ "display": "none" });
+        loginFormPwd.css({ "display": "block" });
+        window.clearInterval(interval1);
+      });
+      loginTel.click(function () {
+        loginForm.css({ "display": "none" });
+        loginFormCode.css({ "display": "block" });
+        window.clearInterval(interval1);
+      });
+      // cookie无记录，根据显示的表单高亮对应Tab
+      if (loginFormWx.css("display") != "none") {
+        loginTabs.removeClass('active');
+        loginWx.addClass("active");
+      }
+      else if (loginFormPwd.css("display") != "none") {
+        loginTabs.removeClass('active');
+        loginAccount.addClass("active");
+      }
+      else if (loginFormCode.css("display") != "none") {
+        loginTabs.removeClass('active');
+        loginTel.addClass("active");
+      }
+    });
+    var backUrl = $("#backUrl").val();
+    var backUrlParam = "";
+    if (backUrl.indexOf("/?") > -1) {
+      var backUrlArr = backUrl.split("/?");
+      backUrl = backUrlArr[0];
+      backUrlParam = backUrlArr[1];
+    } else if (backUrl.indexOf("?") > -1) {
+      var backUrlArr = backUrl.split("?");
+      backUrl = backUrlArr[0];
+      backUrlParam = backUrlArr[1];
+    }
+    var loginFlag = "?loginsucceed=true";
+    function DoWinLogin() {
+      try {
+        $('#loginModal').modal('show');
+        $("#attPage").attr('src', '/Passport/Login/WinLoginIndex?fr=cart')
+      }
+      catch (err) {
+        return;
+        location.href = '/Shopping/SendInfo';
+      }
+    }
+    function DoGuanZhu(pp) {
+      $("#attNotice").html("收藏商品");
+      $('#loginModal').modal('show');
+      $("#attPage").attr('src', '/Shopping/WinGuanZhu?ly=cart&pp=' + pp)
+    }
+    //窗口操作
+    $('#passwordModal').modal({ backdrop: 'static', keyboard: false, show: false });
+    $('#passwordModal').on('shown.bs.modal', function () {
+      var $this = $(this);
+      var $modal_dialog = $this.find('.modal-dialog');
+      $this.css('display', 'block');
+      $modal_dialog.css({ 'margin-top': Math.max(0, ($(window).height() - $modal_dialog.height()) / 2) });
+    });
+    $('#passwordModal').on('hidden.bs.modal', function () {
+      $("#attPage").attr("src", "");
+    });
+    function DoValidPhone(phone) {
+      $('#passwordModal').modal('show');
+      if (backUrlParam.length) {
+        $("#attPage").attr('src', '/Passport/Login/ValidPhone?phone=' + phone + "&" + backUrlParam + "&ReturnUrl=" + backUrl);
+      } else {
+        $("#attPage").attr('src', '/Passport/Login/ValidPhone?phone=' + phone + "&ReturnUrl=" + backUrl);
+      }
+    }
+    // 刷新图形验证码
+    function RefreshImage(valImageId) {
+      var objImage = $("#" + valImageId);
+      if (objImage == undefined) {
+        return;
+      }
+      var now = new Date();
+      objImage.attr('src', '/Passport/Login/BaseImageValidCode?x=' + now.toUTCString());
+    }
+    // 检查手机格式
+    function Check_Phone(id) {
+      HideTips();
+      var phone = $("#" + id).val().trim();
+      if (phone == "") {
+        ShowTips("请输入手机号");
+        return false;
+      }
+      else if (!(/^\s*1\d{10}\s*$/gi).test(phone)) {
+        ShowTips("手机号格式不正确");
+        return false;
+      }
+      return true;
+    }
+    // 检查短信验证码格式
+    function Check_SmsCode(id) {
+      HideTips();
+      var phoneCode = $("#" + id).val().trim();
+      if (phoneCode == "") {
+        ShowTips("请输入您的短信验证码!");
+        return false;
+      }
+      else if (!(/^\d{6}$/gi).test(phoneCode)) {
+        ShowTips("您输入的短信验证码有误，请重新输入!");
+        return false;
+      }
+      return true;
+    }
+    // 检查邮箱或手机格式
+    function Check_Email(id) {
+      HideTips();
+      var Email = $("#" + id).val().trim();
+      if (Email == "") {
+        ShowTips("请输入你的邮箱地址或手机号码");
+        return false;
+      }
+      else if (!/^[\w-]+(\.[\w-]+)*@[\w-]+(\.(\w)+)*(\.(\w){2,3})$/.test(Email) && !(/^\s*1\d{10}\s*$/gi).test(Email)) {
+        ShowTips("请输入有效的邮箱地址或手机号码");
+        return false;
+      }
+      return true;
+    }
+    // 检查密码格式
+    function Check_Password(id) {
+      HideTips();
+      var Password = $("#" + id).val().trim();
+      if (Password == "") {
+        ShowTips("请输入密码!");
+        return false;
+      }
+      else if (Password.length < 6) {
+        ShowTips("密码不能小于6位!");
+        return false;
+      }
+      return true;
+    }
+    // 检查图形验证码
+    function Check_Code(id) {
+      HideTips();
+      var ValidCode = $("#" + id);
+      if (ValidCode.parents(".input-box").css("display") == "block") {
+        if (ValidCode.val().trim() == "") {
+          ShowTips("请输入图形验证码");
+          return false;
+        }
+        else if (ValidCode.val().trim().length != 4) {
+          ShowTips("请输入正确的图形验证码");
+          return false;
+        }
+      }
+      return true;
+    }
+    // 提示文字
+    function ShowTips(nr) {
+      if ($(".login-account").hasClass("active")) {
+        $("#Enr").html(nr);
+      }
+      else if ($(".login-tel").hasClass("active")) {
+        $("#phoneEnr").html(nr);
+      }
+    }
+    function HideTips() {
+      $("#Enr,phoneEnr").html("");
+    }
+    // 回车键
+    document.onkeydown = function (event) {
+      var e = event || window.event || arguments.callee.caller.arguments[0];
+      if (e && e.keyCode == 13) {
+        // 账号密码登录表单
+        var isUsernameFocus = $("#UserName").is(":focus");
+        var isPasswordFocus = $("#PassWord").is(":focus");
+        var isValidcodeFocus = $("#ValidCode").is(":focus");
+        // 手机短信登录表单
+        //var isUserphoneFocus = $("#UserPhone").is(":focus");
+        var isPhonecodeFocus = $("#phoneCode").is(":focus");
+        // Form:账号密码登录判断
+        if (isUsernameFocus) {
+          $("#PassWord").focus();
+          return false;
+        }
+        else if (isPasswordFocus) {
+          if ($("#verifyBox1").css("display") != "none") {
+            $("#ValidCode").focus();
+            return false;
+          }
+          else {
+            Check_User_Login();
+          }
+        }
+        else if (isValidcodeFocus) {
+          Check_User_Login();
+        }
+        // Form:手机短信登录判断
+        if (isPhonecodeFocus) {
+          CheckPhoneLogin();
+        }
+      }
+    };
+    // 微信扫码登录
+    $(function () {
+      if ($(".login-wx").hasClass("active")) {
+        interval1 = window.setInterval(intervalFunc1, 5000);
+      }
+      else {
+        window.clearInterval(interval1);
+      }
+    });
+    var counter1 = 600;
+    var interval1;
+    function intervalFunc1() {
+      if (counter1 > 0) {
+        counter1 -= 1;
+        AjaxWxLogin();
+      }
+      else { window.clearInterval(interval1); }
+    }
+    function AjaxWxLogin() {
+      var pid = "821ab775fa8e49398465ea103dfb4b17";
+      var sj = "2019-10-24";
+      var sign = "2e603bbb42a45481";
+      $.ajax({
+        type: "POST", url: "/Passport/Login/WXLogin", data: { pid: pid, sj: sj, sign: sign }, timeout: 5000, dataType: 'json',
+        error: function (XMLHttpRequest, textStatus, errorThrown) { console.log(errorThrown); },
+        success: function (data) {
+          var retStatus = data.Status;
+          if (retStatus == 0) {
+            // var backUrl = $("#backUrl").val();
+            if (backUrl.length > 2) {
+              if (backUrlParam.length) {
+                location.href = backUrl + loginFlag + "&" + backUrlParam;
+              }
+              else {
+                location.href = backUrl + loginFlag;
+              }
+            }
+            else {
+              if (backUrlParam.length) {
+                location.href = "/Member/MemberCenter/" + loginFlag + "&" + backUrlParam;
+              } else {
+                location.href = "/Member/MemberCenter/" + loginFlag;
+              }
+            }
+          }
+        }
+      });
+    }
+    // 账号密码登录
+    function Check_User_Login() {
+      HideTips();
+      $("#dosubmit").hide();
+      $("#submiting").show();
+      // 账号(邮箱或手机)
+      if (!Check_Email("UserName")) {
+        $("#submiting").hide();
+        $("#dosubmit").show();
+        RefreshImage('imgCaptcha1');
+        return false;
+      }
+      // 密码
+      if (!Check_Password("PassWord")) {
+        $("#submiting").hide();
+        $("#dosubmit").show();
+        RefreshImage('imgCaptcha1');
+        return false;
+      }
+      // 图形验证码
+      if (!Check_Code("ValidCode")) {
+        $("#submiting").hide();
+        $("#dosubmit").show();
+        RefreshImage('imgCaptcha1');
+        return false;
+      }
+      var username = $("#UserName").val().trim();
+      var pwd = $("#PassWord").val().trim();
+      var code = $("#ValidCode").val().trim();
+      // document.getElementById("PassWord").value = encode64(pwd);
+      $.ajax({
+        type: "POST",
+        url: "/Passport/Login/MobileLogin",
+        data: {
+          userName: username,
+          password: pwd,
+          remember: false,
+          action: "login",
+          mobile: "",
+          smsValidCode: "",
+          picValidCode: code
+        },
+        async: false,
+        success: function (data) {
+          console.log(data);
+          if (data.Status == "0") {
+            var data = data.Datas;
+            var failCount = data.LoginFailCount;
+            if (failCount > 3) {
+              $("#verifyBox1").show();
+              RefreshImage('imgCaptcha1');
+            }
+            if (data.StatusCode == "1") {       // 登陆成功，并带有RedirectUrl回传URL链接
+              // var backUrl = $("#backUrl").val();
+              if (backUrl.length > 2) {
+                if (backUrlParam.length) {
+                  location.href = backUrl + loginFlag + "&" + backUrlParam;
+                } else {
+                  location.href = backUrl + loginFlag;
+                }
+              }
+              else {
+                if (backUrlParam.length) {
+                  location.href = "/Member/MemberCenter/" + loginFlag + "&" + backUrlParam;
+                } else {
+                  location.href = "/Member/MemberCenter/" + loginFlag;
+                }
+              }
+            }
+            else if (data.StatusCode == "-1") {     // 参数错误
+              console.log("参数错误");
+              $("#submiting").hide();
+              $("#dosubmit").show();
+              return false;
+            }
+            else {
+              $("#submiting").hide();
+              $("#dosubmit").show();
+              if (data.StatusCode == "-2") {
+                ShowTips("请输入正确的验证码");
+              }
+              else if (data.StatusCode == "-3") {
+                ShowTips("请输入有效的邮箱地址或手机号");
+              }
+              else if (data.StatusCode == "-4") {
+                ShowTips("请输入有效的用户名和密码");
+              }
+              else {
+                ShowTips("登录失败！");
+              }
+              if (failCount > 3) {
+                RefreshImage('imgCaptcha1');
+              }
+              return false;
+            }
+          }
+        }
+      });
+    }
+    //********************手机验证码登录逻辑begin********************
+    var interval = null
+    var counter = 0;
+    $(function () {
+      // 发送短信验证码
+      $("#getcodeBtn").click(function () {
+        HideTips();
+        if (!Check_Phone("UserPhone")) return false;
+        if (!Check_Code("phoneLoginValidCode")) return false;
+        var phone = $("#UserPhone").val().trim();
+        var imgCode = $("#phoneLoginValidCode").val().trim();
+        $.ajax({
+          type: "post",
+          url: "/Passport/Login/SendLoginSmsValidCode",
+          data: {
+            mobile: phone,
+            picValidCode: imgCode
+          },
+          async: false,
+          success: function (data) {
+            if (data.Status == "0") {
+              var data = data.Datas;
+              if (data.StatusCode == "1") {     // 发送成功
+                ShowTips("<span style='color:#232628'>验证码已发送请查收</span>");
+                counter = 0;
+                HideTips();
+                $("#getcodeBtn").hide();
+                $("#regetcode").html("90");
+                $("#prompt_info").show();
+                $("#phoneCode").focus();
+                interval = window.setInterval(intervalFunc, 1000);
+              }
+              else if (data.StatusCode == "2") {      // 需要图片验证码
+                $("#verifyBox2").show();
+                $("#phoneLoginValidCode").focus();
+                ShowTips('请输入图形验证码');
+              }
+              else if (data.StatusCode == "-1") {     // 手机号格式不正确
+                $("#UserPhone").focus();
+                ShowTips('手机号格式不正确，请检查后重新输入');
+                RefreshImage('imgCaptcha2');
+              }
+              else if (data.StatusCode == "-2") {     // 图片验证码不正确
+                $("#verifyBox2").show();
+                ShowTips("图形验证码输入错误，请重新输入");
+                RefreshImage('imgCaptcha2');
+                $("#phoneLoginValidCode").focus();
+              }
+              else if (data.StatusCode == "-3") {    // 短信验证码发送过于频繁
+                ShowTips("短信验证码发送过于频繁，请稍后重试");
+              }
+              else if (data.StatusCode == "-4") {     // 获取验证码次数超过限制
+                ShowTips("获取验证码次数超过限制");
+              }
+              else {
+                ShowTips("验证码发送失败！");
+              }
+            }
+          }
+        });
+      });
+    });
+    // 短信验证码倒计时
+    function intervalFunc() {
+      if (counter > 90) {
+        counter = 0;
+        $("#getcodeBtn").show();
+        $("#prompt_info").hide();
+        window.clearInterval(interval);
+      } else {
+        $("#regetcode").html((90 - counter).toString());
+      }
+      counter = counter + 1;
+    }
+    // 手机验证码登录
+    function CheckPhoneLogin() {
+      HideTips();
+      if (!Check_Phone("UserPhone")) return false;    // 手机
+      if (!Check_Code("phoneLoginValidCode")) return false;     // 图形验证码
+      if (!Check_SmsCode("phoneCode")) return false;      // 短信验证码
+      var phone = $("#UserPhone").val().trim();
+      var imgCode = $("#phoneLoginValidCode").val().trim();
+      var code = $("#phoneCode").val().trim();
+      $.ajax({
+        type: "post",
+        url: "/Passport/Login/MobileLogin",
+        data: {
+          userName: phone,
+          password: "",
+          remember: false,
+          action: "SmsValidCodeLogin",
+          mobile: phone,
+          smsValidCode: code,
+          picValidCode: imgCode
+        },
+        datatype: 'json',
+        async: false,
+        success: function (data) {
+          if (data.Status == "0") {
+            var data = data.Datas;
+            if (data.StatusCode == "1") {       // 登录成功
+              //var backUrl = $("#backUrl").val();
+              if (backUrl.length > 2) {
+                if (backUrlParam.length) {
+                  location.href = backUrl + loginFlag + "&" + backUrlParam;
+                } else {
+                  location.href = backUrl + loginFlag;
+                }
+              }
+              else {
+                if (backUrlParam.length) {
+                  location.href = "/Member/MemberCenter/" + loginFlag + "&" + backUrlParam;
+                } else {
+                  location.href = "/Member/MemberCenter/" + loginFlag;
+                }
+              }
+            }
+            else if (data.StatusCode == "-1") {     // 手机号不能为空
+              ShowTips("手机号不能为空");
+              $("#UserPhone").focus();
+            }
+            else if (data.StatusCode == "-2") {     // 请输入有效的手机号码
+              ShowTips("请输入有效的手机号码");
+              $("#UserPhone").focus();
+            }
+            else if (data.StatusCode == "-3") {     // 短信验证码不能为空
+              ShowTips("短信验证码不能为空");
+              $("#phoneCode").focus();
+            }
+            else if (data.StatusCode == "-4") {     // 短信验证码有误
+              ShowTips("短信验证码有误");
+              $("#phoneCode").focus();
+            }
+            else if (data.StatusCode == "-5") {     // 手机号和验证码不匹配
+              ShowTips("手机号和验证码不匹配");
+            }
+            else {
+              ShowTips("登录失败！");
+            }
+          }
+        }
+      });
+    }
+    //********************手机验证码登录逻辑 end********************
+    // 加密
+    function encode64(pwd) {
+      // base64加密开始
+      var keyStr = "ABCDEFGHIJKLMNOP" + "QRSTUVWXYZabcdef" + "ghijklmnopqrstuv"
+        + "wxyz0123456789+/" + "=";
+      var output = "";
+      var chr1, chr2, chr3 = "";
+      var enc1, enc2, enc3, enc4 = "";
+      var i = 0;
+      do {
+        chr1 = pwd.charCodeAt(i++);
+        chr2 = pwd.charCodeAt(i++);
+        chr3 = pwd.charCodeAt(i++);
+        enc1 = chr1 >> 2;
+        enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+        enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+        enc4 = chr3 & 63;
+        if (isNaN(chr2)) {
+          enc3 = enc4 = 64;
+        } else if (isNaN(chr3)) {
+          enc4 = 64;
+        }
+        output = output + keyStr.charAt(enc1) + keyStr.charAt(enc2)
+          + keyStr.charAt(enc3) + keyStr.charAt(enc4);
+        chr1 = chr2 = chr3 = "";
+        enc1 = enc2 = enc3 = enc4 = "";
+      } while (i < pwd.length);
+
+      return output;
+    }
+  </script>
+  <script type="text/javascript">
+    var userId = 0;
+    function reqUrlParam(paras) {
+      var url = location.href;
+      var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+      var paraObj = {}
+      for (i = 0; j = paraString[i]; i++) {
+        paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+      }
+      var returnValue = paraObj[paras.toLowerCase()];
+      if (typeof (returnValue) == "undefined") {
+        return "";
+      } else {
+        return returnValue;
+      }
+    }
+    function setLocalStoreHua(k, v) {
+      try {
+        if (localStorage != null) {
+          localStorage.setItem(k, v);
+        }
+      } catch (ex) { }
+    }
+    function getLocalStoreHua(k) {
+      try {
+        if (localStorage != null) {
+          var v1 = localStorage.getItem(k);
+          localStorage.removeItem(k);
+          return v1;
+        }
+      } catch (ex) { }
+      return "";
+    }
+    var lsPerfKey = "home/GetProductListPrice";
+    function getProductPrice() {
+      var dataPps = "";
+      $("span[data-pp]").each(function (index, data) {
+        dataPps = dataPps + $(this).attr("data-pp") + ",";
+      })
+      if (dataPps.length > 0) {
+        var perf1 = getLocalStoreHua(lsPerfKey);
+        var dts = new Date();
+        $.ajax({
+          type: "POST", url: "/home/GetProductListPrice",
+          data: { itemcodes: dataPps, perf: perf1 },
+          timeout: 60000, dataType: 'json',
+          success: function (res) {
+            if (res.DataStatus == 200 && res.Status == '0') {
+              if (res.Datas.ProductPrices.length == 0) {
+                return false;
+              }
+              for (var i = 0, len = res.Datas.ProductPrices.length; i < len; i++) {
+                var temp = res.Datas.ProductPrices[i];
+                $("span[data-pp='" + temp.ItemCode + "']").text(temp.Price);
+              }
+            }
+            else { }
+          },
+          complete: function (res) {
+            var dte = new Date();
+            var useMs = dte.getTime() - dts.getTime();
+            //var resTxt = "v0,"+res.readyState + "," + res.status + "," + res.statusText;
+            var resTxt = "v0," + res.status + "," + dts.getTime() + "," + useMs;
+            setLocalStoreHua(lsPerfKey, resTxt);
+            console.log("AjaxReq性能", resTxt);
+          }
+        });
+      }
+    }
+    function setCurUrlClass() {
+      // css : class = "color_tj"
+      var pathname1 = window.location.pathname;
+      $("a[href='" + pathname1 + "'").addClass("color_tj");
+    }
+    getProductPrice();
+    function addHuaPid() {
+      try {
+        var path = encodeURIComponent(window.location.pathname);
+        $("a[data-link]").each(function (index, data) {
+          if ($(this).attr("href").indexOf("huaPid=") == -1) {
+            var href = $(this).attr("href") + "?huaPid=" + path + "-" + $(this).attr("data-link");
+            $(this).attr("href", href);
+          }
+        })
+      }
+      catch (e) {
+        console.log(e);
+      }
+    }
+    addHuaPid();
+    $(function () {
+      $.get("/Home/GetLoginUserId", null, function (data) {
+        userId = data;
+      }, "json");
+      $("#header-chat,#kefu,#kefu1").click(function (e) {
+        e.preventDefault();
+        //$("#MEIQIA-BTN").click();
+        _MEIQIA('showPanel');
+      });
+      if ($("#pjCount").length > 0) {
+        $.get("/productpj/GetPJCount", function (data) {
+          $("#pjCount").text(data);
+        });
+      }
+    });
+    function openChatWindow(e) {
+      //美洽代码
+      //$("#MEIQIA-BTN").click();
+      _MEIQIA('showPanel');
+    }
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KS4PTHC');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script type='text/javascript'>
+    (function (m, ei, q, i, a, j, s) {
+      m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      j = ei.createElement(q),
+        s = ei.getElementsByTagName(q)[0];
+      j.async = true;
+      j.charset = 'UTF-8';
+      j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+      s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', 111117);//1212
+    $.post("/Home/MeiQiaVisitLog", null, function (data) {
+      _MEIQIA('clientId', data);
+    });
+  </script>
+</body>
+
+</html>
