@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <title>中国鲜花礼品网-帮助中心-取消订单方式</title>
+  <link rel="icon" href="../img/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+  <link type="text/css" rel="stylesheet" href="../css/common.css">
+  <link type="text/css" rel="stylesheet" href="../css/public.css">
+  <link type="text/css" rel="stylesheet" href="../css/pagination.css">
+  <style>
+    td {
+      padding: 0 22px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 顶部导航 -->
+  <div class="site-nav">
+    <div class="container">
+      <ul class="site-nav-l">
+        <li class="menu">
+          <a href="/" onClick="addfavorite();return false;"><span class="ico ico-star"></span>收藏鲜花网</a>
+        </li>
+        <li class="menu dropdown">
+          <a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span
+              class="ico ico-mobile"></span>手机花礼</a>
+          <div class="dropdown-menu dropdown-weixin">
+            <img src="../img/common/app_qrcode.jpg" height="124" width="124">
+            <p>APP首单减20元！<br>(需下单时输入券号9920)</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="site-nav-r">
+        <li class="menu login" id="LoginInfo"></li>
+        <li class="site-nav-pipe">|</li>
+        <li class="menu">
+          <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <li class="menu dropdown">
+          <a href="/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span
+              class="glyphicon glyphicon-triangle-bottom"></span></a>
+          <div class="dropdown-menu dropdown-service">
+            <a href="/member/payment/balancefill" target="_blank">在线付款</a>
+            <a href="/help/" target="_blank">帮助中心</a>
+            <a href="/help/afterservice.htm" target="_blank">售后服务</a>
+            <a href="/help/sendRange.htm" target="_blank">配送范围</a>
+            <a href="/chat/" target="_blank">留言反馈</a>
+          </div>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <li class="menu dropdown">
+          <a href="/shopping/showcart" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank"><span
+              class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount"></span><span
+              class="glyphicon glyphicon-triangle-bottom"></span></a>
+          <div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+        </li>
+        <li class="site-nav-pipe">|</li>
+        <li class="menu slogan">
+          取消订单方式
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 顶部导航 End -->
+  <!-- 头部 -->
+  <header>
+    <div class="logo">
+      <h1><a href="//www.hua.com/" class="logo-bd">鲜花速递</a></h1>
+      <i></i>
+      <h2>中国鲜花礼品网 始于2005，简称花礼网</h2>
+    </div>
+    <div class="search">
+      <form name="i_search" method="post" action="/search/">
+        <div class="input-group">
+          <input name="keyword" type="text" class="form-control" placeholder="商品关键词">
+          <span class="input-group-btn">
+            <button class="btn btn-primary" type="button" onClick="this.form.submit()">搜索</button>
+          </span>
+        </div>
+      </form>
+      <span class="help-block"><a href="/songlaoshixianhua/">送老师鲜花</a><a href="/florist/">自选鲜花</a><a
+          href="/shengriliwu/">生日鲜花</a><a href="/worldflora/">港澳台送花</a></span>
+    </div>
+    <div class="service">
+      <span class="ico ico-phone"></span>400-889-8188
+      <a href="/chat/" target="_blank"><span class="ico ico-headset"></span>在线客服</a>
+    </div>
+  </header>
+  <!-- 头部 End -->
+  <!-- 导航 -->
+  <nav class="common">
+    <div class="container">
+      <div class="categorys dropdown">
+        <h3 class="categorys-title" data-hover="dropdown" data-delay="0">
+          <a href="/all.html"><span class="pull-right glyphicon glyphicon-menu-down"></span>全部商品导购</a>
+        </h3>
+        <div class="dropdown-menu dropdown-cate">
+          <h4><a href="/flower/">鲜花</a></h4>
+          <ul class="cate-list list-inline">
+            <li><a target="_blank" href="/aiqingxianhua/">爱情鲜花</a></li>
+            <li><a target="_blank" href="/youqingxianhua/">友情鲜花</a></li>
+            <li><a target="_blank" href="/shengriliwu/">生日鲜花</a></li>
+            <li><a target="_blank" href="/songzhangbeixianhua/">问候长辈</a></li>
+            <li><a target="_blank" href="/zhufuqinghexianhua/">祝贺鲜花</a></li>
+            <li><a target="_blank" href="/hunqingxianhua/">婚庆鲜花</a></li>
+            <li><a target="_blank" href="/tanbingweiwenxianhua/">探病慰问</a></li>
+            <li><a target="_blank" href="/daoqianxianhua/">道歉鲜花</a></li>
+            <li><a target="_blank" href="/businessFlower/kaiyehualan/">开业花篮</a></li>
+          </ul>
+          <h4><a target="_blank" href="/yongshenghua/">永生花</a></h4>
+          <ul class="cate-list list-inline">
+            <li><a target="_blank" href="/yongshenghua/yongshenghua_box.html">经典花盒</a></li>
+            <li><a target="_blank" href="/yongshenghua/yongshenghua_large.html">巨型玫瑰</a></li>
+            <li><a target="_blank" href="/yongshenghua/yongshenghua_lavender.html">薰衣草</a></li>
+            <li><a target="_blank" href="/yongshenghua/yongshenghua_vase.html">永生瓶花</a></li>
+            <li><a target="_blank" href="/yongshenghua/yongshenghua_characteristic.html">特色永生花</a></li>
+          </ul>
+          <h4><a target="_blank" href="/cake/">蛋糕</a></h4>
+          <ul class="cate-list list-inline">
+            <li><a target="_blank" href="/cake/ganso/">元祖</a></li>
+            <li><a target="_blank" href="/cake/holiland/">好利来</a></li>
+            <li><a target="_blank" href="/cake/croissants/">可颂坊</a></li>
+            <li><a target="_blank" href="/cake/waffleboy/">窝夫小子</a></li>
+            <li><a target="_blank" href="/cake/micamika/">米卡米卡</a></li>
+            <li><a target="_blank" href="/cake/yipinxuan/">一品轩</a></li>
+            <li><a target="_blank" href="/cake/xfxb/">幸福西饼</a></li>
+            <li><a target="_blank" href="/cake/mcake/">Mcake</a></li>
+            <li><a target="_blank" href="/cake/lecake/">诺心</a></li>
+            <li><a target="_blank" href="/cake/vcake/">Vcake</a></li>
+            <li><a target="_blank" href="/cake/allcitycake/">全国品牌</a></li>
+          </ul>
+          <h4><a target="_blank" href="/gifts/">礼品</a></h4>
+          <ul class="cate-list list-inline">
+            <li><a target="_blank" href="/livingflower/">泰国保鲜花</a></li>
+            <li><a target="_blank" href="/gifts/musicbox/">音乐盒</a></li>
+            <li><a target="_blank" href="/gifts/crystallaser/">水晶内雕</a></li>
+            <li><a target="_blank" href="/gifts/goldenflower/">金箔花</a></li>
+            <li><a target="_blank" href="/gifts/cosmeticmirror/">化妆镜</a></li>
+            <li><a target="_blank" href="/gifts/kingking/">香薰系列</a></li>
+            <li><a target="_blank" href="/gifts/bestlife/">音乐睡枕</a></li>
+            <li><a target="_blank" href="/gifts/vase/">花瓶/相框</a></li>
+            <li><a target="_blank" href="/gifts/grose/">镀金玫瑰</a></li>
+            <li><a target="_blank" href="/gifts/candle/">LED蜡烛</a></li>
+            <li><a target="_blank" href="/katonghuashu/">卡通花束</a></li>
+            <li><a target="_blank" href="/toys/">品牌公仔</a></li>
+            <li><a target="_blank" href="/gifts/hifi/">智能音响</a></li>
+            <li><a target="_blank" href="/gifts/shoushi/">首饰</a></li>
+            <li><a target="_blank" href="/gifts/chocolate/">手工巧克力</a></li>
+            <li><a target="_blank" href="/gifts/jinkouqiaokeli/">进口巧克力</a></li>
+            <li><a target="_blank" href="/gifts/dengshi/">创意礼品</a></li>
+            <li><a target="_blank" href="/qiyetuangou/gift_card.html">礼品卡</a></li>
+          </ul>
+          <h4><a target="_blank" href="/Plant/">绿植</a></h4>
+          <ul class="cate-list list-inline">
+            <li><a target="_blank" href="/Plant/greenplant/">绿色植物</a></li>
+            <li><a target="_blank" href="/Plant/potflower/">盆栽花卉</a></li>
+          </ul>
+        </div>
+      </div>
+      <ul class="nav">
+        <li><a href="/">首页</a></li>
+        <li><a href="/flower/">鲜花</a></li>
+        <li><a href="/yongshenghua/">永生花</a></li>
+        <li><a href="/cake/">蛋糕</a></li>
+        <li><a href="/gifts/">礼品</a></li>
+        <li><a href="/huayu/">花语大全</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- 导航 End -->
+  <!-- 内容 -->
+  <div class="container">
+    <div class="breadcrumbs"><a href="/">首页</a> &gt; <a href="default.htm">帮助中心</a> &gt; 取消订单</div>
+    <div class="wrapper help">
+      <div class="pull-left w970 l230">
+        <div class="box-border">
+          <div class="article">
+            <h3>
+              <b>CANCEL</b>
+              取消订单
+            </h3>
+            <center>
+              <font style="font-size:18px;">取消订单方式</font>
+            </center><br>
+            <table width="94%" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="D9D9D9"
+              style="border-collapse:collapse">
+              <tbody>
+                <tr bgcolor="fbfbfb">
+                  <td colspan="3" height="34" bgcolor="#eeeeee"><strong>订单撤销</strong></td>
+                </tr>
+                <tr>
+                  <td width="17%" height="108" align="center"><strong>网页撤单</strong><br>
+                  </td>
+                  <td width="83%" colspan="2">在花礼网(全称中国鲜花礼品网)里"<a href="/Member/MemberCenter/"
+                      target="_parent">我的帐号</a>"，在"<a href="/member/order/myattention"
+                      target="_parent">我的订单</a>"部分，查询自己需要撤单的订单，然后看详细信息，在详细信息的下方，会有撤单的按钮，点击确认，即撤单成功(只支持未付款订单自助撤单，已支付/已安排订单需联系客服处理)。<span
+                      class="text-primary"></span></td>
+                </tr>
+                <tr>
+                  <td width="17%" height="113" align="center"><strong>手工撤单</strong><br> </td>
+                  <td colspan="2">您可以直接电话或者传真给我们订单部门,说明您的订单号码和您的身份,在允许的情况下,该订单可被直接撤掉.(电话号码：0755-88855678)</td>
+                </tr>
+                <tr>
+                  <td height="109" align="center"><strong>邮件撤单</strong></td>
+                  <td colspan="2">请您发送撤单邮件到E-mail:kefu@hua.com,说明您的订单号码,您的邮箱地址或会员号和密码,我们即刻安排撤单事项.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p></p>
+            <p>
+              <strong class="text-primary">注：</strong>　<br>
+              1. 非重大节日时期，可接受送货日前一天的订单修改或取消。于送货日前一天内要修改或取消订单，请于上班时间8:30~21:00(星期六、日照常上班)来电洽询客服人员协助。 <br>
+              2. 若送花日当日订花，恕不再接受订单之取消与更改（收货人联系电话或收货地址变更除外）。 <br>
+              3. 重大节日请至少提前一天订购，订购和支付完成后，我们会立刻安排花店处理，请仔细核对订单内容，恕难更改卡片内容。<br>
+              4. 重大节日配送订单，如需取消或修改至少提前2天。<br>
+              5. 订单取消手续费（特别注意中提到的４种情况除外）：<span style="color:#ff0000;">1) VIP会员退款：手续费全免；2)
+                普通会员退款：原路退回或退至银行帐号，扣取支付订单金额的10%作为手续费；存入会员帐户余额，不扣任何手续费。</span>特别注意：送货当日取消、重大节日前一天和当日取消、已预订特殊花材的订单取消、其他已有成本支出订单取消，此4种情况需要酌情收取成本费用，退款分两种方式处理：1)
+              存入会员帐户余额（推荐使用），供以后订购商品抵扣；2) 退回原支付帐号，办理退款周期为1-3个工作日左右（信用卡退款可能到帐时间1-15个工作日左右，具体需根据发卡行而定）。<br>
+              6. 如送货日（非重大节日及确认货尚未送出）欲取消订单，需支付订单总金额的50%~100%作为订单处理及材料费用。<br>
+              7. <font class="text-primary">重大节日订单取消特别说明：</font>由于节日是订花、送花高峰期，工作极其繁忙，<font class="text-primary">
+                通常只接受提前2天取消或修改。</font>
+              （以情人节为例：2月12日（含）之前的订单，可以直接联系取消/修改；2月13日取消，需支付订单总金额的50%作为银行退款手续费、人工费及材料准备费用；2月14日不可接受订单取消。） <br>
+              <br>
+              <font class="text-primary">&ldquo;重大节日&rdquo;定义：</font><br>
+              鲜花行业“重大节日”列明如下：情人节、圣诞节、母亲节、520情人节、七夕情人节、三八节。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pull-left w210 r970">
+        <div class="box-border">
+          <div class="hd"><b></b>帮助中心</div>
+          <ul class="bd">
+            <li>
+              <a href="#"><span class="ico ico-help5"></span>常见问题</a>
+              <ul>
+                <li><a href="faq.htm">常见问题</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span class="ico ico-help3"></span>订单帮助</a>
+              <ul>
+                <li><a href="/help/ordercx/">订单查询</a></li>
+                <li class="active"><a href="order_cancel.htm">取消订单</a></li>
+                <li><a href="re_payment.htm">订单补交货款</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span class="ico ico-help4"></span>售后服务</a>
+              <ul>
+                <li><a href="after_tousu.htm">投诉说明</a></li>
+                <li><a href="after_liquan.htm">优惠券说明</a></li>
+                <li><a href="afterservice.htm">鲜花售后服务</a></li>
+                <li><a href="after_plant.htm">绿植售后服务</a></li>
+                <li><a href="after_other.htm">其他售后服务</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span class="ico ico-help6"></span>礼品卡</a>
+              <ul>
+                <li><a href="lipinka_guide.htm">礼品卡使用说明</a></li>
+                <li><a href="lipinka_check.htm">礼品卡余额查询</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span class="ico ico-help1"></span>
+                <font class="f_14">服务声明</font>
+              </a>
+              <ul>
+                <li><a href="default.htm">服务声明</a></li>
+                <li><a href="shop_step.htm">购物流程</a></li>
+                <li><a href="private.htm">隐私条款</a></li>
+                <li><a href="safe.htm">安全条款</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span class="ico ico-help7"></span>配送说明</a>
+              <ul>
+                <li><a href="send_shuoming.htm">配送说明</a></li>
+                <li><a href="sendRange.htm">鲜花配送范围</a></li>
+                <li><a href="send_zone.htm">郊区/偏远地区配送费用</a></li>
+                <li><a href="hongkongflower_notice.htm">港澳台配送说明</a></li>
+              </ul>
+            </li>
+            <li>
+							<a href="#"><span class="ico ico-help2"></span>支付说明</a>
+							<ul>
+								<li><a href="payment.htm">支付说明</a></li>
+								<li><a href="payment_ips.htm">支付宝在线支付</a></li>
+								<li><a href="payment_YeePay.htm">YeePay易宝在线支付</a></li>
+								<li><a href="payment_99bill.htm">微信支付说明</a></li>
+								<li><a href="payment_foreign.htm">西联汇款、境外汇款等</a></li>
+								<li><a href="payment_bank.htm">银行汇款说明</a></li>
+								<li><a href="payment_post.htm">邮局汇款说明</a></li>
+								<li><a href="payment_door.htm">上门收款说明</a></li>
+								<li><a href="payment_virtualbank.htm">虚拟帐户说明</a></li>
+								<li><a href="payment_ips_faq.htm">在线支付常见问题</a></li>
+							</ul>
+						</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 尾部导航 -->
+  <div class="footer-nav">
+    <a href="/">首页</a><a href="/profile/about.htm" target="_blank">关于我们</a><a href="/profile/media.html"
+      target="_blank">媒体报道</a><a href="/profile/contact.htm" target="_blank">联系方式</a><a href="/qiyetuangou/"
+      target="_blank">企业团购</a><a href="/liansuo/" target="_blank">花店加盟</a><a href="/member/payment/balancefill"
+      target="_blank">在线补款</a><a class="last-child" href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+  </div>
+  <!-- 尾部导航 End -->
+  <!-- 通用尾部 -->
+  <footer>
+    <div class="auth">
+      <a href="//kxlogo.knet.cn/seallogo.dll?sn=e15041744030058395oqbo000000&size=4" target="_blank"><img
+          src="../img/common/kxwz.gif" height="40" width="109"></a>
+      <a href="https://search.szfw.org/cert/l/CX20130306002238002312" target="_blank"><img src="../img/common/cxwz.gif"
+          height="40" width="112"></a>
+      <a href="//www.anquan.org/authenticate/cert/?site=www.hua.com&at=realname" rel="nofollow" target="_blank"><img
+          src="../img/common/smyz.gif" height="40" width="106"></a>
+      <img src="../img/common/slogan.png" height="50" width="212">
+      <a href="/member/payment/fillbyalipay?order_no=&order_sum=" rel="nofollow" target="_blank"><img
+          src="../img/common/zfb.gif" height="49" width="96"></a>
+      <a href="/profile/news_20111110.htm" target="_blank"><img src="../img/common/100.jpg" height="49" width="150"></a>
+    </div>
+    <p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a
+        href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a href="/profile/ICP.htm"
+        rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a href="//www.miibeian.gov.cn" rel="nofollow"
+        target="_blank">粤ICP备09171662号</a> Copyright &copy; 2005-2016</p>
+    <p>花礼网 （中国鲜花礼品网） <a href="/">www.hua.com</a> 中国领先鲜花网品牌,专业鲜花速递服务！</p>
+  </footer>
+  <!-- 通用尾部 End -->
+  <script type="text/javascript" src="../js/common.js"></script>
+  <script>
+    $(function () {
+      var sjs = Math.random();
+      //$.get("/ajax/getlogininfo.asp?rmd="+sjs,null,function(data){if(data.indexOf("<") > -1){$("#LoginInfo").html(data);}});//登陆信息
+      //$.get("/ajax/CartCount.asp?rmd="+sjs,null,function(data){if(data.indexOf("(") > -1){$("#gwcCount").html(data);}});//购物车商品数量
+      //$.get("/ajax/getcartinfo.asp?rmd="+sjs,null,function(data){if(data.indexOf("<") > -1){$("#CartInfo").html(data);}});//购物车信息
+    });
+  </script>
+  <script type="text/javascript" src="../js/statesandright.js"></script>
+</body>
+
+</html>

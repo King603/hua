@@ -2,7 +2,7 @@
     var xhyt = document.getElementById("xhyt");
     var arr = [
         ["aiqingxianhua", "爱情鲜花"],
-        ["shengriliwu", "生日鲜花"],
+        ["theme/birthday", "生日鲜花"],
         ["youqingxianhua", "友情鲜花"],
         ["songzhangbeixianhua", "问候长辈"],
         ["tanbingweiwenxianhua", "探病慰问"],
@@ -13,7 +13,7 @@
     ];
     str = "";
     for (var i = 0; i < arr.length; i++) {
-        str += `<li style="width:30%"><a href="/${arr[i][0]}/" target="_blank">${arr[i][1]}</a></li>`
+        str += `<li><a href="/${arr[i][0]}/" target="_blank">${arr[i][1]}</a></li>`
     }
     xhyt.innerHTML = str;
 })();
@@ -30,7 +30,7 @@
     ];
     str = "";
     for (var i = 0; i < arr.length; i++) {
-        str += `<li style="width:20%"><a href="/${arr[i][0]}/" target="_blank">${arr[i][1]}</a></li>`
+        str += `<li><a href="/${arr[i][0]}/" target="_blank">${arr[i][1]}</a></li>`
     }
     xhhc.innerHTML = str;
 })();

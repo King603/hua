@@ -2,7 +2,7 @@
     var arr = [
         ["aiqingxianhua", "爱情鲜花"],
         ["shengriliwu", "生日鲜花"],
-        ["youqingxianhua", "友情鲜花"],
+        ["theme/birthday", "友情鲜花"],
         ["songzhangbeixianhua", "问候长辈"],
         ["tanbingweiwenxianhua", "探病慰问"],
         ["daoqianxianhua", "道歉鲜花"],

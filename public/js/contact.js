@@ -10,7 +10,7 @@ var _html = (element, arr) => {
   var arr = [
       ["/aiqingxianhua/", "爱情鲜花"],
       ["/youqingxianhua/", "友情鲜花"],
-      ["/shengriliwu/", "生日鲜花"],
+      ["/theme/birthday/", "生日鲜花"],
       ["/songzhangbeixianhua/", "问候长辈"],
       ["/zhufuqinghexianhua/", "祝贺鲜花"],
       ["/hunqingxianhua/", "婚庆鲜花"],
